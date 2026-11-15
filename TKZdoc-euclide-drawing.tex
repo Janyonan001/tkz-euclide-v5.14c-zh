@@ -1,0 +1,1032 @@
+\section{绘图}
+\tkzname{\tkznameofpack} 可以绘制五种类型的对象：点、直线或线段、圆、圆弧和扇形。
+
+%<---------------------------------------------------------------------------->
+%    POINT(S)
+%<---------------------------------------------------------------------------->
+\subsection{绘制一个点或多个点}
+有两种选择：用 \tkzcname{tkzDrawPoint} 绘制单个点，或用 \tkzcname{tkzDrawPoints} 绘制一个或多个点。
+
+\subsubsection{绘制点 \tkzcname{tkzDrawPoint}} \hypertarget{tdrp}{}
+
+\begin{NewMacroBox}{tkzDrawPoint}{\oarg{local options}\parg{name}}%
+\begin{tabular}{lll}%
+参数 &  默认值 & 定义                 \\
+\midrule
+\TAline{点名称} {无默认}  {只接受一个点名}
+\bottomrule
+\end{tabular}
+
+\medskip
+参数为必填。圆盘颜色取圆的颜色但更浅；所有样式都可以修改。点是一个节点，因此在图形缩放时不会受影响。
+
+\medskip
+\begin{tabular}{lll}%
+\toprule
+选项             & 默认值 & 定义 \\
+\midrule
+\TOline{\TIKZ\ 选项}{}{所有 \TIKZ\ 选项均有效。}
+\TOline{shape}  {circle}{可选 \tkzname{cross} 或 \tkzname{cross out}}
+\TOline{size}   {6}{$6 \times$ \tkzcname{pgflinewidth}}
+\TOline{color}  {black}{可修改默认颜色 }
+\bottomrule
+\end{tabular}
+
+\medskip
+{我们还可以创建其他形状，例如 \tkzname{cross}}
+\end{NewMacroBox}
+
+默认情况下，\tkzname{point style } 定义如下：
+
+\begin{tkzltxexample}[]
+  \tikzset{point style/.style = {%
+           draw         = black,
+           inner sep    = 0pt,
+           shape        = circle,
+           minimum size = 3 pt,
+           fill         = black
+                               }
+        } 
+\end{tkzltxexample}
+
+\subsubsection{点绘制示例}
+注意 \tkzname{scale} 不影响点的形状，这是正常的。大多数情况下，一种点的形状就足够了；可以在开头定义，用宏命令或在配置文件中定义。
+
+\begin{tkzexample}[latex=5cm,small]
+  \begin{tikzpicture}[scale=.5]
+   \tkzDefPoint(1,3){A}
+   \tkzDefPoint(4,1){B}
+   \tkzDefPoint(0,0){O}
+   \tkzDrawPoint[color=red](A)
+   \tkzDrawPoint[fill=blue!20,draw=blue](B)
+   \tkzDrawPoint[shape=cross,size=8pt,color=teal](O)
+  \end{tikzpicture}
+\end{tkzexample}
+
+你可以一次绘制多个点，但这个宏命令比前一个稍慢，并且所有点都使用相同的选项。
+\newpage
+\hypertarget{tdrps}{}
+\begin{NewMacroBox}{tkzDrawPoints}{\oarg{local options}\parg{liste}}%
+\begin{tabular}{lll}%
+参数 &  默认值  & 定义 \\
+\midrule
+\TAline{点列表}{无默认}{例如 \tkzcname{tkzDrawPoints(A,B,C)}}
+\bottomrule
+\end{tabular}
+
+\medskip
+\begin{tabular}{lll}%
+选项             & 默认值 & 定义 \\
+\midrule
+\TOline{shape}  {circle}{可选 \tkzname{cross} 或 \tkzname{cross out}}
+\TOline{size}  {6}{$6 \times$ \tkzcname{pgflinewidth}}
+\TOline{color}  {black}{可修改默认颜色 }
+\bottomrule
+\end{tabular}
+
+\medskip
+\tkzHandBomb\ 注意结尾的 \code{s}：漏掉它会在绘制多个点时引发连锁错误。选项与前一个宏命令相同。
+\end{NewMacroBox}
+
+\subsubsection{带大小、颜色和填充的点}
+
+\begin{tkzexample}[latex=7cm,small]
+\begin{tikzpicture}
+\tkzDefPoints{1/3/A,4/1/B,0/0/C}
+\tkzDrawPoints[size=3,color=red,fill=red!50](A,B,C)
+\end{tikzpicture}
+\end{tkzexample}
+%<---------------------------------------------------------------------------->
+%    LINE(S)
+%<---------------------------------------------------------------------------->
+\section{绘制直线}
+以下宏命令用于绘制和标注直线。
+\subsection{绘制直线}
+要绘制直线，只需给出一对点。你可以使用选项 \tkzname{add} 来延长直线（此选项由 \tkzimp{Mark Wibrow} 提供，参见下面的代码）。
+
+直线的默认样式为：
+
+\begin{tkzltxexample}[]
+  \tikzset{line style/.style = {%
+    line width = 0.6pt,
+    color      = black,
+    style      = solid,
+    add        = {.2} and  {.2}%
+   }}
+\end{tkzltxexample}
+其中
+   
+\begin{tkzltxexample}[]
+  \tikzset{%
+    add/.style args={#1 and #2}{
+        to path={%
+ ($(\tikztostart)!-#1!(\tikztotarget)$)--($(\tikztotarget)!-#2!(\tikztostart)$)%
+  \tikztonodes}}}
+\end{tkzltxexample}
+
+你可以用 \tkzcname{tkzSetUpLine} 修改此样式，参见 \ref{tkzsetupline}。
+
+\newpage
+\begin{NewMacroBox}{tkzDrawLine}{\oarg{local options}\parg{pt1,pt2} }%
+参数是由两个或三个点组成的列表。对于射线，你可以用 \tkzname{add} 创建样式。
+
+\begin{tabular}{lll}%
+\toprule
+选项             & 默认值 & 定义                         \\ 
+\midrule
+\TOline{\TIKZ\ 选项}{}{所有 \TIKZ\ 选项均有效。}
+\TOline{add}{0.2 and 0.2}{add = $kl$ and $kr$，……}
+\TOline{\dots}{\dots}{允许线段向左右两侧延长。 }
+\bottomrule
+\end{tabular}
+
+\tkzname{add} 定义经过点 pt1 和 pt2 的直线长度。两个数字均为百分比。绘图时可使用 \TIKZ\ 样式。
+\end{NewMacroBox}
+
+\subsubsection{使用 \tkzname{add} 的示例}
+\begin{tkzexample}[latex=5cm,small]
+\begin{tikzpicture}
+ \tkzInit[xmin=-2,xmax=3,ymin=-2.25,ymax=2.25]
+ \tkzClip[space=.25]
+ \tkzDefPoint(0,0){A} \tkzDefPoint(2,0.5){B}
+ \tkzDefPoint(0,-1){C}\tkzDefPoint(2,-0.5){D} 
+ \tkzDefPoint(0,1){E} \tkzDefPoint(2,1.5){F} 
+ \tkzDefPoint(0,-2){G} \tkzDefPoint(2,-1.5){H}
+ \tkzDrawLine(A,B)    \tkzDrawLine[add = 0 and .5](C,D) 
+ \tkzDrawLine[add = 1 and 0](E,F)
+ \tkzDrawLine[add = 0 and 0](G,H) 
+ \tkzDrawPoints(A,B,C,D,E,F,G,H)    
+ \tkzLabelPoints(A,B,C,D,E,F,G,H)  
+\end{tikzpicture}
+\end{tkzexample} 
+
+你可以用相同的选项一次绘制多条直线。
+\begin{NewMacroBox}{tkzDrawLines}{\oarg{local options}\parg{pt1,pt2 pt3,pt4 ...}}% 
+参数为由空格分隔的点对列表。绘图时可使用 \TIKZ\ 样式。
+\end{NewMacroBox}      
+
+\subsubsection{使用 \tkzcname{tkzDrawLines} 的示例}    
+
+\begin{tkzexample}[latex=8cm,small]
+\begin{tikzpicture}
+  \tkzDefPoint(0,0){A}
+  \tkzDefPoint(2,0){B}
+  \tkzDefPoint(1,2){C}
+  \tkzDefPoint(3,2){D}   
+  \tkzDrawLines(A,B C,D A,C B,D)
+  \tkzLabelPoints(A,B,C,D)
+\end{tikzpicture}
+\end{tkzexample}
+%<---------------------------------------------------------------------------->
+%    SEGMENT(S)
+%<---------------------------------------------------------------------------->
+\section{绘制线段}
+当然，我们也有绘制线段的宏命令。
+
+\subsection{绘制线段 \tkzcname{tkzDrawSegment}} 
+\begin{NewMacroBox}{tkzDrawSegment}{\oarg{local options}\parg{pt1,pt2}}%
+参数是由两个点组成的列表。绘图时可使用 \TIKZ\ 样式。
+ 
+\medskip
+\begin{tabular}{lll}%
+参数    & 示例 & 定义    \\
+\midrule
+\TAline{(pt1,pt2)}{(A,B)}{绘制线段 $[A,B]$}
+\bottomrule 
+\end{tabular}
+ 
+\medskip
+\begin{tabular}{lll}%
+选项    & 示例 & 定义    \\
+\midrule
+\TOline{\TIKZ\ 选项}{}{所有 \TIKZ\ 选项均有效。}
+\TOline{dim}{无默认}{dim = \{label,dim,option\}，……}
+\TOline{\dots}{\dots}{允许给图形添加尺寸标注。}
+\bottomrule 
+\end{tabular}
+
+这当然等价于 \tkzcname{draw (A)--(B);}。你也可以使用选项 \tkzname{add}。
+\end{NewMacroBox}
+
+\subsubsection{使用点引用的示例}     
+
+\begin{tkzexample}[latex=6cm,small]
+\begin{tikzpicture}[scale=1.5]
+  \tkzDefPoint(0,0){A}
+  \tkzDefPoint(2,1){B}
+  \tkzDrawSegment[color=red,thin](A,B)
+  \tkzDrawPoints(A,B)    
+  \tkzLabelPoints(A,B)  
+\end{tikzpicture}
+\end{tkzexample}
+
+\subsubsection{用选项 \tkzname{add} 延长线段} 
+
+\begin{tkzexample}[latex=7cm,small]
+\begin{tikzpicture}
+  \tkzDefPoints{0/0/A,6/0/B,0.8/4/C}
+  \tkzDefTriangleCenter[euler](A,B,C) 
+  \tkzGetPoint{E}
+  \tkzDefCircle[euler](A,B,C)\tkzGetPoints{E}{e}
+  \tkzDrawCircle[red](E,e)
+  \tkzDrawLines[add=.5 and .5](A,B A,C B,C)
+  \tkzDrawPoints(A,B,C,E)
+  \tkzLabelPoints(A,B,C,E)
+  \end{tikzpicture}
+\end{tkzexample}
+
+\subsubsection{用选项 \tkzname{dim} 添加尺寸标注（代码由 Muzimuzhi Z 提供）} 
+这段代码来自 tex.stackexchange.com 上一个问题的回答
+(change-color-and-style-of-dimension-lines-in-tkz-euclide )。
+\tkzname{dim} 的代码基于 \TIKZ\ 选项，因此你必须给出单位。
+现在你可以用多种方式使用两种样式 |dim style| 和 |dim fence style|。
+查看示例以了解用这些样式可以做什么。
+
+\begin{verbatim}
+   \tikzset{dim style/.append style={dashed}} % append if you want to keep precedent style.
+   or 
+   \begin{scope}[ dim style/.append style={orange},
+       dim fence style/.style={dashed}]
+\end{verbatim}
+
+\begin{tkzexample}[latex=7cm]
+\begin{tikzpicture}[scale=.75]
+  \tkzDefPoints{0/3/A, 1/-3/B}
+  \tkzDrawPoints(A,B)
+  \tkzDrawSegment[dim={\(l_0\),1cm,right=2mm}, 
+    dim style/.append style={red, 
+    dash pattern={on 2pt off 2pt}}](A,B)
+  \tkzDrawSegment[dim={\(l_1\),2cm,right=2mm}, 
+    dim style/.append style={blue}](A,B)
+  \begin{scope}[ dim style/.style={orange},
+      dim fence style/.style={dashed}]
+    \tkzDrawSegment[dim={\(l_2\),3cm,right=2mm}](A,B)  
+    \tkzDrawSegment[dim={\(l_3\),-2cm,right=2mm}](A,B)   
+  \end{scope}  
+  \tkzLabelPoints[left](A,B)
+\end{tikzpicture}
+\end{tkzexample}
+
+\subsubsection{用选项 \tkzname{dim} 添加尺寸标注：第一部分} 
+\begin{tkzexample}[latex=7cm,small]
+\begin{tikzpicture}[scale=2]
+\pgfkeys{/pgf/number format/.cd,fixed,precision=2}
+\tkzDefPoint(0,0){A}
+\tkzDefPoint(3.07,0){B}
+\tkzInterCC[R](A,2.37)(B,1.82)
+\tkzGetPoints{C}{C'}
+\tkzDefCircle[in](A,B,C) \tkzGetPoints{G}{g}
+\tkzDrawCircle(G,g)
+\tkzDrawPolygon(A,B,C)
+\tkzDrawPoints(A,B,C)
+\tkzCalcLength(A,B)\tkzGetLength{ABl}
+\tkzCalcLength(B,C)\tkzGetLength{BCl}
+\tkzCalcLength(A,C)\tkzGetLength{ACl}
+\begin{scope}[dim style/.style={dashed,sloped,teal}]
+  \tkzDrawSegment[dim={\pgfmathprintnumber\BCl,6pt,%
+                                      text=red}](C,B)
+  \tkzDrawSegment[dim={\pgfmathprintnumber\ACl,%
+                                        6pt,}](A,C)
+  \tkzDrawSegment[dim={\pgfmathprintnumber\ABl,%
+                                      -6pt,}](A,B)
+\end{scope}
+\tkzLabelPoints(A,B) \tkzLabelPoints[above](C)
+\end{tikzpicture}
+\end{tkzexample}
+
+\subsubsection{用选项 \tkzname{dim} 添加尺寸标注：第二部分} 
+\begin{tkzexample}[latex=6cm,small]
+\begin{tikzpicture}[scale=.5]
+  \tkzDefPoints{0/0/O,-2/0/A,2/0/B,
+                -2/4/C,2/4/D,2/-4/E,-2/-4/F}
+  \tkzDrawPolygon(C,...,F)
+  \tkzDrawSegments(A,B)
+  \tkzDrawPoints(A,...,F,O)
+  \tkzLabelPoints[below left](A,...,F,O)
+  \tkzDrawSegment[dim={ $\sqrt{5}$,2cm,}](C,E)
+  \tkzDrawSegment[dim={ $\frac{\sqrt{5}}{2}$,1cm,}](O,E)
+  \tkzDrawSegment[dim={ $2$,2cm,left=8pt}](F,C)
+  \tkzDrawSegment[dim={ $1$,1cm,left=8pt}](F,A)
+\end{tikzpicture}
+\end{tkzexample}
+
+\subsection{绘制线段 \tkzcname{tkzDrawSegments}} 
+如果选项相同，可以用一个宏命令绘制多条线段。
+
+\begin{NewMacroBox}{tkzDrawSegments}{\oarg{local options}\parg{pt1,pt2 pt3,pt4 ...}}%
+参数是由点对组成的列表。绘图时可使用 \TIKZ\ 样式。
+\end{NewMacroBox}
+
+\begin{tkzexample}[latex=6cm,small]
+\begin{tikzpicture}
+  \tkzInit[xmin=-1,xmax=3,ymin=-1,ymax=2]
+  \tkzClip[space=1]
+  \tkzDefPoint(0,0){A}
+  \tkzDefPoint(2,1){B} 
+  \tkzDefPoint(3,0){C} 
+  \tkzDrawSegments(A,B B,C)
+  \tkzDrawPoints(A,B,C)    
+  \tkzLabelPoints(A,C) 
+  \tkzLabelPoints[above](B)  
+\end{tikzpicture}
+\end{tkzexample}
+
+\subsubsection{在线段上放置箭头}
+\begin{tkzexample}[latex=6cm,small]
+\begin{tikzpicture}
+\tkzSetUpStyle[postaction=decorate,
+    decoration={markings, 
+    mark=at position .5 with {\arrow[thick]{#1}}
+      }]{myarrow}
+  \tkzDefPoint(0,0){A}
+  \tkzDefPoint(4,-4){B}
+  \tkzDrawSegments[myarrow=stealth](A,B)
+  \tkzDrawPoints(A,B) 
+\end{tikzpicture}
+\end{tkzexample}
+
+\subsection{绘制三角形的边}
+
+\subsubsection{如何绘制高} 
+\begin{tkzexample}[latex=7cm,small]
+  \begin{tikzpicture}[rotate=-90]
+  \tkzDefPoint(0,1){A}
+  \tkzDefPoint(2,4){C}
+  \tkzDefPointWith[orthogonal normed,K=7](C,A)
+  \tkzGetPoint{B}
+  \tkzDefSpcTriangle[orthic,name=H](A,B,C){a,b,c}
+  \tkzDrawLine[dashed,color=magenta](C,Hc)
+  \tkzDrawSegment[green!60!black](A,C)
+  \tkzDrawSegment[green!60!black](C,B)
+  \tkzDrawSegment[green!60!black](B,A)
+  \tkzLabelPoint[left](A){$A$}
+  \tkzLabelPoint[right](B){$B$}
+  \tkzLabelPoint[above](C){$C$}
+  \tkzLabelPoint[left](Hc){$Hc$}
+  \tkzLabelSegment[auto](B,A){$c$}
+  \tkzLabelSegment[auto,swap](B,C){$a$}
+  \tkzLabelSegment[auto,swap](C,A){$b$}
+  \tkzMarkAngle[size=1,color=cyan,mark=|](C,B,A)
+  \tkzMarkAngle[size=1,color=cyan,mark=|](A,C,Hc)
+  \tkzMarkAngle[size=0.75,
+                color=orange,mark=||](Hc,C,B)
+  \tkzMarkAngle[size=0.75,
+                color=orange,mark=||](B,A,C)
+  \tkzMarkRightAngle(A,C,B)
+  \tkzMarkRightAngle(B,Hc,C)
+  \end{tikzpicture} 
+\end{tkzexample}
+
+\subsection{绘制多边形} 
+ \begin{NewMacroBox}{tkzDrawPolygon}{\oarg{local options}\parg{points list}}%
+只需给出点列表：宏命令用所给的 \TIKZ\ 选项绘制多边形。你可以用 $(A,...,E)$ 代替 $(A,B,C,D,E)$，用 $(P_1,P...,P_5)$ 代替 $(P_1,P_2,P_3,P_4,P_5)$。
+
+\begin{tabular}{lll}%
+\toprule
+参数             & 示例 & 说明                         \\
+\midrule
+\TAline{\parg{pt1,pt2,pt3,...}}{|\BS tkzDrawPolygon[gray,dashed](A,B,C)|}{绘制三角形}
+\end{tabular}
+
+\medskip
+\begin{tabular}{lll}%
+\toprule
+选项             & 默认值 & 示例                         \\
+\midrule
+\TOline{Options TikZ}{...}{|\BS tkzDrawPolygon[red,line width=2pt](A,B,C)|}
+ \end{tabular} 
+\end{NewMacroBox}
+
+\subsubsection{\tkzcname{tkzDrawPolygon}}
+
+\begin{tkzexample}[latex=7cm, small]  
+\begin{tikzpicture} [rotate=18,scale=1]
+ \tkzDefPoints{0/0/A,2.25/0.2/B,2.5/2.75/C,-0.75/2/D}
+ \tkzDrawPolygon(A,B,C,D)
+ \tkzDrawSegments[style=dashed](A,C B,D) 
+\end{tikzpicture}
+\end{tkzexample}
+
+\subsubsection{选项 \tkzname{two angles}}
+\begin{tkzexample}[latex=6 cm,small]
+\begin{tikzpicture}
+\tkzDefPoint(0,0){A} 
+\tkzDefPoint(6,0){B} 
+\tkzDefTriangle[two angles = 50 and 70](A,B) \tkzGetPoint{C}
+\tkzDrawPolygon(A,B,C)
+\tkzLabelAngle[pos=1.4](B,A,C){$50^\circ$}
+\tkzLabelAngle[pos=0.8](C,B,A){$70^\circ$}
+\end{tikzpicture}
+\end{tkzexample}
+
+\subsubsection{直线样式}
+\begin{tkzexample}[latex=8 cm,small]
+\begin{tikzpicture}[scale=.6]
+\tkzSetUpLine[line width=5mm,color=teal]
+\tkzDefPoint(0,0){O}
+\foreach \i in {0,...,5}{%
+ \tkzDefPoint({30+60*\i}:4){p\i}}
+\tkzDefMidPoint(p1,p3) \tkzGetPoint{m1}
+\tkzDefMidPoint(p3,p5) \tkzGetPoint{m3}
+\tkzDefMidPoint(p5,p1) \tkzGetPoint{m5}
+\tkzDrawPolygon[line join=round](p1,p3,p5)
+\tkzDrawPolygon[teal!80,
+line join=round](p0,p2,p4)
+\tkzDrawSegments(m1,p3 m3,p5 m5,p1)
+\tkzDefCircle[R](O,4.8)\tkzGetPoint{o}
+\tkzDrawCircle[teal](O,o)
+\end{tikzpicture}
+\end{tkzexample}
+
+\subsection{绘制折线} 
+ \begin{NewMacroBox}{tkzDrawPolySeg}{\oarg{local options}\parg{points list}}%
+只需给出点列表：宏命令用所给的 \TIKZ\ 选项绘制折线。
+
+\begin{tabular}{lll}%
+\toprule
+参数             & 示例 & 说明                         \\
+\midrule
+\TAline{\parg{pt1,pt2,pt3,...}}{|\BS tkzDrawPolySeg[gray,dashed](A,B,C)|}{绘制三角形}
+\end{tabular}
+
+\medskip
+\begin{tabular}{lll}%
+\toprule
+选项             & 默认值 & 示例                         \\
+\midrule
+\TOline{Options TikZ}{...}{|\BS tkzDrawPolySeg[red,line width=2pt](A,B,C)|}
+ \end{tabular} 
+\end{NewMacroBox}
+
+\subsubsection{折线}
+
+\begin{tkzexample}[latex=7cm, small]  
+\begin{tikzpicture}
+ \tkzDefPoints{0/0/A,6/0/B,3/4/C,2/2/D}          
+ \tkzDrawPolySeg(A,...,D)
+ \tkzDrawPoints(A,...,D)
+\end{tikzpicture}
+\end{tkzexample}
+
+\subsubsection{在半圆内作两个正方形。}
+一道算额（Sangaku）！问题是证明可以在半圆内作两个正方形，并根据半径确定它们的边长。
+
+\begin{tkzexample}[latex=7 cm,small]
+\begin{tikzpicture}[scale=.75] 
+  \tkzDefPoints{0/0/A,8/0/B,4/0/I}
+  \tkzDefSquare(A,B)    \tkzGetPoints{C}{D} 
+  \tkzInterLC(I,C)(I,B) \tkzGetPoints{E'}{E} 
+  \tkzInterLC(I,D)(I,B) \tkzGetPoints{F'}{F} 
+  \tkzDefPointsBy[projection=onto A--B](E,F){H,G} 
+  \tkzDefPointsBy[symmetry = center H](I){J} 
+  \tkzDefSquare(H,J)     \tkzGetPoints{K}{L} 
+  \tkzDrawSector(I,B)(A) 
+  \tkzDrawPolySeg(H,E,F,G) 
+  \tkzDrawPolySeg(J,K,L) 
+  \tkzDrawPoints(E,G,H,F,J,K,L)
+\end{tikzpicture}
+\end{tkzexample}
+
+\subsubsection{折线：索引记法}
+
+\begin{tkzexample}[latex=7cm, small]  
+\begin{tikzpicture}
+\foreach \pt in {1,2,...,8} {%
+\tkzDefPoint(\pt*20:3){P_\pt}}     
+\tkzDrawPolySeg(P_1,P_...,P_8)
+\tkzDrawPoints(P_1,P_...,P_8)
+\end{tikzpicture}
+\end{tkzexample}
+%<---------------------------------------------------------------------------->
+%    CIRCLE
+%<---------------------------------------------------------------------------->
+\section{用 \tkzcname{tkzDrawCircle} 绘制圆}
+
+\subsection{绘制一个圆}
+\begin{NewMacroBox}{tkzDrawCircle}{\oarg{local options}\parg{A,B}}%
+\tkzHandBomb\ 注意只需两个点即可确定半径。选项 \tkzname{R} 允许你直接以度量值给出半径。
+
+\medskip
+\begin{tabular}{lll}%
+\toprule
+参数           & 示例 & 说明                         \\
+\midrule
+\TAline{\parg{pt1,pt2}}{\parg{A,B}} {以 A 为圆心过 B}
+ \bottomrule
+\end{tabular}   
+
+\medskip
+当然，绘图时你可以添加所有 \TIKZ\ 样式。
+\end{NewMacroBox}
+ 
+ \subsubsection{圆与样式：绘制圆并给圆盘上色}
+ 我们将看到，可以在绘制圆的同时给圆盘上色。
+ 
+\begin{tkzexample}[latex=7cm,small]
+\begin{tikzpicture}
+  \tkzDefPoint(0,0){O} 
+  \tkzDefPoint(3,0){A}
+ % circle with center O and passing through A
+  \tkzDrawCircle(O,A) 
+ % diameter circle $[OA]$
+ \tkzDefCircle[diameter](O,A) \tkzGetPoint{I}
+ \tkzDrawCircle[new,fill=orange!10,opacity=.5](I,A)
+ % circle with center O and radius = exp(1) cm
+  \edef\rayon{\fpeval{0.25*exp(1)}}
+  \tkzDefCircle[R](O,\rayon) \tkzGetPoint{o}
+   \tkzDrawCircle[color=orange](O,o) 
+\end{tikzpicture} 
+\end{tkzexample}  
+
+\subsection{绘制多个圆}  
+\begin{NewMacroBox}{tkzDrawCircles}{\oarg{local options}\parg{A,B C,D \dots}}%
+\tkzHandBomb\ 注意参数是点对列表。可绘制的圆与前一个宏命令相同。选项 \tkzname{R} 允许你直接以度量值给出半径。
+
+\medskip
+\begin{tabular}{lll}%
+\toprule
+参数           & 示例 & 说明                         \\
+\midrule
+\TAline{\parg{pt1,pt2 pt3,pt4 ...}}{\parg{A,B C,D}} {两点列表}
+\bottomrule
+\end{tabular}   
+
+\medskip
+\begin{tabular}{lll}%
+\toprule
+选项             & 默认值 & 定义                         \\ 
+\midrule
+\TOline{through}{through}{由两点确定半径的圆}
+ \bottomrule
+\end{tabular}
+
+\medskip
+你无需使用默认选项 \tkzname{through}。
+当然，绘图时你可以添加所有 \TIKZ\ 样式。
+\end{NewMacroBox}
+
+ \subsubsection{由三角形确定的圆。} 
+ 
+\begin{tkzexample}[latex=9cm,small]
+\begin{tikzpicture}
+  \tkzDefPoints{0/0/A,2/0/B,3/2/C}
+  \tkzDrawPolygon(A,B,C)
+  \tkzDrawCircles(A,B B,C C,A)
+  \tkzDrawPoints(A,B,C)
+  \tkzLabelPoints(A,B,C) 
+\end{tikzpicture} 
+\end{tkzexample}
+
+\subsubsection{同心圆。} 
+ 
+\begin{tkzexample}[latex=7cm,small]
+\begin{tikzpicture}
+   \tkzDefPoints{0/0/A,1/0/a,2/0/b,3/0/c}
+   \tkzDrawCircles(A,a A,b A,c)
+   \tkzDrawPoint(A)
+   \tkzLabelPoints(A)
+\end{tikzpicture}
+\end{tkzexample}
+
+\subsubsection{旁切圆。} 
+
+\begin{tkzexample}[latex=8cm,small] 
+\begin{tikzpicture}[scale=1] 
+\tkzDefPoints{0/0/A,4/0/B,1/2.5/C}
+\tkzDrawPolygon(A,B,C)
+\tkzDefCircle[ex](B,C,A) 
+\tkzGetPoint{J_c} \tkzGetSecondPoint{T_c}
+\tkzDrawCircle(J_c,T_c)
+\tkzDrawLines[add=0 and 1](C,A C,B)
+\tkzDrawSegment(J_c,T_c)
+\tkzMarkRightAngle(J_c,T_c,B)
+\tkzDrawPoints(A,B,C,J_c,T_c)
+\end{tikzpicture}
+\end{tkzexample}
+ 
+\subsubsection{心形线}  
+基于 O. Reboux 的构想，由 D. Rodriguez 用 pst-eucl（一个 PSTricks 模块）实现。
+
+ 它的名字源自希腊语 \textit{kardia}（心脏），因其形状而得名；由 Johan Castillon 命名（Wikipedia）。     
+ 
+\begin{tkzexample}[latex=7cm,small]
+\begin{tikzpicture}[scale=.5]
+  \tkzDefPoint(0,0){O} 
+  \tkzDefPoint(2,0){A}
+  \foreach \ang in {5,10,...,360}{%
+     \tkzDefPoint(\ang:2){M}
+     \tkzDrawCircle(M,A) 
+   }  
+\end{tikzpicture} 
+\end{tkzexample}
+
+\newpage
+
+\subsection{绘制半圆}
+\begin{NewMacroBox}{tkzDrawSemiCircle}{\oarg{local options}\parg{O,A}}%
+
+\medskip
+\begin{tabular}{lll}%
+\toprule
+参数           & 示例 & 说明                         \\
+\midrule
+\TAline{\parg{pt1,pt2}}{\parg{O,A}} {$OA$ 为半径}
+\bottomrule
+\end{tabular} 
+    
+$O$ 为圆心，$A$ 为半圆的一个端点。
+\end{NewMacroBox}  
+
+\subsubsection{\tkzcname{tkzDrawSemiCircle} 的用法}   
+
+\begin{tkzexample}[latex=7cm,small]
+\begin{tikzpicture}
+   \tkzDefPoint(0,0){A} \tkzDefPoint(6,0){B}
+   \tkzDefMidPoint(A,B)  \tkzGetPoint{O}
+   \tkzDrawSemiCircle[blue](O,B)
+   \tkzDrawSemiCircle[red](O,A)
+   \tkzDrawPoints(O,A,B)
+   \tkzLabelPoints[below right](O,A,B)
+ \end{tikzpicture}
+\end{tkzexample}
+
+\subsection{绘制多个半圆}
+
+\begin{NewMacroBox}{tkzDrawSemiCircles}{\oarg{local options}\parg{A,B C,D \dots}}%
+
+\medskip
+\begin{tabular}{lll}%
+\toprule
+参数           & 示例 & 说明                         \\
+\midrule
+\TAline{\parg{pt1,pt2 pt3,pt4 ...}}{\parg{A,B C,D}} {两点列表}
+\bottomrule
+\end{tabular} 
+    
+\end{NewMacroBox}  
+
+\subsubsection{\tkzcname{tkzDrawSemiCircles} 的用法：黄金 arbelos}  
+
+\begin{tkzexample}[vbox,small]
+\begin{tikzpicture}[scale=.75]
+\tkzDefPoints{0/0/A,10/0/B}
+\tkzDefGoldenRatio(A,B) \tkzGetPoint{C}
+\tkzDefMidPoint(A,B)                     \tkzGetPoint{O_0}
+\tkzDefMidPoint(A,C)                     \tkzGetPoint{O_1}
+\tkzDefMidPoint(C,B)                     \tkzGetPoint{O_2}
+\tkzLabelPoints(A,B,C)
+\tkzDrawSegment(A,B)
+\tkzDrawPoints(A,B,C)
+\begin{scope}[local bounding box = graph]
+  \tkzDrawSemiCircles[color=black](O_0,B)
+\end{scope}
+\useasboundingbox (graph.south west) rectangle (graph.north east);
+\tkzClipCircle[out](O_1,C)\tkzClipCircle[out](O_2,B)
+\tkzDrawSemiCircles[draw=none,fill=teal!15](O_0,B)
+\tkzDrawSemiCircles[color=black](O_1,C O_2,B)
+\end{tikzpicture}
+\end{tkzexample}
+
+%<---------------------------------------------------------------------------->
+%    Ellipse
+%<---------------------------------------------------------------------------->
+\section{用 \tkzcname{tkzDrawEllipse} 绘制椭圆}
+
+\subsection{绘制椭圆}
+\begin{NewMacroBox}{tkzDrawEllipse}{\oarg{local options}\parg{C,a,b,An}}%
+
+
+\medskip
+\begin{tabular}{lll}%
+\toprule
+参数           & 示例 & 说明                         \\
+\midrule
+\TAline{\parg{C,a,b,An}}{\parg{C,4,2,45}} {C 为圆心；4 和 2 为半轴长} \\
+ & & 45 为长轴斜率  \\
+ \bottomrule
+\end{tabular}  
+ 
+\medskip
+当然，绘图时你可以添加所有 \TIKZ\ 样式。
+\end{NewMacroBox}
+
+\subsubsection{绘制椭圆示例}
+\begin{tkzexample}[latex=6cm,small]
+   \begin{tikzpicture}[scale=.75]
+      \tkzDefPoint(0,4){C}
+      \tkzDrawEllipse[blue](C,4,2,45)
+      \tkzLabelPoints(C)
+   \end{tikzpicture}
+\end{tkzexample}
+
+%<---------------------------------------------------------------------------->
+%    ARC
+%<---------------------------------------------------------------------------->
+\section{绘制圆弧} 
+\subsection{宏命令 \tkzcname{tkzDrawArc}}
+\begin{NewMacroBox}{tkzDrawArc}{\oarg{local options}\parg{O,\dots}\parg{\dots}}%
+本宏命令绘制以 $O$ 为圆心的圆弧；参数取决于所选项。我们需要一个起点和一个终点。可以直接给起点（最简单），也可以给圆弧半径；后一种情况需要两个角度。角度可以直接给出，也可以由点与圆心共同确定。角度以度为单位。
+
+\medskip
+\begin{tabular}{lll}%
+\toprule
+选项             & 默认值 & 定义                        \\ 
+\midrule
+\TOline{towards}{towards}{$O$ 为圆心，弧从 $A$ 到 $(OB)$} 
+\TOline{rotate} {towards}{弧从 $A$ 开始，角度决定其长度} 
+\TOline{R}{towards}{给出半径和两个角度} 
+\TOline{R with nodes}{towards}{给出半径和两个点}
+\TOline{angles}{towards}{给出半径和两个点}
+\TOline{delta}{0}{两侧各添加的角度 }
+\TOline{reverse}{false}{反转弧的路径，便于反转箭头} 
+\bottomrule
+\end{tabular}
+
+\medskip
+当然，绘图时你可以添加所有 \TIKZ\ 样式。
+
+\medskip
+
+\begin{tabular}{lll}%
+\toprule
+选项             & 参数 & 示例                         \\ 
+\midrule
+\TOline{towards}{\parg{pt,pt}\parg{pt}}{\tkzcname{tkzDrawArc[delta=10](O,A)(B)}} 
+\TOline{rotate} {\parg{pt,pt}\parg{an}}{\tkzcname{tkzDrawArc[rotate,color=red](O,A)(90)}}
+\TOline{R}{\parg{pt,$r$}\parg{an,an}}{\tkzcname{tkzDrawArc[R](O,2)(30,90)}}
+\TOline{R with nodes}{\parg{pt,$r$}\parg{pt,pt}}{\tkzcname{tkzDrawArc[R with nodes](O,2)(A,B)}}
+\TOline{angles}{\parg{pt,pt}\parg{an,an}}{\tkzcname{tkzDrawArc[angles](O,A)(0,90)}}
+\end{tabular}
+\end{NewMacroBox}
+
+下面是几个示例： 
+
+\subsubsection{选项 \tkzname{towards}：从 $A$ 到 $B$ 的弧}
+你不需要写 \tkzname{towards}。在第一个示例中，弧从 $A$ 开始到 $B$ 结束。从 $B$ 到 $A$ 的弧不同：弧总是按逆时针绘制。
+\begin{tkzexample}[latex=6cm,small]
+\begin{tikzpicture}[scale=.75]
+  \tkzDefPoint(0,0){O}
+  \tkzDefPoint(2,-1){A}
+  \tkzDefPointBy[rotation= center O angle 90](A)
+  \tkzGetPoint{B}
+  \tkzDrawArc[color=orange,<->](O,A)(B) 
+  \tkzDrawArc(O,B)(A)
+  \tkzDrawLines[add = 0 and .5](O,A O,B)
+  \tkzDrawPoints(O,A,B)
+  \tkzLabelPoints[below](O,A,B)  
+\end{tikzpicture}
+\end{tkzexample}
+
+\subsubsection{选项 \tkzname{towards}：终止于直线上的弧}
+在这个示例中，弧从 $A$ 开始但终止于直线 $(OB)$。
+ 
+\begin{tkzexample}[latex=6cm,small]
+\begin{tikzpicture}[scale=0.75] 
+  \tkzDefPoint(0,0){O}
+  \tkzDefPoint(2,-1){A}
+  \tkzDefPoint(1,1){B} 
+  \tkzDrawArc[color=blue,->](O,A)(B)
+  \tkzDrawArc[color=gray](O,B)(A)
+  \tkzDrawArc(O,B)(A)
+  \tkzDrawLines[add = 0 and .5](O,A O,B) 
+  \tkzDrawPoints(O,A,B)
+  \tkzLabelPoints[below](O,A,B)  
+\end{tikzpicture}
+\end{tkzexample}
+
+\subsubsection{选项 \tkzname{rotate}}
+\begin{tkzexample}[latex=6cm,small] 
+\begin{tikzpicture}[scale=0.75] 
+  \tkzDefPoint(0,0){O}
+  \tkzDefPoint(2,-2){A}
+  \tkzDefPoint(60:2){B}
+  \tkzDrawLines[add = 0 and .5](O,A O,B)
+  \tkzDrawArc[rotate,color=red](O,A)(180)
+  \tkzDrawPoints(O,A,B)
+  \tkzLabelPoints[below](O,A,B) 
+\end{tikzpicture}
+\end{tkzexample} 
+
+\subsubsection{选项 \tkzname{R}} 
+\begin{tkzexample}[latex=6cm,small]   
+\begin{tikzpicture}[scale=0.75] 
+  \tkzDefPoints{0/0/O}
+  \tkzSetUpCompass[<->]
+  \tkzDrawArc[R,color=teal,double](O,3)(270,360)
+  \tkzDrawArc[R,color=orange,double](O,2)(0,270) 
+  \tkzDrawPoint(O)
+  \tkzLabelPoint[below](O){$O$}  
+\end{tikzpicture} 
+\end{tkzexample}
+
+\subsubsection{选项 \tkzname{R with nodes}} 
+\begin{tkzexample}[latex=6cm,small]
+\begin{tikzpicture}[scale=0.75] 
+  \tkzDefPoint(0,0){O}
+  \tkzDefPoint(2,-1){A}
+  \tkzDefPoint(1,1){B}
+  \tkzCalcLength(B,A)\tkzGetLength{radius}
+  \tkzDrawArc[R with nodes](B,\radius)(A,O)
+\end{tikzpicture}
+\end{tkzexample}
+
+\subsubsection{选项 \tkzname{delta}}
+与 \tkzcname{tkzCompass} 一样，此选项在两侧延长弧；\tkzname{delta} 是以度为单位的角度。也可以用 \tkzcname{tkzSetUpArc} 为所有弧设置该值。
+
+\begin{tkzexample}[latex=7cm,small] 
+\begin{tikzpicture} 
+ \tkzDefPoint(0,0){A}
+ \tkzDefPoint(3,0){B}
+ \tkzDefPointBy[rotation= center A angle 60](B)
+ \tkzGetPoint{C} 
+ \begin{scope}% style only local
+   \tkzDefPointBy[symmetry= center C](A)
+   \tkzGetPoint{D} 
+   \tkzDrawSegments(A,B A,D)
+   \tkzDrawLine(B,D)
+   \tkzSetUpCompass[color=orange]
+   \tkzDrawArc[orange,delta=10](A,B)(C)
+   \tkzDrawArc[orange,delta=10](B,C)(A)
+   \tkzDrawArc[orange,delta=10](C,D)(D)
+ \end{scope}
+
+ \tkzDrawPoints(A,B,C,D)
+ \tkzLabelPoints[below right](A,B,C,D)
+ \tkzMarkRightAngle(D,B,A)
+\end{tikzpicture}
+\end{tkzexample} 
+
+\subsubsection{选项 \tkzname{angles}：示例 1}
+
+\begin{tkzexample}[latex=6cm,small]
+\begin{tikzpicture}[scale=.75]
+  \tkzDefPoint(0,0){A}
+  \tkzDefPoint(5,0){B}  
+  \tkzDefPoint(2.5,0){O} 
+  \tkzDefPointBy[rotation=center O angle 60](B)
+  \tkzGetPoint{D}
+  \tkzDefPointBy[symmetry=center D](O)
+  \tkzGetPoint{E}
+  \begin{scope}
+    \tkzDrawArc[angles](O,B)(0,180)
+    \tkzDrawArc[angles,](B,O)(100,180)  
+    \tkzCompass[delta=20](D,E) 
+    \tkzDrawLines(A,B O,E B,E)
+    \tkzDrawPoints(A,B,O,D,E)
+  \end{scope}
+  \tkzLabelPoints[below right](A,B,O,D,E)
+  \tkzMarkRightAngle(O,B,E) 
+\end{tikzpicture} 
+\end{tkzexample}
+
+\subsubsection{选项 \tkzname{angles}：示例 2}
+
+\begin{tkzexample}[latex=7cm,small]
+  \begin{tikzpicture}
+   \tkzDefPoint(0,0){O}
+   \tkzDefPoint(5,0){I} 
+   \tkzDefPoint(0,5){J}
+   \tkzInterCC(O,I)(I,O)\tkzGetPoints{B}{C}  
+   \tkzInterCC(O,I)(J,O)\tkzGetPoints{D}{A}
+   \tkzInterCC(I,O)(J,O)\tkzGetPoints{L}{K}
+   \tkzDrawArc[angles](O,I)(0,90)
+   \tkzDrawArc[angles,color=gray,
+               style=dashed](I,O)(90,180)
+   \tkzDrawArc[angles,color=gray,
+               style=dashed](J,O)(-90,0)
+   \tkzDrawPoints(A,B,K)
+   \foreach \point in {I,A,B,J,K}{%
+               \tkzDrawSegment(O,\point)} 
+  \end{tikzpicture} 
+\end{tkzexample}
+
+\subsubsection{选项 \tkzname{reverse}：反转箭头}
+
+\begin{tkzexample}[latex=6cm,small]
+  \begin{tikzpicture}
+    \tkzDefPoints{0/0/O,3/0/U}
+    \tkzDefPoint(10:1){A}
+    \tkzDefPoint(90:1){B}
+    \tkzLabelPoints(A,B)
+    \tkzDrawArc[reverse,tkz arrow={Stealth}](O,A)(B)
+    \tkzDrawPoints(A,B,O)
+  \end{tikzpicture}
+\end{tkzexample}
+%<---------------------------------------------------------------------------->
+%    SECTOR
+%<---------------------------------------------------------------------------->
+\section{绘制扇形}
+\subsection{\tkzcname{tkzDrawSector}} 
+\tkzHandBomb\ 注意参数取决于所选项。
+\begin{NewMacroBox}{tkzDrawSector}{\oarg{local options}\parg{O,\dots}\parg{\dots}}%
+\begin{tabular}{SlSlSl}%
+选项             & 默认值 & 定义                         \\ 
+\midrule
+\TOline{towards}{towards}{$O$ 为圆心，弧从 $A$ 到 $(OB)$}
+\TOline{rotate} {towards}{弧从 $A$ 开始，角度决定其长度 } 
+\TOline{R}{towards}{给出半径和两个角度}
+\TOline{R with nodes}{towards}{给出半径和两个点}
+
+\end{tabular} 
+
+\medskip
+\emph{当然，绘图时你可以添加所有 \TIKZ\ 样式。}
+
+\begin{tabular}{lll}%
+
+选项             & 参数 & 示例                         \\ 
+\midrule
+\TOline{towards}{\parg{pt,pt}\parg{pt}}{\tkzcname{tkzDrawSector(O,A)(B)}}
+\TOline{rotate} {\parg{pt,pt}\parg{an}}{\tkzcname{tkzDrawSector[rotate,color=red](O,A)(90)}} 
+\TOline{R}{\parg{pt,$r$}\parg{an,an}}{\tkzcname{tkzDrawSector[R,color=teal](O,2)(30,90)}}
+\TOline{R with nodes}{\parg{pt,$r$}\parg{pt,pt}}{\tkzcname{tkzDrawSector[R with nodes](O,2)(A,B)}}
+\end{tabular}
+\end{NewMacroBox}
+
+下面是几个示例： 
+
+\subsubsection{\tkzcname{tkzDrawSector} 与 \tkzname{towards}} 
+你不需要写 \tkzname{towards}。你可以使用 \tkzname{fill} 作为选项。
+
+\begin{tkzexample}[latex=7cm,small]
+\begin{tikzpicture}
+  \tkzDefPoint(0,0){O}
+  \tkzDefPoint(-30:1){A} 
+  \tkzDefPointBy[rotation = center O angle -60](A) 
+  \tkzDrawSector[teal](O,A)(tkzPointResult)
+ \begin{scope}[shift={(-60:1)}]
+  \tkzDefPoint(0,0){O}
+  \tkzDefPoint(-30:1){A} 
+  \tkzDefPointBy[rotation = center O angle -60](A) 
+  \tkzDrawSector[red](O,tkzPointResult)(A)
+  \end{scope}
+\end{tikzpicture}   
+\end{tkzexample}
+
+\subsubsection{\tkzcname{tkzDrawSector} 与 \tkzname{rotate}}  
+\begin{tkzexample}[latex=7cm,small]  
+\begin{tikzpicture}[scale=2]
+ \tkzDefPoints{0/0/O,2/2/A,2/1/B}
+ \tkzDrawSector[rotate,orange](O,A)(20)
+ \tkzDrawSector[rotate,teal](O,B)(-20)
+\end{tikzpicture} 
+\end{tkzexample}  
+
+\subsubsection{\tkzcname{tkzDrawSector} 与 \tkzname{R}}  
+\begin{tkzexample}[latex=7cm,small]
+\begin{tikzpicture}[scale=1.25]
+ \tkzDefPoint(0,0){O}
+ \tkzDefPoint(2,-1){A}
+ \tkzDrawSector[R](O,1)(30,90)
+ \tkzDrawSector[R](O,1)(90,180)
+ \tkzDrawSector[R](O,1)(180,270)
+ \tkzDrawSector[R](O,1)(270,360) 
+\end{tikzpicture}
+\end{tkzexample}
+
+\subsubsection{\tkzcname{tkzDrawSector} 与 \tkzname{R with nodes}：两个扇形}
+在这个示例中我使用了选项 \tkzname{fill}，但 \tkzcname{tkzFillSector} 同样可行。
+\begin{tkzexample}[latex=7cm,small]
+\begin{tikzpicture}[scale=1.25]
+ \tkzDefPoint(0,0){O}
+ \tkzDefPoint(4,-2){A}
+ \tkzDefPoint(4,1){B}
+ \tkzDefPoint(3,3){C}
+ \tkzDrawSector[R with nodes,%
+                fill=teal!20](O,1)(B,C)
+ \tkzDrawSector[R with nodes,%
+                fill=orange!20](O,1.25)(A,B)  
+\tkzDrawSegments(O,A O,B O,C)
+\tkzDrawPoints(O,A,B,C) 
+\tkzLabelPoints(A,B,C) 
+\tkzLabelPoints[left](O) 
+\end{tikzpicture}
+\end{tkzexample}
+
+\subsubsection{\tkzcname{tkzDrawSector} 与 \tkzname{R with nodes}：六边形中的扇形}
+\begin{tkzexample}[latex=6cm,small]
+\begin{tikzpicture} [scale=.4]
+ \tkzDefPoints{-1/-2/A,1/3/B}
+ \tkzDefRegPolygon[side,sides=6](A,B) 
+ \tkzGetPoint{O} 
+ \tkzDrawPolygon[fill=black!10, draw=blue](P1,P...,P6) 
+ \tkzLabelRegPolygon[sep=1.05](O){A,...,F}
+ \tkzDrawCircle[dashed](O,A)
+ \tkzLabelSegment[above,sloped,
+                  midway](A,B){\(A B = 16m\)}
+ \foreach \i  [count=\xi from 1]  in {2,...,6,1}
+   {%
+    \tkzDefMidPoint(P\xi,P\i)
+    \path (O) to [pos=1.1] node {\xi} (tkzPointResult) ;
+    }
+  \tkzDefRandPointOn[segment = P3--P5] 
+  \tkzGetPoint{S}
+  \tkzDrawSegments[thick,dashed,red](A,S S,B)
+  \tkzDrawPoints(P1,P...,P6,S)
+  \tkzLabelPoint[left,above](S){$S$}
+  \tkzDrawSector[R with nodes,fill=red!20](S,2)(A,B)
+  \tkzLabelAngle[pos=1.5](A,S,B){$\alpha$}
+\end{tikzpicture}
+\end{tkzexample}
+
+\endinput

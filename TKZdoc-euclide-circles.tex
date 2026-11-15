@@ -1,0 +1,319 @@
+\newpage
+\section{圆}
+
+在以下宏命令中，有一个用于绘制圆，这并非什么了不起的功能：你需要圆心以及半径或圆上一点。对我来说最常见的用法是给定圆心并过给定点作圆；这是默认方式，否则使用选项 \tkzname{R}。还有许多特殊的圆，例如三角形的外接圆。
+
+\begin{itemize}
+  \item 第一个宏命令 \tkzcname{tkzDefCircle}，给出某个圆的圆心和半径（单位为 cm），你可以用宏命令 \tkzcname{tkzGetPoint} 和 \tkzcname{tkzGetLength} 获取；
+ 
+ \item 用于绘制圆的宏命令 \tkzcname{tkzDrawCircle}；
+ 
+ \item 用于填充圆盘而不绘制圆的宏命令 \tkzcname{tkzFillCircle}；
+ 
+ \item 有时图形必须包含在一个圆盘内：这就是 \tkzcname{tkzClipCircle} 的作用；
+  
+ \item 最后，\tkzcname{tkzLabelCircle} 用于给圆添加标签。
+\end{itemize} 
+
+\subsection{圆的特征：\tkzcname{tkzDefCircle}}
+ 
+本宏命令给出某些圆的特征（圆心和半径）。
+
+\begin{NewMacroBox}{tkzDefCircle}{\oarg{local options}\parg{A,B} or \parg{A,B,C}}%
+\tkzHandBomb\ 注意参数是由两个或三个点组成的列表。本宏命令既可与 \\ \tkzcname{tkzGetPoints} 配合使用，以获取圆心和圆上一点，也可在不需要保留结果时直接使用 \\ \tkzname{tkzFirstPointResult} 和 \tkzname{tkzSecondPointResult}。\tkzcname{tkzGetLength} 用于获取半径。
+
+\medskip
+\begin{tabular}{lll}%
+\toprule
+参数           & 示例 & 说明                         \\
+\midrule
+\TAline{\parg{pt1,pt2} or \parg{pt1,pt2,pt3}}{\parg{A,B}} {$[AB]$ 为半径，$A$ 为圆心}
+\bottomrule
+\end{tabular} 
+
+\medskip
+\begin{tabular}{lll}%
+\toprule
+选项             & 默认值 & 定义                         \\ 
+\midrule
+\TOline{R}       {circum}{由圆心和半径确定的圆} 
+\TOline{diameter}{circum}{由确定直径的两个点确定的圆}
+\TOline{circum}       {circum}{三角形的外接圆} 
+\TOline{in}           {circum}{三角形的内切圆} 
+\TOline{ex}           {circum}{三角形的旁切圆}
+\TOline{euler or nine}{circum}{欧拉圆（九点圆）}
+\TOline{spieker}      {circum}{斯俾克圆}
+\TOline{apollonius}   {circum}{阿波罗尼斯圆}
+\TOline{orthogonal from} {circum}{[orthogonal from = A ](O,M)}
+\TOline{orthogonal through}{circum}{[orthogonal through = A and B](O,M)} 
+\TOline{K} {1}{阿波罗尼斯圆所使用的系数} 
+ \bottomrule
+\end{tabular}
+
+\medskip
+\emph{在以下示例中，我用一个尚未介绍的宏命令绘制圆。你可能只需要圆心和圆上一点。}
+\end{NewMacroBox} 
+
+\subsubsection{使用选项 \tkzname{R} 的示例}  
+借助宏命令 \tkzcname{tkzGetPoint}，我们得到圆上一点，即其"东极"。
+
+\begin{tkzexample}[latex=7cm,small]  
+\begin{tikzpicture}[scale=1]
+  \tkzDefPoint(3,3){C}
+  \tkzDefPoint(5,5){A}
+   \tkzCalcLength(A,C) \tkzGetLength{rAC}
+  \tkzDefCircle[R](C,\rAC) \tkzGetPoint{B}
+  \tkzDrawCircle(C,B)
+  \tkzDrawSegment(C,A)
+  \tkzLabelSegment[above left](C,A){$2\sqrt{2}$}
+  \tkzDrawPoints(A,B,C)
+  \tkzLabelPoints(A,C,B)
+\end{tikzpicture} 
+\end{tkzexample}     
+
+
+\subsubsection{使用选项 \tkzname{diameter} 的示例}  
+ 这里更简单的做法是直接求 $[AB]$ 的中点。结果即为圆心，如有必要则
+\begin{tkzexample}[latex=7cm,small]  
+\begin{tikzpicture}
+  \tkzDefPoint(0,0){O}
+  \tkzDefPoint(2,2){B}
+  \tkzDefCircle[diameter](O,B) \tkzGetPoint{A}
+  \tkzDrawCircle(A,B)
+  \tkzDrawPoints(O,A,B)
+  \tkzDrawSegment(O,B)
+  \tkzLabelPoints(O,A,B)
+  \tkzLabelSegment[above left](O,A){$\sqrt{2}$}
+  \tkzLabelSegment[above left](A,B){$\sqrt{2}$}
+  \tkzMarkSegments[mark=s||](O,A A,B)
+\end{tikzpicture}
+\end{tkzexample}    
+
+\subsubsection{给定三角形的内切圆与外接圆} 
+ 
+\begin{tkzexample}[latex=7cm,small]  
+\begin{tikzpicture}[scale=.75]
+ \tkzDefPoint(2,2){A}  \tkzDefPoint(5,-2){B}
+ \tkzDefPoint(1,-2){C}
+ \tkzDefCircle[in](A,B,C)
+ \tkzGetPoints{I}{x}   
+ \tkzDefCircle[circum](A,B,C)
+ \tkzGetPoint{K}  
+ \tkzDrawCircles[new](I,x K,A) 
+ \tkzLabelPoints[below](B,C)
+ \tkzLabelPoints[above left](A,I,K)
+ \tkzDrawPolygon(A,B,C)
+ \tkzDrawPoints(A,B,C,I,K) 
+\end{tikzpicture} 
+\end{tkzexample}
+
+\subsubsection{使用选项 \tkzname{ex} 的示例}
+我们希望定义三角形中与顶点 $C$ 相对的旁切圆。
+
+\begin{tkzexample}[latex=8cm,small]
+\begin{tikzpicture}[scale=.75]
+  \tkzDefPoints{ 0/0/A,4/0/B,0.8/4/C}
+  \tkzDefCircle[ex](B,C,A)                   
+  \tkzGetPoints{J_c}{h}
+  \tkzDefPointBy[projection=onto A--C ](J_c)   
+  \tkzGetPoint{X_c}
+  \tkzDefPointBy[projection=onto A--B ](J_c)   
+  \tkzGetPoint{Y_c}     
+  \tkzDefCircle[in](A,B,C)    
+  \tkzGetPoints{I}{y}
+  \tkzDrawCircles[color=lightgray](J_c,h I,y)
+  \tkzDefPointBy[projection=onto A--C ](I)
+  \tkzGetPoint{F}
+  \tkzDefPointBy[projection=onto A--B ](I)
+  \tkzGetPoint{D}
+  \tkzDrawPolygon(A,B,C)
+  \tkzDrawLines[add=0 and 1.5](C,A C,B)
+  \tkzDrawSegments(J_c,X_c I,D  I,F J_c,Y_c)
+  \tkzMarkRightAngles(A,F,I B,D,I J_c,X_c,A
+     J_c,Y_c,B)
+  \tkzDrawPoints(B,C,A,I,D,F,X_c,J_c,Y_c)
+  \tkzLabelPoints(B,A,J_c,I,D)
+  \tkzLabelPoints[above](Y_c)
+  \tkzLabelPoints[left](X_c)
+  \tkzLabelPoints[above left](C)
+  \tkzLabelPoints[left](F)
+\end{tikzpicture}  
+\end{tkzexample}
+
+\subsubsection{给定三角形使用选项 \tkzname{euler} 的欧拉圆}
+ 
+我们验证该圆经过每条边的中点。
+\begin{tkzexample}[latex=6cm,small]  
+\begin{tikzpicture}[scale=.75]
+   \tkzDefPoint(5,3.5){A} 
+   \tkzDefPoint(0,0){B} \tkzDefPoint(7,0){C}
+   \tkzDefCircle[euler](A,B,C)
+   \tkzGetPoints{E}{e}
+   \tkzDefSpcTriangle[medial](A,B,C){M_a,M_b,M_c}
+   \tkzDrawCircle[new](E,e)
+   \tkzDrawPoints(A,B,C,E,M_a,M_b,M_c)    
+   \tkzDrawPolygon(A,B,C)    
+   \tkzLabelPoints[below](B,C)  
+   \tkzLabelPoints[left](A,E)   
+\end{tikzpicture}
+\end{tkzexample}
+
+\subsubsection{给定线段的阿波罗尼斯圆：选项 \tkzname{apollonius}} 
+ 
+\begin{tkzexample}[latex=9cm,small]    
+\begin{tikzpicture}[scale=0.75]
+  \tkzDefPoint(0,0){A} 
+  \tkzDefPoint(4,0){B}
+  \tkzDefCircle[apollonius,K=2](A,B)
+  \tkzGetPoints{K1}{x}
+  \tkzDrawCircle[color = teal!50!black,
+      fill=teal!20,opacity=.4](K1,x)
+  \tkzDefCircle[apollonius,K=3](A,B)
+  \tkzGetPoints{K2}{y}
+  \tkzDrawCircle[color=orange!50,
+      fill=orange!20,opacity=.4](K2,y) 
+  \tkzLabelPoints[below](A,B,K1,K2)
+  \tkzDrawPoints(A,B,K1,K2) 
+  \tkzDrawLine[add=.2 and 1](A,B)  
+\end{tikzpicture}
+\end{tkzexample}  
+
+\subsubsection{给定三角形的旁切圆：选项 \tkzname{ex}}
+ 你也可以获取圆心及其在三角形某条边上的投影。
+ 
+ 可使用 \tkzcname{tkzGetFirstPoint\{Jb\}} 和 \tkzcname{tkzGetSecondPoint\{Tb\}}。
+ 
+\begin{tkzexample}[latex=8cm,small]  
+\begin{tikzpicture}[scale=.6]
+  \tkzDefPoint(0,0){A}
+  \tkzDefPoint(3,0){B}
+  \tkzDefPoint(1,2.5){C}
+  \tkzDefCircle[ex](A,B,C) \tkzGetPoints{I}{i}
+  \tkzDefCircle[ex](C,A,B) \tkzGetPoints{J}{j}
+  \tkzDefCircle[ex](B,C,A) \tkzGetPoints{K}{k}
+  \tkzDefCircle[in](B,C,A) \tkzGetPoints{O}{o}
+  \tkzDrawCircles[new](J,j I,i K,k O,o) 
+  \tkzDrawLines[add=1.5 and 1.5](A,B A,C B,C)
+  \tkzDrawPolygon[purple](I,J,K)
+  \tkzDrawSegments[new](A,K B,J C,I)
+  \tkzDrawPoints(A,B,C)
+  \tkzDrawPoints[new](I,J,K)   
+  \tkzLabelPoints(A,B,C,I,J,K)
+\end{tikzpicture}
+\end{tkzexample}
+ 
+\subsubsection{使用选项 \tkzname{spieker} 的斯俾克圆}   
+中点三角形 $M_aM_bM_c$ 的内切圆即为斯俾克圆：
+
+\begin{tkzexample}[latex=6cm, small]
+\begin{tikzpicture}[scale=1.25]
+  \tkzDefPoints{ 0/0/A,4/0/B,0.8/4/C}
+  \tkzDefSpcTriangle[medial](A,B,C){M_a,M_b,M_c}
+  \tkzDefTriangleCenter[spieker](A,B,C) 
+  \tkzGetPoint{S_p}
+  \tkzDrawPolygon(A,B,C)
+  \tkzDrawPolygon[cyan](M_a,M_b,M_c)
+  \tkzDrawPoints(B,C,A)
+  \tkzDefCircle[spieker](A,B,C)
+  \tkzDrawPoints[new](M_a,M_b,M_c,S_p)
+  \tkzDrawCircle[new](tkzFirstPointResult,%
+    tkzSecondPointResult)
+  \tkzLabelPoints[right](M_a)
+  \tkzLabelPoints[left](M_b)
+  \tkzLabelPoints[below](A,B,M_c,S_p)
+  \tkzLabelPoints[above](C)
+\end{tikzpicture}
+\end{tkzexample}
+ 
+\subsection{旁心的投影}
+
+\begin{NewMacroBox}{tkzDefProjExcenter}{\oarg{local options}\parg{A,B,C}\parg{a,b,c}\marg{X,Y,Z}}%
+每个旁心在三角形 $ABC$ 的三边上各有三个投影。我们可以用一个宏命令获取全部：\\ \tkzcname{tkzDefProjExcenter[name=J](A,B,C)(a,b,c)\{Y,Z,X\}}。
+
+\medskip
+\begin{tabular}{lll}%
+\toprule
+选项             & 默认值 & 定义                        \\
+\midrule
+\TOline{name} {无默认}{用于命名顶点}
+\bottomrule
+\end{tabular}
+
+\begin{tabular}{lll}%
+参数 & 默认值 & 定义 \\
+\midrule
+\TAline{(pt1=$\alpha_1$,pt2=$\alpha_2$,\dots)}{无默认}{每个点都被赋予一个权重}
+\end{tabular}
+
+\medskip
+\end{NewMacroBox}
+
+\subsubsection{\tkzname{旁切圆}}
+
+\begin{tkzexample}[vbox,small]
+\begin{tikzpicture}[scale=.6]
+\tikzset{line style/.append style={line width=.2pt}}
+\tikzset{label style/.append style={color=teal,font=\footnotesize}}
+\tkzDefPoints{0/0/A,5/0/B,0.8/4/C}
+\tkzDefSpcTriangle[excentral,name=J](A,B,C){a,b,c} 
+\tkzDefSpcTriangle[intouch,name=I](A,B,C){a,b,c}
+\tkzDefProjExcenter[name=J](A,B,C)(a,b,c){X,Y,Z}
+\tkzDefCircle[in](A,B,C)   \tkzGetPoint{I} \tkzGetSecondPoint{T}  
+\tkzDrawCircles[red](Ja,Xa Jb,Yb Jc,Zc)
+\tkzDrawCircle(I,T) 
+\tkzDrawPolygon[dashed,color=blue](Ja,Jb,Jc)
+\tkzDrawLines[add=1.5 and 1.5](A,C A,B B,C)
+\tkzDrawSegments(Ja,Xa Ja,Ya Ja,Za
+                 Jb,Xb Jb,Yb Jb,Zb
+                 Jc,Xc Jc,Yc Jc,Zc
+                 I,Ia I,Ib I,Ic)
+\tkzMarkRightAngles[size=.2,fill=gray!15](Ja,Za,B Ja,Xa,B Ja,Ya,C Jb,Yb,C)
+\tkzMarkRightAngles[size=.2,fill=gray!15](Jb,Zb,B Jb,Xb,C Jc,Yc,A Jc,Zc,B)
+\tkzMarkRightAngles[size=.2,fill=gray!15](Jc,Xc,C I,Ia,B I,Ib,C I,Ic,A)
+\tkzDrawSegments[blue](Jc,C Ja,A Jb,B)
+\tkzDrawPoints(A,B,C,Xa,Xb,Xc,Ja,Jb,Jc,Ia,Ib,Ic,Ya,Yb,Yc,Za,Zb,Zc)
+\tkzLabelPoints(A,Ya,Yb,Ja,I)
+\tkzLabelPoints[left](Jb,Ib,Yc)
+\tkzLabelPoints[below](Zb,Ic,Jc,B,Za,Xa)
+\tkzLabelPoints[above right](C,Zc,Yb)
+\tkzLabelPoints[right](Xb,Ia,Xc)
+\end{tikzpicture}
+\end{tkzexample}
+ 
+\subsubsection{\tkzname{Orthogonal from}}
+给定圆心且与给定圆正交的圆。\tkzcname{tkzGetPoints\{z1\}\{z2\}} 给出该圆上的两个点。
+
+\begin{tkzexample}[latex=7cm,small]
+\begin{tikzpicture}[scale=.75]
+  \tkzDefPoints{0/0/O,1/0/A}
+  \tkzDefPoints{1.5/1.25/B,-2/-3/C}
+  \tkzDefCircle[orthogonal from=B](O,A)
+  \tkzGetPoints{z1}{z2}
+  \tkzDefCircle[orthogonal from=C](O,A)
+  \tkzGetPoints{t1}{t2}
+  \tkzDrawCircle(O,A)
+  \tkzDrawCircles[new](B,z1 C,t1)
+  \tkzDrawPoints(t1,t2,C)
+  \tkzDrawPoints(z1,z2,O,A,B)
+  \tkzLabelPoints[right](O,A,B,C)
+\end{tikzpicture}
+\end{tkzexample}
+
+\subsubsection{\tkzname{Orthogonal through}}
+与给定圆正交且经过两个给定点的圆。
+\begin{tkzexample}[latex=6cm,small]
+\begin{tikzpicture}[scale=1]
+  \tkzDefPoint(0,0){O}
+  \tkzDefPoint(1,0){A}
+  \tkzDrawCircle(O,A)
+  \tkzDefPoint(-1.5,-1.5){z1}
+  \tkzDefPoint(1.5,-1.25){z2}
+  \tkzDefCircle[orthogonal through=z1 and z2](O,A)
+   \tkzGetPoint{c}
+  \tkzDrawCircle[new](tkzPointResult,z1)
+  \tkzDrawPoints[new](O,A,z1,z2,c)
+  \tkzLabelPoints[right](O,A,z1,z2,c)
+\end{tikzpicture}
+\end{tkzexample}
+
+\endinput

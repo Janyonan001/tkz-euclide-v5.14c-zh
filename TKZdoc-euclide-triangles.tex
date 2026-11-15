@@ -1,0 +1,579 @@
+\section{三角形}
+
+\subsection{三角形的定义 \tkzcname{tkzDefTriangle}}
+下列宏可以由 \tkzname{至少} 两个点出发来定义或构造三角形。
+
+ 可定义的三角形包括：
+ \begin{itemize}
+\item  \tkzname{two angles}：给定两个角确定一个三角形；
+\item  \tkzname{equilateral}：确定一个等边三角形；
+\item  \tkzname{isosceles right}：确定一个等腰直角三角形；
+\item \tkzname{half}：确定一个直角三角形，其两条直角边（直角的两条边）之比为 $2$；
+\item \tkzname{pythagore}：确定一个直角三角形，其三边之比为 $3:4:5$；
+\item \tkzname{school}：确定一个直角三角形，其三个角分别为 $30^\circ$、$60^\circ$、$90^\circ$；
+\item \tkzname{golden}（即 \tkzname{sublime}）：确定黄金三角形，即以 $[AB]$ 为底、底角为 $72^\circ$ 的等腰三角形；
+
+\item \tkzname{euclid}：确定欧几里得三角形，其角与黄金三角形相同，但边 $[AB]$ 是它的一条腰（$A$ 处角为 $36^\circ$）；在旧版本中该选项写作 "euclide"，末尾带字母 e；
+
+\item \tkzname{gold}：确定一个直角三角形，直角在 $B$ 处，两条直角边之比为 $\Phi=1.618034$，即 $AB/BC=\Phi$。该三角形源自黄金矩形。
+
+\item \tkzname{cheops}：确定第三个点，使三角形为等腰三角形，且三边之比为 $2:\Phi:\Phi$。
+\end{itemize}
+
+\newpage
+\begin{NewMacroBox}{tkzDefTriangle}{\oarg{local options}\parg{A,B}}%
+点的顺序很重要，因为三角形按逆时针方向构造。本宏既可配合 \tkzcname{tkzGetPoint} 使用，若无需保留该点，也可直接使用 \tkzname{tkzPointResult}。
+
+\medskip
+\begin{tabular}{lll}%
+\toprule
+选项             & 默认值 & 含义                        \\
+\midrule
+\TOline{two angles= \#1 and \#2}{无默认}{已知两个角确定三角形}
+\TOline{equilateral} {equilateral}{等边三角形}
+\TOline{half} {equilateral}{$B$ 为直角，$AB=2BC$，$AC$ 为斜边}
+\TOline{isosceles right} {equilateral}{等腰直角三角形}
+\TOline{pythagore}{equilateral}{三边之比为 3-4-5 的直角三角形}
+\TOline{pythagoras}{equilateral}{同上}
+\TOline{egyptian}{equilateral}{同上}
+\TOline{school} {equilateral}{三个角分别为 $30^\circ$、$60^\circ$、$90^\circ$}
+\TOline{gold}{equilateral}{$B$ 为直角，且 $AB/AC = \Phi$}
+\TOline{euclid} {equilateral}{三个角为 $72^\circ$、$72^\circ$、$36^\circ$，$A$ 为顶角}
+\TOline{golden} {equilateral}{三个角为 $72^\circ$、$72^\circ$、$36^\circ$，$C$ 为顶角}
+\TOline{sublime} {equilateral}{三个角为 $72^\circ$、$72^\circ$、$36^\circ$，$C$ 为顶角}
+\TOline{cheops} {equilateral}{$AC=BC$，且 $AC$、$BC$ 与 $2$ 和 $\Phi$ 成比例}
+\TOline{swap} {false}{给出关于 $AB$ 对称的点}
+\bottomrule
+\end{tabular}
+
+\medskip
+\emph{用 \tkzcname{tkzGetPoint} 保存该点；否则可直接使用 \tkzname{tkzPointResult}。}
+\end{NewMacroBox}
+
+\subsubsection{选项 \tkzname{equilateral}}
+\begin{tkzexample}[latex=7 cm,small]
+\begin{tikzpicture}
+  \tkzDefPoint(0,0){A}
+  \tkzDefPoint(4,0){B}
+  \tkzDefTriangle[equilateral](A,B)
+  \tkzGetPoint{C}
+  \tkzDrawPolygons(A,B,C)
+  \tkzDefTriangle[equilateral](B,A)
+  \tkzGetPoint{D}
+  \tkzDrawPolygon(B,A,D)
+  \tkzMarkSegments[mark=s|](A,B B,C A,C A,D B,D)
+\end{tikzpicture}
+\end{tkzexample}
+
+
+\subsubsection{选项 \tkzname{two angles}}
+\begin{tkzexample}[latex=6 cm,small]
+\begin{tikzpicture}
+\tkzDefPoint(0,0){A} 
+\tkzDefPoint(5,0){B} 
+\tkzDefTriangle[two angles = 50 and 70](A,B)
+\tkzGetPoint{C} 
+\tkzDrawSegment(A,B) 
+\tkzDrawPoints(A,B) 
+\tkzLabelPoints(A,B) 
+\tkzDrawSegments[new](A,C B,C) 
+\tkzDrawPoints[new](C)
+\tkzLabelPoints[above,new](C)
+\tkzLabelAngle[pos=1.4](B,A,C){$50^\circ$}
+\tkzLabelAngle[pos=0.8](C,B,A){$70^\circ$}
+\end{tikzpicture}
+\end{tkzexample}
+
+\subsubsection{选项 \tkzname{school}}
+三个角分别为 $30^\circ$、$60^\circ$、$90^\circ$。
+
+\begin{tkzexample}[latex=6 cm,small]
+\begin{tikzpicture}
+  \tkzDefPoints{0/0/A,4/0/B}
+  \tkzDefTriangle[school](A,B)  
+  \tkzGetPoint{C}
+  \tkzMarkRightAngles(C,B,A)
+  \tkzLabelAngle[pos=0.8](B,A,C){$30^\circ$}
+  \tkzLabelAngle[pos=0.8](C,B,A){$90^\circ$}
+  \tkzLabelAngle[pos=0.8](A,C,B){$60^\circ$} 
+  \tkzDrawSegments(A,B)
+  \tkzDrawSegments[new](A,C B,C)
+  \tkzLabelPoints(A,B)
+  \tkzLabelPoints[above](C)
+\end{tikzpicture}
+\end{tkzexample}
+
+\subsubsection{选项 \tkzname{pythagore}}
+该三角形的三边长度之比为 $3:4:5$。
+
+\begin{tkzexample}[latex=6 cm,small]
+\begin{tikzpicture} 
+  \tkzDefPoints{0/0/A,4/0/B} 
+  \tkzDefTriangle[pythagore](A,B) 
+  \tkzGetPoint{C} 
+  \tkzDrawSegments(A,B)
+  \tkzDrawSegments[new](A,C B,C)
+  \tkzMarkRightAngles(A,B,C)
+  \tkzDrawPoints[new](C) 
+  \tkzDrawPoints(A,B) 
+  \tkzLabelPoints[above](A,B)
+  \tkzLabelPoints[new](C)  
+\end{tikzpicture}
+\end{tkzexample}
+
+\subsubsection{选项 \tkzname{pythagore} 与 \tkzname{swap}}
+该三角形的三边长度之比为 $3:4:5$。
+
+\begin{tkzexample}[latex=6 cm,small]
+\begin{tikzpicture} 
+  \tkzDefPoints{0/0/A,4/0/B} 
+  \tkzDefTriangle[pythagore,swap](A,B) 
+  \tkzGetPoint{C} 
+  \tkzDrawSegments(A,B)
+  \tkzDrawSegments[new](A,C B,C)
+  \tkzMarkRightAngles(A,B,C)
+  \tkzLabelPoint[above,new](C){$C$} 
+  \tkzDrawPoints[new](C) 
+  \tkzDrawPoints(A,B) 
+  \tkzLabelPoints(A,B) 
+\end{tikzpicture}
+\end{tkzexample}
+
+\subsubsection{选项 \tkzname{golden}}
+\begin{tkzexample}[latex=6 cm,small]
+\begin{tikzpicture}[scale=.8]
+\tkzDefPoint(0,0){A} \tkzDefPoint(4,0){B} 
+\tkzDefTriangle[golden](A,B)\tkzGetPoint{C} 
+\tkzDefSpcTriangle[in,name=M](A,B,C){a,b,c}
+\tkzDrawPolygon(A,B,C) 
+\tkzDrawPoints(A,B) 
+\tkzDrawSegment(C,Mc) 
+\tkzDrawPoints[new](C)
+\tkzLabelPoints(A,B) 
+\tkzLabelPoints[above,new](C)
+\end{tikzpicture}
+\end{tkzexample}
+
+\subsubsection{选项 \tkzname{euclid}}
+\tkzimp{euclid} 三角形与 \tkzimp{golden} 三角形形状相同，但在前一个中线段 $[AB]$ 是腰，在后一个中 $[AB]$ 是底。
+
+\begin{tkzexample}[latex=7 cm,small]
+\begin{tikzpicture}[scale=.75]
+ \tkzDefPoint(0,0){A} \tkzDefPoint(4,0){B}
+ \tkzDefTriangle[euclid](A,B)\tkzGetPoint{C}
+ \tkzDrawPolygon(A,B,C)
+ \tkzDrawPoints(A,B,C)
+ \tkzLabelPoints(C)
+ \tkzLabelPoints[above](A,B)
+ \tkzLabelAngle[pos=0.8](A,B,C){$72^\circ$}
+ \tkzLabelAngle[pos=0.8](B,C,A){$72^\circ$}
+ \tkzLabelAngle[pos=0.8](C,A,B){$36^\circ$}
+\end{tikzpicture}
+\end{tkzexample}
+
+\subsubsection{选项 \tkzname{isosceles right}}
+\begin{tkzexample}[latex=7 cm,small]
+\begin{tikzpicture}
+  \tkzDefPoint(0,0){A}
+  \tkzDefPoint(4,0){B}
+  \tkzDefTriangle[isosceles right](A,B)
+  \tkzGetPoint{C}
+  \tkzDrawPolygons(A,B,C)
+  \tkzDrawPoints(A,B,C)
+  \tkzMarkRightAngles(A,C,B)
+  \tkzLabelPoints(A,B)
+  \tkzLabelPoints[above](C)
+\end{tikzpicture}
+\end{tkzexample}
+
+\subsubsection{选项 \tkzname{gold}}
+\begin{tkzexample}[latex=6 cm,small]
+\begin{tikzpicture}
+ \tkzDefPoints{0/0/A,4/0/B} 
+ \tkzDefTriangle[gold](A,B)
+ \tkzGetPoint{C}
+ \tkzDrawPolygon(A,B,C)
+ \tkzDrawPoints(A,B,C)
+ \tkzLabelPoints[above](A,B) 
+ \tkzLabelPoints[below](C)
+ \tkzMarkRightAngle(A,B,C)
+ \tkzText(0,-2){$\dfrac{AB}{BC}=\varphi$}
+\end{tikzpicture}
+\end{tkzexample}
+
+\clearpage
+\subsection{用 \tkzcname{tkzDefSpcTriangle} 构造特殊三角形}
+
+某些三角形的重心已在“特殊点”一节中定义；这里我们要确定若干特殊三角形的三个顶点。
+
+\begin{NewMacroBox}{tkzDefSpcTriangle}{\oarg{local options}\parg{p1,p2,p3}\marg{r1,r2,r3}}
+点的顺序非常重要！p1p2p3 定义一个三角形；结果是另一个三角形，其顶点的引用名为 \tkzname{name} 后接 r1、r2、r3。若 \tkzname{name} 为空，则引用名即为 r1、r2、r3。
+
+\medskip
+\begin{tabular}{lll}%
+\toprule
+选项             & 默认值 & 含义                        \\
+\midrule
+\TOline{orthic} {centroid}{由三条高的垂足确定的三角形……}
+\TOline{centroid or medial}{centroid}{三条中线的交点所确定的中点三角形}
+\TOline{in or incentral}{centroid}{由三条角平分线确定}
+\TOline{ex or excentral} {centroid}{由三个旁心确定}
+\TOline{extouch}{centroid}{由三角形与三个旁切圆的切点构成}
+\TOline{intouch or contact} {centroid}{由内切圆的三个切点构成}
+\TOline{} {}{各顶点}
+\TOline{euler} {centroid}{由九点圆上的欧拉线中点构成}
+\TOline{symmedial} {centroid}{三条陪位中线的交点}
+\TOline{tangential}{centroid}{由外接圆在三个顶点处的切线构成}
+\TOline{feuerbach} {centroid}{由九点圆与旁切圆的三个切点构成……}
+\TOline{} {} {圆与旁切圆}
+\TOline{name} {empty}{用于给顶点命名}
+\midrule
+\end{tabular}
+\end{NewMacroBox}
+
+\subsubsection{如何为顶点命名}
+
+使用 \tkzcname{tkzDefSpcTriangle[medial,name=M](A,B,C)\{\_A,\_B,\_C\}} 可得到三个名为 $M_A$、$M_B$、$M_C$ 的顶点。
+
+使用 \tkzcname{tkzDefSpcTriangle[medial](A,B,C)\{a,b,c\}} 可得到三个名为 $a$、$b$、$c$ 的顶点。
+
+使用 \tkzcname{tkzDefSpcTriangle[medial,name=M\_](A,B,C)\{A,B,C\}} 同样可得到三个名为 $M_A$、$M_B$、$M_C$ 的顶点。
+
+\subsubsection{选项 \tkzname{medial} 或 \tkzname{centroid}}
+三角形的重心是三条中线的交点 $G$（有时也记为 $M$），因此有时也称为中位点。重心始终位于三角形内部。
+\\
+
+\href{http://mathworld.wolfram.com/TriangleCentroid.html}{Weisstein, Eric W. "Centroid triangle" From MathWorld--A Wolfram Web Resource.}
+
+在下面的示例中，我们得到欧拉线圆（九点圆），它经过上面定义的各点。
+
+\begin{tkzexample}[latex=7cm,small]
+  \begin{tikzpicture}[rotate=90,scale=.75]
+   \tkzDefPoints{0/0/A,6/0/B,0.8/4/C}
+   \tkzDefTriangleCenter[centroid](A,B,C)
+   \tkzGetPoint{M}
+   \tkzDefSpcTriangle[medial,name=M](A,B,C){_A,_B,_C}
+   \tkzDrawPolygon(A,B,C)
+   \tkzDrawSegments[dashed,new](A,M_A B,M_B C,M_C)
+   \tkzDrawPolygon[new](M_A,M_B,M_C)
+   \tkzDrawPoints(A,B,C)
+   \tkzDrawPoints[new](M,M_A,M_B,M_C)
+   \tkzLabelPoints[above](B)
+   \tkzLabelPoints[below](A,C,M_B)
+   \tkzLabelPoints[right](M_C)
+   \tkzLabelPoints[left](M_A)
+   \tkzLabelPoints[font=\scriptsize](M)
+  \end{tikzpicture}
+\end{tkzexample}
+
+\subsubsection{选项 \tkzname{in} 或 \tkzname{incentral}}
+
+内心三角形（incentral triangle）是以参考三角形的三条角平分线与对应对边的交点为顶点的三角形。
+\\
+\href{http://mathworld.wolfram.com/ContactTriangle.html}{Weisstein, Eric W. "Incentral triangle" From MathWorld--A Wolfram Web Resource.}
+
+
+\begin{tkzexample}[latex=7cm,small]
+\begin{tikzpicture}[scale=1]
+  \tkzDefPoints{ 0/0/A,5/0/B,2/3/C}
+  \tkzDefSpcTriangle[in,name=I](A,B,C){_a,_b,_c}
+  \tkzDefCircle[in](A,B,C) \tkzGetPoints{I}{a}
+  \tkzDrawCircle(I,a)
+  \tkzDrawPolygon(A,B,C)
+  \tkzDrawPolygon[new](I_a,I_b,I_c)
+  \tkzDrawSegments[dashed,new](A,I_a B,I_b C,I_c)
+  \tkzDrawPoints(A,B,C,I,I_a,I_b,I_c) 
+  \tkzLabelPoints[below](A,B,I_c)
+  \tkzLabelPoints[above left](I_b)
+  \tkzLabelPoints[above right](C,I_a)
+\end{tikzpicture}
+\end{tkzexample}
+
+\subsubsection{选项 \tkzname{ex} 或 \tkzname{excentral}}
+
+三角形 $ABC$ 的旁心三角形（excentral triangle）是以 $ABC$ 的三个旁心为顶点的三角形 $J_aJ_bJ_c$。
+
+\begin{tkzexample}[latex=7cm,small]
+\begin{tikzpicture}[scale=.6]
+ \tkzDefPoints{0/0/A,6/0/B,0.8/4/C}
+ \tkzDefSpcTriangle[excentral,name=J](A,B,C){_a,_b,_c}
+ \tkzDefSpcTriangle[extouch,name=T](A,B,C){_a,_b,_c}
+ \tkzDrawPolygon(A,B,C)
+ \tkzDrawPolygon[new](J_a,J_b,J_c)
+ \tkzClipBB
+ \tkzDrawPoints(A,B,C)
+ \tkzDrawPoints[new](J_a,J_b,J_c)
+ \tkzLabelPoints(A,B,C)
+ \tkzLabelPoints[new](J_b,J_c)
+ \tkzLabelPoints[new,above](J_a)
+ \tkzDrawCircles[gray](J_a,T_a J_b,T_b J_c,T_c) 
+\end{tikzpicture}
+\end{tkzexample}
+
+
+\subsubsection{选项 \tkzname{intouch} 或 \tkzname{contact}}
+三角形 $ABC$ 的切点三角形（contact triangle），又称内心切点三角形（intouch triangle），是由 $ABC$ 的内切圆与三边的切点构成的三角形。\\
+\href{http://mathworld.wolfram.com/ContactTriangle.html}{Weisstein, Eric W. "Contact triangle" From MathWorld--A Wolfram Web Resource.}
+
+下面我们得到内切圆与各边相切的切点。
+\begin{tkzexample}[latex=7cm,small]
+\begin{tikzpicture}[scale=.75]
+ \tkzDefPoints{0/0/A,6/0/B,0.8/4/C}          
+ \tkzDefSpcTriangle[intouch,name=X](A,B,C){_a,_b,_c}
+ \tkzInCenter(A,B,C)\tkzGetPoint{I}
+ \tkzDefCircle[in](A,B,C) \tkzGetPoints{I}{i}
+ \tkzDrawCircle(I,i)
+ \tkzDrawPolygon(A,B,C)
+ \tkzDrawPolygon[new](X_a,X_b,X_c)
+ \tkzDrawPoints(A,B,C)
+ \tkzDrawPoints[new](X_a,X_b,X_c)
+ \tkzLabelPoints[right](X_a)
+ \tkzLabelPoints[left](X_b)
+ \tkzLabelPoints[above](C)
+ \tkzLabelPoints[below](A,B,X_c)
+\end{tikzpicture} 
+\end{tkzexample}
+
+\subsubsection{选项 \tkzname{extouch}}
+旁切切点三角形（extouch triangle）$T_aT_bT_c$ 是由三角形 $ABC$ 的三边与三个旁切圆（圆心分别为 $J_a$、$J_b$、$J_c$）的切点构成的三角形。点 $T_a$、$T_b$、$T_c$ 也可分别看作从 $A$、$B$、$C$ 出发将 $ABC$ 的周长二等分的点。\\
+\href{http://mathworld.wolfram.com/ExtouchTriangle.html}{Weisstein, Eric W. "Extouch triangle" From MathWorld--A Wolfram Web Resource.}
+
+下面我们得到旁切圆的切点，以及由三个旁心构成的三角形。
+
+\begin{tkzexample}[latex=8cm,small]
+\begin{tikzpicture}[scale=.7]
+\tkzDefPoints{0/0/A,6/0/B,0.8/4/C}
+\tkzDefSpcTriangle[excentral,
+                 name=J](A,B,C){_a,_b,_c}
+\tkzDefSpcTriangle[extouch,
+                  name=T](A,B,C){_a,_b,_c}
+\tkzDefTriangleCenter[nagel](A,B,C)
+\tkzGetPoint{N_a}
+\tkzDefTriangleCenter[centroid](A,B,C)
+\tkzGetPoint{G}
+\tkzDrawPoints[new](J_a,J_b,J_c)
+\tkzClipBB \tkzShowBB
+\tkzDrawCircles[gray](J_a,T_a J_b,T_b J_c,T_c)
+\tkzDrawLines[add=1 and 1](A,B B,C C,A)
+\tkzDrawSegments[new](A,T_a B,T_b C,T_c)
+\tkzDrawSegments[new](J_a,T_a J_b,T_b J_c,T_c)
+\tkzDrawPolygon(A,B,C)
+\tkzDrawPolygon[new](T_a,T_b,T_c)
+\tkzDrawPoints(A,B,C,N_a)
+\tkzDrawPoints[new](T_a,T_b,T_c)
+\tkzLabelPoints[below left](A)
+\tkzLabelPoints[below](N_a,B)
+\tkzLabelPoints[above](C)
+\tkzLabelPoints[new,below left](T_b)
+\tkzLabelPoints[new,below right](T_c)
+\tkzLabelPoints[new,right=6pt](T_a)
+\tkzMarkRightAngles[fill=gray!15](J_a,T_a,B
+ J_b,T_b,C J_c,T_c,A)
+\end{tikzpicture}
+\end{tkzexample}
+
+\subsubsection{选项 \tkzname{orthic}}
+
+给定三角形 $ABC$，以三条高在各边上的垂足为顶点的三角形 $H_AH_BH_C$ 称为垂足三角形（orthic triangle），有时也叫高三角形。三条直线 $AH_A$、$BH_B$、$CH_C$ 共点于 $ABC$ 的垂心 $H$。
+
+\begin{tkzexample}[latex=7cm,small]
+\begin{tikzpicture}[scale=.75]
+\tkzDefPoints{1/5/A,0/0/B,7/0/C}
+ \tkzDefSpcTriangle[orthic](A,B,C){H_A,H_B,H_C}
+ \tkzDefTriangleCenter[ortho](B,C,A)
+ \tkzGetPoint{H}
+ \tkzDefPointWith[orthogonal,normed](H_A,B)
+ \tkzGetPoint{a}
+ \tkzDrawSegments[new](A,H_A B,H_B C,H_C)   
+ \tkzMarkRightAngles[fill=gray!20,
+         opacity=.5](A,H_A,C B,H_B,A C,H_C,A)
+ \tkzDrawPolygon[fill=teal!20,opacity=.3](A,B,C)
+ \tkzDrawPoints(A,B,C)
+ \tkzDrawPoints[new](H_A,H_B,H_C)
+ \tkzDrawPolygon[new,fill=orange!20,
+                opacity=.3](H_A,H_B,H_C)
+ \tkzLabelPoints(C)
+ \tkzLabelPoints[left](B)
+ \tkzLabelPoints[above](A)
+ \tkzLabelPoints[new](H_A)
+ \tkzLabelPoints[new,above left](H_C)
+ \tkzLabelPoints[new,above right](H_B,H)
+\end{tikzpicture}
+\end{tkzexample}
+    
+\subsubsection{选项 \tkzname{feuerbach}}
+费尔巴哈三角形（Feuerbach triangle）是由九点圆与三个旁切圆的三个切点构成的三角形。\\
+\href{http://mathworld.wolfram.com/FeuerbachTriangle.html}{Weisstein, Eric W. "Feuerbach triangle" From MathWorld--A Wolfram Web Resource.}
+
+ 这些切点确定了费尔巴哈三角形。
+
+\begin{tkzexample}[latex=8cm,small]
+\begin{tikzpicture}[scale=1]
+  \tkzDefPoint(0,0){A}
+  \tkzDefPoint(3,0){B}
+  \tkzDefPoint(0.5,2.5){C}
+  \tkzDefCircle[euler](A,B,C) \tkzGetPoint{N}
+  \tkzDefSpcTriangle[feuerbach,
+                       name=F](A,B,C){_a,_b,_c}
+  \tkzDefSpcTriangle[excentral,
+                       name=J](A,B,C){_a,_b,_c}
+  \tkzDefSpcTriangle[extouch,
+                        name=T](A,B,C){_a,_b,_c}
+  \tkzLabelPoints[below left](J_a,J_b,J_c)  
+  \tkzClipBB \tkzShowBB
+  \tkzDrawCircle[purple](N,F_a)
+  \tkzDrawPolygon(A,B,C)
+  \tkzDrawPolygon[new](F_a,F_b,F_c)
+  \tkzDrawCircles[gray](J_a,F_a J_b,F_b J_c,F_c)
+  \tkzDrawPoints[blue](J_a,J_b,J_c,%
+          F_a,F_b,F_c,A,B,C)
+  \tkzLabelPoints(A,B,F_c)
+  \tkzLabelPoints[above](C)    
+  \tkzLabelPoints[right](F_a)
+  \tkzLabelPoints[left](F_b)        
+\end{tikzpicture}
+\end{tkzexample}
+
+\subsubsection{选项 \tkzname{tangential}} 
+切线三角形（tangential triangle）是由给定三角形 $ABC$ 的外接圆在三个顶点处的切线所围成的三角形 $T_aT_bT_c$。因此它是 $ABC$ 关于外心 $O$ 的反垂足三角形。\\ 
+\href{http://mathworld.wolfram.com/TangentialTriangle.html}{Weisstein, Eric W. "Tangential Triangle." From MathWorld--A Wolfram Web Resource. }
+
+
+\begin{tkzexample}[latex=8cm,small]
+\begin{tikzpicture}[scale=.5,rotate=80]
+  \tkzDefPoints{0/0/A,6/0/B,1.8/4/C}           
+  \tkzDefSpcTriangle[tangential,
+    name=T](A,B,C){_a,_b,_c}
+  \tkzDrawPolygon(A,B,C)
+  \tkzDrawPolygon[new](T_a,T_b,T_c)
+  \tkzDrawPoints(A,B,C)
+  \tkzDrawPoints[new](T_a,T_b,T_c)
+  \tkzDefCircle[circum](A,B,C)  
+  \tkzGetPoint{O} 
+  \tkzDrawCircle(O,A)
+  \tkzLabelPoints(A)
+  \tkzLabelPoints[above](B)
+  \tkzLabelPoints[left](C)
+  \tkzLabelPoints[new](T_b,T_c)
+  \tkzLabelPoints[new,left](T_a)
+\end{tikzpicture} 
+\end{tkzexample} 
+
+\subsubsection{选项 \tkzname{euler}} 
+三角形 $ABC$ 的欧拉三角形（Euler triangle）是三角形 $E_AE_BE_C$，其顶点分别是垂心 $H$ 与三个顶点连线的中点。这些顶点称为欧拉点，位于九点圆上。
+\\
+\href{https://mathworld.wolfram.com/EulerTriangle.html}{Weisstein, Eric W. "Euler Triangle." From MathWorld--A Wolfram Web Resource.} 
+
+\begin{tkzexample}[latex=7cm,small]
+\begin{tikzpicture}[rotate=90,scale=1.25]
+ \tkzDefPoints{0/0/A,6/0/B,0.8/4/C}
+ \tkzDefSpcTriangle[medial,
+     name=M](A,B,C){_A,_B,_C}
+ \tkzDefTriangleCenter[euler](A,B,C)
+     \tkzGetPoint{N} % I= N nine points
+ \tkzDefTriangleCenter[ortho](A,B,C)
+        \tkzGetPoint{H}
+ \tkzDefMidPoint(A,H) \tkzGetPoint{E_A}
+ \tkzDefMidPoint(C,H) \tkzGetPoint{E_C}
+ \tkzDefMidPoint(B,H) \tkzGetPoint{E_B}
+ \tkzDefSpcTriangle[ortho,name=H](A,B,C){_A,_B,_C}
+ \tkzDrawPolygon(A,B,C)
+ \tkzDrawCircle(N,E_A)
+ \tkzDrawSegments[new](A,H_A B,H_B C,H_C)
+ \tkzDrawPoints(A,B,C,N,H)
+ \tkzDrawPoints[red](M_A,M_B,M_C)
+ \tkzDrawPoints[blue]( H_A,H_B,H_C)
+ \tkzDrawPoints[green](E_A,E_B,E_C)
+ \tkzAutoLabelPoints[center=N,font=\scriptsize]%
+(A,B,C,M_A,M_B,M_C,H_A,H_B,H_C,E_A,E_B,E_C)
+\tkzLabelPoints[font=\scriptsize](H,N)
+\tkzMarkSegments[mark=s|,size=3pt,
+  color=blue,line width=1pt](B,E_B E_B,H)
+   \tkzDrawPolygon[color=cyan](M_A,M_B,M_C)
+\end{tikzpicture}
+\end{tkzexample}
+
+\subsubsection{选项 \tkzname{euler} 与选项 \tkzname{orthic}} 
+\begin{tkzexample}[vbox,small]
+  \begin{tikzpicture}[scale=1.25]
+    \tkzDefPoints{0/0/A,6/0/B,0.8/4/C}
+    \tkzDefSpcTriangle[euler,name=E](A,B,C){a,b,c}
+    \tkzDefSpcTriangle[orthic,name=H](A,B,C){a,b,c}
+    \tkzDefExCircle(A,B,C) \tkzGetPoints{I}{i}
+    \tkzDefExCircle(C,A,B) \tkzGetPoints{J}{j}
+    \tkzDefExCircle(B,C,A) \tkzGetPoints{K}{k}
+    \tkzDrawPoints[orange](I,J,K)
+    \tkzLabelPoints[font=\scriptsize](A,B,C,I,J,K)
+    \tkzClipBB
+    \tkzInterLC(I,C)(I,i) \tkzGetSecondPoint{Fc}
+    \tkzInterLC(J,B)(J,j) \tkzGetSecondPoint{Fb}
+    \tkzInterLC(K,A)(K,k) \tkzGetSecondPoint{Fa}
+    \tkzDrawLines[add=1.5 and 1.5](A,B A,C B,C)
+    \tkzDefCircle[euler](A,B,C) \tkzGetPoints{E}{e}
+    \tkzDrawCircle[orange](E,e)
+    \tkzDrawSegments[orange](E,I E,J E,K)
+    \tkzDrawSegments[dashed](A,Ha B,Hb C,Hc)
+    \tkzDrawCircles(J,j I,i K,k)
+    \tkzDrawPoints(A,B,C)
+    \tkzDrawPoints[orange](E,I,J,K,Ha,Hb,Hc,Ea,Eb,Ec,Fa,Fb,Fc)
+    \tkzLabelPoints[font=\scriptsize](E,Ea,Eb,Ec,Ha,Hb,Hc,Fa,Fb,Fc)  
+  \end{tikzpicture}
+\end{tkzexample}
+
+\subsubsection{选项 \tkzname{symmedial}}
+陪位中线三角形（symmedial triangle）$K_AK_BK_C$ 是以三条陪位中线与参考三角形 $ABC$ 的交点为顶点的三角形。
+
+\begin{tkzexample}[latex=7cm,small]
+\begin{tikzpicture}
+\tkzDefPoint(0,0){A}
+\tkzDefPoint(5,0){B}
+\tkzDefPoint(.75,4){C}
+\tkzDefTriangleCenter[symmedian](A,B,C)\tkzGetPoint{K} 
+\tkzDefSpcTriangle[symmedial,name=K_](A,B,C){A,B,C}
+\tkzDrawPolygon(A,B,C)
+\tkzDrawSegments[new](A,K_A B,K_B C,K_C)
+\tkzDrawPoints(A,B,C,K,K_A,K_B,K_C)
+\tkzLabelPoints(A,B,K,K_C)
+\tkzLabelPoints[above](C)
+\tkzLabelPoints[right](K_A)
+\tkzLabelPoints[left](K_B)
+\end{tikzpicture}
+\end{tkzexample}
+
+\subsection{交换三角形中的两个点}
+
+\begin{NewMacroBox}{tkzPermute}{\parg{$pt1$,$pt2$,$pt3$}}%
+\begin{tabular}{lll}%
+参数             & 示例 & 说明                         \\
+\midrule
+\TAline{(pt1,pt2,pt3)} {\tkzcname{tkzPermute}(A,B,C)}{$A$ 与角 $\widehat{B,A,C}$ 保持不变，$B$ 与 $C$ 互换}
+\midrule
+\end{tabular}
+
+\medskip
+\emph{三角形本身不变。}
+\end{NewMacroBox}
+
+\subsubsection{对 \tkzname{school} 三角形的修改}
+该三角形是在射线 $[Ax)$ 上由线段 $[AB]$ 构造出来的。
+
+若希望线段 $[AC]$ 位于 $[Ax)$ 上，只需交换 $B$ 与 $C$。
+
+\begin{tkzexample}[latex=7cm,small]
+\begin{tikzpicture}
+  \tkzDefPoints{0/0/A,4/0/B,6/0/x}
+  \tkzDefTriangle[school](A,B)  
+  \tkzGetPoint{C}
+  \tkzPermute(A,B,C)
+  \tkzDrawSegments(A,B C,x)
+  \tkzDrawSegments(A,C B,C)
+  \tkzDrawPoints(A,B,C)
+  \tkzLabelPoints(A,C,x)
+  \tkzLabelPoints[above](B)
+  \tkzMarkRightAngles(C,B,A)
+\end{tikzpicture}
+\end{tkzexample}
+
+说明：只有第一个点保持不变。后两个参数的顺序无关紧要。
+
+\endinput

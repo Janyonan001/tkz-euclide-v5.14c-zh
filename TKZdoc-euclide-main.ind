@@ -1,0 +1,1089 @@
+\begin{theindex}
+
+  \item \texttt  {\textbackslash ang}, \hyperpage{125}
+  \item \texttt  {\textbackslash Ax}, \hyperpage{200}
+  \item \texttt  {\textbackslash Ay}, \hyperpage{200}
+
+  \indexspace
+
+  \item \texttt  {\textbackslash coordinate}, \hyperpage{28}
+
+  \indexspace
+
+  \item \texttt  {\textbackslash dAB}, \hyperpage{198}
+  \item \texttt  {\textbackslash Delta}, \hyperpage{184}
+  \item \texttt  {\textbackslash draw (A)--(B);}, \hyperpage{136}
+
+  \indexspace
+
+  \item \texttt  {\textbackslash endpgfinterruptboundingbox}, 
+		\hyperpage{170}
+  \item \texttt  {Environment}
+    \subitem \texttt  {scope}, \hyperpage{31}, \hyperpage{210}
+    \subitem \texttt  {tikzpicture}, \hyperpage{210}
+
+  \indexspace
+
+  \item \texttt  {\textbackslash foreach}, \hyperpage{116}
+  \item \texttt  {\textbackslash fpeval}, \hyperpage{118}
+
+  \indexspace
+
+  \item \texttt  {\textbackslash iftkzFlagCC}, \hyperpage{119}
+  \item \texttt  {\textbackslash iftkzFlagLC}, \hyperpage{113}
+
+  \indexspace
+
+  \item \texttt  {\textbackslash len}, \hyperpage{199, 200}
+
+  \indexspace
+
+  \item Operating System 
+    \subitem \texttt  {Windows}, \hyperpage{22}
+
+  \indexspace
+
+  \item Package 
+    \subitem \texttt  {pgfmath}, \hyperpage{272}
+    \subitem \texttt  {tkz-elements}, \hyperpage{275}, \hyperpage{277}
+    \subitem \texttt  {tkz-euclide}, \hyperpage{161}
+    \subitem \texttt  {xfp}, \hyperpage{22}, \hyperpage{28}, 
+		\hyperpage{30}, \hyperpage{198}, \hyperpage{272, 273}, 
+		\hyperpage{277}
+  \item \texttt  {\textbackslash pgfinterruptboundingbox}, 
+		\hyperpage{170}
+  \item \texttt  {\textbackslash pgflinewidth}, \hyperpage{131}, 
+		\hyperpage{133}
+  \item \texttt  {\textbackslash pgfmathsetmacro}, \hyperpage{118}
+  \item \texttt  {\textbackslash pgfresetboundingbox}, \hyperpage{161}
+  \item \texttt  {\textbackslash px}, \hyperpage{200}
+  \item \texttt  {\textbackslash py}, \hyperpage{200}
+
+  \indexspace
+
+  \item \texttt  {\textbackslash rAB}, \hyperpage{35}
+  \item \texttt  {\textbackslash rAp}, \hyperpage{44}
+
+  \indexspace
+
+  \item standalone, \hyperpage{15}
+
+  \indexspace
+
+  \item TeX Distributions 
+    \subitem \texttt  {MiKTeX}, \hyperpage{22}
+    \subitem \texttt  {TeXLive}, \hyperpage{22}
+  \item Ti\emph  {k}Z Library 
+    \subitem \texttt  {babel}, \hyperpage{21}
+    \subitem \texttt  {decorations}, \hyperpage{273}
+  \item \texttt  {\textbackslash tikzset}, \hyperpage{209}
+  \item \texttt  {tkz-euclide: options}
+    \subitem \texttt  {lua}, \hyperpage{277}
+    \subitem \texttt  {mini}, \hyperpage{277}
+  \item \texttt  {\textbackslash tkzAngleResult}, \hyperpage{124, 125}, 
+		\hyperpage{127}
+  \item \texttt  {\textbackslash tkzAutoLabelPoint(A,B,C)}, 
+		\hyperpage{181}
+  \item \texttt  {\textbackslash tkzAutoLabelPoints}, \hyperpage{181}
+  \item \texttt  {\textbackslash tkzAutoLabelPoints: arguments}
+    \subitem \texttt  {点列表}, \hyperpage{181}
+  \item \texttt  {\textbackslash tkzAutoLabelPoints{\ttfamily  [}{\color  {myblue}\meta  {local options}}{\ttfamily  ]}{\ttfamily  (}{\color  {myblue}\meta  {$A_1,A_2,...$}}{\ttfamily  )}}, 
+		\hyperpage{181}
+  \item \texttt  {\textbackslash tkzCalcLength}, \hyperpage{198}, 
+		\hyperpage{275}
+  \item \texttt  {\textbackslash tkzCalcLength: arguments}
+    \subitem \texttt  {(pt1,pt2)\{name of macro\}}, \hyperpage{198}
+  \item \texttt  {\textbackslash tkzCalcLength: options}
+    \subitem \texttt  {cm}, \hyperpage{198}
+  \item \texttt  {\textbackslash tkzCalcLength{\ttfamily  [}{\color  {myblue}\meta  {local options}}{\ttfamily  ]}{\ttfamily  (}{\color  {myblue}\meta  {pt1,pt2}}{\ttfamily  )}}, 
+		\hyperpage{198}
+  \item \texttt  {\textbackslash tkzCentroid}, \hyperpage{37}
+  \item \texttt  {\textbackslash tkzClip}, \hyperpage{21}, 
+		\hyperpage{161--163}, \hyperpage{275}
+  \item \texttt  {\textbackslash tkzClip: options}
+    \subitem \texttt  {space}, \hyperpage{162}
+  \item \texttt  {\textbackslash tkzClipBB}, \hyperpage{164}
+  \item \texttt  {\textbackslash tkzClipCircle[out]}, \hyperpage{170}
+  \item \texttt  {\textbackslash tkzClipCircle}, \hyperpage{101}, 
+		\hyperpage{166}
+  \item \texttt  {\textbackslash tkzClipCircle: arguments}
+    \subitem \texttt  {{\ttfamily  (}{\color  {myblue}\meta  {A,B}}{\ttfamily  )}}, 
+		\hyperpage{166}
+  \item \texttt  {\textbackslash tkzClipCircle: options}
+    \subitem \texttt  {out}, \hyperpage{166}
+  \item \texttt  {\textbackslash tkzClipCircle{\ttfamily  [}{\color  {myblue}\meta  {local options}}{\ttfamily  ]}{\ttfamily  (}{\color  {myblue}\meta  {A,B}}{\ttfamily  )}}, 
+		\hyperpage{166}
+  \item \texttt  {\textbackslash tkzClipPolygon[out]}, \hyperpage{166}, 
+		\hyperpage{170}
+  \item \texttt  {\textbackslash tkzClipPolygon}, \hyperpage{165}
+  \item \texttt  {\textbackslash tkzClipPolygon: arguments}
+    \subitem \texttt  {{\ttfamily  (}{\color  {myblue}\meta  {pt1,pt2,pt3,\dots  }}{\ttfamily  )}}, 
+		\hyperpage{165}
+  \item \texttt  {\textbackslash tkzClipPolygon: options}
+    \subitem \texttt  {out}, \hyperpage{165}
+  \item \texttt  {\textbackslash tkzClipPolygon{\ttfamily  [}{\color  {myblue}\meta  {local options}}{\ttfamily  ]}{\ttfamily  (}{\color  {myblue}\meta  {points list}}{\ttfamily  )}}, 
+		\hyperpage{165}
+  \item \texttt  {\textbackslash tkzClipSector(O,A)(B)}, 
+		\hyperpage{168}
+  \item \texttt  {\textbackslash tkzClipSector[R](O,2)(30,90)}, 
+		\hyperpage{168}
+  \item \texttt  {\textbackslash tkzClipSector[rotate](O,A)(90)}, 
+		\hyperpage{168}
+  \item \texttt  {\textbackslash tkzClipSector}, \hyperpage{168}
+  \item \texttt  {\textbackslash tkzClipSector: options}
+    \subitem \texttt  {R}, \hyperpage{168}
+    \subitem \texttt  {rotate}, \hyperpage{168}
+    \subitem \texttt  {towards}, \hyperpage{168}
+  \item \texttt  {\textbackslash tkzClipSector{\ttfamily  [}{\color  {myblue}\meta  {local options}}{\ttfamily  ]}{\ttfamily  (}{\color  {myblue}\meta  {O,\dots  }}{\ttfamily  )}{\ttfamily  (}{\color  {myblue}\meta  {\dots  }}{\ttfamily  )}}, 
+		\hyperpage{168}
+  \item \texttt  {\textbackslash tkzClip{\ttfamily  [}{\color  {myblue}\meta  {local options}}{\ttfamily  ]}}, 
+		\hyperpage{162}
+  \item \texttt  {\textbackslash tkzcmtopt}, \hyperpage{200}
+  \item \texttt  {\textbackslash tkzcmtopt: arguments}
+    \subitem \texttt  {(number)\{name of macro\}}, \hyperpage{200}
+  \item \texttt  {\textbackslash tkzcmtopt{\ttfamily  (}{\color  {myblue}\meta  {number}}{\ttfamily  )}{\ttfamily  \char `\{}{\color  {myblue}\meta  {name of macro}}{\ttfamily  \char `\}}}, 
+		\hyperpage{200}
+  \item \texttt  {\textbackslash tkzCompass}, \hyperpage{150}, 
+		\hyperpage{190}, \hyperpage{275}
+  \item \texttt  {\textbackslash tkzCompass: options}
+    \subitem \texttt  {delta}, \hyperpage{190}
+    \subitem \texttt  {length}, \hyperpage{190}
+  \item \texttt  {\textbackslash tkzCompasss}, \hyperpage{191}
+  \item \texttt  {\textbackslash tkzCompasss: options}
+    \subitem \texttt  {delta}, \hyperpage{191}
+    \subitem \texttt  {length}, \hyperpage{191}
+  \item \texttt  {\textbackslash tkzCompasss{\ttfamily  [}{\color  {myblue}\meta  {local options}}{\ttfamily  ]}{\ttfamily  (}{\color  {myblue}\meta  {pt1,pt2 pt3,pt4,\dots  }}{\ttfamily  )}}, 
+		\hyperpage{191}
+  \item \texttt  {\textbackslash tkzCompass{\ttfamily  [}{\color  {myblue}\meta  {local options}}{\ttfamily  ]}{\ttfamily  (}{\color  {myblue}\meta  {A,B}}{\ttfamily  )}}, 
+		\hyperpage{190}
+  \item \texttt  {\textbackslash tkzDefBarycentricPoint}, 
+		\hyperpage{36}, \hyperpage{39}
+  \item \texttt  {\textbackslash tkzDefBarycentricPoint: arguments}
+    \subitem \texttt  {(pt1=$\mitalpha _1$,pt2=$\mitalpha _2$,\dots  )}, 
+		\hyperpage{36}
+  \item \texttt  {\textbackslash tkzDefBarycentricPoint{\ttfamily  (}{\color  {myblue}\meta  {pt1=$\mitalpha _1$,pt2=$\mitalpha _2$,\dots  }}{\ttfamily  )}}, 
+		\hyperpage{36}
+  \item \texttt  {\textbackslash tkzDefCircle[euler](A,B,C)}, 
+		\hyperpage{272}
+  \item \texttt  {\textbackslash tkzDefCircle[radius](A,B)}, 
+		\hyperpage{199}
+  \item \texttt  {\textbackslash tkzDefCircle}, \hyperpage{101}, 
+		\hyperpage{275, 276}
+  \item \texttt  {\textbackslash tkzDefCircle: arguments}
+    \subitem \texttt  {{\ttfamily  (}{\color  {myblue}\meta  {pt1,pt2}}{\ttfamily  )} or {\ttfamily  (}{\color  {myblue}\meta  {pt1,pt2,pt3}}{\ttfamily  )}}, 
+		\hyperpage{101}
+  \item \texttt  {\textbackslash tkzDefCircle: options}
+    \subitem \texttt  {K}, \hyperpage{101}
+    \subitem \texttt  {R}, \hyperpage{101}
+    \subitem \texttt  {apollonius}, \hyperpage{101}
+    \subitem \texttt  {circum}, \hyperpage{101}
+    \subitem \texttt  {diameter}, \hyperpage{101}
+    \subitem \texttt  {euler or nine}, \hyperpage{101}
+    \subitem \texttt  {ex}, \hyperpage{101}
+    \subitem \texttt  {in}, \hyperpage{101}
+    \subitem \texttt  {orthogonal from}, \hyperpage{101}
+    \subitem \texttt  {orthogonal through}, \hyperpage{101}
+    \subitem \texttt  {spieker}, \hyperpage{101}
+  \item \texttt  {\textbackslash tkzDefCircleBy}, \hyperpage{108}, 
+		\hyperpage{275}
+  \item \texttt  {\textbackslash tkzDefCircleBy: arguments}
+    \subitem \texttt  {pt1,pt2}, \hyperpage{108}
+  \item \texttt  {\textbackslash tkzDefCircleBy: options}
+    \subitem \texttt  {homothety}, \hyperpage{108}
+    \subitem \texttt  {inversion}, \hyperpage{108}
+    \subitem \texttt  {projection }, \hyperpage{108}
+    \subitem \texttt  {reflection}, \hyperpage{108}
+    \subitem \texttt  {rotation }, \hyperpage{108}
+    \subitem \texttt  {symmetry }, \hyperpage{108}
+    \subitem \texttt  {translation}, \hyperpage{108}
+  \item \texttt  {\textbackslash tkzDefCircleBy{\ttfamily  [}{\color  {myblue}\meta  {local options}}{\ttfamily  ]}{\ttfamily  (}{\color  {myblue}\meta  {pt1,pt2}}{\ttfamily  )}}, 
+		\hyperpage{108}
+  \item \texttt  {\textbackslash tkzDefCircle{\ttfamily  [}{\color  {myblue}\meta  {local options}}{\ttfamily  ]}{\ttfamily  (}{\color  {myblue}\meta  {A,B}}{\ttfamily  )} or {\ttfamily  (}{\color  {myblue}\meta  {A,B,C}}{\ttfamily  )}}, 
+		\hyperpage{101}
+  \item \texttt  {\textbackslash tkzDefEquiPoints}, \hyperpage{41, 42}, 
+		\hyperpage{275}
+  \item \texttt  {\textbackslash tkzDefEquiPoints: arguments}
+    \subitem \texttt  {(pt1,pt2)}, \hyperpage{41}
+  \item \texttt  {\textbackslash tkzDefEquiPoints: options}
+    \subitem \texttt  {/compass/delta}, \hyperpage{41}
+    \subitem \texttt  {dist}, \hyperpage{41}
+    \subitem \texttt  {from=pt}, \hyperpage{41}
+    \subitem \texttt  {show}, \hyperpage{41}
+  \item \texttt  {\textbackslash tkzDefEquiPoints{\ttfamily  [}{\color  {myblue}\meta  {local options}}{\ttfamily  ]}{\ttfamily  (}{\color  {myblue}\meta  {pt1,pt2}}{\ttfamily  )}}, 
+		\hyperpage{41}
+  \item \texttt  {\textbackslash tkzDefExtSimilitudeCenter}, 
+		\hyperpage{37}
+  \item \texttt  {\textbackslash tkzDefGoldenRatio(A,C)}, 
+		\hyperpage{35}
+  \item \texttt  {\textbackslash tkzDefGoldenRatio}, \hyperpage{35}
+  \item \texttt  {\textbackslash tkzDefGoldenRatio: arguments}
+    \subitem \texttt  {(pt1,pt2)}, \hyperpage{35}
+  \item \texttt  {\textbackslash tkzDefGoldenRatio{\ttfamily  (}{\color  {myblue}\meta  {pt1,pt2}}{\ttfamily  )}}, 
+		\hyperpage{35}
+  \item \texttt  {\textbackslash tkzDefGoldenRectangle}, \hyperpage{97}
+  \item \texttt  {\textbackslash tkzDefGoldenRectangle: arguments}
+    \subitem \texttt  {{\ttfamily  (}{\color  {myblue}\meta  {pt1,pt2}}{\ttfamily  )}}, 
+		\hyperpage{97}
+  \item \texttt  {\textbackslash tkzDefGoldenRectangle{\ttfamily  (}{\color  {myblue}\meta  {point,point}}{\ttfamily  )}}, 
+		\hyperpage{97}
+  \item \texttt  {\textbackslash tkzDefGoldRectangle}, \hyperpage{97}
+  \item \texttt  {\textbackslash tkzDefHarmonic}, \hyperpage{40}
+  \item \texttt  {\textbackslash tkzDefHarmonic: options}
+    \subitem \texttt  {both}, \hyperpage{40}
+    \subitem \texttt  {ext}, \hyperpage{40}
+    \subitem \texttt  {int}, \hyperpage{40}
+  \item \texttt  {\textbackslash tkzDefHarmonic{\ttfamily  [}{\color  {myblue}\meta  {options}}{\ttfamily  ]}{\ttfamily  (}{\color  {myblue}\meta  {pt1,pt2,pt3}}{\ttfamily  )} or {\ttfamily  (}{\color  {myblue}\meta  {pt1,pt2,k}}{\ttfamily  )}}, 
+		\hyperpage{40}
+  \item \texttt  {\textbackslash tkzDefIntSimilitudeCenter}, 
+		\hyperpage{37}
+  \item \texttt  {\textbackslash tkzDefLine}, \hyperpage{74}
+  \item \texttt  {\textbackslash tkzDefLine: arguments}
+    \subitem \texttt  {{\ttfamily  (}{\color  {myblue}\meta  {pt1,pt2,pt3}}{\ttfamily  )}}, 
+		\hyperpage{74}
+    \subitem \texttt  {{\ttfamily  (}{\color  {myblue}\meta  {pt1,pt2}}{\ttfamily  )}}, 
+		\hyperpage{74}
+    \subitem \texttt  {{\ttfamily  (}{\color  {myblue}\meta  {pt1}}{\ttfamily  )}}, 
+		\hyperpage{74}
+  \item \texttt  {\textbackslash tkzDefLine: options}
+    \subitem \texttt  {K}, \hyperpage{74}
+    \subitem \texttt  {altitude}, \hyperpage{74}
+    \subitem \texttt  {bisector out}, \hyperpage{74}
+    \subitem \texttt  {bisector}, \hyperpage{74}
+    \subitem \texttt  {euler}, \hyperpage{74}
+    \subitem \texttt  {mediator}, \hyperpage{74}
+    \subitem \texttt  {normed}, \hyperpage{74}
+    \subitem \texttt  {orthogonal=through\dots  }, \hyperpage{74}
+    \subitem \texttt  {parallel=through\dots  }, \hyperpage{74}
+    \subitem \texttt  {perpendicular=through\dots  }, \hyperpage{74}
+    \subitem \texttt  {symmedian}, \hyperpage{74}
+    \subitem \texttt  {tangent at}, \hyperpage{74}
+    \subitem \texttt  {tangent from}, \hyperpage{74}
+  \item \texttt  {\textbackslash tkzDefLine{\ttfamily  [}{\color  {myblue}\meta  {local options}}{\ttfamily  ]}{\ttfamily  (}{\color  {myblue}\meta  {pt1,pt2}}{\ttfamily  )} or {\ttfamily  (}{\color  {myblue}\meta  {pt1,pt2,pt3}}{\ttfamily  )}}, 
+		\hyperpage{74}
+  \item \texttt  {\textbackslash tkzDefMidArc}, \hyperpage{42}
+  \item \texttt  {\textbackslash tkzDefMidArc: arguments}
+    \subitem \texttt  {$pt1,pt2,pt3$}, \hyperpage{42}
+  \item \texttt  {\textbackslash tkzDefMidArc{\ttfamily  (}{\color  {myblue}\meta  {pt1,pt2,pt3}}{\ttfamily  )}}, 
+		\hyperpage{42}
+  \item \texttt  {\textbackslash tkzDefMidPoint}, \hyperpage{14}, 
+		\hyperpage{35}
+  \item \texttt  {\textbackslash tkzDefMidPoint: arguments}
+    \subitem \texttt  {(pt1,pt2)}, \hyperpage{35}
+  \item \texttt  {\textbackslash tkzDefMidPoint{\ttfamily  (}{\color  {myblue}\meta  {pt1,pt2}}{\ttfamily  )}}, 
+		\hyperpage{35}
+  \item \texttt  {\textbackslash tkzDefNinePointsCircle}, 
+		\hyperpage{275}
+  \item \texttt  {\textbackslash tkzDefParallelogram}, \hyperpage{32}, 
+		\hyperpage{97}
+  \item \texttt  {\textbackslash tkzDefParallelogram: arguments}
+    \subitem \texttt  {{\ttfamily  (}{\color  {myblue}\meta  {pt1,pt2,pt3}}{\ttfamily  )}}, 
+		\hyperpage{97}
+  \item \texttt  {\textbackslash tkzDefParallelogram{\ttfamily  (}{\color  {myblue}\meta  {pt1,pt2,pt3}}{\ttfamily  )}}, 
+		\hyperpage{97}
+  \item \texttt  {\textbackslash tkzDefPoint}, \hyperpage{28, 29}, 
+		\hyperpage{35}, \hyperpage{124}
+  \item \texttt  {\textbackslash tkzDefPoint: arguments}
+    \subitem \texttt  {($\mitalpha $:$d$)}, \hyperpage{29}
+    \subitem \texttt  {($x,y$)}, \hyperpage{29}
+    \subitem \texttt  {\{ref\}}, \hyperpage{29}
+  \item \texttt  {\textbackslash tkzDefPoint: options}
+    \subitem \texttt  {label}, \hyperpage{30}
+    \subitem \texttt  {shift}, \hyperpage{30}
+  \item \texttt  {\textbackslash tkzDefPointBy[rotation = \dots  ]}, 
+		\hyperpage{124}
+  \item \texttt  {\textbackslash tkzDefPointBy}, \hyperpage{53}
+  \item \texttt  {\textbackslash tkzDefPointBy: arguments}
+    \subitem \texttt  {pt}, \hyperpage{54}
+  \item \texttt  {\textbackslash tkzDefPointBy: options}
+    \subitem \texttt  {homothety}, \hyperpage{54}
+    \subitem \texttt  {inversion negative}, \hyperpage{54}
+    \subitem \texttt  {inversion}, \hyperpage{54}
+    \subitem \texttt  {projection }, \hyperpage{54}
+    \subitem \texttt  {reflection}, \hyperpage{54}
+    \subitem \texttt  {rotation in rad}, \hyperpage{54}
+    \subitem \texttt  {rotation with nodes}, \hyperpage{54}
+    \subitem \texttt  {rotation }, \hyperpage{54}
+    \subitem \texttt  {symmetry }, \hyperpage{54}
+    \subitem \texttt  {translation}, \hyperpage{54}
+  \item \texttt  {\textbackslash tkzDefPointBy{\ttfamily  [}{\color  {myblue}\meta  {local options}}{\ttfamily  ]}{\ttfamily  (}{\color  {myblue}\meta  {pt}}{\ttfamily  )}}, 
+		\hyperpage{53}
+  \item \texttt  {\textbackslash tkzDefPointOnCircle}, 
+		\hyperpage{44, 45}
+  \item \texttt  {\textbackslash tkzDefPointOnCircle: options}
+    \subitem \texttt  {R in rad}, \hyperpage{44}
+    \subitem \texttt  {R}, \hyperpage{44}
+    \subitem \texttt  {through in rad}, \hyperpage{44}
+    \subitem \texttt  {through}, \hyperpage{44}
+  \item \texttt  {\textbackslash tkzDefPointOnCircle{\ttfamily  [}{\color  {myblue}\meta  {local options}}{\ttfamily  ]}}, 
+		\hyperpage{44}
+  \item \texttt  {\textbackslash tkzDefPointOnLine}, \hyperpage{43}
+  \item \texttt  {\textbackslash tkzDefPointOnLine: arguments}
+    \subitem \texttt  {pt1,pt2}, \hyperpage{43}
+  \item \texttt  {\textbackslash tkzDefPointOnLine: options}
+    \subitem \texttt  {pos=nb}, \hyperpage{43}
+  \item \texttt  {\textbackslash tkzDefPointOnLine{\ttfamily  [}{\color  {myblue}\meta  {local options}}{\ttfamily  ]}{\ttfamily  (}{\color  {myblue}\meta  {A,B}}{\ttfamily  )}}, 
+		\hyperpage{43}
+  \item \texttt  {\textbackslash tkzDefPoints\{0/0/O,2/2/A\}}, 
+		\hyperpage{33}
+  \item \texttt  {\textbackslash tkzDefPoints}, \hyperpage{28}, 
+		\hyperpage{32}
+  \item \texttt  {\textbackslash tkzDefPoints: arguments}
+    \subitem \texttt  {$x_i/y_i/r_i$}, \hyperpage{33}
+  \item \texttt  {\textbackslash tkzDefPoints: options}
+    \subitem \texttt  {shift}, \hyperpage{33}
+  \item \texttt  {\textbackslash tkzDefPointsBy}, \hyperpage{53}, 
+		\hyperpage{63}
+  \item \texttt  {\textbackslash tkzDefPointsBy: arguments}
+    \subitem \texttt  {{\ttfamily  (}{\color  {myblue}\meta  {list of points}}{\ttfamily  )}{\ttfamily  \char `\{}{\color  {myblue}\meta  {list of pts}}{\ttfamily  \char `\}}}, 
+		\hyperpage{63}
+  \item \texttt  {\textbackslash tkzDefPointsBy: options}
+    \subitem \texttt  {homothety = center \#1 ratio \#2}, 
+		\hyperpage{63}
+    \subitem \texttt  {inversion = center \#1 through \#2}, 
+		\hyperpage{63}
+    \subitem \texttt  {inversion negative = center \#1 through \#2}, 
+		\hyperpage{63}
+    \subitem \texttt  {projection = onto \#1--\#2}, \hyperpage{63}
+    \subitem \texttt  {reflection = over \#1--\#2}, \hyperpage{63}
+    \subitem \texttt  {rotation = center \#1 angle \#2}, \hyperpage{63}
+    \subitem \texttt  {rotation in rad = center \#1 angle \#2}, 
+		\hyperpage{63}
+    \subitem \texttt  {rotation with nodes = center \#1 from \#2 to \#3}, 
+		\hyperpage{63}
+    \subitem \texttt  {symmetry = center \#1}, \hyperpage{63}
+    \subitem \texttt  {translation = from \#1 to \#2}, \hyperpage{63}
+  \item \texttt  {\textbackslash tkzDefPointsBy{\ttfamily  [}{\color  {myblue}\meta  {local options}}{\ttfamily  ]}{\ttfamily  (}{\color  {myblue}\meta  {list of points}}{\ttfamily  )}{\ttfamily  \char `\{}{\color  {myblue}\meta  {list of points}}{\ttfamily  \char `\}}}, 
+		\hyperpage{63}
+  \item \texttt  {\textbackslash tkzDefPoints{\ttfamily  [}{\color  {myblue}\meta  {local options}}{\ttfamily  ]}{\ttfamily  \char `\{}{\color  {myblue}\meta  {$x_1/y_1/r_1,x_2/y_2/r_2$, ...}}{\ttfamily  \char `\}}}, 
+		\hyperpage{32}
+  \item \texttt  {\textbackslash tkzDefPointWith}, \hyperpage{64, 65}
+  \item \texttt  {\textbackslash tkzDefPointWith: arguments}
+    \subitem \texttt  {(pt1,pt2)}, \hyperpage{65}
+  \item \texttt  {\textbackslash tkzDefPointWith: options}
+    \subitem \texttt  {K}, \hyperpage{65}
+    \subitem \texttt  {colinear normed= at \#1}, \hyperpage{65}
+    \subitem \texttt  {colinear= at \#1}, \hyperpage{65}
+    \subitem \texttt  {linear normed}, \hyperpage{65}
+    \subitem \texttt  {linear}, \hyperpage{65}
+    \subitem \texttt  {orthogonal normed}, \hyperpage{65}
+    \subitem \texttt  {orthogonal}, \hyperpage{65}
+  \item \texttt  {\textbackslash tkzDefPointWith{\ttfamily  (}{\color  {myblue}\meta  {pt1,pt2}}{\ttfamily  )}}, 
+		\hyperpage{65}
+  \item \texttt  {\textbackslash tkzDefPoint{\ttfamily  [}{\color  {myblue}\meta  {local options}}{\ttfamily  ]}{\ttfamily  (}{\color  {myblue}\meta  {$x,y$}}{\ttfamily  )}{\ttfamily  \char `\{}{\color  {myblue}\meta  {ref}}{\ttfamily  \char `\}} or {\ttfamily  (}{\color  {myblue}\meta  {$\mitalpha $:$d$}}{\ttfamily  )}{\ttfamily  \char `\{}{\color  {myblue}\meta  {ref}}{\ttfamily  \char `\}}}, 
+		\hyperpage{29}
+  \item \texttt  {\textbackslash tkzDefProjExcenter[name=J](A,B,C)(a,b,c)\{Y,Z,X\}}, 
+		\hyperpage{105}
+  \item \texttt  {\textbackslash tkzDefProjExcenter}, \hyperpage{105}
+  \item \texttt  {\textbackslash tkzDefProjExcenter: arguments}
+    \subitem \texttt  {(pt1=$\mitalpha _1$,pt2=$\mitalpha _2$,\dots  )}, 
+		\hyperpage{105}
+  \item \texttt  {\textbackslash tkzDefProjExcenter: options}
+    \subitem \texttt  {name}, \hyperpage{105}
+  \item \texttt  {\textbackslash tkzDefProjExcenter{\ttfamily  [}{\color  {myblue}\meta  {local options}}{\ttfamily  ]}{\ttfamily  (}{\color  {myblue}\meta  {A,B,C}}{\ttfamily  )}{\ttfamily  (}{\color  {myblue}\meta  {a,b,c}}{\ttfamily  )}{\ttfamily  \char `\{}{\color  {myblue}\meta  {X,Y,Z}}{\ttfamily  \char `\}}}, 
+		\hyperpage{105}
+  \item \texttt  {\textbackslash tkzDefRadicalAxis}, \hyperpage{204}
+  \item \texttt  {\textbackslash tkzDefRadicalAxis: arguments}
+    \subitem \texttt  {(pt1,pt2)(pt3,pt4)}, \hyperpage{204}
+  \item \texttt  {\textbackslash tkzDefRadicalAxis{\ttfamily  (}{\color  {myblue}\meta  {$pt1$,$pt2$}}{\ttfamily  )}{\ttfamily  (}{\color  {myblue}\meta  {$pt3$,$pt4$}}{\ttfamily  )}}, 
+		\hyperpage{204}
+  \item \texttt  {\textbackslash tkzDefRandPointOn}, \hyperpage{71}
+  \item \texttt  {\textbackslash tkzDefRandPointOn: options}
+    \subitem \texttt  {circle =center pt1 radius dim}, \hyperpage{71}
+    \subitem \texttt  {circle through=center pt1 through pt2}, 
+		\hyperpage{71}
+    \subitem \texttt  {disk through=center pt1 through pt2}, 
+		\hyperpage{71}
+    \subitem \texttt  {line=pt1--pt2}, \hyperpage{71}
+    \subitem \texttt  {rectangle=pt1 and pt2}, \hyperpage{71}
+    \subitem \texttt  {segment= pt1--pt2}, \hyperpage{71}
+  \item \texttt  {\textbackslash tkzDefRandPointOn{\ttfamily  [}{\color  {myblue}\meta  {local options}}{\ttfamily  ]}}, 
+		\hyperpage{71}
+  \item \texttt  {\textbackslash tkzDefRectangle}, \hyperpage{96}
+  \item \texttt  {\textbackslash tkzDefRectangle: arguments}
+    \subitem \texttt  {{\ttfamily  (}{\color  {myblue}\meta  {pt1,pt2}}{\ttfamily  )}}, 
+		\hyperpage{96}
+  \item \texttt  {\textbackslash tkzDefRectangle{\ttfamily  (}{\color  {myblue}\meta  {pt1,pt2}}{\ttfamily  )}}, 
+		\hyperpage{96}
+  \item \texttt  {\textbackslash tkzDefRegPolygon}, \hyperpage{98}
+  \item \texttt  {\textbackslash tkzDefRegPolygon: arguments}
+    \subitem \texttt  {{\ttfamily  (}{\color  {myblue}\meta  {pt1,pt2}}{\ttfamily  )}}, 
+		\hyperpage{98}
+  \item \texttt  {\textbackslash tkzDefRegPolygon: options}
+    \subitem \texttt  {Options TikZ}, \hyperpage{99}
+    \subitem \texttt  {center}, \hyperpage{99}
+    \subitem \texttt  {name}, \hyperpage{99}
+    \subitem \texttt  {sides}, \hyperpage{99}
+    \subitem \texttt  {side}, \hyperpage{99}
+  \item \texttt  {\textbackslash tkzDefRegPolygon{\ttfamily  [}{\color  {myblue}\meta  {local options}}{\ttfamily  ]}{\ttfamily  (}{\color  {myblue}\meta  {pt1,pt2}}{\ttfamily  )}}, 
+		\hyperpage{98}
+  \item \texttt  {\textbackslash tkzDefShiftPoint}, \hyperpage{31}
+  \item \texttt  {\textbackslash tkzDefShiftPoint: arguments}
+    \subitem \texttt  {($\mitalpha $:$d$)}, \hyperpage{31}
+    \subitem \texttt  {($x,y$)}, \hyperpage{31}
+    \subitem \texttt  {\{ref\}}, \hyperpage{31}
+  \item \texttt  {\textbackslash tkzDefShiftPoint: options}
+    \subitem \texttt  {[pt]}, \hyperpage{31}
+  \item \texttt  {\textbackslash tkzDefShiftPoint{\ttfamily  [}{\color  {myblue}\meta  {Point}}{\ttfamily  ]}{\ttfamily  (}{\color  {myblue}\meta  {$x,y$}}{\ttfamily  )}{\ttfamily  \char `\{}{\color  {myblue}\meta  {ref}}{\ttfamily  \char `\}} or {\ttfamily  (}{\color  {myblue}\meta  {$\mitalpha $:$d$}}{\ttfamily  )}{\ttfamily  \char `\{}{\color  {myblue}\meta  {ref}}{\ttfamily  \char `\}}}, 
+		\hyperpage{31}
+  \item \texttt  {\textbackslash tkzDefSimilitudeCenter}, 
+		\hyperpage{37}, \hyperpage{275}
+  \item \texttt  {\textbackslash tkzDefSimilitudeCenter: arguments}
+    \subitem \texttt  {{\ttfamily  (}{\color  {myblue}\meta  {pt1,pt2}}{\ttfamily  )}{\ttfamily  (}{\color  {myblue}\meta  {pt3,pt4}}{\ttfamily  )}}, 
+		\hyperpage{37}
+  \item \texttt  {\textbackslash tkzDefSimilitudeCenter: options}
+    \subitem \texttt  {ext}, \hyperpage{38}
+    \subitem \texttt  {int}, \hyperpage{38}
+  \item \texttt  {\textbackslash tkzDefSimilitudeCenter{\ttfamily  [}{\color  {myblue}\meta  {options}}{\ttfamily  ]}{\ttfamily  (}{\color  {myblue}\meta  {O,A}}{\ttfamily  )}{\ttfamily  (}{\color  {myblue}\meta  {O',B}}{\ttfamily  )}}, 
+		\hyperpage{37}
+  \item \texttt  {\textbackslash tkzDefSpcTriangle[medial,name=M\_](A,B,C)\{A,B,C\}}, 
+		\hyperpage{85}
+  \item \texttt  {\textbackslash tkzDefSpcTriangle[medial,name=M](A,B,C)\{\_A,\_B,\_C\}}, 
+		\hyperpage{85}
+  \item \texttt  {\textbackslash tkzDefSpcTriangle[medial](A,B,C)\{a,b,c\}}, 
+		\hyperpage{85}
+  \item \texttt  {\textbackslash tkzDefSpcTriangle}, \hyperpage{85}, 
+		\hyperpage{275}
+  \item \texttt  {\textbackslash tkzDefSpcTriangle: options}
+    \subitem \texttt  {centroid or medial}, \hyperpage{85}
+    \subitem \texttt  {euler}, \hyperpage{85}
+    \subitem \texttt  {ex or excentral}, \hyperpage{85}
+    \subitem \texttt  {extouch}, \hyperpage{85}
+    \subitem \texttt  {feuerbach}, \hyperpage{85}
+    \subitem \texttt  {in or incentral}, \hyperpage{85}
+    \subitem \texttt  {intouch or contact}, \hyperpage{85}
+    \subitem \texttt  {name}, \hyperpage{85}
+    \subitem \texttt  {orthic}, \hyperpage{85}
+    \subitem \texttt  {symmedial}, \hyperpage{85}
+    \subitem \texttt  {tangential}, \hyperpage{85}
+    \subitem \texttt  {}, \hyperpage{85}
+  \item \texttt  {\textbackslash tkzDefSpcTriangle{\ttfamily  [}{\color  {myblue}\meta  {local options}}{\ttfamily  ]}{\ttfamily  (}{\color  {myblue}\meta  {p1,p2,p3}}{\ttfamily  )}{\ttfamily  \char `\{}{\color  {myblue}\meta  {r1,r2,r3}}{\ttfamily  \char `\}}}, 
+		\hyperpage{85}
+  \item \texttt  {\textbackslash tkzDefSquare}, \hyperpage{95, 96}
+  \item \texttt  {\textbackslash tkzDefSquare: arguments}
+    \subitem \texttt  {{\ttfamily  (}{\color  {myblue}\meta  {pt1,pt2}}{\ttfamily  )}}, 
+		\hyperpage{95}
+  \item \texttt  {\textbackslash tkzDefSquare{\ttfamily  (}{\color  {myblue}\meta  {pt1,pt2}}{\ttfamily  )}}, 
+		\hyperpage{95}
+  \item \texttt  {\textbackslash tkzDefTriangle}, \hyperpage{32}, 
+		\hyperpage{80, 81}
+  \item \texttt  {\textbackslash tkzDefTriangle: options}
+    \subitem \texttt  {cheops}, \hyperpage{81}
+    \subitem \texttt  {egyptian}, \hyperpage{81}
+    \subitem \texttt  {equilateral}, \hyperpage{81}
+    \subitem \texttt  {euclid}, \hyperpage{81}
+    \subitem \texttt  {golden}, \hyperpage{81}
+    \subitem \texttt  {gold}, \hyperpage{81}
+    \subitem \texttt  {half}, \hyperpage{81}
+    \subitem \texttt  {isosceles right}, \hyperpage{81}
+    \subitem \texttt  {pythagoras}, \hyperpage{81}
+    \subitem \texttt  {pythagore}, \hyperpage{81}
+    \subitem \texttt  {school}, \hyperpage{81}
+    \subitem \texttt  {sublime}, \hyperpage{81}
+    \subitem \texttt  {swap}, \hyperpage{81}
+    \subitem \texttt  {two angles= \#1 and \#2}, \hyperpage{81}
+  \item \texttt  {\textbackslash tkzDefTriangleCenter[ortho](B,C,A)}, 
+		\hyperpage{46}
+  \item \texttt  {\textbackslash tkzDefTriangleCenter}, \hyperpage{46}, 
+		\hyperpage{275}
+  \item \texttt  {\textbackslash tkzDefTriangleCenter: arguments}
+    \subitem \texttt  {(pt1,pt2,pt3)}, \hyperpage{46}
+  \item \texttt  {\textbackslash tkzDefTriangleCenter: options}
+    \subitem \texttt  {centroid}, \hyperpage{46}
+    \subitem \texttt  {circum}, \hyperpage{46}
+    \subitem \texttt  {euler}, \hyperpage{46}
+    \subitem \texttt  {ex}, \hyperpage{46}
+    \subitem \texttt  {feuerbach}, \hyperpage{46}
+    \subitem \texttt  {gergonne}, \hyperpage{46}
+    \subitem \texttt  {grebe}, \hyperpage{46}
+    \subitem \texttt  {in}, \hyperpage{46}
+    \subitem \texttt  {lemoine}, \hyperpage{46}
+    \subitem \texttt  {median}, \hyperpage{46}
+    \subitem \texttt  {mittenpunkt}, \hyperpage{46}
+    \subitem \texttt  {nagel}, \hyperpage{46}
+    \subitem \texttt  {orthic}, \hyperpage{46}
+    \subitem \texttt  {ortho}, \hyperpage{46}
+    \subitem \texttt  {spieker}, \hyperpage{46}
+    \subitem \texttt  {symmedian}, \hyperpage{46}
+  \item \texttt  {\textbackslash tkzDefTriangleCenter{\ttfamily  [}{\color  {myblue}\meta  {local options}}{\ttfamily  ]}{\ttfamily  (}{\color  {myblue}\meta  {A,B,C}}{\ttfamily  )}}, 
+		\hyperpage{46}
+  \item \texttt  {\textbackslash tkzDefTriangle{\ttfamily  [}{\color  {myblue}\meta  {local options}}{\ttfamily  ]}{\ttfamily  (}{\color  {myblue}\meta  {A,B}}{\ttfamily  )}}, 
+		\hyperpage{81}
+  \item \texttt  {\textbackslash tkzDotProduct}, \hyperpage{201}
+  \item \texttt  {\textbackslash tkzDotProduct: arguments}
+    \subitem \texttt  {(pt1,pt2,pt3)}, \hyperpage{201}
+  \item \texttt  {\textbackslash tkzDotProduct{\ttfamily  (}{\color  {myblue}\meta  {$pt1$,$pt2$,$pt3$}}{\ttfamily  )}}, 
+		\hyperpage{201}
+  \item \texttt  {\textbackslash tkzDrawArc[angles](O,A)(0,90)}, 
+		\hyperpage{148}
+  \item \texttt  {\textbackslash tkzDrawArc[delta=10](O,A)(B)}, 
+		\hyperpage{148}
+  \item \texttt  {\textbackslash tkzDrawArc[R with nodes](O,2)(A,B)}, 
+		\hyperpage{148}
+  \item \texttt  {\textbackslash tkzDrawArc[R](O,2)(30,90)}, 
+		\hyperpage{148}
+  \item \texttt  {\textbackslash tkzDrawArc[rotate,color=red](O,A)(90)}, 
+		\hyperpage{148}
+  \item \texttt  {\textbackslash tkzDrawArc}, \hyperpage{124}, 
+		\hyperpage{148}, \hyperpage{214}, \hyperpage{273}, 
+		\hyperpage{275}
+  \item \texttt  {\textbackslash tkzDrawArc: options}
+    \subitem \texttt  {R with nodes}, \hyperpage{148}
+    \subitem \texttt  {R}, \hyperpage{148}
+    \subitem \texttt  {angles}, \hyperpage{148}
+    \subitem \texttt  {delta}, \hyperpage{148}
+    \subitem \texttt  {reverse}, \hyperpage{148}
+    \subitem \texttt  {rotate}, \hyperpage{148}
+    \subitem \texttt  {towards}, \hyperpage{148}
+  \item \texttt  {\textbackslash tkzDrawArc{\ttfamily  [}{\color  {myblue}\meta  {local options}}{\ttfamily  ]}{\ttfamily  (}{\color  {myblue}\meta  {O,\dots  }}{\ttfamily  )}{\ttfamily  (}{\color  {myblue}\meta  {\dots  }}{\ttfamily  )}}, 
+		\hyperpage{148}
+  \item \texttt  {\textbackslash tkzDrawCircle(N,P)}, \hyperpage{272}
+  \item \texttt  {\textbackslash tkzDrawCircle[R](O,3)}, 
+		\hyperpage{272}
+  \item \texttt  {\textbackslash tkzDrawCircle[R](O,3cm)}, 
+		\hyperpage{272}
+  \item \texttt  {\textbackslash tkzDrawCircle}, \hyperpage{101}, 
+		\hyperpage{143}, \hyperpage{154}, \hyperpage{276}
+  \item \texttt  {\textbackslash tkzDrawCircle: arguments}
+    \subitem \texttt  {{\ttfamily  (}{\color  {myblue}\meta  {pt1,pt2}}{\ttfamily  )}}, 
+		\hyperpage{143}
+  \item \texttt  {\textbackslash tkzDrawCircles}, \hyperpage{143}, 
+		\hyperpage{272}
+  \item \texttt  {\textbackslash tkzDrawCircles: arguments}
+    \subitem \texttt  {{\ttfamily  (}{\color  {myblue}\meta  {pt1,pt2 pt3,pt4 ...}}{\ttfamily  )}}, 
+		\hyperpage{143}
+  \item \texttt  {\textbackslash tkzDrawCircles: options}
+    \subitem \texttt  {through}, \hyperpage{143}
+  \item \texttt  {\textbackslash tkzDrawCircles{\ttfamily  [}{\color  {myblue}\meta  {local options}}{\ttfamily  ]}{\ttfamily  (}{\color  {myblue}\meta  {A,B C,D \dots  }}{\ttfamily  )}}, 
+		\hyperpage{143}
+  \item \texttt  {\textbackslash tkzDrawCircle{\ttfamily  [}{\color  {myblue}\meta  {local options}}{\ttfamily  ]}{\ttfamily  (}{\color  {myblue}\meta  {A,B}}{\ttfamily  )}}, 
+		\hyperpage{143}
+  \item \texttt  {\textbackslash tkzDrawEllipse}, \hyperpage{147}
+  \item \texttt  {\textbackslash tkzDrawEllipse: arguments}
+    \subitem \texttt  {{\ttfamily  (}{\color  {myblue}\meta  {C,a,b,An}}{\ttfamily  )}}, 
+		\hyperpage{147}
+  \item \texttt  {\textbackslash tkzDrawEllipse{\ttfamily  [}{\color  {myblue}\meta  {local options}}{\ttfamily  ]}{\ttfamily  (}{\color  {myblue}\meta  {C,a,b,An}}{\ttfamily  )}}, 
+		\hyperpage{147}
+  \item \texttt  {\textbackslash tkzDrawLine}, \hyperpage{135}
+  \item \texttt  {\textbackslash tkzDrawLine: options}
+    \subitem \texttt  {Ti\textsl  {k}Z\ 选项}, \hyperpage{135}
+    \subitem \texttt  {\dots  }, \hyperpage{135}
+    \subitem \texttt  {add}, \hyperpage{135}
+  \item \texttt  {\textbackslash tkzDrawLines}, \hyperpage{135}
+  \item \texttt  {\textbackslash tkzDrawLines{\ttfamily  [}{\color  {myblue}\meta  {local options}}{\ttfamily  ]}{\ttfamily  (}{\color  {myblue}\meta  {pt1,pt2 pt3,pt4 ...}}{\ttfamily  )}}, 
+		\hyperpage{135}
+  \item \texttt  {\textbackslash tkzDrawLine{\ttfamily  [}{\color  {myblue}\meta  {local options}}{\ttfamily  ]}{\ttfamily  (}{\color  {myblue}\meta  {pt1,pt2}}{\ttfamily  )} }, 
+		\hyperpage{135}
+  \item \texttt  {\textbackslash tkzDrawPoint(A,B)}, \hyperpage{272}
+  \item \texttt  {\textbackslash tkzDrawPoint}, \hyperpage{131}
+  \item \texttt  {\textbackslash tkzDrawPoint: arguments}
+    \subitem \texttt  {点名称}, \hyperpage{131}
+  \item \texttt  {\textbackslash tkzDrawPoint: options}
+    \subitem \texttt  {Ti\textsl  {k}Z\ 选项}, \hyperpage{131}
+    \subitem \texttt  {color}, \hyperpage{131}
+    \subitem \texttt  {shape}, \hyperpage{131}
+    \subitem \texttt  {size}, \hyperpage{131}
+  \item \texttt  {\textbackslash tkzDrawPoints(A,B)}, \hyperpage{272}
+  \item \texttt  {\textbackslash tkzDrawPoints(A,B,C)}, \hyperpage{133}
+  \item \texttt  {\textbackslash tkzDrawPoints}, \hyperpage{131}, 
+		\hyperpage{133}
+  \item \texttt  {\textbackslash tkzDrawPoints: arguments}
+    \subitem \texttt  {点列表}, \hyperpage{133}
+  \item \texttt  {\textbackslash tkzDrawPoints: options}
+    \subitem \texttt  {color}, \hyperpage{133}
+    \subitem \texttt  {shape}, \hyperpage{133}
+    \subitem \texttt  {size}, \hyperpage{133}
+  \item \texttt  {\textbackslash tkzDrawPoints{\ttfamily  [}{\color  {myblue}\meta  {local options}}{\ttfamily  ]}{\ttfamily  (}{\color  {myblue}\meta  {liste}}{\ttfamily  )}}, 
+		\hyperpage{133}
+  \item \texttt  {\textbackslash tkzDrawPoint{\ttfamily  [}{\color  {myblue}\meta  {local options}}{\ttfamily  ]}{\ttfamily  (}{\color  {myblue}\meta  {name}}{\ttfamily  )}}, 
+		\hyperpage{131}
+  \item \texttt  {\textbackslash tkzDrawPolygon}, \hyperpage{140, 141}
+  \item \texttt  {\textbackslash tkzDrawPolygon: arguments}
+    \subitem \texttt  {{\ttfamily  (}{\color  {myblue}\meta  {pt1,pt2,pt3,...}}{\ttfamily  )}}, 
+		\hyperpage{140}
+  \item \texttt  {\textbackslash tkzDrawPolygon: options}
+    \subitem \texttt  {Options TikZ}, \hyperpage{140}
+  \item \texttt  {\textbackslash tkzDrawPolygon{\ttfamily  [}{\color  {myblue}\meta  {local options}}{\ttfamily  ]}{\ttfamily  (}{\color  {myblue}\meta  {points list}}{\ttfamily  )}}, 
+		\hyperpage{140}
+  \item \texttt  {\textbackslash tkzDrawPolySeg}, \hyperpage{141}, 
+		\hyperpage{275}
+  \item \texttt  {\textbackslash tkzDrawPolySeg: arguments}
+    \subitem \texttt  {{\ttfamily  (}{\color  {myblue}\meta  {pt1,pt2,pt3,...}}{\ttfamily  )}}, 
+		\hyperpage{142}
+  \item \texttt  {\textbackslash tkzDrawPolySeg: options}
+    \subitem \texttt  {Options TikZ}, \hyperpage{142}
+  \item \texttt  {\textbackslash tkzDrawPolySeg{\ttfamily  [}{\color  {myblue}\meta  {local options}}{\ttfamily  ]}{\ttfamily  (}{\color  {myblue}\meta  {points list}}{\ttfamily  )}}, 
+		\hyperpage{141}
+  \item \texttt  {\textbackslash tkzDrawSector(O,A)(B)}, 
+		\hyperpage{152}
+  \item \texttt  {\textbackslash tkzDrawSector[R with nodes](O,2)(A,B)}, 
+		\hyperpage{152}
+  \item \texttt  {\textbackslash tkzDrawSector[R,color=teal](O,2)(30,90)}, 
+		\hyperpage{152}
+  \item \texttt  {\textbackslash tkzDrawSector[rotate,color=red](O,A)(90)}, 
+		\hyperpage{152}
+  \item \texttt  {\textbackslash tkzDrawSector}, \hyperpage{152--154}
+  \item \texttt  {\textbackslash tkzDrawSector: options}
+    \subitem \texttt  {R with nodes}, \hyperpage{152}
+    \subitem \texttt  {R}, \hyperpage{152}
+    \subitem \texttt  {rotate}, \hyperpage{152}
+    \subitem \texttt  {towards}, \hyperpage{152}
+  \item \texttt  {\textbackslash tkzDrawSector{\ttfamily  [}{\color  {myblue}\meta  {local options}}{\ttfamily  ]}{\ttfamily  (}{\color  {myblue}\meta  {O,\dots  }}{\ttfamily  )}{\ttfamily  (}{\color  {myblue}\meta  {\dots  }}{\ttfamily  )}}, 
+		\hyperpage{152}
+  \item \texttt  {\textbackslash tkzDrawSegment}, \hyperpage{136}
+  \item \texttt  {\textbackslash tkzDrawSegment: arguments}
+    \subitem \texttt  {(pt1,pt2)}, \hyperpage{136}
+  \item \texttt  {\textbackslash tkzDrawSegment: options}
+    \subitem \texttt  {Ti\textsl  {k}Z\ 选项}, \hyperpage{136}
+    \subitem \texttt  {\dots  }, \hyperpage{136}
+    \subitem \texttt  {dim}, \hyperpage{136}
+  \item \texttt  {\textbackslash tkzDrawSegments}, \hyperpage{138}, 
+		\hyperpage{272}
+  \item \texttt  {\textbackslash tkzDrawSegments{\ttfamily  [}{\color  {myblue}\meta  {local options}}{\ttfamily  ]}{\ttfamily  (}{\color  {myblue}\meta  {pt1,pt2 pt3,pt4 ...}}{\ttfamily  )}}, 
+		\hyperpage{138}
+  \item \texttt  {\textbackslash tkzDrawSegment{\ttfamily  [}{\color  {myblue}\meta  {local options}}{\ttfamily  ]}{\ttfamily  (}{\color  {myblue}\meta  {pt1,pt2}}{\ttfamily  )}}, 
+		\hyperpage{136}
+  \item \texttt  {\textbackslash tkzDrawSemiCircle}, \hyperpage{146}
+  \item \texttt  {\textbackslash tkzDrawSemiCircle: arguments}
+    \subitem \texttt  {{\ttfamily  (}{\color  {myblue}\meta  {pt1,pt2}}{\ttfamily  )}}, 
+		\hyperpage{146}
+  \item \texttt  {\textbackslash tkzDrawSemiCircles}, 
+		\hyperpage{146, 147}
+  \item \texttt  {\textbackslash tkzDrawSemiCircles: arguments}
+    \subitem \texttt  {{\ttfamily  (}{\color  {myblue}\meta  {pt1,pt2 pt3,pt4 ...}}{\ttfamily  )}}, 
+		\hyperpage{146}
+  \item \texttt  {\textbackslash tkzDrawSemiCircles{\ttfamily  [}{\color  {myblue}\meta  {local options}}{\ttfamily  ]}{\ttfamily  (}{\color  {myblue}\meta  {A,B C,D \dots  }}{\ttfamily  )}}, 
+		\hyperpage{146}
+  \item \texttt  {\textbackslash tkzDrawSemiCircle{\ttfamily  [}{\color  {myblue}\meta  {local options}}{\ttfamily  ]}{\ttfamily  (}{\color  {myblue}\meta  {O,A}}{\ttfamily  )}}, 
+		\hyperpage{146}
+  \item \texttt  {\textbackslash tkzDrawX}, \hyperpage{275}
+  \item \texttt  {\textbackslash tkzDuplicateLen}, \hyperpage{196}
+  \item \texttt  {\textbackslash tkzDuplicateLength}, \hyperpage{196}
+  \item \texttt  {\textbackslash tkzDuplicateSegment}, 
+		\hyperpage{196, 197}
+  \item \texttt  {\textbackslash tkzDuplicateSegment: arguments}
+    \subitem \texttt  {(pt1,pt2)(pt3,pt4)\{pt5\}}, \hyperpage{196}
+  \item \texttt  {\textbackslash tkzDuplicateSegment{\ttfamily  (}{\color  {myblue}\meta  {pt1,pt2}}{\ttfamily  )}{\ttfamily  (}{\color  {myblue}\meta  {pt3,pt4}}{\ttfamily  )}{\ttfamily  \char `\{}{\color  {myblue}\meta  {pt5}}{\ttfamily  \char `\}}}, 
+		\hyperpage{196}
+  \item \texttt  {\textbackslash tkzFeuerBachCircle}, \hyperpage{275}
+  \item \texttt  {\textbackslash tkzFillAngle}, \hyperpage{159}, 
+		\hyperpage{224}
+  \item \texttt  {\textbackslash tkzFillAngle: options}
+    \subitem \texttt  {size}, \hyperpage{159}
+  \item \texttt  {\textbackslash tkzFillAngles}, \hyperpage{160}
+  \item \texttt  {\textbackslash tkzFillAngles{\ttfamily  [}{\color  {myblue}\meta  {local options}}{\ttfamily  ]}{\ttfamily  (}{\color  {myblue}\meta  {A,O,B}}{\ttfamily  )}{\ttfamily  (}{\color  {myblue}\meta  {A',O',B'}}{\ttfamily  )}etc.}, 
+		\hyperpage{160}
+  \item \texttt  {\textbackslash tkzFillAngle{\ttfamily  [}{\color  {myblue}\meta  {local options}}{\ttfamily  ]}{\ttfamily  (}{\color  {myblue}\meta  {A,O,B}}{\ttfamily  )}}, 
+		\hyperpage{159}
+  \item \texttt  {\textbackslash tkzFillCircle}, \hyperpage{101}, 
+		\hyperpage{155}
+  \item \texttt  {\textbackslash tkzFillCircle: options}
+    \subitem \texttt  {R}, \hyperpage{155}
+    \subitem \texttt  {radius}, \hyperpage{155}
+  \item \texttt  {\textbackslash tkzFillCircle{\ttfamily  [}{\color  {myblue}\meta  {local options}}{\ttfamily  ]}{\ttfamily  (}{\color  {myblue}\meta  {A,B}}{\ttfamily  )}}, 
+		\hyperpage{155}
+  \item \texttt  {\textbackslash tkzFillPolygon}, \hyperpage{158}
+  \item \texttt  {\textbackslash tkzFillPolygon: arguments}
+    \subitem \texttt  {{\ttfamily  (}{\color  {myblue}\meta  {pt1,pt2,\dots  }}{\ttfamily  )}}, 
+		\hyperpage{158}
+  \item \texttt  {\textbackslash tkzFillPolygon{\ttfamily  [}{\color  {myblue}\meta  {local options}}{\ttfamily  ]}{\ttfamily  (}{\color  {myblue}\meta  {points list}}{\ttfamily  )}}, 
+		\hyperpage{158}
+  \item \texttt  {\textbackslash tkzFillSector(O,A)(B)}, 
+		\hyperpage{159}
+  \item \texttt  {\textbackslash tkzFillSector[R with nodes](O,2)(A,B)}, 
+		\hyperpage{159}
+  \item \texttt  {\textbackslash tkzFillSector[R,color=blue](O,2)(30,90)}, 
+		\hyperpage{159}
+  \item \texttt  {\textbackslash tkzFillSector[rotate,color=red](O,A)(90)}, 
+		\hyperpage{159}
+  \item \texttt  {\textbackslash tkzFillSector}, \hyperpage{153}, 
+		\hyperpage{158, 159}
+  \item \texttt  {\textbackslash tkzFillSector: options}
+    \subitem \texttt  {R with nodes}, \hyperpage{158, 159}
+    \subitem \texttt  {R}, \hyperpage{158, 159}
+    \subitem \texttt  {rotate}, \hyperpage{158, 159}
+    \subitem \texttt  {towards}, \hyperpage{158, 159}
+  \item \texttt  {\textbackslash tkzFillSector{\ttfamily  [}{\color  {myblue}\meta  {local options}}{\ttfamily  ]}{\ttfamily  (}{\color  {myblue}\meta  {O,\dots  }}{\ttfamily  )}{\ttfamily  (}{\color  {myblue}\meta  {\dots  }}{\ttfamily  )}}, 
+		\hyperpage{158}
+  \item \texttt  {\textbackslash tkzFindAngle}, \hyperpage{124, 125}
+  \item \texttt  {\textbackslash tkzFindAngle: arguments}
+    \subitem \texttt  {(pt1,pt2,pt3)}, \hyperpage{125}
+  \item \texttt  {\textbackslash tkzFindAngle{\ttfamily  (}{\color  {myblue}\meta  {pt1,pt2,pt3}}{\ttfamily  )}}, 
+		\hyperpage{125}
+  \item \texttt  {\textbackslash tkzFindSlopeAngle}, 
+		\hyperpage{127--129}
+  \item \texttt  {\textbackslash tkzFindSlopeAngle: arguments}
+    \subitem \texttt  {(pt1,pt2)}, \hyperpage{127}
+  \item \texttt  {\textbackslash tkzFindSlopeAngle{\ttfamily  (}{\color  {myblue}\meta  {A,B}}{\ttfamily  )}}, 
+		\hyperpage{127}
+  \item \texttt  {\textbackslash tkzGetAngle}, \hyperpage{124, 125}, 
+		\hyperpage{127, 128}
+  \item \texttt  {\textbackslash tkzGetAngle: arguments}
+    \subitem \texttt  {宏名称}, \hyperpage{125}
+  \item \texttt  {\textbackslash tkzGetAngle{\ttfamily  (}{\color  {myblue}\meta  {name of macro}}{\ttfamily  )}}, 
+		\hyperpage{124}
+  \item \texttt  {\textbackslash tkzGetFirstPoint\{A\}}, 
+		\hyperpage{272}
+  \item \texttt  {\textbackslash tkzGetFirstPoint\{Jb\}}, 
+		\hyperpage{104}
+  \item \texttt  {\textbackslash tkzGetFirstPoint\{M\} }, 
+		\hyperpage{34}
+  \item \texttt  {\textbackslash tkzGetFirstPoint}, \hyperpage{34}, 
+		\hyperpage{95}
+  \item \texttt  {\textbackslash tkzGetFirstPoint: arguments}
+    \subitem \texttt  {ref1}, \hyperpage{34}
+  \item \texttt  {\textbackslash tkzGetFirstPoint{\ttfamily  \char `\{}{\color  {myblue}\meta  {ref1}}{\ttfamily  \char `\}}}, 
+		\hyperpage{34}
+  \item \texttt  {\textbackslash tkzGetLength\{dAB\}}, \hyperpage{198}
+  \item \texttt  {\textbackslash tkzGetLength}, \hyperpage{34}, 
+		\hyperpage{101}, \hyperpage{198, 199}, \hyperpage{272}
+  \item \texttt  {\textbackslash tkzGetLength: arguments}
+    \subitem \texttt  {name of a macro}, \hyperpage{35}
+  \item \texttt  {\textbackslash tkzGetLength{\ttfamily  \char `\{}{\color  {myblue}\meta  {name of a macro}}{\ttfamily  \char `\}}}, 
+		\hyperpage{34}
+  \item \texttt  {\textbackslash tkzGetPoint(A)}, \hyperpage{272}
+  \item \texttt  {\textbackslash tkzGetPoint\{A\}}, \hyperpage{272}
+  \item \texttt  {\textbackslash tkzGetPoint\{C\}}, \hyperpage{65}
+  \item \texttt  {\textbackslash tkzGetPoint\{M\} }, \hyperpage{34}
+  \item \texttt  {\textbackslash tkzGetPoint\{M\}}, \hyperpage{53}
+  \item \texttt  {\textbackslash tkzGetPoint}, \hyperpage{14}, 
+		\hyperpage{34, 35}, \hyperpage{46}, \hyperpage{48}, 
+		\hyperpage{64}, \hyperpage{71}, \hyperpage{74}, 
+		\hyperpage{81}, \hyperpage{97}, \hyperpage{101, 102}, 
+		\hyperpage{112}, \hyperpage{272}
+  \item \texttt  {\textbackslash tkzGetPoint: arguments}
+    \subitem \texttt  {ref}, \hyperpage{34}
+  \item \texttt  {\textbackslash tkzGetPointCoord}, 
+		\hyperpage{200, 201}
+  \item \texttt  {\textbackslash tkzGetPointCoord: arguments}
+    \subitem \texttt  {(point)\{name of macro\}}, \hyperpage{200}
+  \item \texttt  {\textbackslash tkzGetPointCoord{\ttfamily  (}{\color  {myblue}\meta  {$A$}}{\ttfamily  )}{\ttfamily  \char `\{}{\color  {myblue}\meta  {name of macro}}{\ttfamily  \char `\}}}, 
+		\hyperpage{200}
+  \item \texttt  {\textbackslash tkzGetPoints\{A\}\{B\}}, 
+		\hyperpage{272}
+  \item \texttt  {\textbackslash tkzGetPoints\{M,N\} }, \hyperpage{34}
+  \item \texttt  {\textbackslash tkzGetPoints\{N\}\{P\}}, 
+		\hyperpage{272}
+  \item \texttt  {\textbackslash tkzGetPoints\{O'\}\{M'\}}, 
+		\hyperpage{108}
+  \item \texttt  {\textbackslash tkzGetPoints\{z1\}\{z2\}}, 
+		\hyperpage{107}
+  \item \texttt  {\textbackslash tkzGetPoints}, \hyperpage{34}, 
+		\hyperpage{74}, \hyperpage{95--97}, \hyperpage{101}, 
+		\hyperpage{108}, \hyperpage{272}
+  \item \texttt  {\textbackslash tkzGetPoints: arguments}
+    \subitem \texttt  {\{ref1,ref2\}}, \hyperpage{34}
+  \item \texttt  {\textbackslash tkzGetPoints{\ttfamily  \char `\{}{\color  {myblue}\meta  {ref1}}{\ttfamily  \char `\}}{\ttfamily  \char `\{}{\color  {myblue}\meta  {ref2}}{\ttfamily  \char `\}}}, 
+		\hyperpage{34}
+  \item \texttt  {\textbackslash tkzGetPoint{\ttfamily  \char `\{}{\color  {myblue}\meta  {ref}}{\ttfamily  \char `\}}}, 
+		\hyperpage{34}
+  \item \texttt  {\textbackslash tkzGetRandPointOn}, \hyperpage{71}
+  \item \texttt  {\textbackslash tkzGetResult}, \hyperpage{201}
+  \item \texttt  {\textbackslash tkzGetSecondPoint\{A\}}, 
+		\hyperpage{272}
+  \item \texttt  {\textbackslash tkzGetSecondPoint\{M\} }, 
+		\hyperpage{34}
+  \item \texttt  {\textbackslash tkzGetSecondPoint\{Tb\}}, 
+		\hyperpage{104}
+  \item \texttt  {\textbackslash tkzGetSecondPoint}, \hyperpage{34}, 
+		\hyperpage{95}
+  \item \texttt  {\textbackslash tkzGetSecondPoint: arguments}
+    \subitem \texttt  {ref2}, \hyperpage{34}
+  \item \texttt  {\textbackslash tkzGetSecondPoint{\ttfamily  \char `\{}{\color  {myblue}\meta  {ref2}}{\ttfamily  \char `\}}}, 
+		\hyperpage{34}
+  \item \texttt  {\textbackslash tkzGetVectxy}, \hyperpage{70}
+  \item \texttt  {\textbackslash tkzGetVectxy: arguments}
+    \subitem \texttt  {(point)\{name of macro\}}, \hyperpage{70}
+  \item \texttt  {\textbackslash tkzGetVectxy{\ttfamily  (}{\color  {myblue}\meta  {$A,B$}}{\ttfamily  )}\{{\color  {myblue}\meta  {text}}\}}, 
+		\hyperpage{70}
+  \item \texttt  {\textbackslash tkzGrid}, \hyperpage{275}
+  \item \texttt  {\textbackslash tkzIncentralTriangle}, \hyperpage{275}
+  \item \texttt  {\textbackslash tkzInit}, \hyperpage{21}, 
+		\hyperpage{161, 162}, \hyperpage{276}
+  \item \texttt  {\textbackslash tkzInit: options}
+    \subitem \texttt  {xmax}, \hyperpage{162}
+    \subitem \texttt  {xmin}, \hyperpage{162}
+    \subitem \texttt  {xstep}, \hyperpage{162}
+    \subitem \texttt  {ymax}, \hyperpage{162}
+    \subitem \texttt  {ymin}, \hyperpage{162}
+    \subitem \texttt  {ystep}, \hyperpage{162}
+  \item \texttt  {\textbackslash tkzInit{\ttfamily  [}{\color  {myblue}\meta  {local options}}{\ttfamily  ]}}, 
+		\hyperpage{162}
+  \item \texttt  {\textbackslash tkzInterCC}, \hyperpage{34}, 
+		\hyperpage{119}
+  \item \texttt  {\textbackslash tkzInterCC: options}
+    \subitem \texttt  {N}, \hyperpage{119}
+    \subitem \texttt  {R}, \hyperpage{119}
+    \subitem \texttt  {common=pt}, \hyperpage{119}
+    \subitem \texttt  {with nodes}, \hyperpage{119}
+  \item \texttt  {\textbackslash tkzInterCC{\ttfamily  [}{\color  {myblue}\meta  {options}}{\ttfamily  ]}{\ttfamily  (}{\color  {myblue}\meta  {$O,A$}}{\ttfamily  )}{\ttfamily  (}{\color  {myblue}\meta  {$O',A'$}}{\ttfamily  )} or {\ttfamily  (}{\color  {myblue}\meta  {$O,r$}}{\ttfamily  )}{\ttfamily  (}{\color  {myblue}\meta  {$O',r'$}}{\ttfamily  )} or {\ttfamily  (}{\color  {myblue}\meta  {$O,A,B$}}{\ttfamily  )} {\ttfamily  (}{\color  {myblue}\meta  {$O',C,D$}}{\ttfamily  )}}, 
+		\hyperpage{119}
+  \item \texttt  {\textbackslash tkzInterLC}, \hyperpage{112}
+  \item \texttt  {\textbackslash tkzInterLC: options}
+    \subitem \texttt  {N}, \hyperpage{112}
+    \subitem \texttt  {R}, \hyperpage{112}
+    \subitem \texttt  {common=pt}, \hyperpage{112}
+    \subitem \texttt  {near}, \hyperpage{112}
+    \subitem \texttt  {with nodes}, \hyperpage{112}
+  \item \texttt  {\textbackslash tkzInterLC{\ttfamily  [}{\color  {myblue}\meta  {options}}{\ttfamily  ]}{\ttfamily  (}{\color  {myblue}\meta  {$A,B$}}{\ttfamily  )}{\ttfamily  (}{\color  {myblue}\meta  {$O,C$}}{\ttfamily  )} or {\ttfamily  (}{\color  {myblue}\meta  {$O,r$}}{\ttfamily  )} or {\ttfamily  (}{\color  {myblue}\meta  {$O,C,D$}}{\ttfamily  )}}, 
+		\hyperpage{112}
+  \item \texttt  {\textbackslash tkzInterLL}, \hyperpage{112}
+  \item \texttt  {\textbackslash tkzInterLL{\ttfamily  (}{\color  {myblue}\meta  {$A,B$}}{\ttfamily  )}{\ttfamily  (}{\color  {myblue}\meta  {$C,D$}}{\ttfamily  )}}, 
+		\hyperpage{112}
+  \item \texttt  {\textbackslash tkzIsLinear}, \hyperpage{206, 207}, 
+		\hyperpage{275}
+  \item \texttt  {\textbackslash tkzIsLinear: arguments}
+    \subitem \texttt  {(pt1,pt2,pt3)}, \hyperpage{206}
+  \item \texttt  {\textbackslash tkzIsLinear{\ttfamily  (}{\color  {myblue}\meta  {$pt1$,$pt2$,$pt3$}}{\ttfamily  )}}, 
+		\hyperpage{206}
+  \item \texttt  {\textbackslash tkzIsOrtho}, \hyperpage{206, 207}, 
+		\hyperpage{275}
+  \item \texttt  {\textbackslash tkzIsOrtho: arguments}
+    \subitem \texttt  {(pt1,pt2,pt3)}, \hyperpage{206}
+  \item \texttt  {\textbackslash tkzIsOrtho{\ttfamily  (}{\color  {myblue}\meta  {$pt1$,$pt2$,$pt3$}}{\ttfamily  )}}, 
+		\hyperpage{206}
+  \item \texttt  {\textbackslash tkzLabelAngle}, \hyperpage{184}
+  \item \texttt  {\textbackslash tkzLabelAngle: options}
+    \subitem \texttt  {pos}, \hyperpage{184}
+  \item \texttt  {\textbackslash tkzLabelAngles}, \hyperpage{184}, 
+		\hyperpage{186}
+  \item \texttt  {\textbackslash tkzLabelAngles{\ttfamily  [}{\color  {myblue}\meta  {local options}}{\ttfamily  ]}{\ttfamily  (}{\color  {myblue}\meta  {A,O,B}}{\ttfamily  )}{\ttfamily  (}{\color  {myblue}\meta  {A',O',B'}}{\ttfamily  )}etc.}, 
+		\hyperpage{186}
+  \item \texttt  {\textbackslash tkzLabelAngle{\ttfamily  [}{\color  {myblue}\meta  {local options}}{\ttfamily  ]}{\ttfamily  (}{\color  {myblue}\meta  {A,O,B}}{\ttfamily  )}}, 
+		\hyperpage{184}
+  \item \texttt  {\textbackslash tkzLabelArc(A,B)\{$5$\}}, 
+		\hyperpage{187}
+  \item \texttt  {\textbackslash tkzLabelArc}, \hyperpage{187}, 
+		\hyperpage{214}, \hyperpage{275}
+  \item \texttt  {\textbackslash tkzLabelArc: arguments}
+    \subitem \texttt  {(pt1,pt2,pt3)}, \hyperpage{187}
+    \subitem \texttt  {label}, \hyperpage{187}
+  \item \texttt  {\textbackslash tkzLabelArc: options}
+    \subitem \texttt  {pos}, \hyperpage{187}
+  \item \texttt  {\textbackslash tkzLabelArc{\ttfamily  [}{\color  {myblue}\meta  {local options}}{\ttfamily  ]}{\ttfamily  (}{\color  {myblue}\meta  {pt1,pt2,pt3}}{\ttfamily  )}{\ttfamily  \char `\{}{\color  {myblue}\meta  {label}}{\ttfamily  \char `\}}}, 
+		\hyperpage{187}
+  \item \texttt  {\textbackslash tkzLabelCircle}, \hyperpage{101}, 
+		\hyperpage{186}
+  \item \texttt  {\textbackslash tkzLabelCircle: options}
+    \subitem \texttt  {tikz options}, \hyperpage{186}
+  \item \texttt  {\textbackslash tkzLabelCircle{\ttfamily  [}{\color  {myblue}\meta  {tikz options}}{\ttfamily  ]}{\ttfamily  (}{\color  {myblue}\meta  {O,A}}{\ttfamily  )}{\ttfamily  (}{\color  {myblue}\meta  {angle}}{\ttfamily  )}{\ttfamily  \char `\{}{\color  {myblue}\meta  {label}}{\ttfamily  \char `\}}}, 
+		\hyperpage{186}
+  \item \texttt  {\textbackslash tkzLabelLine(A,B)}, \hyperpage{184}
+  \item \texttt  {\textbackslash tkzLabelLine}, \hyperpage{184}
+  \item \texttt  {\textbackslash tkzLabelLine: arguments}
+    \subitem \texttt  {label}, \hyperpage{184}
+  \item \texttt  {\textbackslash tkzLabelLine: options}
+    \subitem \texttt  {pos}, \hyperpage{184}
+  \item \texttt  {\textbackslash tkzLabelLine{\ttfamily  [}{\color  {myblue}\meta  {local options}}{\ttfamily  ]}{\ttfamily  (}{\color  {myblue}\meta  {pt1,pt2}}{\ttfamily  )}{\ttfamily  \char `\{}{\color  {myblue}\meta  {label}}{\ttfamily  \char `\}}}, 
+		\hyperpage{184}
+  \item \texttt  {\textbackslash tkzLabelPoint(A)\{\$A\_1\$\}}, 
+		\hyperpage{179}
+  \item \texttt  {\textbackslash tkzLabelPoint}, \hyperpage{179, 180}
+  \item \texttt  {\textbackslash tkzLabelPoint: arguments}
+    \subitem \texttt  {point}, \hyperpage{179}
+  \item \texttt  {\textbackslash tkzLabelPoint: options}
+    \subitem \texttt  {TikZ options}, \hyperpage{179}
+  \item \texttt  {\textbackslash tkzLabelPoints(A,B,C)}, 
+		\hyperpage{180}
+  \item \texttt  {\textbackslash tkzLabelPoints}, \hyperpage{180}
+  \item \texttt  {\textbackslash tkzLabelPoints: arguments}
+    \subitem \texttt  {点列表}, \hyperpage{180}
+  \item \texttt  {\textbackslash tkzLabelPoints{\ttfamily  [}{\color  {myblue}\meta  {local options}}{\ttfamily  ]}{\ttfamily  (}{\color  {myblue}\meta  {$A_1,A_2,...$}}{\ttfamily  )}}, 
+		\hyperpage{180}
+  \item \texttt  {\textbackslash tkzLabelPoint{\ttfamily  [}{\color  {myblue}\meta  {local options}}{\ttfamily  ]}{\ttfamily  (}{\color  {myblue}\meta  {point}}{\ttfamily  )}\{{\color  {myblue}\meta  {label}}\}}, 
+		\hyperpage{179}
+  \item \texttt  {\textbackslash tkzLabelRegPolygon}, \hyperpage{275}
+  \item \texttt  {\textbackslash tkzLabelSegment(A,B)\{$5$\}}, 
+		\hyperpage{181}
+  \item \texttt  {\textbackslash tkzLabelSegment}, \hyperpage{181}
+  \item \texttt  {\textbackslash tkzLabelSegment: arguments}
+    \subitem \texttt  {(pt1,pt2)}, \hyperpage{181}
+    \subitem \texttt  {label}, \hyperpage{181}
+  \item \texttt  {\textbackslash tkzLabelSegment: options}
+    \subitem \texttt  {pos}, \hyperpage{181}
+  \item \texttt  {\textbackslash tkzLabelSegments}, \hyperpage{181}, 
+		\hyperpage{183}
+  \item \texttt  {\textbackslash tkzLabelSegments{\ttfamily  [}{\color  {myblue}\meta  {local options}}{\ttfamily  ]}{\ttfamily  (}{\color  {myblue}\meta  {pt1,pt2 pt3,pt4 ...}}{\ttfamily  )}}, 
+		\hyperpage{183}
+  \item \texttt  {\textbackslash tkzLabelSegment{\ttfamily  [}{\color  {myblue}\meta  {local options}}{\ttfamily  ]}{\ttfamily  (}{\color  {myblue}\meta  {pt1,pt2}}{\ttfamily  )}{\ttfamily  \char `\{}{\color  {myblue}\meta  {label}}{\ttfamily  \char `\}}}, 
+		\hyperpage{181}
+  \item \texttt  {\textbackslash tkzLegend}, \hyperpage{275}
+  \item \texttt  {\textbackslash tkzMarkAngle}, \hyperpage{175, 176}, 
+		\hyperpage{224}, \hyperpage{272, 273}
+  \item \texttt  {\textbackslash tkzMarkAngle: options}
+    \subitem \texttt  {arc}, \hyperpage{175}
+    \subitem \texttt  {mark}, \hyperpage{175}
+    \subitem \texttt  {mkcolor}, \hyperpage{175}
+    \subitem \texttt  {mkpos}, \hyperpage{175}
+    \subitem \texttt  {mksize}, \hyperpage{175}
+    \subitem \texttt  {size}, \hyperpage{175}
+  \item \texttt  {\textbackslash tkzMarkAngles}, \hyperpage{176}
+  \item \texttt  {\textbackslash tkzMarkAngles{\ttfamily  [}{\color  {myblue}\meta  {local options}}{\ttfamily  ]}{\ttfamily  (}{\color  {myblue}\meta  {A,O,B}}{\ttfamily  )}{\ttfamily  (}{\color  {myblue}\meta  {A',O',B'}}{\ttfamily  )}etc.}, 
+		\hyperpage{176}
+  \item \texttt  {\textbackslash tkzMarkAngle{\ttfamily  [}{\color  {myblue}\meta  {local options}}{\ttfamily  ]}{\ttfamily  (}{\color  {myblue}\meta  {A,O,B}}{\ttfamily  )}}, 
+		\hyperpage{175}
+  \item \texttt  {\textbackslash tkzMarkArc}, \hyperpage{174}, 
+		\hyperpage{214}, \hyperpage{275}
+  \item \texttt  {\textbackslash tkzMarkArc: options}
+    \subitem \texttt  {color}, \hyperpage{174}
+    \subitem \texttt  {mark}, \hyperpage{174}
+    \subitem \texttt  {pos}, \hyperpage{174}
+    \subitem \texttt  {size}, \hyperpage{174}
+  \item \texttt  {\textbackslash tkzMarkArc{\ttfamily  [}{\color  {myblue}\meta  {local options}}{\ttfamily  ]}{\ttfamily  (}{\color  {myblue}\meta  {pt1,pt2,pt3}}{\ttfamily  )}}, 
+		\hyperpage{174}
+  \item \texttt  {\textbackslash tkzMarkRightAngle}, \hyperpage{176}
+  \item \texttt  {\textbackslash tkzMarkRightAngle: options}
+    \subitem \texttt  {german}, \hyperpage{176}
+    \subitem \texttt  {size}, \hyperpage{176}
+  \item \texttt  {\textbackslash tkzMarkRightAngles}, \hyperpage{178}
+  \item \texttt  {\textbackslash tkzMarkRightAngles{\ttfamily  [}{\color  {myblue}\meta  {local options}}{\ttfamily  ]}{\ttfamily  (}{\color  {myblue}\meta  {A,O,B}}{\ttfamily  )}{\ttfamily  (}{\color  {myblue}\meta  {A',O',B'}}{\ttfamily  )}etc.}, 
+		\hyperpage{178}
+  \item \texttt  {\textbackslash tkzMarkRightAngle{\ttfamily  [}{\color  {myblue}\meta  {local options}}{\ttfamily  ]}{\ttfamily  (}{\color  {myblue}\meta  {A,O,B}}{\ttfamily  )}}, 
+		\hyperpage{176}
+  \item \texttt  {\textbackslash tkzMarkSegment}, \hyperpage{173}
+  \item \texttt  {\textbackslash tkzMarkSegment: options}
+    \subitem \texttt  {color}, \hyperpage{173}
+    \subitem \texttt  {mark}, \hyperpage{173}
+    \subitem \texttt  {pos}, \hyperpage{173}
+    \subitem \texttt  {size}, \hyperpage{173}
+  \item \texttt  {\textbackslash tkzMarkSegments}, \hyperpage{173}
+  \item \texttt  {\textbackslash tkzMarkSegments{\ttfamily  [}{\color  {myblue}\meta  {local options}}{\ttfamily  ]}{\ttfamily  (}{\color  {myblue}\meta  {pt1,pt2 pt3,pt4 ...}}{\ttfamily  )}}, 
+		\hyperpage{173}
+  \item \texttt  {\textbackslash tkzMarkSegment{\ttfamily  [}{\color  {myblue}\meta  {local options}}{\ttfamily  ]}{\ttfamily  (}{\color  {myblue}\meta  {pt1,pt2}}{\ttfamily  )}}, 
+		\hyperpage{173}
+  \item \texttt  {\textbackslash tkzPermute}, \hyperpage{94}
+  \item \texttt  {\textbackslash tkzPermute: arguments}
+    \subitem \texttt  {(pt1,pt2,pt3)}, \hyperpage{94}
+  \item \texttt  {\textbackslash tkzPermute{\ttfamily  (}{\color  {myblue}\meta  {$pt1$,$pt2$,$pt3$}}{\ttfamily  )}}, 
+		\hyperpage{94}
+  \item \texttt  {\textbackslash tkzPicAngle}, \hyperpage{178}
+  \item \texttt  {\textbackslash tkzPicAngle: options}
+    \subitem \texttt  {tikz option}, \hyperpage{178}
+  \item \texttt  {\textbackslash tkzPicAngle{\ttfamily  [}{\color  {myblue}\meta  {tikz options}}{\ttfamily  ]}{\ttfamily  (}{\color  {myblue}\meta  {A,O,B}}{\ttfamily  )}}, 
+		\hyperpage{178}
+  \item \texttt  {\textbackslash tkzPicRightAngle}, 
+		\hyperpage{178, 179}
+  \item \texttt  {\textbackslash tkzPicRightAngle: options}
+    \subitem \texttt  {tikz option}, \hyperpage{179}
+  \item \texttt  {\textbackslash tkzPicRightAngle{\ttfamily  [}{\color  {myblue}\meta  {tikz options}}{\ttfamily  ]}{\ttfamily  (}{\color  {myblue}\meta  {A,O,B}}{\ttfamily  )}}, 
+		\hyperpage{179}
+  \item \texttt  {\textbackslash tkzPowerCircle}, \hyperpage{204}, 
+		\hyperpage{275}
+  \item \texttt  {\textbackslash tkzPowerCircle: arguments}
+    \subitem \texttt  {(pt1)(pt2,pt3)}, \hyperpage{204}
+  \item \texttt  {\textbackslash tkzPowerCircle{\ttfamily  (}{\color  {myblue}\meta  {$pt1$}}{\ttfamily  )}{\ttfamily  (}{\color  {myblue}\meta  {$pt2$,$pt3$}}{\ttfamily  )}}, 
+		\hyperpage{204}
+  \item \texttt  {\textbackslash tkzProtractor}, \hyperpage{195}, 
+		\hyperpage{275}
+  \item \texttt  {\textbackslash tkzProtractor: options}
+    \subitem \texttt  {lw}, \hyperpage{195}
+    \subitem \texttt  {return}, \hyperpage{195}
+    \subitem \texttt  {scale}, \hyperpage{195}
+  \item \texttt  {\textbackslash tkzProtractor{\ttfamily  [}{\color  {myblue}\meta  {local options}}{\ttfamily  ]}{\ttfamily  (}{\color  {myblue}\meta  {$O,A$}}{\ttfamily  )}}, 
+		\hyperpage{195}
+  \item \texttt  {\textbackslash tkzpttocm}, \hyperpage{199}
+  \item \texttt  {\textbackslash tkzpttocm: arguments}
+    \subitem \texttt  {(number)\{name of macro\}}, \hyperpage{199}
+  \item \texttt  {\textbackslash tkzpttocm{\ttfamily  (}{\color  {myblue}\meta  {number}}{\ttfamily  )}{\ttfamily  \char `\{}{\color  {myblue}\meta  {name of macro}}{\ttfamily  \char `\}}}, 
+		\hyperpage{199}
+  \item \texttt  {\textbackslash tkzSetUpArc}, \hyperpage{150}, 
+		\hyperpage{213, 214}, \hyperpage{273}, \hyperpage{275}
+  \item \texttt  {\textbackslash tkzSetUpArc: options}
+    \subitem \texttt  {color}, \hyperpage{214}
+    \subitem \texttt  {delta}, \hyperpage{214}
+    \subitem \texttt  {line width}, \hyperpage{214}
+    \subitem \texttt  {style}, \hyperpage{214}
+  \item \texttt  {\textbackslash tkzSetUpArc{\ttfamily  [}{\color  {myblue}\meta  {local options}}{\ttfamily  ]}}, 
+		\hyperpage{214}
+  \item \texttt  {\textbackslash tkzSetUpColors}, \hyperpage{209}
+  \item \texttt  {\textbackslash tkzSetUpCompass}, \hyperpage{214, 215}, 
+		\hyperpage{273}, \hyperpage{275}
+  \item \texttt  {\textbackslash tkzSetUpCompass: options}
+    \subitem \texttt  {color}, \hyperpage{215}
+    \subitem \texttt  {delta}, \hyperpage{215}
+    \subitem \texttt  {line width}, \hyperpage{215}
+    \subitem \texttt  {style}, \hyperpage{215}
+  \item \texttt  {\textbackslash tkzSetUpCompass{\ttfamily  [}{\color  {myblue}\meta  {local options}}{\ttfamily  ]}}, 
+		\hyperpage{215}
+  \item \texttt  {\textbackslash tkzSetUpLabel}, \hyperpage{216}
+  \item \texttt  {\textbackslash tkzSetUpLine}, \hyperpage{134}, 
+		\hyperpage{211, 212}
+  \item \texttt  {\textbackslash tkzSetUpLine: options}
+    \subitem \texttt  {add}, \hyperpage{212}
+    \subitem \texttt  {color}, \hyperpage{212}
+    \subitem \texttt  {line width}, \hyperpage{212}
+    \subitem \texttt  {style}, \hyperpage{212}
+  \item \texttt  {\textbackslash tkzSetUpLine{\ttfamily  [}{\color  {myblue}\meta  {local options}}{\ttfamily  ]}}, 
+		\hyperpage{212}
+  \item \texttt  {\textbackslash tkzSetUpPoint}, \hyperpage{209--211}
+  \item \texttt  {\textbackslash tkzSetUpPoint: options}
+    \subitem \texttt  {color}, \hyperpage{209}
+    \subitem \texttt  {fill}, \hyperpage{209}
+    \subitem \texttt  {shape}, \hyperpage{209}
+    \subitem \texttt  {size}, \hyperpage{209}
+  \item \texttt  {\textbackslash tkzSetUpPoint{\ttfamily  [}{\color  {myblue}\meta  {local options}}{\ttfamily  ]}}, 
+		\hyperpage{209}
+  \item \texttt  {\textbackslash tkzSetUpStyle}, \hyperpage{216, 217}
+  \item \texttt  {\textbackslash tkzSetUpStyle{\ttfamily  [}{\color  {myblue}\meta  {local options}}{\ttfamily  ]}}, 
+		\hyperpage{216}
+  \item \texttt  {\textbackslash tkzShowBB}, \hyperpage{163}
+  \item \texttt  {\textbackslash tkzShowBB{\ttfamily  [}{\color  {myblue}\meta  {local options}}{\ttfamily  ]}}, 
+		\hyperpage{163}
+  \item \texttt  {\textbackslash tkzShowLine}, \hyperpage{191--193}, 
+		\hyperpage{215}, \hyperpage{275}
+  \item \texttt  {\textbackslash tkzShowLine: options}
+    \subitem \texttt  {K}, \hyperpage{191}
+    \subitem \texttt  {bisector}, \hyperpage{191}
+    \subitem \texttt  {gap}, \hyperpage{191}
+    \subitem \texttt  {length}, \hyperpage{191}
+    \subitem \texttt  {mediator}, \hyperpage{191}
+    \subitem \texttt  {orthogonal}, \hyperpage{191}
+    \subitem \texttt  {perpendicular}, \hyperpage{191}
+    \subitem \texttt  {ratio}, \hyperpage{191}
+    \subitem \texttt  {size}, \hyperpage{191}
+  \item \texttt  {\textbackslash tkzShowLine{\ttfamily  [}{\color  {myblue}\meta  {local options}}{\ttfamily  ]}{\ttfamily  (}{\color  {myblue}\meta  {pt1,pt2}}{\ttfamily  )} or {\ttfamily  (}{\color  {myblue}\meta  {pt1,pt2,pt3}}{\ttfamily  )}}, 
+		\hyperpage{191}
+  \item \texttt  {\textbackslash tkzShowTransformation}, 
+		\hyperpage{193, 194}
+  \item \texttt  {\textbackslash tkzShowTransformation: options}
+    \subitem \texttt  {K}, \hyperpage{193}
+    \subitem \texttt  {gap}, \hyperpage{193}
+    \subitem \texttt  {length}, \hyperpage{193}
+    \subitem \texttt  {projection=onto pt1--pt2}, \hyperpage{193}
+    \subitem \texttt  {ratio}, \hyperpage{193}
+    \subitem \texttt  {reflection= over pt1--pt2}, \hyperpage{193}
+    \subitem \texttt  {size}, \hyperpage{193}
+    \subitem \texttt  {symmetry=center pt}, \hyperpage{193}
+    \subitem \texttt  {translation=from pt1 to pt2}, \hyperpage{193}
+  \item \texttt  {\textbackslash tkzShowTransformation{\ttfamily  [}{\color  {myblue}\meta  {local options}}{\ttfamily  ]}{\ttfamily  (}{\color  {myblue}\meta  {pt1,pt2}}{\ttfamily  )} or {\ttfamily  (}{\color  {myblue}\meta  {pt1,pt2,pt3}}{\ttfamily  )}}, 
+		\hyperpage{193}
+  \item \texttt  {\textbackslash tkzSwapPoints}, \hyperpage{201}
+  \item \texttt  {\textbackslash tkzSwapPoints: arguments}
+    \subitem \texttt  {(pt1,pt2)}, \hyperpage{201}
+  \item \texttt  {\textbackslash tkzSwapPoints{\ttfamily  (}{\color  {myblue}\meta  {$pt1$,$pt2$}}{\ttfamily  )}}, 
+		\hyperpage{201}
+  \item \texttt  {\textbackslash tkzTestInterCC}, \hyperpage{112}, 
+		\hyperpage{119, 120}
+  \item \texttt  {\textbackslash tkzTestInterCC{\ttfamily  (}{\color  {myblue}\meta  {$O,A$}}{\ttfamily  )}{\ttfamily  (}{\color  {myblue}\meta  {$O',B$}}{\ttfamily  )}}, 
+		\hyperpage{119}
+  \item \texttt  {\textbackslash tkzTestInterLC}, \hyperpage{112, 113}
+  \item \texttt  {\textbackslash tkzTestInterLC{\ttfamily  (}{\color  {myblue}\meta  {$O,A$}}{\ttfamily  )}{\ttfamily  (}{\color  {myblue}\meta  {$O',B$}}{\ttfamily  )}}, 
+		\hyperpage{113}
+
+  \indexspace
+
+  \item \texttt  {\textbackslash useasboundingbox}, \hyperpage{161}
+
+  \indexspace
+
+  \item \texttt  {\textbackslash Vx}, \hyperpage{70}
+  \item \texttt  {\textbackslash Vy}, \hyperpage{70}
+
+  \indexspace
+
+  \item \texttt  {\textbackslash xstep}, \hyperpage{162}
+
+  \indexspace
+
+  \item \texttt  {\textbackslash ystep}, \hyperpage{162}
+
+\end{theindex}

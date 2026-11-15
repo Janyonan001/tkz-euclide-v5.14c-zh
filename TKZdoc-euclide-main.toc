@@ -1,0 +1,529 @@
+\contentsline {part}{\numberline {I}入门}{10}{part.1}%
+\contentsline {section}{\numberline {1}介绍与概览}{11}{section.1}%
+\contentsline {subsection}{\numberline {1.1}为什么需要 \textbf {\texttt {\textcolor {black}{tkz-euclide}}}？}{11}{subsection.1.1}%
+\contentsline {subsection}{\numberline {1.2}\textbf {\texttt {\textcolor {black}{Ti\textsl {k}Z}}} 与 \textbf {\texttt {\textcolor {black}{tkz-euclide}}}}{11}{subsection.1.2}%
+\contentsline {subsubsection}{\numberline {1.2.1}第一卷，命题 I，\_几何原本\_}{11}{subsubsection.1.2.1}%
+\contentsline {subsubsection}{\numberline {1.2.2}使用 {\ntt tkz-euclide} 的完整代码}{12}{subsubsection.1.2.2}%
+\contentsline {subsubsection}{\numberline {1.2.3}第一卷，命题 II，\_几何原本\_}{13}{subsubsection.1.2.3}%
+\contentsline {subsection}{\numberline {1.3}如何使用 \textbf {\texttt {\textcolor {black}{tkz-euclide}}} 宏包？}{15}{subsection.1.3}%
+\contentsline {subsubsection}{\numberline {1.3.1}让我们看一个经典示例}{15}{subsubsection.1.3.1}%
+\contentsline {subsubsection}{\numberline {1.3.2}第一部分：黄金三角形}{17}{subsubsection.1.3.2}%
+\contentsline {subsubsection}{\numberline {1.3.3}第二部分：使用黄金三角形和欧几里得三角形的另外两种方法}{18}{subsubsection.1.3.3}%
+\contentsline {subsubsection}{\numberline {1.3.4}完整但最小的示例}{19}{subsubsection.1.3.4}%
+\contentsline {section}{\numberline {2}安装}{22}{section.2}%
+\contentsline {section}{\numberline {3}tkz 代码的基本元素}{22}{section.3}%
+\contentsline {subsection}{\numberline {3.1}对象与语言}{22}{subsection.3.1}%
+\contentsline {subsection}{\numberline {3.2}记号与约定}{23}{subsection.3.2}%
+\contentsline {subsection}{\numberline {3.3}\textbf {\texttt {\textcolor {black}{Set, Calculate, Draw, Mark, Label}}}}{25}{subsection.3.3}%
+\contentsline {section}{\numberline {4}关于本手册及其示例}{25}{section.4}%
+\contentsline {part}{\numberline {II}点}{26}{part.2}%
+\contentsline {section}{\numberline {5}第一步：固定点}{27}{section.5}%
+\contentsline {section}{\numberline {6}点的定义：\textbf {\texttt {\textcolor {MidnightBlue}{\textbackslash tkzDefPoint}}} 或 \textbf {\texttt {\textcolor {MidnightBlue}{\textbackslash tkzDefPoints}}}}{27}{section.6}%
+\contentsline {subsection}{\numberline {6.1}定义命名点：\textbf {\texttt {\textcolor {MidnightBlue}{\textbackslash tkzDefPoint}}}}{28}{subsection.6.1}%
+\contentsline {subsubsection}{\numberline {6.1.1}笛卡尔坐标}{29}{subsubsection.6.1.1}%
+\contentsline {subsubsection}{\numberline {6.1.2}用 \texttt {\textcolor {MidnightBlue}{xfp}} 进行计算}{29}{subsubsection.6.1.2}%
+\contentsline {subsubsection}{\numberline {6.1.3}极坐标}{30}{subsubsection.6.1.3}%
+\contentsline {subsubsection}{\numberline {6.1.4}相对点}{30}{subsubsection.6.1.4}%
+\contentsline {subsection}{\numberline {6.2}相对于另一个点的点：\textbf {\texttt {\textcolor {MidnightBlue}{\textbackslash tkzDefShiftPoint}}}}{30}{subsection.6.2}%
+\contentsline {subsubsection}{\numberline {6.2.1}等腰三角形}{31}{subsubsection.6.2.1}%
+\contentsline {subsubsection}{\numberline {6.2.2}等边三角形}{31}{subsubsection.6.2.2}%
+\contentsline {subsubsection}{\numberline {6.2.3}平行四边形}{31}{subsubsection.6.2.3}%
+\contentsline {subsection}{\numberline {6.3}多个点的定义：\textbf {\texttt {\textcolor {MidnightBlue}{\textbackslash tkzDefPoints}}}}{31}{subsection.6.3}%
+\contentsline {subsection}{\numberline {6.4}创建三角形}{32}{subsection.6.4}%
+\contentsline {subsection}{\numberline {6.5}创建正方形}{32}{subsection.6.5}%
+\contentsline {section}{\numberline {7}辅助工具}{32}{section.7}%
+\contentsline {subsection}{\numberline {7.1}常数}{32}{subsection.7.1}%
+\contentsline {subsection}{\numberline {7.2}通过计算得到新点}{33}{subsection.7.2}%
+\contentsline {section}{\numberline {8}特殊点}{34}{section.8}%
+\contentsline {subsection}{\numberline {8.1}线段的中点 \textbf {\texttt {\textcolor {MidnightBlue}{\textbackslash tkzDefMidPoint}}}}{34}{subsection.8.1}%
+\contentsline {subsubsection}{\numberline {8.1.1}\textbf {\texttt {\textcolor {MidnightBlue}{\textbackslash tkzDefMidPoint}}} 的使用}{34}{subsubsection.8.1.1}%
+\contentsline {subsection}{\numberline {8.2}\textbf {\texttt {\textcolor {black}{黄金比例}}} \textbf {\texttt {\textcolor {MidnightBlue}{\textbackslash tkzDefGoldenRatio}}}}{34}{subsection.8.2}%
+\contentsline {subsubsection}{\numberline {8.2.1}用黄金比例分割线段}{35}{subsubsection.8.2.1}%
+\contentsline {subsubsection}{\numberline {8.2.2}黄金 arbelos（鞋匠刀形）}{35}{subsubsection.8.2.2}%
+\contentsline {subsection}{\numberline {8.3}\textbf {\texttt {\textcolor {black}{重心坐标}}} 与 \textbf {\texttt {\textcolor {MidnightBlue}{\textbackslash tkzDefBarycentricPoint}}}}{35}{subsection.8.3}%
+\contentsline {subsubsection}{\numberline {8.3.1}两个点的情形}{36}{subsubsection.8.3.1}%
+\contentsline {subsubsection}{\numberline {8.3.2}三个点的情形}{36}{subsubsection.8.3.2}%
+\contentsline {subsection}{\numberline {8.4}内、外相似中心：\textbf {\texttt {\textcolor {MidnightBlue}{\textbackslash tkzDefSimilitudeCenter}}}}{36}{subsection.8.4}%
+\contentsline {subsubsection}{\numberline {8.4.1}用 \textbf {\texttt {\textcolor {black}{node}}} 获取内、外相似中心}{37}{subsubsection.8.4.1}%
+\contentsline {subsubsection}{\numberline {8.4.2}D'Alembert 定理}{38}{subsubsection.8.4.2}%
+\contentsline {subsubsection}{\numberline {8.4.3}使用 \textbf {\texttt {\textcolor {black}{node}}} 的示例}{38}{subsubsection.8.4.3}%
+\contentsline {subsection}{\numberline {8.5}\textbf {\texttt {\textcolor {black}{调和分割}}} 与 \textbf {\texttt {\textcolor {MidnightBlue}{\textbackslash tkzDefHarmonic}}}}{39}{subsection.8.5}%
+\contentsline {subsubsection}{\numberline {8.5.1}选项 \textbf {\texttt {\textcolor {black}{ext}}} 与 \textbf {\texttt {\textcolor {black}{int}}}}{39}{subsubsection.8.5.1}%
+\contentsline {subsubsection}{\numberline {8.5.2}角平分线与调和分割}{39}{subsubsection.8.5.2}%
+\contentsline {subsubsection}{\numberline {8.5.3}选项 \textbf {\texttt {\textcolor {black}{both}}}}{40}{subsubsection.8.5.3}%
+\contentsline {subsection}{\numberline {8.6}\textbf {\texttt {\textcolor {black}{等距点}}} 与 \textbf {\texttt {\textcolor {MidnightBlue}{\textbackslash tkzDefEquiPoints}}}}{40}{subsection.8.6}%
+\contentsline {subsubsection}{\numberline {8.6.1}带选项使用 \textbf {\texttt {\textcolor {MidnightBlue}{\textbackslash tkzDefEquiPoints}}}}{41}{subsubsection.8.6.1}%
+\contentsline {subsection}{\numberline {8.7}弧的中点}{41}{subsection.8.7}%
+\contentsline {section}{\numberline {9}直线或圆上的点}{42}{section.9}%
+\contentsline {subsection}{\numberline {9.1}直线上的点 与 \textbf {\texttt {\textcolor {MidnightBlue}{\textbackslash tkzDefPointOnLine}}}}{42}{subsection.9.1}%
+\contentsline {subsubsection}{\numberline {9.1.1}选项 \textbf {\texttt {\textcolor {black}{pos}}} 的使用}{43}{subsubsection.9.1.1}%
+\contentsline {subsection}{\numberline {9.2}圆上的点 与 \textbf {\texttt {\textcolor {MidnightBlue}{\textbackslash tkzDefPointOnCircle}}}}{43}{subsection.9.2}%
+\contentsline {subsubsection}{\numberline {9.2.1}Altshiller 定理}{43}{subsubsection.9.2.1}%
+\contentsline {subsubsection}{\numberline {9.2.2}\textbf {\texttt {\textcolor {MidnightBlue}{\textbackslash tkzDefPointOnCircle}}} 的使用}{44}{subsubsection.9.2.2}%
+\contentsline {section}{\numberline {10}与三角形相关的特殊点}{45}{section.10}%
+\contentsline {subsection}{\numberline {10.1}三角形中心：\textbf {\texttt {\textcolor {MidnightBlue}{\textbackslash tkzDefTriangleCenter}}}}{45}{subsection.10.1}%
+\contentsline {subsubsection}{\numberline {10.1.1}选项 \textbf {\texttt {\textcolor {black}{ortho}}} 或 \textbf {\texttt {\textcolor {black}{orthic}}}}{45}{subsubsection.10.1.1}%
+\contentsline {subsubsection}{\numberline {10.1.2}选项 \textbf {\texttt {\textcolor {black}{centroid}}}}{46}{subsubsection.10.1.2}%
+\contentsline {subsubsection}{\numberline {10.1.3}选项 \textbf {\texttt {\textcolor {black}{circum}}}}{46}{subsubsection.10.1.3}%
+\contentsline {subsubsection}{\numberline {10.1.4}选项 \textbf {\texttt {\textcolor {black}{in}}}}{46}{subsubsection.10.1.4}%
+\contentsline {subsubsection}{\numberline {10.1.5}选项 \textbf {\texttt {\textcolor {black}{ex}}}}{47}{subsubsection.10.1.5}%
+\contentsline {subsubsection}{\numberline {10.1.6}选项 \textbf {\texttt {\textcolor {black}{euler}}}}{47}{subsubsection.10.1.6}%
+\contentsline {subsubsection}{\numberline {10.1.7}选项 \textbf {\texttt {\textcolor {black}{symmedian}}}}{48}{subsubsection.10.1.7}%
+\contentsline {subsubsection}{\numberline {10.1.8}选项 \textbf {\texttt {\textcolor {black}{spieker}}}}{49}{subsubsection.10.1.8}%
+\contentsline {subsubsection}{\numberline {10.1.9}选项 \textbf {\texttt {\textcolor {black}{gergonne}}}}{49}{subsubsection.10.1.9}%
+\contentsline {subsubsection}{\numberline {10.1.10}选项 \textbf {\texttt {\textcolor {black}{nagel}}}}{50}{subsubsection.10.1.10}%
+\contentsline {subsubsection}{\numberline {10.1.11}Option \textbf {\texttt {\textcolor {black}{mittenpunkt}}}}{50}{subsubsection.10.1.11}%
+\contentsline {subsubsection}{\numberline {10.1.12}Relation between \textbf {\texttt {\textcolor {black}{gergonne}}}, \textbf {\texttt {\textcolor {black}{centroid}}} and \textbf {\texttt {\textcolor {black}{mittenpunkt}}}}{51}{subsubsection.10.1.12}%
+\contentsline {section}{\numberline {11}通过变换定义点}{52}{section.11}%
+\contentsline {subsection}{\numberline {11.1}\textbf {\texttt {\textcolor {MidnightBlue}{\textbackslash tkzDefPointBy}}}}{52}{subsection.11.1}%
+\contentsline {subsubsection}{\numberline {11.1.1}\textbf {\texttt {\textcolor {black}{translation}}}（平移）}{53}{subsubsection.11.1.1}%
+\contentsline {subsubsection}{\numberline {11.1.2}\textbf {\texttt {\textcolor {black}{reflection}}}（反射，即轴对称）}{53}{subsubsection.11.1.2}%
+\contentsline {subsubsection}{\numberline {11.1.3}\textbf {\texttt {\textcolor {black}{homothety}}}（位似）与 \textbf {\texttt {\textcolor {black}{projection}}}（投影）}{54}{subsubsection.11.1.3}%
+\contentsline {subsubsection}{\numberline {11.1.4}\textbf {\texttt {\textcolor {black}{projection}}}（投影）}{54}{subsubsection.11.1.4}%
+\contentsline {subsubsection}{\numberline {11.1.5}\textbf {\texttt {\textcolor {black}{symmetry}}}（中心对称）}{55}{subsubsection.11.1.5}%
+\contentsline {subsubsection}{\numberline {11.1.6}\textbf {\texttt {\textcolor {black}{rotation}}}（旋转）}{55}{subsubsection.11.1.6}%
+\contentsline {subsubsection}{\numberline {11.1.7}\textbf {\texttt {\textcolor {black}{rotation in radian}}}（弧度制旋转）}{56}{subsubsection.11.1.7}%
+\contentsline {subsubsection}{\numberline {11.1.8}\textbf {\texttt {\textcolor {black}{rotation with nodes}}}（按节点旋转）}{56}{subsubsection.11.1.8}%
+\contentsline {subsubsection}{\numberline {11.1.9}\textbf {\texttt {\textcolor {black}{inversion}}}（反演）}{56}{subsubsection.11.1.9}%
+\contentsline {subsubsection}{\numberline {11.1.10}直线的反演：示例 1}{58}{subsubsection.11.1.10}%
+\contentsline {subsubsection}{\numberline {11.1.11}直线的反演：示例 2}{58}{subsubsection.11.1.11}%
+\contentsline {subsubsection}{\numberline {11.1.12}直线的反演：示例 3}{59}{subsubsection.11.1.12}%
+\contentsline {subsubsection}{\numberline {11.1.13}圆的反演与 \textbf {\texttt {\textcolor {black}{homothety}}}（位似）}{59}{subsubsection.11.1.13}%
+\contentsline {subsubsection}{\numberline {11.1.14}三角形关于其内切圆的 \textbf {\texttt {\textcolor {black}{inversion}}}（反演）}{60}{subsubsection.11.1.14}%
+\contentsline {subsubsection}{\numberline {11.1.15}与反演圆正交的圆的 \textbf {\texttt {\textcolor {black}{inversion}}}（反演）}{60}{subsubsection.11.1.15}%
+\contentsline {subsubsection}{\numberline {11.1.16}\textbf {\texttt {\textcolor {black}{inversion negative}}}（负反演）}{61}{subsubsection.11.1.16}%
+\contentsline {subsection}{\numberline {11.2}多个点的变换：\textbf {\texttt {\textcolor {MidnightBlue}{\textbackslash tkzDefPointsBy}}}}{62}{subsection.11.2}%
+\contentsline {subsubsection}{\numberline {11.2.1}多个点的 \textbf {\texttt {\textcolor {black}{translation}}}（平移）}{63}{subsubsection.11.2.1}%
+\contentsline {subsubsection}{\numberline {11.2.2}多个点的 \textbf {\texttt {\textcolor {black}{symmetry}}}（中心对称）：一个卵形}{63}{subsubsection.11.2.2}%
+\contentsline {section}{\numberline {12}用向量定义点}{63}{section.12}%
+\contentsline {subsection}{\numberline {12.1}\textbf {\texttt {\textcolor {MidnightBlue}{\textbackslash tkzDefPointWith}}}}{63}{subsection.12.1}%
+\contentsline {subsubsection}{\numberline {12.1.1}选项 \textbf {\texttt {\textcolor {black}{colinear at}}}：简单示例}{64}{subsubsection.12.1.1}%
+\contentsline {subsubsection}{\numberline {12.1.2}选项 \textbf {\texttt {\textcolor {black}{colinear at}}}：较复杂的示例}{65}{subsubsection.12.1.2}%
+\contentsline {subsubsection}{\numberline {12.1.3}选项 \textbf {\texttt {\textcolor {black}{colinear at}}}：如何使用 $K$}{65}{subsubsection.12.1.3}%
+\contentsline {subsubsection}{\numberline {12.1.4}选项 \textbf {\texttt {\textcolor {black}{colinear at}}} 配合 $K=\sqrt {2}/2$}{66}{subsubsection.12.1.4}%
+\contentsline {subsubsection}{\numberline {12.1.5}选项 \textbf {\texttt {\textcolor {black}{orthogonal}}} 配合 $K=1$}{66}{subsubsection.12.1.5}%
+\contentsline {subsubsection}{\numberline {12.1.6}选项 \textbf {\texttt {\textcolor {black}{orthogonal}}} 配合 $K=-1$}{66}{subsubsection.12.1.6}%
+\contentsline {subsubsection}{\numberline {12.1.7}选项 \textbf {\texttt {\textcolor {black}{orthogonal}}}：一个较复杂的示例}{67}{subsubsection.12.1.7}%
+\contentsline {subsubsection}{\numberline {12.1.8}选项 \textbf {\texttt {\textcolor {black}{colinear}}} 与 \textbf {\texttt {\textcolor {black}{orthogonal}}}}{68}{subsubsection.12.1.8}%
+\contentsline {subsubsection}{\numberline {12.1.9}选项 \textbf {\texttt {\textcolor {black}{orthogonal normed}}}}{68}{subsubsection.12.1.9}%
+\contentsline {subsubsection}{\numberline {12.1.10}选项 \textbf {\texttt {\textcolor {black}{orthogonal normed}}} 与 K=2}{68}{subsubsection.12.1.10}%
+\contentsline {subsubsection}{\numberline {12.1.11}选项 \textbf {\texttt {\textcolor {black}{linear}}}}{68}{subsubsection.12.1.11}%
+\contentsline {subsubsection}{\numberline {12.1.12}选项 \textbf {\texttt {\textcolor {black}{linear normed}}}}{69}{subsubsection.12.1.12}%
+\contentsline {subsection}{\numberline {12.2}\textbf {\texttt {\textcolor {MidnightBlue}{\textbackslash tkzGetVectxy}}}}{69}{subsection.12.2}%
+\contentsline {subsubsection}{\numberline {12.2.1}用 \textbf {\texttt {\textcolor {MidnightBlue}{\textbackslash tkzGetVectxy}}} 传递坐标}{69}{subsubsection.12.2.1}%
+\contentsline {section}{\numberline {13}随机点}{70}{section.13}%
+\contentsline {subsection}{\numberline {13.1}获取随机点}{70}{subsection.13.1}%
+\contentsline {subsubsection}{\numberline {13.1.1}矩形内的随机点}{70}{subsubsection.13.1.1}%
+\contentsline {subsubsection}{\numberline {13.1.2}线段或直线上的随机点}{71}{subsubsection.13.1.2}%
+\contentsline {subsubsection}{\numberline {13.1.3}圆或圆盘内的随机点}{71}{subsubsection.13.1.3}%
+\contentsline {part}{\numberline {III}直线、三角形与多边形}{72}{part.3}%
+\contentsline {section}{\numberline {14}直线}{73}{section.14}%
+\contentsline {subsection}{\numberline {14.1}直线的定义}{73}{subsection.14.1}%
+\contentsline {subsubsection}{\numberline {14.1.1}使用 \textbf {\texttt {\textcolor {black}{mediator}}}}{74}{subsubsection.14.1.1}%
+\contentsline {subsubsection}{\numberline {14.1.2}用 \textbf {\texttt {\textcolor {black}{mediator}}} 选项绘制包络}{74}{subsubsection.14.1.2}%
+\contentsline {subsubsection}{\numberline {14.1.3}用 \textbf {\texttt {\textcolor {black}{mediator}}} 选项绘制抛物线}{74}{subsubsection.14.1.3}%
+\contentsline {subsubsection}{\numberline {14.1.4}使用 \textbf {\texttt {\textcolor {black}{bisector}}} 与 \textbf {\texttt {\textcolor {black}{normed}}} 选项}{75}{subsubsection.14.1.4}%
+\contentsline {subsubsection}{\numberline {14.1.5}使用 \textbf {\texttt {\textcolor {black}{parallel=through}}} 选项}{75}{subsubsection.14.1.5}%
+\contentsline {subsubsection}{\numberline {14.1.6}使用 \textbf {\texttt {\textcolor {black}{orthogonal}}} 与 \textbf {\texttt {\textcolor {black}{parallel}}} 选项}{76}{subsubsection.14.1.6}%
+\contentsline {subsubsection}{\numberline {14.1.7}使用 \textbf {\texttt {\textcolor {black}{altitude}}} 选项}{76}{subsubsection.14.1.7}%
+\contentsline {subsubsection}{\numberline {14.1.8}使用 \textbf {\texttt {\textcolor {black}{euler}}} 选项}{76}{subsubsection.14.1.8}%
+\contentsline {subsubsection}{\numberline {14.1.9}过圆上一点的切线：\textbf {\texttt {\textcolor {black}{tangent at}}}}{77}{subsubsection.14.1.9}%
+\contentsline {subsubsection}{\numberline {14.1.10}过圆外一点的切线：切点的选择（\textbf {\texttt {\textcolor {black}{tangent from}}} 选项）}{77}{subsubsection.14.1.10}%
+\contentsline {subsubsection}{\numberline {14.1.11}过圆外一点的切线示例}{78}{subsubsection.14.1.11}%
+\contentsline {subsubsection}{\numberline {14.1.12}Andrew Mertz 示例}{78}{subsubsection.14.1.12}%
+\contentsline {subsubsection}{\numberline {14.1.13}绘制切线：\textbf {\texttt {\textcolor {black}{tangent from}}} 选项}{79}{subsubsection.14.1.13}%
+\contentsline {section}{\numberline {15}三角形}{79}{section.15}%
+\contentsline {subsection}{\numberline {15.1}三角形的定义 \textbf {\texttt {\textcolor {MidnightBlue}{\textbackslash tkzDefTriangle}}}}{79}{subsection.15.1}%
+\contentsline {subsubsection}{\numberline {15.1.1}选项 \textbf {\texttt {\textcolor {black}{equilateral}}}}{80}{subsubsection.15.1.1}%
+\contentsline {subsubsection}{\numberline {15.1.2}选项 \textbf {\texttt {\textcolor {black}{two angles}}}}{81}{subsubsection.15.1.2}%
+\contentsline {subsubsection}{\numberline {15.1.3}选项 \textbf {\texttt {\textcolor {black}{school}}}}{81}{subsubsection.15.1.3}%
+\contentsline {subsubsection}{\numberline {15.1.4}选项 \textbf {\texttt {\textcolor {black}{pythagore}}}}{81}{subsubsection.15.1.4}%
+\contentsline {subsubsection}{\numberline {15.1.5}选项 \textbf {\texttt {\textcolor {black}{pythagore}}} 与 \textbf {\texttt {\textcolor {black}{swap}}}}{82}{subsubsection.15.1.5}%
+\contentsline {subsubsection}{\numberline {15.1.6}选项 \textbf {\texttt {\textcolor {black}{golden}}}}{82}{subsubsection.15.1.6}%
+\contentsline {subsubsection}{\numberline {15.1.7}选项 \textbf {\texttt {\textcolor {black}{euclid}}}}{82}{subsubsection.15.1.7}%
+\contentsline {subsubsection}{\numberline {15.1.8}选项 \textbf {\texttt {\textcolor {black}{isosceles right}}}}{83}{subsubsection.15.1.8}%
+\contentsline {subsubsection}{\numberline {15.1.9}选项 \textbf {\texttt {\textcolor {black}{gold}}}}{83}{subsubsection.15.1.9}%
+\contentsline {subsection}{\numberline {15.2}用 \textbf {\texttt {\textcolor {MidnightBlue}{\textbackslash tkzDefSpcTriangle}}} 构造特殊三角形}{84}{subsection.15.2}%
+\contentsline {subsubsection}{\numberline {15.2.1}如何为顶点命名}{84}{subsubsection.15.2.1}%
+\contentsline {subsubsection}{\numberline {15.2.2}选项 \textbf {\texttt {\textcolor {black}{medial}}} 或 \textbf {\texttt {\textcolor {black}{centroid}}}}{84}{subsubsection.15.2.2}%
+\contentsline {subsubsection}{\numberline {15.2.3}选项 \textbf {\texttt {\textcolor {black}{in}}} 或 \textbf {\texttt {\textcolor {black}{incentral}}}}{85}{subsubsection.15.2.3}%
+\contentsline {subsubsection}{\numberline {15.2.4}选项 \textbf {\texttt {\textcolor {black}{ex}}} 或 \textbf {\texttt {\textcolor {black}{excentral}}}}{85}{subsubsection.15.2.4}%
+\contentsline {subsubsection}{\numberline {15.2.5}选项 \textbf {\texttt {\textcolor {black}{intouch}}} 或 \textbf {\texttt {\textcolor {black}{contact}}}}{86}{subsubsection.15.2.5}%
+\contentsline {subsubsection}{\numberline {15.2.6}选项 \textbf {\texttt {\textcolor {black}{extouch}}}}{86}{subsubsection.15.2.6}%
+\contentsline {subsubsection}{\numberline {15.2.7}选项 \textbf {\texttt {\textcolor {black}{orthic}}}}{87}{subsubsection.15.2.7}%
+\contentsline {subsubsection}{\numberline {15.2.8}选项 \textbf {\texttt {\textcolor {black}{feuerbach}}}}{88}{subsubsection.15.2.8}%
+\contentsline {subsubsection}{\numberline {15.2.9}选项 \textbf {\texttt {\textcolor {black}{tangential}}}}{89}{subsubsection.15.2.9}%
+\contentsline {subsubsection}{\numberline {15.2.10}选项 \textbf {\texttt {\textcolor {black}{euler}}}}{90}{subsubsection.15.2.10}%
+\contentsline {subsubsection}{\numberline {15.2.11}选项 \textbf {\texttt {\textcolor {black}{euler}}} 与选项 \textbf {\texttt {\textcolor {black}{orthic}}}}{92}{subsubsection.15.2.11}%
+\contentsline {subsubsection}{\numberline {15.2.12}选项 \textbf {\texttt {\textcolor {black}{symmedial}}}}{93}{subsubsection.15.2.12}%
+\contentsline {subsection}{\numberline {15.3}交换三角形中的两个点}{93}{subsection.15.3}%
+\contentsline {subsubsection}{\numberline {15.3.1}对 \textbf {\texttt {\textcolor {black}{school}}} 三角形的修改}{93}{subsubsection.15.3.1}%
+\contentsline {section}{\numberline {16}多边形的定义}{94}{section.16}%
+\contentsline {subsection}{\numberline {16.1}正方形顶点的定义}{94}{subsection.16.1}%
+\contentsline {subsubsection}{\numberline {16.1.1}用两个点调用 \textbf {\texttt {\textcolor {MidnightBlue}{\textbackslash tkzDefSquare}}}}{94}{subsubsection.16.1.1}%
+\contentsline {subsubsection}{\numberline {16.1.2}用 \textbf {\texttt {\textcolor {MidnightBlue}{\textbackslash tkzDefSquare}}} 得到等腰直角三角形}{95}{subsubsection.16.1.2}%
+\contentsline {subsubsection}{\numberline {16.1.3}勾股定理与 \textbf {\texttt {\textcolor {MidnightBlue}{\textbackslash tkzDefSquare}}}}{95}{subsubsection.16.1.3}%
+\contentsline {subsection}{\numberline {16.2}矩形顶点的定义}{95}{subsection.16.2}%
+\contentsline {subsubsection}{\numberline {16.2.1}矩形定义示例}{96}{subsubsection.16.2.1}%
+\contentsline {subsection}{\numberline {16.3}平行四边形的定义}{96}{subsection.16.3}%
+\contentsline {subsubsection}{\numberline {16.3.1}平行四边形定义示例}{96}{subsubsection.16.3.1}%
+\contentsline {subsection}{\numberline {16.4}黄金矩形}{96}{subsection.16.4}%
+\contentsline {subsubsection}{\numberline {16.4.1}黄金矩形}{97}{subsubsection.16.4.1}%
+\contentsline {subsubsection}{\numberline {16.4.2}黄金矩形的尺规作法}{97}{subsubsection.16.4.2}%
+\contentsline {subsection}{\numberline {16.5}正多边形}{97}{subsection.16.5}%
+\contentsline {subsubsection}{\numberline {16.5.1}选项 \textbf {\texttt {\textcolor {black}{center}}}}{98}{subsubsection.16.5.1}%
+\contentsline {subsubsection}{\numberline {16.5.2}选项 \textbf {\texttt {\textcolor {black}{side}}}}{98}{subsubsection.16.5.2}%
+\contentsline {part}{\numberline {IV}圆}{99}{part.4}%
+\contentsline {section}{\numberline {17}圆}{100}{section.17}%
+\contentsline {subsection}{\numberline {17.1}圆的特征：\textbf {\texttt {\textcolor {MidnightBlue}{\textbackslash tkzDefCircle}}}}{100}{subsection.17.1}%
+\contentsline {subsubsection}{\numberline {17.1.1}使用选项 \textbf {\texttt {\textcolor {black}{R}}} 的示例}{101}{subsubsection.17.1.1}%
+\contentsline {subsubsection}{\numberline {17.1.2}使用选项 \textbf {\texttt {\textcolor {black}{diameter}}} 的示例}{101}{subsubsection.17.1.2}%
+\contentsline {subsubsection}{\numberline {17.1.3}给定三角形的内切圆与外接圆}{101}{subsubsection.17.1.3}%
+\contentsline {subsubsection}{\numberline {17.1.4}使用选项 \textbf {\texttt {\textcolor {black}{ex}}} 的示例}{102}{subsubsection.17.1.4}%
+\contentsline {subsubsection}{\numberline {17.1.5}给定三角形使用选项 \textbf {\texttt {\textcolor {black}{euler}}} 的欧拉圆}{102}{subsubsection.17.1.5}%
+\contentsline {subsubsection}{\numberline {17.1.6}给定线段的阿波罗尼斯圆：选项 \textbf {\texttt {\textcolor {black}{apollonius}}}}{103}{subsubsection.17.1.6}%
+\contentsline {subsubsection}{\numberline {17.1.7}给定三角形的旁切圆：选项 \textbf {\texttt {\textcolor {black}{ex}}}}{103}{subsubsection.17.1.7}%
+\contentsline {subsubsection}{\numberline {17.1.8}使用选项 \textbf {\texttt {\textcolor {black}{spieker}}} 的斯俾克圆}{103}{subsubsection.17.1.8}%
+\contentsline {subsection}{\numberline {17.2}旁心的投影}{104}{subsection.17.2}%
+\contentsline {subsubsection}{\numberline {17.2.1}\textbf {\texttt {\textcolor {black}{旁切圆}}}}{105}{subsubsection.17.2.1}%
+\contentsline {subsubsection}{\numberline {17.2.2}\textbf {\texttt {\textcolor {black}{Orthogonal from}}}}{106}{subsubsection.17.2.2}%
+\contentsline {subsubsection}{\numberline {17.2.3}\textbf {\texttt {\textcolor {black}{Orthogonal through}}}}{106}{subsubsection.17.2.3}%
+\contentsline {section}{\numberline {18}由变换得到的圆}{107}{section.18}%
+\contentsline {subsection}{\numberline {18.1}宏命令 \textbf {\texttt {\textcolor {MidnightBlue}{\textbackslash tkzDefCircleBy}}}}{107}{subsection.18.1}%
+\contentsline {subsubsection}{\numberline {18.1.1}\textbf {\texttt {\textcolor {black}{平移}}}}{108}{subsubsection.18.1.1}%
+\contentsline {subsubsection}{\numberline {18.1.2}\textbf {\texttt {\textcolor {black}{反射}}}（轴对称）}{108}{subsubsection.18.1.2}%
+\contentsline {subsubsection}{\numberline {18.1.3}\textbf {\texttt {\textcolor {black}{位似}}}}{108}{subsubsection.18.1.3}%
+\contentsline {subsubsection}{\numberline {18.1.4}\textbf {\texttt {\textcolor {black}{中心对称}}}}{109}{subsubsection.18.1.4}%
+\contentsline {subsubsection}{\numberline {18.1.5}\textbf {\texttt {\textcolor {black}{旋转}}}}{109}{subsubsection.18.1.5}%
+\contentsline {subsubsection}{\numberline {18.1.6}\textbf {\texttt {\textcolor {black}{反演}}}}{109}{subsubsection.18.1.6}%
+\contentsline {part}{\numberline {V}交点与角}{110}{part.5}%
+\contentsline {section}{\numberline {19}交点}{111}{section.19}%
+\contentsline {subsection}{\numberline {19.1}两条直线的交点 \textbf {\texttt {\textcolor {MidnightBlue}{\textbackslash tkzInterLL}}}}{111}{subsection.19.1}%
+\contentsline {subsubsection}{\numberline {19.1.1}两条直线相交的示例}{111}{subsubsection.19.1.1}%
+\contentsline {subsection}{\numberline {19.2}直线与圆的交点 \textbf {\texttt {\textcolor {MidnightBlue}{\textbackslash tkzInterLC}}}}{111}{subsection.19.2}%
+\contentsline {subsubsection}{\numberline {19.2.1}测试直线与圆是否相交：\textbf {\texttt {\textcolor {MidnightBlue}{\textbackslash tkzTestInterLC}}}}{112}{subsubsection.19.2.1}%
+\contentsline {subsubsection}{\numberline {19.2.2}直线与圆相交}{112}{subsubsection.19.2.2}%
+\contentsline {subsubsection}{\numberline {19.2.3}经过圆心的直线：选项 \textbf {\texttt {\textcolor {black}{common}}}}{113}{subsubsection.19.2.3}%
+\contentsline {subsubsection}{\numberline {19.2.4}使用选项 \textbf {\texttt {\textcolor {black}{common}}} 的直线与圆相交}{113}{subsubsection.19.2.4}%
+\contentsline {subsubsection}{\numberline {19.2.5}直线与圆相交：点的顺序}{114}{subsubsection.19.2.5}%
+\contentsline {subsubsection}{\numberline {19.2.6}使用 \textbf {\texttt {\textcolor {MidnightBlue}{\textbackslash foreach}}} 的示例}{115}{subsubsection.19.2.6}%
+\contentsline {subsubsection}{\numberline {19.2.7}使用选项 \textbf {\texttt {\textcolor {black}{near}}} 的直线与圆相交}{115}{subsubsection.19.2.7}%
+\contentsline {subsubsection}{\numberline {19.2.8}更复杂的直线与圆相交示例}{116}{subsubsection.19.2.8}%
+\contentsline {subsubsection}{\numberline {19.2.9}由圆心和度量值确定的圆及特殊情况}{116}{subsubsection.19.2.9}%
+\contentsline {subsubsection}{\numberline {19.2.10}半径的计算}{117}{subsubsection.19.2.10}%
+\contentsline {subsubsection}{\numberline {19.2.11}选项 \texttt {with nodes}}{118}{subsubsection.19.2.11}%
+\contentsline {subsection}{\numberline {19.3}两个圆的交点 \textbf {\texttt {\textcolor {MidnightBlue}{\textbackslash tkzInterCC}}}}{118}{subsection.19.3}%
+\contentsline {subsubsection}{\numberline {19.3.1}测试两圆是否相交：\textbf {\texttt {\textcolor {MidnightBlue}{\textbackslash tkzTestInterCC}}}}{119}{subsubsection.19.3.1}%
+\contentsline {subsubsection}{\numberline {19.3.2}带有 \textbf {\texttt {\textcolor {black}{common}}} 公共点的两圆相交}{119}{subsubsection.19.3.2}%
+\contentsline {subsubsection}{\numberline {19.3.3}两圆相交：点的顺序}{119}{subsubsection.19.3.3}%
+\contentsline {subsubsection}{\numberline {19.3.4}等边三角形的构造}{120}{subsubsection.19.3.4}%
+\contentsline {subsubsection}{\numberline {19.3.5}线段三等分}{120}{subsubsection.19.3.5}%
+\contentsline {subsubsection}{\numberline {19.3.6}使用选项 \texttt {with nodes}}{121}{subsubsection.19.3.6}%
+\contentsline {subsubsection}{\numberline {19.3.7}求交组合示例}{122}{subsubsection.19.3.7}%
+\contentsline {subsubsection}{\numberline {19.3.8}Altshiller-Court 定理}{122}{subsubsection.19.3.8}%
+\contentsline {section}{\numberline {20}角}{123}{section.20}%
+\contentsline {subsection}{\numberline {20.1}在 \textbf {\texttt {\textcolor {black}{tkz-euclide}}} 中的定义与用法}{123}{subsection.20.1}%
+\contentsline {subsection}{\numberline {20.2}获取角度 \textbf {\texttt {\textcolor {MidnightBlue}{\textbackslash tkzGetAngle}}}}{123}{subsection.20.2}%
+\contentsline {subsection}{\numberline {20.3}由三个点构成的角}{124}{subsection.20.3}%
+\contentsline {subsubsection}{\numberline {20.3.1}角度度量的验证}{125}{subsubsection.20.3.1}%
+\contentsline {subsubsection}{\numberline {20.3.2}确定三角形的三个角}{125}{subsubsection.20.3.2}%
+\contentsline {subsubsection}{\numberline {20.3.3}两圆之间的夹角}{125}{subsubsection.20.3.3}%
+\contentsline {subsection}{\numberline {20.4}直线与水平轴的夹角 \textbf {\texttt {\textcolor {MidnightBlue}{\textbackslash tkzFindSlopeAngle}}}}{126}{subsection.20.4}%
+\contentsline {subsubsection}{\numberline {20.4.1}如何使用 \textbf {\texttt {\textcolor {MidnightBlue}{\textbackslash tkzFindSlopeAngle}}}}{126}{subsubsection.20.4.1}%
+\contentsline {subsubsection}{\numberline {20.4.2}\textbf {\texttt {\textcolor {MidnightBlue}{\textbackslash tkzFindSlopeAngle}}} 与 \textbf {\texttt {\textcolor {MidnightBlue}{\textbackslash tkzGetAngle}}} 的使用}{127}{subsubsection.20.4.2}%
+\contentsline {subsubsection}{\numberline {20.4.3}\textbf {\texttt {\textcolor {MidnightBlue}{\textbackslash tkzFindSlopeAngle}}} 的另一用法}{128}{subsubsection.20.4.3}%
+\contentsline {part}{\numberline {VI}绘图、填充与裁剪}{129}{part.6}%
+\contentsline {section}{\numberline {21}绘图}{130}{section.21}%
+\contentsline {subsection}{\numberline {21.1}绘制一个点或多个点}{130}{subsection.21.1}%
+\contentsline {subsubsection}{\numberline {21.1.1}绘制点 \textbf {\texttt {\textcolor {MidnightBlue}{\textbackslash tkzDrawPoint}}}}{130}{subsubsection.21.1.1}%
+\contentsline {subsubsection}{\numberline {21.1.2}点绘制示例}{130}{subsubsection.21.1.2}%
+\contentsline {subsubsection}{\numberline {21.1.3}带大小、颜色和填充的点}{132}{subsubsection.21.1.3}%
+\contentsline {section}{\numberline {22}绘制直线}{132}{section.22}%
+\contentsline {subsection}{\numberline {22.1}绘制直线}{132}{subsection.22.1}%
+\contentsline {subsubsection}{\numberline {22.1.1}使用 \textbf {\texttt {\textcolor {black}{add}}} 的示例}{134}{subsubsection.22.1.1}%
+\contentsline {subsubsection}{\numberline {22.1.2}使用 \textbf {\texttt {\textcolor {MidnightBlue}{\textbackslash tkzDrawLines}}} 的示例}{134}{subsubsection.22.1.2}%
+\contentsline {section}{\numberline {23}绘制线段}{135}{section.23}%
+\contentsline {subsection}{\numberline {23.1}绘制线段 \textbf {\texttt {\textcolor {MidnightBlue}{\textbackslash tkzDrawSegment}}}}{135}{subsection.23.1}%
+\contentsline {subsubsection}{\numberline {23.1.1}使用点引用的示例}{135}{subsubsection.23.1.1}%
+\contentsline {subsubsection}{\numberline {23.1.2}用选项 \textbf {\texttt {\textcolor {black}{add}}} 延长线段}{136}{subsubsection.23.1.2}%
+\contentsline {subsubsection}{\numberline {23.1.3}用选项 \textbf {\texttt {\textcolor {black}{dim}}} 添加尺寸标注（代码由 Muzimuzhi Z 提供）}{136}{subsubsection.23.1.3}%
+\contentsline {subsubsection}{\numberline {23.1.4}用选项 \textbf {\texttt {\textcolor {black}{dim}}} 添加尺寸标注：第一部分}{137}{subsubsection.23.1.4}%
+\contentsline {subsubsection}{\numberline {23.1.5}用选项 \textbf {\texttt {\textcolor {black}{dim}}} 添加尺寸标注：第二部分}{137}{subsubsection.23.1.5}%
+\contentsline {subsection}{\numberline {23.2}绘制线段 \textbf {\texttt {\textcolor {MidnightBlue}{\textbackslash tkzDrawSegments}}}}{137}{subsection.23.2}%
+\contentsline {subsubsection}{\numberline {23.2.1}在线段上放置箭头}{138}{subsubsection.23.2.1}%
+\contentsline {subsection}{\numberline {23.3}绘制三角形的边}{139}{subsection.23.3}%
+\contentsline {subsubsection}{\numberline {23.3.1}如何绘制高}{139}{subsubsection.23.3.1}%
+\contentsline {subsection}{\numberline {23.4}绘制多边形}{139}{subsection.23.4}%
+\contentsline {subsubsection}{\numberline {23.4.1}\textbf {\texttt {\textcolor {MidnightBlue}{\textbackslash tkzDrawPolygon}}}}{140}{subsubsection.23.4.1}%
+\contentsline {subsubsection}{\numberline {23.4.2}选项 \textbf {\texttt {\textcolor {black}{two angles}}}}{140}{subsubsection.23.4.2}%
+\contentsline {subsubsection}{\numberline {23.4.3}直线样式}{140}{subsubsection.23.4.3}%
+\contentsline {subsection}{\numberline {23.5}绘制折线}{140}{subsection.23.5}%
+\contentsline {subsubsection}{\numberline {23.5.1}折线}{141}{subsubsection.23.5.1}%
+\contentsline {subsubsection}{\numberline {23.5.2}在半圆内作两个正方形。}{141}{subsubsection.23.5.2}%
+\contentsline {subsubsection}{\numberline {23.5.3}折线：索引记法}{141}{subsubsection.23.5.3}%
+\contentsline {section}{\numberline {24}用 \textbf {\texttt {\textcolor {MidnightBlue}{\textbackslash tkzDrawCircle}}} 绘制圆}{142}{section.24}%
+\contentsline {subsection}{\numberline {24.1}绘制一个圆}{142}{subsection.24.1}%
+\contentsline {subsubsection}{\numberline {24.1.1}圆与样式：绘制圆并给圆盘上色}{142}{subsubsection.24.1.1}%
+\contentsline {subsection}{\numberline {24.2}绘制多个圆}{142}{subsection.24.2}%
+\contentsline {subsubsection}{\numberline {24.2.1}由三角形确定的圆。}{143}{subsubsection.24.2.1}%
+\contentsline {subsubsection}{\numberline {24.2.2}同心圆。}{143}{subsubsection.24.2.2}%
+\contentsline {subsubsection}{\numberline {24.2.3}旁切圆。}{144}{subsubsection.24.2.3}%
+\contentsline {subsubsection}{\numberline {24.2.4}心形线}{144}{subsubsection.24.2.4}%
+\contentsline {subsection}{\numberline {24.3}绘制半圆}{145}{subsection.24.3}%
+\contentsline {subsubsection}{\numberline {24.3.1}\textbf {\texttt {\textcolor {MidnightBlue}{\textbackslash tkzDrawSemiCircle}}} 的用法}{145}{subsubsection.24.3.1}%
+\contentsline {subsection}{\numberline {24.4}绘制多个半圆}{145}{subsection.24.4}%
+\contentsline {subsubsection}{\numberline {24.4.1}\textbf {\texttt {\textcolor {MidnightBlue}{\textbackslash tkzDrawSemiCircles}}} 的用法：黄金 arbelos}{146}{subsubsection.24.4.1}%
+\contentsline {section}{\numberline {25}用 \textbf {\texttt {\textcolor {MidnightBlue}{\textbackslash tkzDrawEllipse}}} 绘制椭圆}{146}{section.25}%
+\contentsline {subsection}{\numberline {25.1}绘制椭圆}{146}{subsection.25.1}%
+\contentsline {subsubsection}{\numberline {25.1.1}绘制椭圆示例}{147}{subsubsection.25.1.1}%
+\contentsline {section}{\numberline {26}绘制圆弧}{147}{section.26}%
+\contentsline {subsection}{\numberline {26.1}宏命令 \textbf {\texttt {\textcolor {MidnightBlue}{\textbackslash tkzDrawArc}}}}{147}{subsection.26.1}%
+\contentsline {subsubsection}{\numberline {26.1.1}选项 \textbf {\texttt {\textcolor {black}{towards}}}：从 $A$ 到 $B$ 的弧}{148}{subsubsection.26.1.1}%
+\contentsline {subsubsection}{\numberline {26.1.2}选项 \textbf {\texttt {\textcolor {black}{towards}}}：终止于直线上的弧}{148}{subsubsection.26.1.2}%
+\contentsline {subsubsection}{\numberline {26.1.3}选项 \textbf {\texttt {\textcolor {black}{rotate}}}}{148}{subsubsection.26.1.3}%
+\contentsline {subsubsection}{\numberline {26.1.4}选项 \textbf {\texttt {\textcolor {black}{R}}}}{149}{subsubsection.26.1.4}%
+\contentsline {subsubsection}{\numberline {26.1.5}选项 \textbf {\texttt {\textcolor {black}{R with nodes}}}}{149}{subsubsection.26.1.5}%
+\contentsline {subsubsection}{\numberline {26.1.6}选项 \textbf {\texttt {\textcolor {black}{delta}}}}{149}{subsubsection.26.1.6}%
+\contentsline {subsubsection}{\numberline {26.1.7}选项 \textbf {\texttt {\textcolor {black}{angles}}}：示例 1}{150}{subsubsection.26.1.7}%
+\contentsline {subsubsection}{\numberline {26.1.8}选项 \textbf {\texttt {\textcolor {black}{angles}}}：示例 2}{150}{subsubsection.26.1.8}%
+\contentsline {subsubsection}{\numberline {26.1.9}选项 \textbf {\texttt {\textcolor {black}{reverse}}}：反转箭头}{151}{subsubsection.26.1.9}%
+\contentsline {section}{\numberline {27}绘制扇形}{151}{section.27}%
+\contentsline {subsection}{\numberline {27.1}\textbf {\texttt {\textcolor {MidnightBlue}{\textbackslash tkzDrawSector}}}}{151}{subsection.27.1}%
+\contentsline {subsubsection}{\numberline {27.1.1}\textbf {\texttt {\textcolor {MidnightBlue}{\textbackslash tkzDrawSector}}} 与 \textbf {\texttt {\textcolor {black}{towards}}}}{151}{subsubsection.27.1.1}%
+\contentsline {subsubsection}{\numberline {27.1.2}\textbf {\texttt {\textcolor {MidnightBlue}{\textbackslash tkzDrawSector}}} 与 \textbf {\texttt {\textcolor {black}{rotate}}}}{152}{subsubsection.27.1.2}%
+\contentsline {subsubsection}{\numberline {27.1.3}\textbf {\texttt {\textcolor {MidnightBlue}{\textbackslash tkzDrawSector}}} 与 \textbf {\texttt {\textcolor {black}{R}}}}{152}{subsubsection.27.1.3}%
+\contentsline {subsubsection}{\numberline {27.1.4}\textbf {\texttt {\textcolor {MidnightBlue}{\textbackslash tkzDrawSector}}} 与 \textbf {\texttt {\textcolor {black}{R with nodes}}}：两个扇形}{152}{subsubsection.27.1.4}%
+\contentsline {subsubsection}{\numberline {27.1.5}\textbf {\texttt {\textcolor {MidnightBlue}{\textbackslash tkzDrawSector}}} 与 \textbf {\texttt {\textcolor {black}{R with nodes}}}：六边形中的扇形}{153}{subsubsection.27.1.5}%
+\contentsline {section}{\numberline {28}填充}{153}{section.28}%
+\contentsline {subsection}{\numberline {28.1}给圆盘上色}{153}{subsection.28.1}%
+\contentsline {subsubsection}{\numberline {28.1.1}阴阳}{154}{subsubsection.28.1.1}%
+\contentsline {subsubsection}{\numberline {28.1.2}取自一道算额}{154}{subsubsection.28.1.2}%
+\contentsline {subsubsection}{\numberline {28.1.3}裁剪与填充 第一部分}{155}{subsubsection.28.1.3}%
+\contentsline {subsubsection}{\numberline {28.1.4}裁剪与填充 第二部分}{156}{subsubsection.28.1.4}%
+\contentsline {subsubsection}{\numberline {28.1.5}裁剪与填充 第三部分}{156}{subsubsection.28.1.5}%
+\contentsline {subsection}{\numberline {28.2}给多边形上色}{157}{subsection.28.2}%
+\contentsline {subsubsection}{\numberline {28.2.1}\textbf {\texttt {\textcolor {MidnightBlue}{\textbackslash tkzFillPolygon}}}}{157}{subsubsection.28.2.1}%
+\contentsline {subsection}{\numberline {28.3}\textbf {\texttt {\textcolor {MidnightBlue}{\textbackslash tkzFillSector}}}}{157}{subsection.28.3}%
+\contentsline {subsubsection}{\numberline {28.3.1}\textbf {\texttt {\textcolor {MidnightBlue}{\textbackslash tkzFillSector}}} 与 \textbf {\texttt {\textcolor {black}{towards}}}}{158}{subsubsection.28.3.1}%
+\contentsline {subsubsection}{\numberline {28.3.2}\textbf {\texttt {\textcolor {MidnightBlue}{\textbackslash tkzFillSector}}} 与 \textbf {\texttt {\textcolor {black}{rotate}}}}{158}{subsubsection.28.3.2}%
+\contentsline {subsection}{\numberline {28.4}给角上色：\textbf {\texttt {\textcolor {MidnightBlue}{\textbackslash tkzFillAngle}}}}{158}{subsection.28.4}%
+\contentsline {subsubsection}{\numberline {28.4.1}使用 \textbf {\texttt {\textcolor {black}{size}}} 的示例}{159}{subsubsection.28.4.1}%
+\contentsline {subsubsection}{\numberline {28.4.2}改变点的顺序}{159}{subsubsection.28.4.2}%
+\contentsline {subsubsection}{\numberline {28.4.3}多个角}{160}{subsubsection.28.4.3}%
+\contentsline {section}{\numberline {29}控制边界框}{160}{section.29}%
+\contentsline {subsection}{\numberline {29.1}\textbf {\texttt {\textcolor {MidnightBlue}{\textbackslash tkzInit}}} 的作用}{160}{subsection.29.1}%
+\contentsline {subsection}{\numberline {29.2}\textbf {\texttt {\textcolor {MidnightBlue}{\textbackslash tkzInit}}}}{161}{subsection.29.2}%
+\contentsline {subsection}{\numberline {29.3}\textbf {\texttt {\textcolor {MidnightBlue}{\textbackslash tkzClip}}}}{161}{subsection.29.3}%
+\contentsline {subsection}{\numberline {29.4}\textbf {\texttt {\textcolor {MidnightBlue}{\textbackslash tkzClip}}} 与选项 \textbf {\texttt {\textcolor {black}{space}}}}{162}{subsection.29.4}%
+\contentsline {subsection}{\numberline {29.5}\textbf {\texttt {\textcolor {MidnightBlue}{\textbackslash tkzShowBB}}}}{162}{subsection.29.5}%
+\contentsline {subsubsection}{\numberline {29.5.1}\textbf {\texttt {\textcolor {MidnightBlue}{\textbackslash tkzShowBB}}} 示例}{162}{subsubsection.29.5.1}%
+\contentsline {subsection}{\numberline {29.6}\textbf {\texttt {\textcolor {MidnightBlue}{\textbackslash tkzClipBB}}}}{163}{subsection.29.6}%
+\contentsline {subsubsection}{\numberline {29.6.1}\textbf {\texttt {\textcolor {MidnightBlue}{\textbackslash tkzClipBB}}} 与角平分线示例}{163}{subsubsection.29.6.1}%
+\contentsline {section}{\numberline {30}裁剪不同对象}{164}{section.30}%
+\contentsline {subsection}{\numberline {30.1}裁剪多边形}{164}{subsection.30.1}%
+\contentsline {subsubsection}{\numberline {30.1.1}\textbf {\texttt {\textcolor {MidnightBlue}{\textbackslash tkzClipPolygon}}}}{164}{subsubsection.30.1.1}%
+\contentsline {subsubsection}{\numberline {30.1.2}\textbf {\texttt {\textcolor {MidnightBlue}{\textbackslash tkzClipPolygon[out]}}}}{165}{subsubsection.30.1.2}%
+\contentsline {subsubsection}{\numberline {30.1.3}示例：在正方形中使用 \texttt {Clip} 绘制 Sangaku}{165}{subsubsection.30.1.3}%
+\contentsline {subsection}{\numberline {30.2}裁剪圆盘}{165}{subsection.30.2}%
+\contentsline {subsubsection}{\numberline {30.2.1}简单裁剪}{166}{subsubsection.30.2.1}%
+\contentsline {subsection}{\numberline {30.3}向外裁剪}{166}{subsection.30.3}%
+\contentsline {subsection}{\numberline {30.4}圆盘的交集}{166}{subsection.30.4}%
+\contentsline {subsection}{\numberline {30.5}裁剪扇形}{167}{subsection.30.5}%
+\contentsline {subsubsection}{\numberline {30.5.1}裁剪扇形：第一个示例}{168}{subsubsection.30.5.1}%
+\contentsline {subsubsection}{\numberline {30.5.2}裁剪扇形：第二个示例}{168}{subsubsection.30.5.2}%
+\contentsline {subsection}{\numberline {30.6}Ti\textsl {k}Z\ 选项：trim left 或 trim right}{169}{subsection.30.6}%
+\contentsline {subsection}{\numberline {30.7}Ti\textsl {k}Z\ 控制 \textbf {\texttt {\textcolor {MidnightBlue}{\textbackslash pgfinterruptboundingbox}}} 与 \textbf {\texttt {\textcolor {MidnightBlue}{\textbackslash endpgfinterruptboundingbox}}}}{169}{subsection.30.7}%
+\contentsline {subsubsection}{\numberline {30.7.1}控制边界框}{169}{subsubsection.30.7.1}%
+\contentsline {subsection}{\numberline {30.8}反向裁剪：\textbf {\texttt {\textcolor {black}{tkzreverseclip}}}}{169}{subsection.30.8}%
+\contentsline {subsubsection}{\numberline {30.8.1}\textbf {\texttt {\textcolor {MidnightBlue}{\textbackslash tkzClipPolygon[out]}}} 示例}{169}{subsubsection.30.8.1}%
+\contentsline {part}{\numberline {VII}标记与标注}{171}{part.7}%
+\contentsline {section}{\numberline {31}标记}{172}{section.31}%
+\contentsline {subsection}{\numberline {31.1}标记线段 \textbf {\texttt {\textcolor {MidnightBlue}{\textbackslash tkzMarkSegment}}}}{172}{subsection.31.1}%
+\contentsline {subsubsection}{\numberline {31.1.1}多个标记}{172}{subsubsection.31.1.1}%
+\contentsline {subsubsection}{\numberline {31.1.2}\textbf {\texttt {\textcolor {black}{mark}}} 的用法}{172}{subsubsection.31.1.2}%
+\contentsline {subsection}{\numberline {31.2}标记多条线段 \textbf {\texttt {\textcolor {MidnightBlue}{\textbackslash tkzMarkSegments}}}}{172}{subsection.31.2}%
+\contentsline {subsubsection}{\numberline {31.2.1}等腰三角形的标记}{173}{subsubsection.31.2.1}%
+\contentsline {subsection}{\numberline {31.3}带构造的标记：等边三角形}{173}{subsection.31.3}%
+\contentsline {subsection}{\numberline {31.4}标记圆弧 \textbf {\texttt {\textcolor {MidnightBlue}{\textbackslash tkzMarkArc}}}}{173}{subsection.31.4}%
+\contentsline {subsubsection}{\numberline {31.4.1}多个标记}{174}{subsubsection.31.4.1}%
+\contentsline {subsection}{\numberline {31.5}标记角：\textbf {\texttt {\textcolor {MidnightBlue}{\textbackslash tkzMarkAngle}}}}{174}{subsection.31.5}%
+\contentsline {subsubsection}{\numberline {31.5.1}\textbf {\texttt {\textcolor {black}{mark = x}}} 与 \textbf {\texttt {\textcolor {black}{mark =||}}} 示例}{174}{subsubsection.31.5.1}%
+\contentsline {subsection}{\numberline {31.6}标记小角：选项 \textbf {\texttt {\textcolor {black}{veclen}}}}{175}{subsection.31.6}%
+\contentsline {subsection}{\numberline {31.7}标记直角：\textbf {\texttt {\textcolor {MidnightBlue}{\textbackslash tkzMarkRightAngle}}}}{175}{subsection.31.7}%
+\contentsline {subsubsection}{\numberline {31.7.1}标记直角}{176}{subsubsection.31.7.1}%
+\contentsline {subsubsection}{\numberline {31.7.2}德式直角标记}{176}{subsubsection.31.7.2}%
+\contentsline {subsubsection}{\numberline {31.7.3}样式混合}{176}{subsubsection.31.7.3}%
+\contentsline {subsubsection}{\numberline {31.7.4}完整示例}{177}{subsubsection.31.7.4}%
+\contentsline {subsection}{\numberline {31.8}\textbf {\texttt {\textcolor {MidnightBlue}{\textbackslash tkzMarkRightAngles}}}}{177}{subsection.31.8}%
+\contentsline {subsection}{\numberline {31.9}Ti\textsl {k}Z\ 库 \textbf {\texttt {\textcolor {black}{angles}}}}{177}{subsection.31.9}%
+\contentsline {subsubsection}{\numberline {31.9.1}使用 Ti\textsl {k}Z\ 标记角}{178}{subsubsection.31.9.1}%
+\contentsline {section}{\numberline {32}点的标注}{178}{section.32}%
+\contentsline {subsection}{\numberline {32.1}单点标注：\textbf {\texttt {\textcolor {MidnightBlue}{\textbackslash tkzLabelPoint}}}}{178}{subsection.32.1}%
+\contentsline {subsubsection}{\numberline {32.1.1}\textbf {\texttt {\textcolor {MidnightBlue}{\textbackslash tkzLabelPoint}}} 示例}{179}{subsubsection.32.1.1}%
+\contentsline {subsubsection}{\numberline {32.1.2}引用与标签}{179}{subsubsection.32.1.2}%
+\contentsline {subsection}{\numberline {32.2}为多点添加标签 \textbf {\texttt {\textcolor {MidnightBlue}{\textbackslash tkzLabelPoints}}}}{179}{subsection.32.2}%
+\contentsline {subsubsection}{\numberline {32.2.1}\textbf {\texttt {\textcolor {MidnightBlue}{\textbackslash tkzLabelPoints}}} 示例}{179}{subsubsection.32.2.1}%
+\contentsline {subsection}{\numberline {32.3}标签的自动定位 \textbf {\texttt {\textcolor {MidnightBlue}{\textbackslash tkzAutoLabelPoints}}}}{180}{subsection.32.3}%
+\contentsline {subsubsection}{\numberline {32.3.1}使用 \textbf {\texttt {\textcolor {MidnightBlue}{\textbackslash tkzAutoLabelPoints}}} 为点标注}{180}{subsubsection.32.3.1}%
+\contentsline {section}{\numberline {33}线段的标注}{180}{section.33}%
+\contentsline {subsection}{\numberline {33.1}宏 \textbf {\texttt {\textcolor {MidnightBlue}{\textbackslash tkzLabelSegment}}} 与 \textbf {\texttt {\textcolor {MidnightBlue}{\textbackslash tkzLabelSegments}}}}{180}{subsection.33.1}%
+\contentsline {subsubsection}{\numberline {33.1.1}线段上方与下方的标签}{181}{subsubsection.33.1.1}%
+\contentsline {subsubsection}{\numberline {33.1.2}示例：黑板}{181}{subsubsection.33.1.2}%
+\contentsline {subsubsection}{\numberline {33.1.3}标签与选项 \textbf {\texttt {\textcolor {black}{swap}}}}{182}{subsubsection.33.1.3}%
+\contentsline {subsubsection}{\numberline {33.1.4}等腰三角形的标签}{182}{subsubsection.33.1.4}%
+\contentsline {section}{\numberline {34}直线的标注}{183}{section.34}%
+\contentsline {subsection}{\numberline {34.1}宏 \textbf {\texttt {\textcolor {MidnightBlue}{\textbackslash tkzLabelLine}}}}{183}{subsection.34.1}%
+\contentsline {subsubsection}{\numberline {34.1.1}\textbf {\texttt {\textcolor {MidnightBlue}{\textbackslash tkzLabelLine}}} 示例}{183}{subsubsection.34.1.1}%
+\contentsline {section}{\numberline {35}角的标注}{183}{section.35}%
+\contentsline {subsection}{\numberline {35.1}宏 \textbf {\texttt {\textcolor {MidnightBlue}{\textbackslash tkzLabelAngle}}} 与 \textbf {\texttt {\textcolor {MidnightBlue}{\textbackslash tkzLabelAngles}}}}{183}{subsection.35.1}%
+\contentsline {subsubsection}{\numberline {35.1.1}示例（由 J. S. Bibra 提供，\TeX .SE）}{184}{subsubsection.35.1.1}%
+\contentsline {subsubsection}{\numberline {35.1.2}使用 \textbf {\texttt {\textcolor {black}{pos}}}}{184}{subsubsection.35.1.2}%
+\contentsline {subsubsection}{\numberline {35.1.3}\textbf {\texttt {\textcolor {black}{pos}}} 与 \textbf {\texttt {\textcolor {MidnightBlue}{\textbackslash tkzLabelAngles}}}}{185}{subsubsection.35.1.3}%
+\contentsline {section}{\numberline {36}圆的标注}{185}{section.36}%
+\contentsline {subsection}{\numberline {36.1}宏 \textbf {\texttt {\textcolor {MidnightBlue}{\textbackslash tkzLabelCircle}}}}{185}{subsection.36.1}%
+\contentsline {subsubsection}{\numberline {36.1.1}圆周围的标签}{186}{subsubsection.36.1.1}%
+\contentsline {section}{\numberline {37}圆弧的标注}{186}{section.37}%
+\contentsline {subsection}{\numberline {37.1}宏 \textbf {\texttt {\textcolor {MidnightBlue}{\textbackslash tkzLabelArc}}}}{186}{subsection.37.1}%
+\contentsline {subsubsection}{\numberline {37.1.1}圆弧上的标签}{187}{subsubsection.37.1.1}%
+\contentsline {part}{\numberline {VIII}补充}{188}{part.8}%
+\contentsline {section}{\numberline {38}使用圆规}{189}{section.38}%
+\contentsline {subsection}{\numberline {38.1}主要宏 \textbf {\texttt {\textcolor {MidnightBlue}{\textbackslash tkzCompass}}}}{189}{subsection.38.1}%
+\contentsline {subsubsection}{\numberline {38.1.1}选项 \textbf {\texttt {\textcolor {black}{length}}}}{189}{subsubsection.38.1.1}%
+\contentsline {subsubsection}{\numberline {38.1.2}选项 \textbf {\texttt {\textcolor {black}{delta}}}}{189}{subsubsection.38.1.2}%
+\contentsline {subsection}{\numberline {38.2}多重构造 \textbf {\texttt {\textcolor {MidnightBlue}{\textbackslash tkzCompasss}}}}{190}{subsection.38.2}%
+\contentsline {subsubsection}{\numberline {38.2.1}\textbf {\texttt {\textcolor {MidnightBlue}{\textbackslash tkzCompasss}}} 的用法}{190}{subsubsection.38.2.1}%
+\contentsline {section}{\numberline {39}Show}{190}{section.39}%
+\contentsline {subsection}{\numberline {39.1}显示某些直线的构造 \textbf {\texttt {\textcolor {MidnightBlue}{\textbackslash tkzShowLine}}}}{190}{subsection.39.1}%
+\contentsline {subsubsection}{\numberline {39.1.1}\textbf {\texttt {\textcolor {MidnightBlue}{\textbackslash tkzShowLine}}} 与 \textbf {\texttt {\textcolor {black}{parallel}}} 示例}{191}{subsubsection.39.1.1}%
+\contentsline {subsubsection}{\numberline {39.1.2}\textbf {\texttt {\textcolor {MidnightBlue}{\textbackslash tkzShowLine}}} 与 \textbf {\texttt {\textcolor {black}{perpendicular}}} 示例}{191}{subsubsection.39.1.2}%
+\contentsline {subsubsection}{\numberline {39.1.3}\textbf {\texttt {\textcolor {MidnightBlue}{\textbackslash tkzShowLine}}} 与 \textbf {\texttt {\textcolor {black}{bisector}}} 示例}{191}{subsubsection.39.1.3}%
+\contentsline {subsubsection}{\numberline {39.1.4}\textbf {\texttt {\textcolor {MidnightBlue}{\textbackslash tkzShowLine}}} 与 \textbf {\texttt {\textcolor {black}{mediator}}} 示例}{192}{subsubsection.39.1.4}%
+\contentsline {subsection}{\numberline {39.2}某些变换的构造 \texttt {\textbackslash tkzShowTransformation}}{192}{subsection.39.2}%
+\contentsline {subsubsection}{\numberline {39.2.1}\textbf {\texttt {\textcolor {MidnightBlue}{\textbackslash tkzShowTransformation}}} 用法示例}{193}{subsubsection.39.2.1}%
+\contentsline {subsubsection}{\numberline {39.2.2}\textbf {\texttt {\textcolor {MidnightBlue}{\textbackslash tkzShowTransformation}}} 用法另一示例}{193}{subsubsection.39.2.2}%
+\contentsline {section}{\numberline {40}量角器}{194}{section.40}%
+\contentsline {subsection}{\numberline {40.1}宏 \textbf {\texttt {\textcolor {MidnightBlue}{\textbackslash tkzProtractor}}}}{194}{subsection.40.1}%
+\contentsline {subsubsection}{\numberline {40.1.1}圆形量角器}{194}{subsubsection.40.1.1}%
+\contentsline {subsubsection}{\numberline {40.1.2}圆形量角器，透明且反向}{195}{subsubsection.40.1.2}%
+\contentsline {section}{\numberline {41}杂项与数学工具}{195}{section.41}%
+\contentsline {subsection}{\numberline {41.1}复制线段}{195}{subsection.41.1}%
+\contentsline {subsubsection}{\numberline {41.1.1}\textbf {\texttt {\textcolor {MidnightBlue}{\textbackslash tkzDuplicateSegment}}} 的用法}{196}{subsubsection.41.1.1}%
+\contentsline {subsubsection}{\numberline {41.1.2}用 \textbf {\texttt {\textcolor {MidnightBlue}{\textbackslash tkzDuplicateSegment}}} 求黄金比例}{196}{subsubsection.41.1.2}%
+\contentsline {subsubsection}{\numberline {41.1.3}黄金三角形或崇高三角形}{197}{subsubsection.41.1.3}%
+\contentsline {subsection}{\numberline {41.2}线段长度 \textbf {\texttt {\textcolor {MidnightBlue}{\textbackslash tkzCalcLength}}}}{197}{subsection.41.2}%
+\contentsline {subsubsection}{\numberline {41.2.1}圆规与正方形的构造}{198}{subsubsection.41.2.1}%
+\contentsline {subsubsection}{\numberline {41.2.2}由直径确定的圆的半径}{198}{subsubsection.41.2.2}%
+\contentsline {subsection}{\numberline {41.3}从 pt 到 cm 或从 cm 到 pt 的换算}{198}{subsection.41.3}%
+\contentsline {subsection}{\numberline {41.4}单位换算}{199}{subsection.41.4}%
+\contentsline {subsection}{\numberline {41.5}获取点的坐标}{199}{subsection.41.5}%
+\contentsline {subsubsection}{\numberline {41.5.1}用 \textbf {\texttt {\textcolor {MidnightBlue}{\textbackslash tkzGetPointCoord}}} 传递坐标}{199}{subsubsection.41.5.1}%
+\contentsline {subsubsection}{\numberline {41.5.2}用 \textbf {\texttt {\textcolor {MidnightBlue}{\textbackslash tkzGetPointCoord}}} 求向量之和}{200}{subsubsection.41.5.2}%
+\contentsline {subsection}{\numberline {41.6}交换点的标签}{200}{subsection.41.6}%
+\contentsline {subsubsection}{\numberline {41.6.1}\textbf {\texttt {\textcolor {MidnightBlue}{\textbackslash tkzSwapPoints}}} 的用法}{200}{subsubsection.41.6.1}%
+\contentsline {subsection}{\numberline {41.7}点积}{200}{subsection.41.7}%
+\contentsline {subsubsection}{\numberline {41.7.1}简单示例}{201}{subsubsection.41.7.1}%
+\contentsline {subsubsection}{\numberline {41.7.2}共圆点}{202}{subsubsection.41.7.2}%
+\contentsline {subsection}{\numberline {41.8}点关于圆的幂}{203}{subsection.41.8}%
+\contentsline {subsubsection}{\numberline {41.8.1}由根轴求幂}{203}{subsubsection.41.8.1}%
+\contentsline {subsection}{\numberline {41.9}根轴}{203}{subsection.41.9}%
+\contentsline {subsubsection}{\numberline {41.9.1}两个相离的圆}{204}{subsubsection.41.9.1}%
+\contentsline {subsubsection}{\numberline {41.9.2}两个相交的圆}{204}{subsubsection.41.9.2}%
+\contentsline {subsubsection}{\numberline {41.9.3}两个外切圆}{204}{subsubsection.41.9.3}%
+\contentsline {subsubsection}{\numberline {41.9.4}两个内切圆}{205}{subsubsection.41.9.4}%
+\contentsline {subsubsection}{\numberline {41.9.5}三个圆}{205}{subsubsection.41.9.5}%
+\contentsline {subsection}{\numberline {41.10}\textbf {\texttt {\textcolor {MidnightBlue}{\textbackslash tkzIsLinear}}}、\textbf {\texttt {\textcolor {MidnightBlue}{\textbackslash tkzIsOrtho}}}}{205}{subsection.41.10}%
+\contentsline {subsubsection}{\numberline {41.10.1}\textbf {\texttt {\textcolor {MidnightBlue}{\textbackslash tkzIsOrtho}}} 与 \textbf {\texttt {\textcolor {MidnightBlue}{\textbackslash tkzIsLinear}}} 的用法}{206}{subsubsection.41.10.1}%
+\contentsline {part}{\numberline {IX}样式}{207}{part.9}%
+\contentsline {section}{\numberline {42}预定义样式}{208}{section.42}%
+\contentsline {section}{\numberline {43}点样式}{208}{section.43}%
+\contentsline {subsection}{\numberline {43.1}\textbf {\texttt {\textcolor {MidnightBlue}{\textbackslash tkzSetUpPoint}}} 的用法}{208}{subsection.43.1}%
+\contentsline {subsubsection}{\numberline {43.1.1}全局样式或局部样式}{209}{subsubsection.43.1.1}%
+\contentsline {subsubsection}{\numberline {43.1.2}局部样式}{209}{subsubsection.43.1.2}%
+\contentsline {subsubsection}{\numberline {43.1.3}\textbf {\texttt {\textcolor {black}{Style}}} 与 \textbf {\texttt {\textcolor {black}{scope}}}}{209}{subsubsection.43.1.3}%
+\contentsline {subsubsection}{\numberline {43.1.4}\textbf {\texttt {\textcolor {MidnightBlue}{\textbackslash tkzSetUpPoint}}} 简单示例}{210}{subsubsection.43.1.4}%
+\contentsline {subsubsection}{\numberline {43.1.5}在 group 内部使用 \textbf {\texttt {\textcolor {MidnightBlue}{\textbackslash tkzSetUpPoint}}}}{210}{subsubsection.43.1.5}%
+\contentsline {section}{\numberline {44}直线样式}{210}{section.44}%
+\contentsline {subsection}{\numberline {44.1}\textbf {\texttt {\textcolor {MidnightBlue}{\textbackslash tkzSetUpLine}}} 的用法}{210}{subsection.44.1}%
+\contentsline {subsubsection}{\numberline {44.1.1}改变线宽}{211}{subsubsection.44.1.1}%
+\contentsline {subsubsection}{\numberline {44.1.2}改变直线样式}{212}{subsubsection.44.1.2}%
+\contentsline {subsubsection}{\numberline {44.1.3}延长直线}{212}{subsubsection.44.1.3}%
+\contentsline {section}{\numberline {45}圆弧样式}{212}{section.45}%
+\contentsline {subsection}{\numberline {45.1}宏 \textbf {\texttt {\textcolor {MidnightBlue}{\textbackslash tkzSetUpArc}}}}{212}{subsection.45.1}%
+\contentsline {subsubsection}{\numberline {45.1.1}\textbf {\texttt {\textcolor {MidnightBlue}{\textbackslash tkzSetUpArc}}} 的用法}{213}{subsubsection.45.1.1}%
+\contentsline {section}{\numberline {46}圆规样式}{213}{section.46}%
+\contentsline {subsection}{\numberline {46.1}宏 \textbf {\texttt {\textcolor {MidnightBlue}{\textbackslash tkzSetUpCompass}}}}{213}{subsection.46.1}%
+\contentsline {subsubsection}{\numberline {46.1.1}\textbf {\texttt {\textcolor {MidnightBlue}{\textbackslash tkzSetUpCompass}}} 的用法}{214}{subsubsection.46.1.1}%
+\contentsline {subsubsection}{\numberline {46.1.2}\textbf {\texttt {\textcolor {MidnightBlue}{\textbackslash tkzSetUpCompass}}} 与 \textbf {\texttt {\textcolor {MidnightBlue}{\textbackslash tkzShowLine}}} 配合使用}{214}{subsubsection.46.1.2}%
+\contentsline {section}{\numberline {47}标签样式}{215}{section.47}%
+\contentsline {subsection}{\numberline {47.1}宏 \textbf {\texttt {\textcolor {MidnightBlue}{\textbackslash tkzSetUpLabel}}}}{215}{subsection.47.1}%
+\contentsline {subsubsection}{\numberline {47.1.1}\textbf {\texttt {\textcolor {MidnightBlue}{\textbackslash tkzSetUpLabel}}} 的用法}{215}{subsubsection.47.1.1}%
+\contentsline {section}{\numberline {48}自定义样式}{215}{section.48}%
+\contentsline {subsection}{\numberline {48.1}宏 \textbf {\texttt {\textcolor {MidnightBlue}{\textbackslash tkzSetUpStyle}}}}{215}{subsection.48.1}%
+\contentsline {subsubsection}{\numberline {48.1.1}\textbf {\texttt {\textcolor {MidnightBlue}{\textbackslash tkzSetUpStyle}}} 的用法}{216}{subsubsection.48.1.1}%
+\contentsline {section}{\numberline {49}如何使用 \textbf {\texttt {\textcolor {black}{arrows}}}}{216}{section.49}%
+\contentsline {subsection}{\numberline {49.1}在直线、射线或线段端点处的箭头}{216}{subsection.49.1}%
+\contentsline {subsubsection}{\numberline {49.1.1}缩放箭头头部}{217}{subsubsection.49.1.1}%
+\contentsline {subsubsection}{\numberline {49.1.2}使用 vector 样式}{217}{subsubsection.49.1.2}%
+\contentsline {subsection}{\numberline {49.2}在线段中点处的箭头}{218}{subsection.49.2}%
+\contentsline {subsubsection}{\numberline {49.2.1}在平行四边形中}{218}{subsubsection.49.2.1}%
+\contentsline {subsubsection}{\numberline {49.2.2}与另一条直线平行的直线}{218}{subsubsection.49.2.2}%
+\contentsline {subsubsection}{\numberline {49.2.3}圆上的箭头}{219}{subsubsection.49.2.3}%
+\contentsline {subsection}{\numberline {49.3}在多边形的所有边上放置箭头}{219}{subsection.49.3}%
+\contentsline {subsubsection}{\numberline {49.3.1}用 \textbf {\texttt {\textcolor {black}{tkz arrows}}} 在每条线段上放置箭头}{219}{subsubsection.49.3.1}%
+\contentsline {subsubsection}{\numberline {49.3.2}将 \textbf {\texttt {\textcolor {black}{tkz arrows}}} 用于圆}{220}{subsubsection.49.3.2}%
+\contentsline {part}{\numberline {X}示例}{221}{part.10}%
+\contentsline {section}{\numberline {50}不同作者}{222}{section.50}%
+\contentsline {subsection}{\numberline {50.1}Andrew Swan 的代码}{222}{subsection.50.1}%
+\contentsline {subsection}{\numberline {50.2}Dimitris Kapetas 的示例}{223}{subsection.50.2}%
+\contentsline {subsection}{\numberline {50.3}John Kitzmiller 的示例}{223}{subsection.50.3}%
+\contentsline {subsection}{\numberline {50.4}示例 1：来自印度尼西亚}{224}{subsection.50.4}%
+\contentsline {subsection}{\numberline {50.5}示例 2：来自印度尼西亚}{225}{subsection.50.5}%
+\contentsline {subsection}{\numberline {50.6}Nicolas François 绘制的 Morley 定理示意图}{227}{subsection.50.6}%
+\contentsline {subsection}{\numberline {50.7}赵爽的勾股定理（毕达哥拉斯定理）}{228}{subsection.50.7}%
+\contentsline {subsection}{\numberline {50.8}Reuleaux 三角形}{230}{subsection.50.8}%
+\contentsline {section}{\numberline {51}一些有趣的示例}{231}{section.51}%
+\contentsline {subsection}{\numberline {51.1}整数的平方根}{231}{subsection.51.1}%
+\contentsline {subsection}{\numberline {51.2}关于直角三角形}{231}{subsection.51.2}%
+\contentsline {subsection}{\numberline {51.3}阿基米德}{232}{subsection.51.3}%
+\contentsline {subsubsection}{\numberline {51.3.1}等面积的正方形与矩形；黄金分割}{234}{subsubsection.51.3.1}%
+\contentsline {subsubsection}{\numberline {51.3.2}施泰纳线与西姆松线}{235}{subsubsection.51.3.2}%
+\contentsline {subsection}{\numberline {51.4}希波克拉底月牙}{236}{subsection.51.4}%
+\contentsline {subsection}{\numberline {51.5}海什木月牙}{236}{subsection.51.5}%
+\contentsline {subsection}{\numberline {51.6}关于圆的裁剪}{238}{subsection.51.6}%
+\contentsline {subsection}{\numberline {51.7}相似等腰三角形}{239}{subsection.51.7}%
+\contentsline {subsection}{\numberline {51.8}《Tangente》修订版}{240}{subsection.51.8}%
+\contentsline {subsection}{\numberline {51.9}《Le Monde》版}{241}{subsection.51.9}%
+\contentsline {subsection}{\numberline {51.10}三角形的高}{242}{subsection.51.10}%
+\contentsline {subsection}{\numberline {51.11}高——另一种作法}{243}{subsection.51.11}%
+\contentsline {subsection}{\numberline {51.12}等边三角形中的三个圆}{245}{subsection.51.12}%
+\contentsline {subsection}{\numberline {51.13}正弦定理}{246}{subsection.51.13}%
+\contentsline {subsection}{\numberline {51.14}生命之花}{247}{subsection.51.14}%
+\contentsline {subsection}{\numberline {51.15}圆内接五边形}{249}{subsection.51.15}%
+\contentsline {subsection}{\numberline {51.16}正方形内作五边形}{251}{subsection.51.16}%
+\contentsline {subsection}{\numberline {51.17}内接六边形}{253}{subsection.51.17}%
+\contentsline {subsubsection}{\numberline {51.17.1}内接六边形：版本 1}{253}{subsubsection.51.17.1}%
+\contentsline {subsubsection}{\numberline {51.17.2}内接六边形：版本 2}{253}{subsubsection.51.17.2}%
+\contentsline {subsection}{\numberline {51.18}点关于圆的幂}{254}{subsection.51.18}%
+\contentsline {subsection}{\numberline {51.19}两个不同心圆的根轴}{255}{subsection.51.19}%
+\contentsline {subsection}{\numberline {51.20}外位似中心}{257}{subsection.51.20}%
+\contentsline {subsection}{\numberline {51.21}两圆的公切线}{258}{subsection.51.21}%
+\contentsline {subsection}{\numberline {51.22}用根轴作两圆的公切线}{259}{subsection.51.22}%
+\contentsline {subsection}{\numberline {51.23}用圆规求线段中点}{261}{subsection.51.23}%
+\contentsline {subsection}{\numberline {51.24}圆的定义，\_Apollonius\_}{262}{subsection.51.24}%
+\contentsline {subsection}{\numberline {51.25}反演的应用：\textbf {\texttt {\textcolor {black}{Pappus 链}}}}{263}{subsection.51.25}%
+\contentsline {subsection}{\numberline {51.26}阿基米德《引理集》命题 1}{264}{subsection.51.26}%
+\contentsline {subsection}{\numberline {51.27}阿基米德《引理集》命题 6}{265}{subsection.51.27}%
+\contentsline {subsection}{\numberline {51.28}阿波罗尼奥斯圆}{267}{subsection.51.28}%
+\contentsline {part}{\numberline {XI}常见问题}{270}{part.11}%
+\contentsline {section}{\numberline {52}常见问题}{271}{section.52}%
+\contentsline {subsection}{\numberline {52.1}最常见的错误}{271}{subsection.52.1}%
+\contentsline {part}{\numberline {XII}新特性、兼容性与选项}{273}{part.12}%
+\contentsline {section}{\numberline {53}新特性与兼容性}{274}{section.53}%
+\contentsline {subsection}{\numberline {53.1}第 5.14 版}{274}{subsection.53.1}%
+\contentsline {subsection}{\numberline {53.2}第 5.10 版}{274}{subsection.53.2}%
+\contentsline {subsection}{\numberline {53.3}从第 3 版到第 5 版}{275}{subsection.53.3}%
+\contentsline {section}{\numberline {54}使用 lua}{276}{section.54}%
+\contentsline {subsection}{\numberline {54.1}选项 \texttt {lua}}{276}{subsection.54.1}%
+\contentsline {subsection}{\numberline {54.2}选项 \texttt {mini}}{276}{subsection.54.2}%
+\contentsline {section}{\nonumberline 索引}{277}{section*.2}%
+\providecommand \tocbasic@end@toc@file {}\tocbasic@end@toc@file 

@@ -1,0 +1,35 @@
+\section{常见问题}
+
+\subsection{最常见的错误}
+这些是我自己最常犯的错误，因为语法已经修改过好几次。本节将持续扩充。
+
+\begin{itemize}\setlength{\itemsep}{10pt}
+  \item 忘记在绘制多个对象的宏后加 ``s''，例如 \tkzcname{tkzDrawSegments} 或 \tkzcname{tkzDrawCircles}：\tkzcname{tkzDrawPoint(A,B)} 是错误的，应当写成 \tkzcname{tkzDrawPoints(A,B)}。
+
+  \item 自第 4 版起，单位始终为 cm，因此不要再写单位：\tkzcname{tkzDrawCircle[R](O,3cm)} 应写成 \tkzcname{tkzDrawCircle[R](O,3)}。常用的 \tkzname{TikZ} 选项仍保留其单位，例如 \tkzname{below right = 12pt}；另一方面，在 \tkzcname{tkzMarkAngle} 中设置圆弧半径时应写成 \tkzname{size=1.2}。
+
+  \item 圆括号与花括号混用。创建的点其名称放在花括号中，而作为选项或参数使用的点其名称放在圆括号中：应写 \tkzcname{tkzGetPoint\{A\}}，而不是 \tkzcname{tkzGetPoint(A)}。
+
+  \item 用 \tkzcname{tkzGetPoint\{A\}} 代替了 \tkzcname{tkzGetFirstPoint\{A\}}。当一个宏给出两个点时，要么用 \tkzcname{tkzGetPoints\{A\}\{B\}} 同时获取两个点，要么用 \tkzcname{tkzGetFirstPoint\{A\}} 或 \tkzcname{tkzGetSecondPoint\{A\}} 只获取其中一个。这些点也可以通过引用 \tkzname{tkzFirstPointResult} 和 \tkzname{tkzSecondPointResult} 来使用。有些宏还会给出第三个点 \tkzname{tkzPointResult}。
+
+  \item 立即获取结果：\tkzcname{tkzGetPoint}、\tkzcname{tkzGetPoints} 或 \tkzcname{tkzGetLength} 必须紧跟在计算结果的宏之后，因为下一次计算会覆盖它。
+
+  \item 直线与圆、或两圆的交点顺序在不同版本间有时会发生变化；这会导致图形错误或报错。选项 \tkzname{common} 和 \tkzname{near} 允许你选择所需的点。
+
+  \item 选项与参数混用：所有使用圆的宏都需要知道其半径。当半径由一个测量值给出时，选项中要包含 \tkzname{R}。
+
+  \item 角度以度为单位，少数情况下以弧度为单位。
+
+  \item 点列表不能在行尾被 \code{\%} 截断：|\tkzDrawSegments(A,B%| 紧接着 |C,D)| 会得到点 |BC,D|，因为 \code{\%} 也会删掉两个点之间的空格。直接换行，不要加 \code{\%}。
+
+  \item 第 3 版中用于特殊圆的语法，例如 |\tkzDrawCircle[euler](A,B,C)|，已不再存在：先用 \tkzcname{tkzDefCircle[euler](A,B,C)} 定义圆，再用 \tkzcname{tkzGetPoints\{N\}\{P\}} 获取圆心和圆上一点，最后用 \tkzcname{tkzDrawCircle(N,P)} 绘制。自第 5.14 版起，旧语法会给出错误信息。
+
+  \item 如果传参时计算出错，最好先完成计算再调用宏。
+
+  \item 不要混用 \tkzNamePack{pgfmath} 和 \tkzNamePack{xfp} 的语法。我通常选择 \tkzNamePack{xfp}；如果你更喜欢 \tkzNamePack{pgfmath}，请在传参之前完成计算。
+
+  \item ``dimension too large''（维度太大）错误在某些情况下会出现，例如使用 \tkzcname{tkzDrawArc} 或 \tkzcname{tkzMarkAngle} 且角度非常小时：它来自 \NameLib{decorations} 库，在弧上放置标记时触发，即使没有标记也会发生。一种避免方法是使用选项 \tkzname{veclen}（参见第 \ref{opt-veclen} 节）：在使用它的作用域内，函数 \code{veclen} 由 \tkzNamePack{xfp} 计算。在此作用域内不要使用求交宏。
+
+  \item 自第 5.14 版起，\tkzcname{tkzSetUpCompass}\code{[delta=...]} 不再扩展用 \tkzcname{tkzDrawArc} 绘制的圆弧：对这些圆弧请使用 \tkzcname{tkzSetUpArc}\code{[delta=...]}。
+\end{itemize}
+\endinput

@@ -1,0 +1,430 @@
+\section{控制边界框}
+引自 \tkzimp{PgfManual}：
+
+"当添加 clip 选项时，当前路径将用于裁剪后续的图形。裁剪绝不会扩大裁剪区域。因此，当你针对某一路径裁剪后再针对另一路径裁剪时，实际裁剪区域是两者的交集。
+唯一能扩大裁剪路径的方法是结束进行裁剪的 {pgfscope}。在 {pgfscope} 结束时，进入该作用域时生效的裁剪路径会被重新恢复。"
+
+
+首先，使用 \TIKZ\ 时你无需处理边界框的大小。早期版本的 \tkzNamePack{tkz-euclide} 并不控制它；自第 4 版起，边界框的大小受到了限制。
+
+使用宏 \tkzcname{tkzInit} 后，初始边界框由以 $(0,0)$ 和 $(10,10)$ 为对角顶点的矩形定义。宏 \tkzcname{tkzInit} 可以通过参数 \tkzname{xmin}、\tkzname{xmax}、\tkzname{ymin} 和 \tkzname{ymax} 修改这个初始边界框。当然，任何画在外部的图形都会修改由 \TIKZ\ 维护的边界框。你可以通过 \TIKZ\ 命令或选项来影响这一行为，例如 \tkzcname{useasboundingbox} 或选项 \tkzname{use as bounding box}。这样你可以为图形预留一个框，但图形可能溢出该框并延伸到正文中。
+命令 \tkzcname{pgfresetboundingbox} 会清除边界框并重新开始一个新的边界框。
+
+\subsection{\tkzcname{tkzInit} 的作用}
+ 然而，有时需要控制所显示内容的大小。
+ 为此，你需要先准备好将要使用的边界框：这正是宏 \tkzNameMacro{tkzInit} 的作用。对于某些图形，固定极值（xmin、xmax、ymin 和 ymax）并对该矩形执行 \code{clip}，以便尽可能精确地控制图形大小，是很有用的。
+
+有两个宏可用于控制边界框：
+\begin{itemize}
+   \item \tkzcname{tkzInit}
+   \item \tkzcname{tkzClip}
+\end{itemize}
+\vspace{20pt}
+
+我还添加了一些与边界框直接相关的宏：你可以显示它或对其进行裁剪（见下文）。
+
+\subsection{\tkzcname{tkzInit}}
+
+\begin{NewMacroBox}{tkzInit}{\oarg{local options}}\hypertarget{init}{}%
+\begin{tabular}{lll}%    
+选项  & 默认值 & 说明             \\
+\midrule    
+\TOline{xmin} {0} {横坐标的最小值，单位为 cm}
+\TOline{xmax} {10} {横坐标的最大值，单位为 cm}
+\TOline{xstep}{1} {$x$ 方向两个刻度之间的间距}
+\TOline{ymin} {0} {$y$ 轴的最小值，单位为 cm}
+\TOline{ymax} {10} {$y$ 轴的最大值，单位为 cm}
+\TOline{ystep}{1} {$y$ 方向两个刻度之间的间距}  
+\bottomrule    
+\end{tabular}
+
+\medskip 
+
+\tkzcname{tkzInit} 的作用是定义一个 \textcolor{red}{正交}坐标系和平面上的一个矩形区域，你可以在该区域内用笛卡尔坐标放置图形。
+该宏定义了你的工作区域，就像在图形计算器上一样。自 \tkzname{\tkznameofpack} 第 4 版起，\tkzcname{xstep} 和 \tkzcname{ystep} 始终为 1，因此 \tkzcname{tkzInit} 主要用于 \code{clipping out} 之类的操作。
+\end{NewMacroBox}
+
+
+\subsection{\tkzcname{tkzClip}}
+
+\begin{NewMacroBox}{tkzClip}{\oarg{local options}}
+该宏会隐藏位于由 (xmin~;~ymin) 与 (xmax~;~ymax) 所定义矩形之外的所有内容。
+
+\medskip
+\begin{tabular}{lll}
+\hline
+选项  & 默认值 & 说明             \\
+\midrule
+\TOline{space} {1} {在背景矩形的右、左、下、上四个方向上增加的数值}
+\bottomrule
+\end{tabular}
+
+\medskip
+
+选项 \tkzname{space} 会扩大图形的可见部分，使其变为由 (xmin-space~;~ymin-space) 与 (xmax+space~;~ymax+space) 所定义的矩形。\tkzname{space} 可以为负值！单位为 cm，且无需写出。
+\end{NewMacroBox}
+
+
+
+该宏对初始矩形进行 \code{clip}，使得只有位于该矩形内部的路径才会被绘制。
+
+\begin{tkzexample}[latex=8cm,small]
+\begin{tikzpicture}
+ \tkzInit[xmax=4, ymax=3]
+ \tkzDefPoints{-1/-1/A,5/2/B}
+ \tkzDrawX \tkzDrawY 
+ \tkzGrid
+ \tkzClip
+ \tkzDrawSegment(A,B)
+\end{tikzpicture}
+\end{tkzexample} 
+
+你可以增加一些空间：
+\begin{tkzltxexample}[]
+  \tkzClip[space=1]
+\end{tkzltxexample} 
+
+\subsection{\tkzcname{tkzClip} 与选项 \tkzname{space}} 
+该选项在 \code{clipped} 矩形周围增加一些空间。
+\begin{tkzexample}[latex=8cm,small]
+\begin{tikzpicture}
+ \tkzInit[xmax=4, ymax=3]
+ \tkzDefPoints{-1/-1/A,5/2/B}
+ \tkzDrawX \tkzDrawY 
+ \tkzGrid
+ \tkzClip[space=1]
+ \tkzDrawSegment(A,B)
+\end{tikzpicture}
+\end{tkzexample}   
+\code{clipped} 矩形的尺寸为 \tkzname{xmin-1}、\tkzname{ymin-1}、\tkzname{xmax+1} 和 \tkzname{ymax+1}。 
+
+%<--------------------------------------------------------------------------->
+%              tkzShowBB
+%<--------------------------------------------------------------------------->
+\subsection{\tkzcname{tkzShowBB}}
+最简单的宏。
+\begin{NewMacroBox}{tkzShowBB}{\oarg{local options}}% 
+该宏以矩形框的形式显示边界框。它接受 \TIKZ\ 选项。
+\end{NewMacroBox} 
+
+
+\subsubsection{\tkzcname{tkzShowBB} 示例}
+\begin{tkzexample}[latex=8cm,small]
+\begin{tikzpicture}[scale=.5]
+  \tkzInit[ymax=5,xmax=8]
+  \tkzGrid  
+  \tkzDefPoint(3,0){A}
+   \begin{scope}
+    \tkzClipBB
+    \tkzDefCircle[R](A,5) \tkzGetPoint{a}
+    \tkzDrawCircle(A,a)
+    \tkzShowBB[line width = 4pt,fill=teal!10,%
+              opacity=.4]
+   \end{scope}
+\tkzDefCircle[R](A,4) \tkzGetPoint{b}
+\tkzDrawCircle[red](A,b)
+\end{tikzpicture}
+\end{tkzexample}
+%<--------------------------------------------------------------------------->
+%         tkzClipBB
+%<--------------------------------------------------------------------------->
+\subsection{\tkzcname{tkzClipBB}}
+\begin{NewMacroBox}{tkzClipBB}{}%
+其思想是将后续的构造限制在当前边界框之内。
+\end{NewMacroBox}
+
+\subsubsection{\tkzcname{tkzClipBB} 与角平分线示例}
+
+\begin{tkzexample}[latex=6cm,small]
+  \begin{tikzpicture}
+  \tkzInit[xmin=-3,xmax=6, ymin=-1,ymax=6]
+  \tkzDefPoint(0,0){O}\tkzDefPoint(3,1){I}
+  \tkzDefPoint(1,4){J}
+  \tkzDefLine[bisector](I,O,J) \tkzGetPoint{i}
+  \tkzDefLine[bisector out](I,O,J) \tkzGetPoint{j}
+  \tkzDrawPoints(O,I,J,i,j)
+  \tkzClipBB
+  \tkzDrawLines[add = 1 and 2,color=orange](O,I O,J)
+  \tkzDrawLines[add = 1 and 2](O,i O,j)
+  \tkzShowBB
+  \end{tikzpicture}
+\end{tkzexample}
+
+
+\newpage
+
+\section{裁剪不同对象}
+
+\subsection{裁剪多边形} 
+ \begin{NewMacroBox}{tkzClipPolygon}{\oarg{local options}\parg{points list}}%
+该宏将图形限制在给定的多边形之内。
+
+\medskip
+\begin{tabular}{lll}%
+\toprule
+参数       & 示例 & 说明     \\ 
+\midrule
+\TAline{\parg{pt1,pt2,pt3,\dots}}{\parg{A,B,C}}{}
+\midrule
+选项  & 默认值 & 说明             \\
+\midrule    
+\TOline{out} {} {裁剪对象的外部}
+ \end{tabular}
+\end{NewMacroBox}
+
+\subsubsection{\tkzcname{tkzClipPolygon}}
+
+\begin{tkzexample}[latex=7cm,small]
+  \begin{tikzpicture}[scale=1.25] 
+  \tkzDefPoint(0,0){A} 
+  \tkzDefPoint(4,0){B} 
+  \tkzDefPoint(1,3){C} 
+  \tkzDrawPolygon(A,B,C) 
+  \tkzDefPoint(0,2){D} 
+  \tkzDefPoint(2,0){E} 
+  \tkzDrawPoints(D,E) 
+  \tkzLabelPoints(D,E) 
+  \tkzClipPolygon(A,B,C) 
+  \tkzDrawLine[new](D,E)
+\end{tikzpicture}
+\end{tkzexample}
+
+\subsubsection{\tkzcname{tkzClipPolygon[out]}}
+
+\begin{tkzexample}[latex=7cm,small]
+  \begin{tikzpicture}[scale=1]
+  \tkzDefPoint(0,0){P1}
+  \tkzDefPoint(4,0){P2}
+  \tkzDefPoint(4,4){P3}
+  \tkzDefPoint(0,4){P4}
+  \tkzDefPoint(1,1){Q1}
+  \tkzDefPoint(3,1){Q2}
+  \tkzDefPoint(3,3){Q3}
+  \tkzDefPoint(1,3){Q4}
+  \tkzDrawPolygon(P1,P2,P3,P4)
+  \begin{scope}
+     \tkzClipPolygon[out](Q1,Q2,Q3,Q4)
+    \tkzFillPolygon[teal!20](P1,P2,P3,P4)
+  \end{scope}
+  \tkzDrawPolygon(Q1,Q2,Q3,Q4)
+  \end{tikzpicture}
+\end{tkzexample}
+
+\subsubsection{示例：在正方形中使用 \code{Clip} 绘制 Sangaku} 
+\begin{tkzexample}[latex=7cm, small]  
+\begin{tikzpicture}[scale=.75]
+ \tkzDefPoint(0,0){A} \tkzDefPoint(8,0){B}
+ \tkzDefSquare(A,B)   \tkzGetPoints{C}{D}
+ \tkzDefPoint(4,8){F}
+ \tkzDefTriangle[equilateral](C,D) 
+ \tkzGetPoint{I}
+ \tkzDefPointBy[projection=onto B--C](I) 
+ \tkzGetPoint{J}
+ \tkzInterLL(D,B)(I,J)  \tkzGetPoint{K}
+ \tkzDefPointBy[symmetry=center K](B)  
+ \tkzGetPoint{M}
+ \tkzClipPolygon(B,C,D,A)
+ \tkzFillPolygon[color = orange](A,B,C,D)
+ \tkzFillCircle[color = yellow](M,I)
+ \tkzFillCircle[color = blue!50!black](F,D)
+\end{tikzpicture}
+\end{tkzexample}
+
+\subsection{裁剪圆盘}
+
+\begin{NewMacroBox}{tkzClipCircle}{\oarg{local options}\parg{A,B}}%
+\begin{tabular}{lll}%
+\toprule
+参数           & 示例 & 说明                         \\
+\midrule
+\TAline{\parg{A,B}}{\parg{A,B}} {AB 为半径}
+\bottomrule
+\end{tabular}  
+ 
+\medskip
+\begin{tabular}{lll}%
+选项             & 默认值 & 说明                         \\ 
+\midrule
+\TOline{out} {} {裁剪对象的外部}
+ \bottomrule
+\end{tabular}
+
+\medskip
+无需写出 \tkzname{radius}，因为它是默认选项。
+\end{NewMacroBox}
+
+ \subsubsection{简单裁剪} 
+\begin{tkzexample}[latex=6cm,small] 
+\begin{tikzpicture}[scale=.5]
+  \tkzDefPoint(0,0){A} \tkzDefPoint(2,2){O}
+  \tkzDefPoint(4,4){B} \tkzDefPoint(5,5){C}
+  \tkzDrawPoints(O,A,B,C) 
+  \tkzLabelPoints(O,A,B,C)
+  \tkzDrawCircle(O,A) 
+  \tkzClipCircle(O,A)
+  \tkzDrawLine(A,C)
+  \tkzDrawCircle[fill=teal!10,opacity=.5](C,O)
+\end{tikzpicture} 
+\end{tkzexample}
+
+\subsection{向外裁剪}
+
+\begin{tkzexample}[latex=6cm,small]
+\begin{tikzpicture}
+  \tkzInit[xmin=-3,ymin=-2,xmax=4,ymax=3]
+   \tkzDefPoint(0,0){O}
+   \tkzDefPoint(-4,-2){A}
+   \tkzDefPoint(3,1){B}
+   \tkzDefCircle[R](O,2) \tkzGetPoint{o}
+   \tkzDrawPoints(A,B) % to have a good bounding box
+   \begin{scope}
+    \tkzClipCircle[out](O,o)
+    \tkzDrawLines(A,B)
+   \end{scope}
+\end{tikzpicture}  
+\end{tkzexample} 
+
+\subsection{圆盘的交集}
+
+\begin{tkzexample}[latex=6cm,small]
+\begin{tikzpicture}
+\tkzDefPoints{0/0/O,4/0/A,0/4/B}
+\tkzDrawPolygon[fill=teal](O,A,B)
+\tkzClipPolygon(O,A,B)
+\tkzClipCircle(A,O)
+\tkzClipCircle(B,O)
+\tkzFillPolygon[white](O,A,B)
+\end{tikzpicture}
+\end{tkzexample} 
+
+关于裁剪圆的更复杂示例，请参见 \ref{About clipping circles} 节。
+
+\subsection{裁剪扇形}
+\tkzHandBomb\  注意，参数取决于所使用的选项。
+\begin{NewMacroBox}{tkzClipSector}{\oarg{local options}\parg{O,\dots}\parg{\dots}}%
+\begin{tabular}{lll}%
+选项             & 默认值 & 说明                         \\ 
+\midrule
+\TOline{towards}{towards}{$O$ 为圆心，扇形从 $A$ 起沿 $(OB)$ 方向}
+\TOline{rotate} {towards}{扇形从 $A$ 起，由角度确定其张角} 
+\TOline{R}{towards}{给定半径和两个角度} 
+\bottomrule
+\end{tabular} 
+
+\medskip
+当然，你可以为图形添加所有 \TIKZ\ 样式。
+
+\medskip   
+\begin{tabular}{lll}%
+\toprule
+选项             & 参数 & 示例                         \\ 
+\midrule
+\TOline{towards}{\parg{pt,pt}\parg{pt}}{\tkzcname{tkzClipSector(O,A)(B)}}
+\TOline{rotate} {\parg{pt,pt}\parg{angle}}{\tkzcname{tkzClipSector[rotate](O,A)(90)}} 
+\TOline{R}{\parg{pt,$r$}\parg{angle 1,angle 2}}{\tkzcname{tkzClipSector[R](O,2)(30,90)}}
+\end{tabular}
+\end{NewMacroBox}
+
+\subsubsection{裁剪扇形：第一个示例}
+\begin{tkzexample}[latex=7cm,small] 
+\begin{tikzpicture}[scale=0.5]
+\tkzDefPoint(0,0){a}
+\tkzDefPoint(12,0){b}
+\tkzDefPoint(4,10){c}
+\tkzInterCC[R](a,6)(b,8) 
+\tkzGetFirstPoint{AB1} \tkzGetSecondPoint{AB2}
+\tkzInterCC[R](a,6)(c,6) 
+\tkzGetFirstPoint{AC1} \tkzGetSecondPoint{AC2}
+\tkzInterCC[R](b,8)(c,6) 
+\tkzGetFirstPoint{BC1} \tkzGetSecondPoint{BC2}
+\tkzDrawArc(a,AB2)(AB1)
+\tkzDrawArc(b,AB1)(AB2)
+\tkzDrawArc(a,AC2)(AC1)
+\tkzDrawArc(c,AC1)(AC2)
+\tkzDrawArc(b,BC2)(BC1)
+\tkzDrawArc(c,BC1)(BC2)
+\begin{scope}
+\tkzClipSector(b,BC2)(BC1)
+\tkzFillSector[teal!40!white](c,BC1)(BC2)
+\end{scope}
+\begin{scope}
+\tkzClipSector(a,AB2)(AB1)
+\tkzFillSector[teal!40!white](b,AB1)(AB2)
+\end{scope}
+\begin{scope}
+\tkzClipSector(a,AC2)(AC1)
+\tkzFillSector[teal!40!white](c,AC1)(AC2)
+\end{scope}
+\end{tikzpicture}
+\end{tkzexample}
+
+\subsubsection{裁剪扇形：第二个示例}
+\begin{tkzexample}[latex=7cm,small] 
+\begin{tikzpicture}[scale=1.5] 
+  \tkzDefPoint(0,0){O}
+  \tkzDefPoint(2,-1){A}
+  \tkzDefPoint(1,1){B} 
+  \tkzDrawSector[new,dashed](O,A)(B)
+  \tkzDrawSector[new](O,B)(A)
+\begin{scope}
+\tkzClipSector(O,B)(A)
+\tkzDefSquare(O,B) \tkzGetPoints{B'}{O'}
+\tkzDrawPolygon[color=teal,fill=teal!20](O,B,B',O')
+\end{scope}
+\tkzDrawPoints(A,B,O) 
+\end{tikzpicture} 
+\end{tkzexample}
+
+
+\subsection{\TIKZ\ 选项：trim left 或 trim right}
+参见 \tkzimp{pgfmanual}。
+
+\subsection{\TIKZ\ 控制 \tkzcname{pgfinterruptboundingbox} 与 \tkzcname{endpgfinterruptboundingbox}}
+该命令会临时中断边界框的计算并开始一个新的边界框。
+参见 \tkzimp{pgfmanual}
+
+\subsubsection{控制边界框} 
+\begin{tkzexample}[latex=7cm,small] 
+\begin{tikzpicture}
+\tkzDefPoint(0,5){A}\tkzDefPoint(5,4){B}
+\tkzDefPoint(0,0){C}\tkzDefPoint(5,1){D}
+\tkzDrawSegments(A,B C,D A,C)
+\pgfinterruptboundingbox
+   \tkzInterLL(A,B)(C,D)\tkzGetPoint{I}
+\endpgfinterruptboundingbox
+\tkzClipBB
+\tkzDrawCircle(I,B)
+\end{tikzpicture}
+\end{tkzexample}
+
+\subsection{反向裁剪：\tkzname{tkzreverseclip}}
+
+要使用该选项，必须先定义一个边界框。
+
+\begin{tkzltxexample}[]
+  \tikzset{tkzreverseclip/.style={insert path={
+     (current bounding box.south west) --(current bounding box.north west)
+   --(current bounding box.north east) --  (current bounding box.south east)
+   -- cycle} }}
+\end{tkzltxexample}
+
+\subsubsection{\tkzcname{tkzClipPolygon[out]} 示例}
+\tkzcname{tkzClipPolygon[out]}、\tkzcname{tkzClipCircle[out]} 使用了该选项。
+\begin{tkzexample}[vbox,small]
+\begin{tikzpicture}[scale=1]
+\tkzInit[xmin=-5,xmax=5,ymin=-4,ymax=6]
+\tkzClip
+\tkzDefPoints{-.5/0/P1,.5/0/P2}
+\foreach \i [count=\j from 3] in {2,...,7}{%
+    \tkzDefShiftPoint[P\i]({45*(\i-1)}:1){P\j}}  
+\tkzClipPolygon[out](P1,P...,P8)
+\tkzCalcLength(P1,P5)\tkzGetLength{r}
+\begin{scope}[blend group=screen]
+  \foreach \i in {1,...,8}{%
+   \tkzDefCircle[R](P\i,\r) \tkzGetPoint{x}
+   \tkzFillCircle[color=teal](P\i,x)}
+  \end{scope}
+\end{tikzpicture}
+\end{tkzexample}
+
+\endinput

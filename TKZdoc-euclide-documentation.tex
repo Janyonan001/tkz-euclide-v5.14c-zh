@@ -1,0 +1,27 @@
+\section{关于本手册及其示例}
+
+本手册使用 \code{lualatex} 编译。我使用自己的文档类 \tkzname{tkz-doc.cls}，它基于 \tkzname{scrartcl}。
+
+下面是本手册中使用的样式列表。要了解如何使用样式，请参见第 \ref{custom} 节。
+
+|\tkzSetUpColors[background=white,text=black]  |
+
+|\tkzSetUpCompass[color=orange, line width=.2pt,delta=10]|
+
+|\tkzSetUpArc[color=gray,line width=.2pt,delta=10]|
+
+|\tkzSetUpPoint[size=2,color=teal]|
+
+|\tkzSetUpLine[line width=.2pt,color=teal]|
+
+|\tkzSetUpStyle[color=orange,line width=.2pt]{new}|
+
+|\tikzset{every picture/.style={line width=.2pt}}|
+
+|\tikzset{label angle style/.append style={color=teal,font=\footnotesize}}|
+
+|\tikzset{label style/.append style={below,color=teal,font=\scriptsize}}|
+
+有些示例使用预定义的样式，例如：
+
+|\tikzset{new/.style={color=orange,line width=.2pt}}  |

@@ -1,0 +1,219 @@
+% !TEX TS-program = lualatex
+% encoding : utf8
+% Copyright 2011-2026  Alain Matthes
+% SPDX-License-Identifier: LPPL-1.3c
+% Maintainer: Alain Matthes
+
+\PassOptionsToPackage{unicode}{hyperref}
+
+\documentclass[DIV         = 14,
+               fontsize    = 10,
+               index       = totoc,
+               twoside,
+               cadre,
+               headings    = small,
+               ]{tkz-doc-euclide}
+\gdef\tkznameofpack{tkz-euclide}
+\gdef\tkzversionofpack{5.14c}
+\gdef\tkzdateofpack{\today}
+\gdef\tkznameofdoc{doc-tkz-euclide}
+\gdef\tkzversionofdoc{5.14c}
+\gdef\tkzdateofdoc{\today}
+\gdef\tkzauthorofpack{Alain Matthes}
+\gdef\tkzadressofauthor{}
+\gdef\tkznamecollection{AlterMundus}
+\gdef\tkzurlauthor{http://altermundus.fr}
+\gdef\tkzengine{lualatex}
+\gdef\tkzurlauthorcom{http://altermundus.fr}
+\gdef\tkztranslatorofdoc{翻译：金永权}
+\gdef\tkztranslateraddressofdoc{夏邑县第一高级中学}
+\nameoffile{\tkznameofpack}
+% -- Packages ---------------------------------------------------
+\usepackage[dvipsnames,svgnames]{xcolor}
+\usepackage{calc}
+\usepackage{tkz-base}
+\usepackage[lua]{tkz-euclide}
+\usepackage{pgfornament}
+\usetikzlibrary{backgrounds}
+\usepackage[colorlinks,pdfencoding=auto, psdextra]{hyperref}
+\hypersetup{
+      linkcolor=Gray,
+      citecolor=Green,
+      filecolor=Mulberry,
+      urlcolor=NavyBlue,
+      menucolor=Gray,
+      runcolor=Mulberry,
+      linkbordercolor=Gray,
+      citebordercolor=Green,
+      filebordercolor=Mulberry,
+      urlbordercolor=NavyBlue,
+      menubordercolor=Gray,
+      runbordercolor=Mulberry,
+      pdfsubject={欧几里得几何},
+      pdfauthor={\tkzauthorofpack},
+      pdftitle={\tkznameofpack},
+      pdfcreator={\tkzengine},
+      bookmarksdepth=3
+}
+\usepackage{tkzexample}
+\usepackage{fontspec}
+\setmainfont{texgyrepagella}[
+  Extension = .otf,
+  UprightFont = *-regular ,
+  ItalicFont  = *-italic  ,
+  BoldFont    = *-bold    ,
+  BoldItalicFont = *-bolditalic
+]
+\setsansfont{texgyreheros}[
+  Extension = .otf,
+  UprightFont = *-regular ,
+  ItalicFont  = *-italic  ,
+  BoldFont    = *-bold    ,
+  BoldItalicFont = *-bolditalic ,
+]
+
+\setmonofont{lmmono10-regular.otf}[
+  Numbers={Lining,SlashedZero},
+  ItalicFont=lmmonoslant10-regular.otf,
+  BoldFont=lmmonolt10-bold.otf,
+  BoldItalicFont=lmmonolt10-boldoblique.otf,
+]
+\newfontfamily\ttcondensed{lmmonoltcond10-regular.otf}
+%% (La)TeX font-related declarations:
+\linespread{1.05}      % Pagella needs more space between lines
+\usepackage[math-style=literal,bold-style=literal]{unicode-math}
+\usepackage{fourier-otf}
+\let\rmfamily\ttfamily
+\usepackage{multicol,lscape}
+\usepackage[UTF8]{ctex}
+\AtBeginDocument{%
+  \renewcommand{\contentsname}{目录}%
+  \renewcommand{\indexname}{索引}%
+}
+\usepackage[normalem]{ulem}
+\usepackage{multirow,multido,booktabs,cellspace}
+\usepackage{shortvrb,fancyvrb,bookmark}
+\usepackage{makeidx}
+\makeindex
+
+%<--------------------------------------------------------------------------->
+% settings styles
+\tkzSetUpColors[background=white,text=black]
+\tkzSetUpCompass[color=orange, line width=.2pt,delta=10]
+\tkzSetUpArc[color=gray,line width=.2pt,delta=10]
+\tkzSetUpPoint[size=2,color=teal]
+\tkzSetUpLine[line width=.2pt,color=teal]
+\tkzSetUpStyle[color=orange,line width=.2pt]{new}
+\tikzset{every picture/.style={line width=.2pt}}
+\tikzset{label angle style/.append style={color=teal,font=\footnotesize}}
+\tikzset{label style/.append style={below,color=teal,font=\scriptsize}}
+\tikzset{new/.style={color=orange,line width=.2pt}}
+
+\AtBeginDocument{\MakeShortVerb{\|}} % link to shortvrb
+\setlength{\emergencystretch}{3em}% fewer overfull lines with long macro names
+\def\code{\texttt}
+\newcommand*{\ItkzPopt}[2]{\texttt{#2}\index{#1_3@\texttt{#1: options}!\texttt{#2}}}
+
+\begin{document}
+
+\parindent=0pt
+\tkzTitleFrame{tkz-euclide v5.14c\\Euclidean Geometry\\中文版}
+\clearpage
+
+\defoffile{\lefthand\ \tkzname{\tkznameofpack} 是一组便捷的宏，用于在带有笛卡尔坐标系的平面中绘制图形。它处理欧几里得几何中最经典的情形。\tkzname{\tkznameofpack} 构建于 PGF 及其配套前端 \TIKZ\ 之上，是一个对 (La)TeX 友好的绘图宏包。它提供了一个高层接口，让你能够轻松地构建图形：你可以尽可能地按照手工作图的方式，一步一步地构建它们。\\
+第 5 版的 \tkzname{\tkznameofpack} 可以使用 Lua 进行某些计算；请参阅本手册末尾的 \code{News} 和 \code{Lua} 两节。\\
+请注意：英语不是我的母语，因此可能存在一些错误。
+}
+
+\presentation
+
+\vspace*{1cm}
+\lefthand\ 首先，我要感谢 \textbf{Till Tantau} 编写了如此出色的宏包 \href{https://github.com/pgf-tikz/pgf}{\TIKZ}。
+
+\vspace*{12pt}
+\lefthand\ 致谢：我收到了许多宝贵的建议、意见、更正和示例，来自
+
+\tkzimp{Jean-Côme Charpentier}, \tkzimp{Josselin Noirel}, \tkzimp{Manuel Pégourié-Gonnard}, \tkzimp{Franck Pastor}, \tkzimp{David Arnold},
+
+\tkzimp{Ulrike Fischer}, \tkzimp{Stefan Kottwitz}, \tkzimp{Christian Tellechea}, \tkzimp{Nicolas Kisselhoff}, \tkzimp{Wolfgang Büchel},
+
+\tkzimp{John Kitzmiller}, \tkzimp{Dimitri Kapetas}, \tkzimp{Gaétan Marris}, \tkzimp{Mark Wibrow}, \tkzimp{Yves Combe}, \tkzimp{Paul Gaborit}, \tkzimp{Laurent Van Deik} 和 \tkzimp{Muzimuzhi Z}。
+
+\vspace*{12pt}
+\lefthand\ 我还要感谢 Eric Weisstein，MathWorld 的创建者：
+\href{http://mathworld.wolfram.com/about/author.html}{MathWorld}。
+
+\vspace*{12pt}
+\lefthand\ 你可以在我的网站上找到一些示例：
+\href{http://altermundus.fr}{altermundus.fr}。 \hspace{2cm} 正在建设中！
+
+\vfill
+如有关于本手册的错别字或其他意见，请发送至 \href{mailto:al.ma@mac.com}{\textcolor{blue}{Alain Matthes}}。
+
+本文件可按照 \LaTeX{} 项目公共许可证的条款进行再分发和/或修改，该许可证从 \href{http://www.ctan.org/}{CTAN}\  档案库分发。
+
+\clearpage
+\setcounter{tocdepth}{2}% sections and subsections; subsubsections stay in the PDF bookmarks
+\tableofcontents
+\clearpage
+\newpage
+
+%\parindent=2em
+\part{入门}
+\input{TKZdoc-euclide-presentation.tex}
+\input{TKZdoc-euclide-installation.tex}
+\input{TKZdoc-euclide-elements.tex}
+\input{TKZdoc-euclide-documentation.tex}
+
+\part{点}
+\input{TKZdoc-euclide-points.tex}
+\input{TKZdoc-euclide-pointsSpc.tex}
+\input{TKZdoc-euclide-pointby.tex}
+\input{TKZdoc-euclide-pointwith.tex}
+\input{TKZdoc-euclide-rnd.tex}
+
+\part{直线、三角形与多边形}
+\input{TKZdoc-euclide-lines.tex}
+\input{TKZdoc-euclide-triangles.tex}
+\input{TKZdoc-euclide-polygons.tex}
+
+\part{圆}
+\input{TKZdoc-euclide-circles.tex}
+\input{TKZdoc-euclide-circleby.tex}
+
+\part{交点与角}
+\input{TKZdoc-euclide-intersection.tex}
+\input{TKZdoc-euclide-angles.tex}
+
+\part{绘图、填充与裁剪}
+\input{TKZdoc-euclide-drawing.tex}
+\input{TKZdoc-euclide-filling.tex}
+\input{TKZdoc-euclide-clipping.tex}
+
+\part{标记与标注}
+\input{TKZdoc-euclide-marking.tex}
+\input{TKZdoc-euclide-labelling.tex}
+
+\part{补充}
+\input{TKZdoc-euclide-compass.tex}
+\input{TKZdoc-euclide-show.tex}
+\input{TKZdoc-euclide-rapporteur.tex}
+\input{TKZdoc-euclide-tools.tex}
+
+\part{样式}
+\input{TKZdoc-euclide-styles.tex}
+
+\part{示例}
+\input{TKZdoc-euclide-others.tex}
+\input{TKZdoc-euclide-examples.tex}
+
+\part{常见问题}
+\input{TKZdoc-euclide-FAQ.tex}
+
+\part{新特性、兼容性与选项}
+\input{TKZdoc-euclide-news.tex}
+\input{TKZdoc-euclide-lua.tex}
+
+\clearpage\newpage
+\small\printindex
+\end{document}

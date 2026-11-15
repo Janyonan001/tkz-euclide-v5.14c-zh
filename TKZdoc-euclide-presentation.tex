@@ -1,0 +1,608 @@
+\section{介绍与概览}
+
+\begin{tkzexample}[latex=5cm,small]
+  \begin{tikzpicture}[scale=.25]
+  \tkzDefPoints{0/0/A,12/0/B,6/12*sind(60)/C}
+  \foreach \density in {20,30,...,240}{%
+    \tkzDrawPolygon[fill=teal!\density](A,B,C)
+    \pgfnodealias{X}{A}
+    \tkzDefPointWith[linear,K=.15](A,B) \tkzGetPoint{A}
+    \tkzDefPointWith[linear,K=.15](B,C) \tkzGetPoint{B}
+    \tkzDefPointWith[linear,K=.15](C,X) \tkzGetPoint{C}}
+  \end{tikzpicture}
+\end{tkzexample}
+
+\vspace*{12pt}
+
+\subsection{为什么需要 \tkzname{\tkznameofpack}？}
+我的最初目标是为其他数学教师和我自己提供一个工具，以便快速创建欧几里得几何图形，而无需花费太多精力学习一门新的编程语言。
+\tkzname{\tkznameofpack} 面向使用 \LATEX 的数学教师：它让在 \LATEX 中轻松创建正确的绘图成为可能。
+
+最简单的方法似乎是重现手工作图的方式。
+要描述一个作图过程，你当然必须定义对象，还要定义你所执行的操作。在我看来，一种接近数学家及其学生语言的语法会更容易理解，而且这种语法也应该接近 \LaTeX 的语法。
+对象当然是点、线段、直线、三角形、多边形和圆。至于操作，我认为五种就足够了：定义、创建、绘制、标记和标注。
+
+语法也许略显冗长，但我相信它很容易学习。
+因此，学生和教师都能轻松使用这个工具。
+
+\subsection{\tkzname{\TIKZ} 与 \tkzname{\tkznameofpack}}
+
+我喜欢用 \TIKZ 编程，如果没有 \TIKZ，我绝不会想到创建 \tkzname{\tkznameofpack}。请不要忘记，\TIKZ 在幕后工作，你随时可以插入 \TIKZ 代码：\tkzname{\tkznameofpack} 并不妨碍你使用 \TIKZ。
+话虽如此，我不认为混合语法是一件好事。
+
+没有必要比较 \TIKZ 和 \tkzname{\tkznameofpack}：它们面向的受众不同。前者能让你做很多事情，后者只绘制几何图形。前者可以做到后者所做的一切，但后者会更轻松地完成你想要的事情。
+
+主要目的是定义点以创建几何图形。\tkzname{\tkznameofpack} 允许你从这些点出发绘制欧几里得几何的基本对象，但对于某些操作（如给面着色）可能不够用。在这种情况下，你随时可以使用 \TIKZ。
+
+下面是基于 \PGF 手册中几何示例对 \tkzname{\TIKZ} 和 \tkzname{\tkznameofpack} 的一些比较。
+古希腊人用来构造几何图形和角的两个主要工具是圆规和直尺。我的想法是让你尽可能自然地一步一步跟随用这两个工具手工作图的过程。
+
+\subsubsection{第一卷，命题 I，\_几何原本\_ }
+
+\begin{tikzpicture}
+\node [mybox,title={第一卷，命题 I  \_几何原本\_}] (box){%
+    \begin{minipage}{0.90\textwidth}
+{\emph{在一条给定的有限直线上作一个等边三角形。}
+} 
+    \end{minipage}
+};
+\end{tikzpicture}% 
+
+
+解释：
+
+\emph{PgfManual} 的第四个教程是关于几何作图的。\emph{T. Tantau} 用他出色的工具 Ti\emph{k}Z 得到了这个图。这里我用 \emph{tkz-euclide} 给出同样的作图。Ti\emph{k}Z 代码以绿色显示，\emph{tkz-euclide} 代码以红色显示。
+
+\medskip
+
+\vbox{\color{green!50!black} |\usepackage{tikz}|\\
+|\usetikzlibrary{calc,intersections,through,backgrounds}|}
+
+\medskip
+\vbox{\color{red} |\usepackage{tkz-euclide}|}
+
+\medskip
+我们如何得到直线 $AB$？我们使用两个固定点。\\
+
+\medskip
+\vbox{\color{green!50!black} 
+|\coordinate [label=left:$A$] (A) at (0,0);|\\
+|\coordinate [label=right:$B$] (B) at (1.25,0.25);|\\
+|\draw (A) -- (B);|}
+
+\medskip
+\vbox{\color{red}
+|\tkzDefPoint(0,0){A}|\\
+|\tkzDefPoint(1.25,0.25){B}|\\
+|\tkzDrawSegment(A,B)|\\
+|\tkzLabelPoint[left](A){$A$}|\\
+|\tkzLabelPoint[right](B){$B$}|}
+
+我们想在每个点 $A$ 和 $B$ 周围画一个圆，其半径为线段 $AB$ 的长度。
+\medskip
+
+\vbox{\color{green!50!black}
+|\draw let \p1 = ($ (B) - (A) $),|\\
+|\n2 = {veclen(\x1,\y1)} in|\\
+|          (A) circle (\n2)|\\
+|          (B) circle (\n2);|}
+
+\medskip
+\vbox{\color{red} 
+|\tkzDrawCircles(A,B B,A)|
+}
+
+圆 $\mathcal{D}$ 和 $\mathcal{E}$ 的交点：
+
+\medskip
+
+\vbox{\color{green!50!black} 
+|draw [name path=A--B] (A) -- (B);|\\
+|node (D) [name path=D,draw,circle through=(B),label=left:$D$] at (A) {}; |\\
+|node (E) [name path=E,draw,circle through=(A),label=right:$E$] at (B) {};|\\
+|path [name intersections={of=D and E, by={[label=above:$C$]C,[label=below:$C'$]C'}}]; |\\
+|draw [name path=C--C',red] (C) -- (C');|\\
+|path [name intersections={of=A--B and C--C',by=F}];|\\
+|node [fill=red,inner sep=1pt,label=-45:$F$] at (F) {};|\\}
+
+\medskip
+\vbox{\color{red} |\tkzInterCC(A,B)(B,A) \tkzGetPoints{C}{X}|\\}
+
+
+如何绘制点：
+
+\medskip
+\vbox{\color{green!50!black} |\foreach \point in {A,B,C}|\\
+|\fill [black,opacity=.5] (\point) circle (2pt);|\\}
+
+\medskip
+\vbox{\color{red}| \tkzDrawPoints[fill=gray,opacity=.5](A,B,C)|\\}
+
+\subsubsection{使用 \pkg{tkz-euclide} 的完整代码}
+
+我们需要定义一些颜色：
+
+|\colorlet{input}{red!80!black} |\\
+|\colorlet{output}{red!70!black}|\\
+|\colorlet{triangle}{green!50!black!40}  |
+
+\begin{tkzexample}[vbox,small]
+  \colorlet{input}{red!80!black} 
+  \colorlet{output}{red!70!black}
+  \colorlet{triangle}{green!50!black!40}
+  \begin{tikzpicture}[scale=1.25,thick,help lines/.style={thin,draw=black!50}]
+  \tkzDefPoint(0,0){A}     
+  \tkzDefPoint(1.25+rand(),0.25+rand()){B}      
+  \tkzInterCC(A,B)(B,A) \tkzGetPoints{C}{X}
+
+  \tkzFillPolygon[triangle,opacity=.5](A,B,C)
+  \tkzDrawSegment[input](A,B) 
+  \tkzDrawSegments[red](A,C B,C)  
+  \tkzDrawCircles[help lines](A,B B,A)
+  \tkzDrawPoints[fill=gray,opacity=.5](A,B,C)
+  
+  \tkzLabelPoints(A,B)
+  \tkzLabelCircle[below=12pt](A,B)(180){$\mathcal{D}$}
+  \tkzLabelCircle[above=12pt](B,A)(180){$\mathcal{E}$}
+  \tkzLabelPoint[above,red](C){$C$}
+      
+  \end{tikzpicture}
+\end{tkzexample}
+
+\subsubsection{第一卷，命题 II，\_几何原本\_}
+
+\begin{tikzpicture}
+\node [mybox,title={第一卷，命题 II  \_几何原本\_}] (box){%
+\begin{minipage}{0.90\textwidth}
+  {\emph{把一条等于给定直线的直线放置，使其一端位于给定点。}}
+\end{minipage}
+};
+\end{tikzpicture}% 
+
+解释
+
+在第一部分中，我们需要线段 $AB$ 的中点。使用 \TIKZ 时，我们可以使用库 \tkzname{calc}：
+
+\medskip
+\vbox{\color{green!50!black} |\coordinate [label=left:$A$] (A) at (0,0);|\\
+|\coordinate [label=right:$B$] (B) at (1.25,0.25);|\\
+|\draw (A) -- (B);|\\
+|\node [fill=red,inner sep=1pt,label=below:$X$] (X) at ($ (A)!.5!(B) $) {};|\\}
+
+使用 \pkg{tkz-euclide}，我们有宏 \tkzcname{tkzDefMidPoint}；我们用 \tkzcname{tkzGetPoint} 得到点 $X$，但下一步不需要这个点。
+
+
+\medskip
+\vbox{\red |\tkzDefPoints{0/0/A,0.75/0.25/B,1/1.5/C}|\\  
+|\tkzDefMidPoint(A,B) \tkzGetPoint{X}|}
+
+\medskip
+然后我们需要构造一个等边三角形。用 \pkg{tkz-euclide} 很容易。用 TikZ 则需要更多功夫，因为你需要中点 $X$ 来通过三角计算得到点 $D$。
+
+\medskip
+\vbox{\color{green!50!black}
+|\node [fill=red,inner sep=1pt,label=below:$X$] (X) at ($ (A)!.5!(B) $) {}; | \\
+|\node [fill=red,inner sep=1pt,label=above:$D$] (D) at                      |  \\
+|($ (X) ! {sin(60)*2} ! 90:(B) $) {};                                       |  \\
+|\draw (A) -- (D) -- (B);                                                   |  \\
+}                                                                           
+
+\medskip
+\vbox{\color{red} |\tkzDefTriangle[equilateral](A,B) \tkzGetPoint{D}|}
+
+我们可以在图的末尾用以下命令绘制三角形：
+
+\medskip
+\vbox{\color{red} |\tkzDrawPolygon{A,B,C}|}
+
+\medskip
+我们知道如何绘制以 $B$ 为圆心、经过 $C$ 的圆 $\mathcal{H}$，以及如何放置点 $E$ 和 $F$：
+
+\medskip
+\vbox{\color{green!50!black} 
+|\node (H) [label=135:$H$,draw,circle through=(C)] at (B) {};|          \\
+|\draw (D) -- ($ (D) ! 3.5 ! (B) $) coordinate [label=below:$F$] (F);|  \\
+|\draw (D) -- ($ (D) ! 2.5 ! (A) $) coordinate [label=below:$E$] (E);|} 
+
+\medskip
+
+\vbox{\color{red} |\tkzDrawCircle(B,C)|\\
+|\tkzDrawLines[add=0 and 2](D,A D,B)|}
+
+\medskip
+我们可以在图的末尾放置点 $E$ 和 $F$。现在不需要它们。
+
+求直线与圆的交点：这里我们寻找以 $B$ 为圆心、经过 $C$ 的圆与直线 $DB$ 的交点。
+无限直线 $DB$ 与圆相交，但使用 \TIKZ 时我们需要延长线段 $DB$，这可以通过 partway 计算来完成。我们得到点 $F$，而 $BF$ 或 $DF$ 与圆相交：
+
+\medskip
+\vbox{\color{green!50!black}| \node (H) [label=135:$H$,draw,circle through=(C)] at (B) {}; |  \\
+|\path let \p1 = ($ (B) - (C) $) in|                                     \\
+|  coordinate [label=left:$G$] (G) at ($ (B) ! veclen(\x1,\y1) ! (F) $); |  \\
+|\fill[red,opacity=.5] (G) circle (2pt);|}                                
+
+\medskip
+至于两个圆的交点，用 \pkg{tkz-euclide} 求直线与圆的交点也很容易。我们不需要 $F$：
+
+\medskip
+\vbox{\color{red} | \tkzInterLC(B,D)(B,C)\tkzGetFirstPoint{G}|}
+
+\medskip
+没有更多困难了。下面是经过一些简化的最终代码。
+我们绘制以 $D$ 为圆心、经过 $G$ 的圆 $\mathcal{K}$。它与直线 $AD$ 交于点 $L$。$AL = BC$。
+
+\vbox{\color{red} | \tkzDrawCircle(D,G)|}
+\vbox{\color{red} | \tkzInterLC(D,A)(D,G)\tkzGetSecondPoint{L}|}
+
+\begin{tkzexample}[latex=7cm,small]
+\begin{tikzpicture}[scale=1.5]
+\tkzDefPoint(0,0){A}
+\tkzDefPoint(0.75,0.25){B}  
+\tkzDefPoint(1,1.5){C} 
+\tkzDefTriangle[equilateral](A,B)\tkzGetPoint{D}
+\tkzInterLC[near](D,B)(B,C)      \tkzGetSecondPoint{G}
+\tkzInterLC[near](A,D)(D,G)      \tkzGetFirstPoint{L}
+\tkzDrawCircles(B,C D,G)
+\tkzDrawLines[add=0 and 2](D,A D,B)
+\tkzDrawSegment(A,B) 
+\tkzDrawSegments[red](A,L B,C) 
+\tkzDrawPoints[red](D,L,G)
+\tkzDrawPoints[fill=gray](A,B,C)
+\tkzLabelPoints[left,red](A)
+\tkzLabelPoints[below right,red](L)
+\tkzLabelCircle[above](B,C)(20){$\mathcal{(H)}$}
+\tkzLabelPoints[above left](D)
+\tkzLabelPoints[above](G)
+\tkzLabelPoints[above,red](C)
+\tkzLabelPoints[right,red](B)
+\tkzLabelCircle[below](D,G)(-90){$\mathcal{(K)}$}
+\end{tikzpicture}
+\end{tkzexample}
+
+% 与第 3、4 版的比较现在位于"新特性与兼容性"一节中。
+
+\subsection{如何使用 \tkzname{\tkznameofpack} 宏包？}
+\subsubsection{让我们看一个经典示例}
+为了展示正确的方式，我们将构建一个等边三角形。有几种方法可行；我们将遵循欧几里得的步骤。
+
+\begin{itemize}
+\item   首先，你需要一个文档类。要测试你的代码，最好的选择是使用 \tkzname{standalone}\index{standalone} 类创建一个单独的图。
+\begin{verbatim}  
+\documentclass{standalone}
+\end{verbatim}
+\item 然后加载 \tkzname{\tkznameofpack} 宏包：
+\begin{verbatim}  
+\usepackage{tkz-euclide} or \usepackage[lua]{tkz-euclide}
+\end{verbatim}
+
+ 你不需要加载 \TIKZ：\tkzname{\tkznameofpack} 宏包在 TikZ 之上工作并会加载它。
+
+ \item 开始文档并打开一个 TikZ picture 环境：
+\begin{verbatim}
+\begin{document}
+\begin{tikzpicture}
+\end{verbatim}
+
+\item 现在我们定义两个固定点：
+\begin{verbatim}
+\tkzDefPoint(0,0){A}
+\tkzDefPoint(5,2){B}
+\end{verbatim}
+
+\item 两个点定义两个圆；我们来使用它们：
+
+ 以 $A$ 为圆心经过 $B$ 的圆和以 $B$ 为圆心经过 $A$ 的圆。这两个圆有两个公共点。
+\begin{verbatim}
+\tkzInterCC(A,B)(B,A)
+\end{verbatim}
+我们用以下命令得到交点
+\begin{verbatim}
+\tkzGetPoints{C}{D}
+\end{verbatim}
+
+\item 所有必要的点现在都已定义；我们可以进入最后的步骤，包括绘图。
+\begin{verbatim}
+\tkzDrawCircles[gray,dashed](A,B B,A)
+\tkzDrawPolygon(A,B,C)% The triangle
+\end{verbatim}
+\item 绘制所有点 $A$、$B$、$C$ 和 $D$：
+\begin{verbatim}
+\tkzDrawPoints(A,...,D)
+\end{verbatim}
+
+\item 在最后一步中，我们为点添加标签并使用选项来定位它们：\\
+\begin{verbatim}
+\tkzLabelSegments[swap](A,B){$c$}
+\tkzLabelPoints(A,B,D)
+\tkzLabelPoints[above](C)
+\end{verbatim}
+\item 最后，我们关闭两个环境：
+\begin{verbatim}
+\end{tikzpicture}
+\end{document}
+\end{verbatim}
+
+\item 完整代码：
+
+\begin{tkzexample}[latex=8cm,small]
+ \begin{tikzpicture}[scale=.5]
+   % fixed points
+  \tkzDefPoint(0,0){A}
+  \tkzDefPoint(5,2){B}
+  % calculus
+  \tkzInterCC(A,B)(B,A)
+  \tkzGetPoints{C}{D}
+  % drawings
+  \tkzDrawCircles(A,B B,A)
+  \tkzDrawPolygon(A,B,C)
+  \tkzDrawPoints(A,...,D)
+  % marking
+  \tkzMarkSegments[mark=s||](A,B B,C C,A)
+  % labelling
+  \tkzLabelSegments[swap](A,B){$c$}
+  \tkzLabelPoints(A,B,D)
+  \tkzLabelPoints[above](C)
+\end{tikzpicture}
+\end{tkzexample}
+
+ \end{itemize}
+
+\subsubsection{第一部分：黄金三角形}
+\begin{center}
+\begin{tikzpicture}
+  
+\tkzDefPoint(0,0){C} % 可以用 \tkzDefPoint[label=below:$C$](0,0){C} 但不要这样做
+\tkzDefPoint(2,6){B}
+% 我们通过旋转得到 D 和 E
+\tkzDefPointBy[rotation= center B angle 36](C) \tkzGetPoint{D} 
+\tkzDefPointBy[rotation= center B angle 72](C) \tkzGetPoint{E} 
+% 为了得到 A，我们使用直线的交点
+\tkzInterLL(B,E)(C,D) \tkzGetPoint{A}
+\tkzInterLL(C,E)(B,D) \tkzGetPoint{H}
+
+% 角
+\tkzMarkAngles[size=2](C,B,D E,A,D) %这是为了绘制弧
+\tkzLabelAngles[pos=1.5](C,B,D E,A,D){$\alpha$}
+\tkzMarkRightAngle(B,H,C)
+\tkzDrawPoints(A,...,E)
+
+% 绘图
+\tkzDrawArc[delta=10](B,C)(E)
+\tkzDrawPolygon(C,B,D)
+\tkzDrawSegments(D,A B,A C,E)
+
+% 现在才添加标签
+\tkzLabelPoints[below left](C,A)
+\tkzLabelPoints[below right](D)
+\tkzLabelPoints[above](B,E)
+\end{tikzpicture}
+\end{center}
+
+让我们分析这个图：
+\begin{enumerate}
+  \item $CBD$ 和 $DBE$ 是等腰三角形；
+  
+  \item $BC=BE$，且 $(BD)$ 是角 $CBE$ 的平分线；
+  
+  \item 由此我们推出角 $CBD$ 和 $DBE$ 相等；设 $\alpha$ 为它们的度量。
+   \[\widehat{BAC} +\widehat{ABC} + \widehat{BCA}=180^\circ \ \text{在三角形中}\ BAC \]
+   \[3\alpha + \widehat{BCA}=180^\circ\  \text{在三角形中}\ CBD\]
+   于是
+     \[\alpha + 2\widehat{BCA}=180^\circ \] 
+   或者
+     \[\widehat{BCA}=90^\circ -\alpha/2 \] 
+    
+    \item 最终   \[\widehat{CBD}=\alpha=36^\circ \]
+     三角形 $CBD$ 是一个 \code{golden} 三角形。
+\end{enumerate}
+
+\vspace*{24pt}
+我们如何构造一个黄金三角形，或者一个 $36^\circ$ 的角？
+
+\begin{enumerate}
+  \item 我们放置固定点 $C$ 和 $D$。|\tkzDefPoint(0,0){C}| 和 |\tkzDefPoint(4,0){D}|；
+  \item 我们构造一个正方形 $CDef$，并构造 $[Cf]$ 的中点 $m$；
+  
+ 我们可以用圆规和直尺完成所有这些；
+  \item 然后我们画一个以 $m$ 为圆心、经过 $e$ 的弧。这个弧与直线 $(Cf)$ 交于 $n$；
+  \item 现在以 $C$ 和 $D$ 为圆心、半径为 $Cn$ 的两个弧定义点 $B$。
+\end{enumerate}
+
+\begin{tkzexample}[latex=7cm,small]
+\begin{tikzpicture}
+  \tkzDefPoint(0,0){C}
+  \tkzDefPoint(4,0){D}
+  \tkzDefSquare(C,D)                     
+  \tkzGetPoints{e}{f}
+  \tkzDefMidPoint(C,f)                   
+  \tkzGetPoint{m}
+  \tkzInterLC(C,f)(m,e)                  
+  \tkzGetSecondPoint{n}
+  \tkzInterCC[with nodes](C,C,n)(D,C,n) 
+  \tkzGetFirstPoint{B}
+  \tkzDrawSegment[brown,dashed](f,n)
+  \pgfinterruptboundingbox% from tikz
+  \tkzDrawPolygon[brown,dashed](C,D,e,f)
+  \tkzDrawArc[brown,dashed](m,e)(n)
+  \tkzCompass[brown,dashed,delta=20](C,B)
+  \tkzCompass[brown,dashed,delta=20](D,B)
+  \endpgfinterruptboundingbox 
+  \tkzDrawPolygon(B,...,D)
+  \tkzDrawPoints(B,C,D,e,f,m,n)
+  \tkzLabelPoints[above](B)
+  \tkzLabelPoints[left](f,m,n)
+  \tkzLabelPoints(C,D)
+  \tkzLabelPoints[right](e)
+\end{tikzpicture}
+\end{tkzexample}
+
+
+在构建黄金三角形 $BCD$ 之后，我们通过注意到 $BD=DA$ 来构建点 $A$。然后我们得到点 $E$，最后得到点 $F$，作为已定义对象（一条直线和一个圆）的交点。
+
+
+\subsubsection{第二部分：使用黄金三角形和欧几里得三角形的另外两种方法}
+
+\tkzname{\tkznameofpack} 知道如何定义 \code{golden} 或 \code{euclide} 三角形。我们可以将 $BCD$ 和 $BCA$ 定义为黄金三角形。
+
+
+  \begin{center}
+    \begin{tkzexample}[code only,small]
+      \begin{tikzpicture}
+        \tkzDefPoint(0,0){C}
+        \tkzDefPoint(4,0){D}
+        \tkzDefTriangle[golden](C,D)
+        \tkzGetPoint{B}
+        \tkzDefTriangle[golden](B,C)
+        \tkzGetPoint{A}
+        \tkzInterLC[near](A,B)(B,D) \tkzGetFirstPoint{E}
+        \tkzInterLL(B,D)(C,E) \tkzGetPoint{F}
+        \tkzDrawPoints(C,D,B)
+        \tkzDrawPolygon(B,...,D)  
+        \tkzDrawPolygon(B,C,D)
+        \tkzDrawSegments(D,A A,B C,E)
+        \tkzDrawArc[delta=10](B,C)(E)
+        \tkzDrawPoints(A,...,F) 
+        \tkzMarkRightAngle(B,F,C)  
+        \tkzMarkAngles(C,B,D E,A,D)
+        \tkzLabelAngles[pos=1.5](C,B,D E,A,D){$\alpha$} 
+        \tkzLabelPoints[below](A,C,D,E)
+        \tkzLabelPoints[above right](B,F)
+      \end{tikzpicture} 
+    \end{tkzexample}
+  \end{center}
+
+下面是使用旋转的最后一种方法：
+
+\begin{center}
+  \begin{tkzexample}[code only,small]
+  \begin{tikzpicture} 
+  \tkzDefPoint(0,0){C} % possible 
+  % \tkzDefPoint[label=below:$C$](0,0){C} 
+  % but don't do this
+  \tkzDefPoint(2,6){B}
+  % We get D and E with a rotation
+  \tkzDefPointBy[rotation= center B angle 36](C) \tkzGetPoint{D} 
+  \tkzDefPointBy[rotation= center B angle 72](C) \tkzGetPoint{E} 
+  % To get A we use an intersection of lines
+  \tkzInterLL(B,E)(C,D) \tkzGetPoint{A}
+  \tkzInterLL(C,E)(B,D) \tkzGetPoint{H}
+  % drawing
+  \tkzDrawArc[delta=10](B,C)(E)
+  \tkzDrawPolygon(C,B,D)
+  \tkzDrawSegments(D,A B,A C,E)
+  % angles 
+  \tkzMarkAngles(C,B,D E,A,D) %this is to draw the arcs
+  \tkzLabelAngles[pos=1.5](C,B,D E,A,D){$\alpha$}
+  \tkzMarkRightAngle(B,H,C)
+  \tkzDrawPoints(A,...,E)
+  % Label only now
+  \tkzLabelPoints[below left](C,A)
+  \tkzLabelPoints[below right](D)
+  \tkzLabelPoints[above](B,E)
+  \end{tikzpicture}
+  \end{tkzexample}
+\end{center}
+
+
+\subsubsection{完整但最小的示例}
+
+
+选定一个长度单位后，本示例展示如何用直尺和圆规从长度为 $a$ 的线段得到长度为 $\sqrt{a}$ 的线段。
+
+$IB=a$，$AI=1$
+
+\vspace{12pt}
+\hypertarget{firstex}{}
+\begin{tkzexample}[vbox,small]
+\begin{tikzpicture}[scale=1,ra/.style={fill=gray!20}]
+   % fixed points
+   \tkzDefPoint(0,0){A}
+   \tkzDefPoint(1,0){I}
+   % calculation
+   \tkzDefPointBy[homothety=center A ratio  10 ](I) \tkzGetPoint{B}  
+   \tkzDefMidPoint(A,B)              \tkzGetPoint{M}
+   \tkzDefPointWith[orthogonal](I,M) \tkzGetPoint{H}
+   \tkzInterLC(I,H)(M,B)             \tkzGetFirstPoint{C}
+   \tkzDrawSegment[style=purple](I,C)
+   \tkzDrawArc(M,B)(A)
+   \tkzDrawSegment[dim={$1$,-16pt,}](A,I)
+   \tkzDrawSegment[dim={$(a-1)/2$,-10pt,}](I,M)
+   \tkzDrawSegment[dim={$(a+1)/2$,-16pt,}](M,B)   
+   \tkzMarkRightAngle[ra](A,I,C)
+   \tkzDrawPoints(I,A,B,C,M)  
+   \tkzLabelPoint[left](A){$A(0,0)$} 
+   \tkzLabelPoints[above right](I,M)
+   \tkzLabelPoints[above left](C)
+   \tkzLabelPoint[right](B){$B(10,0)$}
+   \tkzLabelSegment[right=4pt](I,C){$\sqrt{a^2}=a \ (a>0)$}
+\end{tikzpicture}
+\end{tkzexample}
+
+\emph{注释}
+ 
+\begin{itemize}
+\item 导言区
+
+
+ 让我们先看导言区。如果你需要 \tkzname{xcolor}，请在 \tkzname{tkz-euclide} 之前加载它，即在 \TIKZ 之前。\TIKZ 可能会在活动字符方面引起问题，但它
+ 提供了 \NameLib{babel} 库，旨在解决这些问题。
+ 
+\begin{tkzltxexample}[]
+\documentclass{standalone} % or another class
+   % \usepackage{xcolor} % before tikz or tkz-euclide if necessary
+\usepackage{tkz-euclide} % no need to load TikZ
+   % \usetkzobj{all}  is no longer necessary 
+   % \usetikzlibrary{babel}  if there are problems with the active characters
+\end{tkzltxexample}
+
+以下代码由几个部分组成：
+
+   \item 固定点的定义：第一部分定义作图所需的点；这些是固定点。在大多数情况下，宏 \tkzcname{tkzInit} 和 \tkzcname{tkzClip} 不是必需的。
+
+\begin{tkzltxexample}[]
+  \tkzDefPoint(0,0){A}
+  \tkzDefPoint(1,0){I}
+\end{tkzltxexample}
+ 
+  \item 第二部分从固定点创建新点：
+ 点 $B$ 放置在距 $A$ $10$~cm 处。$[AB]$ 的中点是 $M$，然后我们定义在点 $I$ 处与 $(AB)$ 正交的直线。然后我们寻找这条直线与以 $M$ 为圆心、经过 $A$ 的半圆的交点。
+  
+\begin{tkzltxexample}[]
+   \tkzDefPointBy[homothety=center A ratio  10 ](I)
+      \tkzGetPoint{B}
+   \tkzDefMidPoint(A,B)
+      \tkzGetPoint{M}
+   \tkzDefPointWith[orthogonal](I,M)
+      \tkzGetPoint{H}
+   \tkzInterLC(I,H)(M,B)             
+   \tkzGetSecondPoint{C}
+ \end{tkzltxexample}  
+     
+
+ \item 第三部分包含绘图；
+ \begin{tkzltxexample}[]
+   \tkzDrawSegment[style=purple](I,H)
+   \tkzDrawPoints(O,I,A,B,M)
+   \tkzDrawArc(M,A)(O)
+   \tkzDrawSegment[dim={$1$,-16pt,}](A,I)
+   \tkzDrawSegment[dim={$a/2$,-10pt,}](I,M)
+   \tkzDrawSegment[dim={$a/2$,-16pt,}](M,B)
+ \end{tkzltxexample}
+ 
+\item 标记：第四部分用于标记；
+
+
+\begin{tkzltxexample}[]
+ \tkzMarkRightAngle[ra](A,I,C)
+ \end{tkzltxexample}
+ 
+ \item 标注：最后一部分只放置标签。
+\begin{tkzltxexample}[]
+   \tkzLabelPoint[left](A){$A(0,0)$} 
+   \tkzLabelPoint[right](B){$B(10,0)$}
+   \tkzLabelSegment[right=4pt](I,C){$\sqrt{a^2}=a \ (a>0)$}
+\end{tkzltxexample}
+
+\end{itemize}
+
+\endinput

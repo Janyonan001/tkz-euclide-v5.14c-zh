@@ -1,0 +1,300 @@
+\section{第一步：固定点}
+
+几何作图的第一步是定义固定点，图形将从这些点构建。
+
+总体思路是避免操作坐标，而是使用第一步中固定的点或通过宏包工具获得的点的引用。即使可以直接使用坐标，我认为这也是个坏主意：最好使用命名点。
+
+\tkzname{\tkznameofpack} 使用专用于几何作图的宏和词汇。你当然可以使用 \TIKZ 的工具，但在我看来不混合这两种语法更合乎逻辑。
+
+对于 \TIKZ，\tkzname{\tkznameofpack} 的点是一个特殊的 \code{node}。在下一节中我们将看到如何用坐标定义点。这里不讨论点的样式（颜色和形状）：你会在示例中找到一些提示，并在第 \ref{custom} 节中找到更多信息。
+
+
+\section{点的定义：\tkzcname{tkzDefPoint} 或 \tkzcname{tkzDefPoints}}
+
+ 点可以通过以下任一方式指定：
+\begin{itemize}
+\item 笛卡尔坐标；
+\item 极坐标；
+\item 命名点；
+\item 相对点。
+\end{itemize}
+
+
+当一个点的名称与唯一一对十进制数关联时，该点就被定义：
+ $(x,y)$（$x$ 横坐标，$y$ 纵坐标）或 $(a:d)$（$a$ 角，$d$ 距离）。
+ 这之所以可能，是因为平面被赋予了一个单位为 $1$~cm 的标准正交笛卡尔坐标系。
+
+ 笛卡尔坐标 $(a,b)$ 指向在 $x$ 方向上 $a$ 厘米、在 $y$ 方向上 $b$ 厘米的点。
+
+ 极坐标中的一个点需要一个以度为单位的角 $\alpha$，以及到原点的距离 $d$；默认单位是 \texttt{cm}。
+
+ 宏 \tkzNameMacro{tkzDefPoint} 通过给点赋值坐标来定义点。这个宏基于
+
+ \tkzNameMacro{coordinate}，这是 \TIKZ 的一个宏，并接受 \TIKZ 选项如 \tkzname{shift}。计算由宏包 \tkzNamePack{xfp} 完成。我们可以使用笛卡尔坐标或极坐标。
+
+\begin{minipage}[t]{0.48\textwidth}
+ 笛卡尔坐标
+\begin{tkzexample}[code only,small]
+\begin{tikzpicture}[scale=1] 
+  \tkzInit[xmax=5,ymax=5]
+  % necessary to limit
+  % the size of the axes
+  \tkzDrawX[>=latex]
+  \tkzDrawY[>=latex]
+  \tkzDefPoints{0/0/O,1/0/I,0/1/J}
+  \tkzDefPoint(3,4){A} 
+  \tkzDrawPoints(O,A) 
+  \tkzLabelPoint[above](A){$A_1(x_1,y_1)$} 
+  \tkzShowPointCoord[xlabel=$x_1$,
+                     ylabel=$y_1$](A) 
+  \tkzLabelPoints(O,I)
+  \tkzLabelPoints[left](J)
+  \tkzDrawPoints[shape=cross](I,J) 
+\end{tikzpicture}
+\end{tkzexample}%
+\end{minipage}
+\begin{minipage}[t]{0.45\textwidth}
+ 极坐标
+\begin{tkzexample}[code only,small]
+\begin{tikzpicture}[scale=1]
+  \tkzInit[xmax=5,ymax=5]
+  \tkzDrawX[>=latex]
+  \tkzDrawY[>=latex]  
+  \tkzDefPoints{0/0/O,1/0/I,0/1/J}
+  \tkzDefPoint(40:4){P} 
+  \tkzDrawSegment[dim={$d$,
+                 16pt,above=6pt}](O,P)
+  \tkzDrawPoints(O,P) 
+  \tkzMarkAngle[mark=none,->](I,O,P) 
+  \tkzFillAngle[opacity=.5](I,O,P) 
+  \tkzLabelAngle[pos=1.25](I,O,P){%
+                              $\alpha$}
+  \tkzLabelPoint[right](P){$P(\alpha:d)$}
+  \tkzDrawPoints[shape=cross](I,J)
+  \tkzLabelPoints(O,I)
+  \tkzLabelPoints[left](J)
+\end{tikzpicture}
+\end{tkzexample}
+\end{minipage}%
+
+\begin{minipage}[b]{0.45\textwidth}
+\begin{tikzpicture}[scale=1]
+  \tkzInit[xmax=5,ymax=5]
+  \tkzDrawX[>=latex]
+  \tkzDrawY[>=latex]
+  \tkzDefPoints{0/0/O,1/0/I,0/1/J}
+  \tkzDefPoint(3,4){A}
+  \tkzDrawPoints(O,A)
+  \tkzLabelPoint[above](A){$A_1 (x_1,y_1)$}
+  \tkzShowPointCoord[xlabel=$x_1$,ylabel=$y_1$](A)
+  \tkzLabelPoints(O,I)
+  \tkzLabelPoints[left](J)
+  \tkzDrawPoints[shape=cross](I,J)
+\end{tikzpicture}
+\end{minipage}
+\begin{minipage}[b]{0.45\textwidth}
+\begin{tikzpicture}[,scale=1]
+  \tkzInit[xmax=5,ymax=5]
+  \tkzDrawX[>=latex]
+  \tkzDrawY[>=latex]  
+  \tkzDefPoints{0/0/O,1/0/I,0/1/J}
+  \tkzDefPoint(40:4){P} 
+  \tkzDrawSegment[dim={$d$,
+                 16pt,above=6pt}](O,P)
+  \tkzDrawPoints(O,P) 
+  \tkzMarkAngle[mark=none,->](I,O,P) 
+  \tkzFillAngle[opacity=.5](I,O,P) 
+  \tkzLabelAngle[pos=1.25](I,O,P){$\alpha$}  
+  \tkzLabelPoint[right](P){$P  (\alpha : d )$} 
+  \tkzDrawPoints[shape=cross](I,J) 
+  \tkzLabelPoints(O,I)
+  \tkzLabelPoints[left](J) 
+\end{tikzpicture}
+\end{minipage}%
+
+\subsection{定义命名点：\tkzcname{tkzDefPoint}}
+
+\begin{NewMacroBox}{tkzDefPoint}{\oarg{local options}\parg{$x,y$}\marg{ref} or \parg{$\alpha$:$d$}\marg{ref}}%
+\begin{tabular}{lll}%
+参数 & 默认值 & 定义  \\
+\midrule
+\TAline{($x,y$)}{no default}{$x$ 和 $y$ 是两个度量，默认为 cm。}
+\TAline{($\alpha$:$d$)}{no default}{$\alpha$ 是以度为单位的角，$d$ 是一个度量}
+\TAline{\{ref\}}{no default}{赋值给该点的引用：$A$、$T\_a$、$P1$ 或 $P_1$}
+\bottomrule
+\end{tabular}
+
+\medskip
+\emph{这个宏的必选参数是两个十进制数：第一种情况是两个长度，第二种情况是一个以度为单位的角和一个长度。不要混淆点的引用和名称：引用供计算使用，但名称通常与引用相同。}
+
+\medskip
+\begin{tabular}{lll}%
+\toprule
+选项             & 默认值 & 定义  \\
+\midrule
+\TOline{label} {no default} {允许你在预定义距离处放置标签}
+\TOline{shift} {no default} {将 $(x,y)$ 或 $(\alpha:d)$ 加到所有坐标上}
+\end{tabular}
+\end{NewMacroBox}
+
+\subsubsection{笛卡尔坐标}
+ 
+\begin{tkzexample}[latex=6cm,small]
+  \begin{tikzpicture}
+  \tkzInit[xmax=5,ymax=5] % limits the size of the axes
+  \tkzDrawX[>=latex]
+  \tkzDrawY[>=latex]  
+  \tkzDefPoint(0,0){A}
+  \tkzDefPoint(4,0){B}
+  \tkzDefPoint(0,3){C} 
+  \tkzDrawPolygon(A,B,C)
+  \tkzDrawPoints(A,B,C)
+  \end{tikzpicture}
+\end{tkzexample}
+
+\subsubsection{用 \tkzNamePack{xfp} 进行计算}
+
+ \begin{tkzexample}[latex=7cm,small]
+\begin{tikzpicture}[scale=1]
+  \tkzInit[xmax=4,ymax=4]
+  \tkzDrawX\tkzDrawY
+  \tkzDefPoint(-1+2,sqrt(4)){O}
+  \tkzDefPoint({3*ln(exp(1))},{exp(1)}){A}
+  \tkzDefPoint({4*sin(pi/6)},{4*cos(pi/6)}){B}
+  \tkzDrawPoints(O,B,A)
+\end{tikzpicture}
+\end{tkzexample}
+
+\subsubsection{极坐标}
+
+\begin{tkzexample}[latex=7cm,small]
+  \begin{tikzpicture}
+  \foreach \an [count=\i] in {0,60,...,300}
+   { \tkzDefPoint(\an:3){A_\i}}
+  \tkzDrawPolygon(A_1,A_...,A_6)
+  \tkzDrawPoints(A_1,A_...,A_6)
+  \end{tikzpicture}
+\end{tkzexample}
+
+\subsubsection{相对点}
+首先，我们可以使用 \TIKZ 的 \tkzNameEnv{scope} 环境。
+在下面的示例中，我们有一种定义等边三角形的方法。
+
+\begin{tkzexample}[latex=7cm,small]
+\begin{tikzpicture}[scale=1]
+ \begin{scope}[rotate=30]
+  \tkzDefPoint(2,3){A}
+  \begin{scope}[shift=(A)]
+     \tkzDefPoint(90:5){B}
+     \tkzDefPoint(30:5){C}
+  \end{scope}
+ \end{scope}
+ \tkzDrawPolygon(A,B,C)
+\tkzLabelPoints[above](B,C)
+\tkzLabelPoints[below](A)
+\tkzDrawPoints(A,B,C)
+\end{tikzpicture}
+\end{tkzexample}
+
+\subsection{相对于另一个点的点：\tkzcname{tkzDefShiftPoint}}
+\begin{NewMacroBox}{tkzDefShiftPoint}{\oarg{Point}\parg{$x,y$}\marg{ref} or \parg{$\alpha$:$d$}\marg{ref}}%
+\begin{tabular}{lll}%
+参数 & 默认值 & 定义 \\
+\midrule
+\TAline{($x,y$)}{no default}{$x$ 和 $y$ 是两个度量，默认为 cm。}
+\TAline{($\alpha$:$d$)}{no default}{$\alpha$ 是以度为单位的角，$d$ 是一个度量}
+\TAline{\{ref\}}{no default}{赋值给该点的引用：$A$、$T\_a$、$P1$ 或 $P_1$}
+
+\midrule
+选项 & 默认值 & 定义 \\
+
+\midrule
+\TOline{[pt]} {no default} {\tkzcname{tkzDefShiftPoint}[A](0:4)\{B\}}
+\end{tabular}
+\end{NewMacroBox}
+
+\subsubsection{等腰三角形}
+这个宏将一个点相对于另一个点放置；它等价于一次平移。下面是如何构造一个以 $A$ 为主要顶点、该顶点处角为 $30^{\circ}$ 的等腰三角形。
+
+\begin{tkzexample}[latex=7cm,small]
+\begin{tikzpicture}[rotate=-30]
+ \tkzDefPoint(2,3){A}
+ \tkzDefShiftPoint[A](0:4){B}
+ \tkzDefShiftPoint[A](30:4){C}
+ \tkzDrawSegments(A,B B,C C,A)
+ \tkzMarkSegments[mark=|](A,B A,C)
+ \tkzDrawPoints(A,B,C)
+ \tkzLabelPoints[right](B,C)
+ \tkzLabelPoints[above left](A)
+\end{tikzpicture}
+\end{tkzexample}
+
+\subsubsection{等边三角形}
+让我们看看如何得到一个等边三角形（有更简单的方法，见 \tkzcname{tkzDefTriangle}）。
+
+\begin{tkzexample}[latex=7cm,small]
+\begin{tikzpicture}[scale=1]
+ \tkzDefPoint(2,3){A}
+ \tkzDefShiftPoint[A](30:3){B}
+ \tkzDefShiftPoint[A](-30:3){C}
+ \tkzDrawPolygon(A,B,C)
+ \tkzDrawPoints(A,B,C)
+ \tkzLabelPoints[right](B,C)
+ \tkzLabelPoints[above left](A)
+ \tkzMarkSegments[mark=|](A,B A,C B,C)
+\end{tikzpicture}
+\end{tkzexample}
+
+\subsubsection{平行四边形}
+有更简单的方法，见 \tkzcname{tkzDefParallelogram}。
+\begin{tkzexample}[latex=7cm,small]
+\begin{tikzpicture}
+ \tkzDefPoint(0,0){A}
+ \tkzDefPoint(30:3){B}
+ \tkzDefShiftPointCoord[B](10:2){C}
+ \tkzDefShiftPointCoord[A](10:2){D}
+ \tkzDrawPolygon(A,...,D)
+ \tkzDrawPoints(A,...,D)
+\end{tikzpicture}
+\end{tkzexample}
+
+\subsection{多个点的定义：\tkzcname{tkzDefPoints}}
+
+\begin{NewMacroBox}{tkzDefPoints}{\oarg{local options}\marg{$x_1/y_1/r_1,x_2/y_2/r_2$, ...}}%
+$x_i$ 和 $y_i$ 是引用为 $r_i$ 的点的坐标。
+
+\begin{tabular}{lll}%
+\toprule
+参数 & 默认值 & 示例  \\
+\midrule
+\TAline{$x_i/y_i/r_i$}{}{\tkzcname{tkzDefPoints\{0/0/O,2/2/A\}}}
+\end{tabular}
+
+\medskip
+\begin{tabular}{lll}%
+选项             & 默认值 & 定义   \\
+\midrule
+\TOline{shift} {no default} {将 $(x,y)$ 或 $(\alpha:d)$ 加到所有坐标上}
+\end{tabular}
+\end{NewMacroBox}
+
+\subsection{创建三角形}
+\begin{tkzexample}[latex=6cm,small]
+\begin{tikzpicture}[scale=.75]
+ \tkzDefPoints{0/0/A,4/0/B,4/3/C}
+ \tkzDrawPolygon(A,B,C)
+ \tkzDrawPoints(A,B,C)
+\end{tikzpicture}
+\end{tkzexample}
+
+\subsection{创建正方形}
+请注意这里绘制多边形的语法。
+\begin{tkzexample}[latex=6cm,small]
+\begin{tikzpicture}[scale=1]
+ \tkzDefPoints{0/0/A,2/0/B,2/2/C,0/2/D}
+ \tkzDrawPolygon(A,...,D)
+ \tkzDrawPoints(A,...,D)
+\end{tikzpicture}
+\end{tkzexample}
+
+\endinput

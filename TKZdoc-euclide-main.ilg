@@ -1,0 +1,9 @@
+This is makeindex, version 2.18 [TeX Live 2026] (kpathsea + Thai support).
+Scanning input file TKZdoc-euclide-main.idx....
+!! Input index error (file = TKZdoc-euclide-main.idx, line = 68):
+   -- Extra `@' at position 47 of first argument.
+done (992 entries accepted, 1 rejected).
+Sorting entries...........done (11028 comparisons).
+Generating output file TKZdoc-euclide-main.ind....done (1089 lines written, 0 warnings).
+Output written in TKZdoc-euclide-main.ind.
+Transcript written in TKZdoc-euclide-main.ilg.

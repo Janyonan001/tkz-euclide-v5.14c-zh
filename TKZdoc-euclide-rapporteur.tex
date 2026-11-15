@@ -1,0 +1,44 @@
+\section{量角器}
+基于 Yves Combe 的思路，以下宏用于绘制量角器。
+原理很简单：只需指定一条射线。量角器放置在其原点 $O$ 处，射线的方向由 $A$ 给出。角度按逆时针方向测量；使用选项 \tkzname{return} 时，量角器被反转，角度按顺时针方向测量。
+\subsection{宏 \tkzcname{tkzProtractor}} % (fold)
+\label{sub:the_macro_tkzcname_tkzprotractor}
+
+% subsection the_macro_tkzcname_tkzprotractor (end)
+\begin{NewMacroBox}{tkzProtractor}{\oarg{local options}\parg{$O,A$}}%
+\begin{tabular}{lll}%
+选项    & 默认值 & 说明     \\ 
+\midrule
+\TOline{lw}  {0.4 pt} {线宽}
+\TOline{scale}  {1} {比例：调整量角器的大小} 
+\TOline{return} {false} {三角函数圆反向}
+\end{tabular}
+\end{NewMacroBox}
+
+\subsubsection{圆形量角器} 
+逆时针测量：
+
+\begin{tkzexample}[latex=7cm,small] 
+\begin{tikzpicture}[scale=.5]
+\tkzDefPoint(2,0){A}\tkzDefPoint(0,0){O}
+\tkzDefShiftPoint[A](31:5){B}
+\tkzDefShiftPoint[A](158:5){C}
+\tkzDrawPoints(A,B,C)
+\tkzDrawSegments[color = red,
+    line width = 1pt](A,B A,C)
+  \tkzProtractor[scale = 1](A,B) 
+\end{tikzpicture}
+\end{tkzexample}  
+
+\subsubsection{圆形量角器，透明且反向}
+
+\begin{tkzexample}[latex=7cm,small] 
+\begin{tikzpicture}[scale=.5]
+  \tkzDefPoint(2,3){A}
+  \tkzDefShiftPoint[A](31:5){B}  
+   \tkzDefShiftPoint[A](158:5){C}   
+  \tkzDrawSegments[color=red,line width=1pt](A,B A,C)
+  \tkzProtractor[return](A,C) 
+\end{tikzpicture}
+\end{tkzexample}
+\endinput

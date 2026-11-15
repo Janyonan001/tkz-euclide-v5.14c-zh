@@ -1,0 +1,257 @@
+\section{新特性与兼容性}\label{news}
+
+\subsection{第 5.14 版}
+\begingroup\sloppy
+
+本版本仅修正缺陷；语法没有变化，也没有新增宏。
+
+\begin{itemize}
+  \item \tkzcname{tkzDefCircle} 在使用选项 \tkzname{orthogonal from} 或 \tkzname{orthogonal through} 时，不再影响后续的 \tkzcname{tkzDefCircle} 调用。
+  \item 下列宏的选项现在仅作用于当前调用：\tkzcname{tkzShowLine}、\tkzcname{tkzDefSimilitudeCenter}、\tkzcname{tkzCalcLength}、\tkzcname{tkzGrid}、\tkzcname{tkzClip}、\tkzcname{tkzDefEquiPoints}、\tkzcname{tkzLegend}。
+  \item \tkzcname{tkzIsLinear} 曾给出错误答案（始终为真）；\tkzcname{tkzIsLinear} 和 \tkzcname{tkzIsOrtho} 现在使用随长度变化的容差。
+  \item \tkzcname{tkzPowerCircle} 的结果不再在其他计算之后发生改变。
+  \item 圆的反演（\tkzcname{tkzDefCircleBy}）仅当原圆经过反演中心时才得到一条直线。
+  \item \tkzcname{tkzDefCircle}\code{[spieker]} 现在以 cm 为单位给出半径，与其他选项一致。
+  \item 用 \tkzcname{tkzDefTriangleCenter} 和 \tkzcname{tkzDefSpcTriangle} 的 \tkzname{feuerbach} 选项得到的 Feuerbach 点和 Feuerbach 三角形现在是精确的。
+  \item \tkzcname{tkzDrawPolySeg}：路径起点处的箭头方向正确。
+  \item \tkzcname{tkzCompass} 接受 \tkzname{delta} 的小数值；\tkzcname{tkzProtractor}\code{[return]} 正常工作；\tkzcname{tkzLabelRegPolygon} 使用其 \tkzname{sep} 选项；\tkzcname{tkzDrawX} 使用其 \tkzname{step} 选项。
+  \item 第 3 版的旧语法，例如 |\tkzDrawCircle[euler](A,B,C)|，现在会给出错误信息，而不是陷入无休止的编译。
+  \item 别名 \tkzcname{tkzDefNinePointsCircle}、\tkzcname{tkzFeuerBachCircle} 和 \tkzcname{tkzIncentralTriangle} 恢复正常。
+\end{itemize}
+
+有两处变化可能会影响你的图形：
+\begin{itemize}
+  \item \tkzcname{tkzSetUpCompass}\code{[delta=...]} 现在只作用于圆规标记。要扩展由 \tkzcname{tkzDrawArc}、\tkzcname{tkzMarkArc} 和 \tkzcname{tkzLabelArc} 绘制的圆弧，请使用 \tkzcname{tkzSetUpArc}\code{[delta=...]}。在此版本之前，两者使用同一个值。
+  \item \TIKZ\ 样式 \tkzname{help lines} 不再被本宏包修改。
+\end{itemize}
+
+\endgroup
+
+\subsection{第 5.10 版}
+\begin{itemize}
+  \item 新增法语文档。
+  \item 新增 \code{mini} 选项。你可以将此选项与 \tkzNamePack{tkz-elements} 宏包配合使用。只会加载绘图所需的模块。目前此选项仅在使用 \tkzNamePack{tkz-elements} 时有用。
+\end{itemize}
+
+\subsection{从第 3 版到第 5 版}
+
+\tkzname{\tkznameofpack} 4 是其前身的简化版本，独立于 \tkzname{tkz-base}。\tkzname{tkz-euclide} 3 的大多数宏都被保留，但特殊圆现在先用 \tkzcname{tkzDefCircle} 定义，再用 \tkzcname{tkzDrawCircle} 绘制。单位现在是 \tkzname{cm}。如果你需要使用 \tkzname{tkz-base} 中的某些宏，可能需要使用 \tkzcname{tkzInit}。
+
+第 5 版对用户没有任何改变。使用选项 \code{lua}（|\usepackage[lua]{tkz-euclide}|）时，计算由 Lua 完成：之后必须用 LuaLaTeX 编译。参见第 \ref{calc_with_lua} 节。
+
+% \subsection{With 5.06 version}
+%      \begin{itemize}
+%       \item 修正了宏 |\tkzLabelAngle| 与选项 \code{angle} 的缺陷。
+%        \item 新增 |\tkzSetUpCircle|。
+%        \item 修正了若干笔误。
+%        \item 移除了一些法文文本。
+%      \end{itemize}
+%
+%
+% \subsection{With 5.05 version}
+%
+%  修正了 ``Complete but minimal example'' 中的文档。
+%
+% \subsection{With 5.03 version}
+%
+% \begin{itemize}
+%
+%     \item 修正了文件 tkz-obj-lua-points-spc.tex 中宏 |\tkzDefBarycentricPointTwo| 的缺陷。
+%
+%   \item 新增宏 |\tkzDrawEllipse|。
+%
+%   \item 删除宏 |\tkzDrawSectorAngles| 和 |\tkzDrawSectorRwithNodesAngles|。
+% \end{itemize}
+%
+%
+% \subsection{With 5.0 version} % (fold)
+%
+% \begin{itemize}
+%
+%     \item 最后，我为宏包 \tkzname{\tkznameofpack} 新增了 \code{lua} 选项。它允许用 lua 完成主要函数的计算；（参见 \ref{calc_with_lua}）。语法不变。对用户而言一切如常。
+%
+%   \item 选项 \code{xfp} 已改为 \code{veclen}，参见 \ref{opt-veclen}。
+%
+% \end{itemize}
+%
+% \subsection{With 4.2 version} % (fold)
+% \label{sub:with_4_2_version}
+%
+% 为使语法更统一，特别是为了将坐标的定义与求解和其余部分（即绘图、标记与标注）区分开，做了一些修改。
+% 现在定义宏被单独隔离，今后引入使用 \tkzimp{Lua} 的坐标计算阶段会更容易。
+%
+% 以下是部分改动。
+% \vspace{1cm}
+%  \begin{itemize}\setlength{\itemsep}{10pt}
+%
+%
+% \item 我最近发现在使用 \code{scale} 选项时存在一个问题。当用某些工具绘制某些图形时，大量使用 |pgfmathreciprocal| 会引入微小的计算误差，这些误差会累积起来，使图形无法使用。以下是避免这些问题的做法：
+% \begin{enumerate}
+%
+%   \item 我这边引入了 Muzimuzhi 提出的补丁，修改了 |pgfmathreciprocal|；
+%
+% \item  Muzimuzhi 提出的另一个思路是，在加载 |fpu| 库之后，把 |/pgf/fpu/install only={reciprocal}| 作为 |tikzpicture| 环境的选项传入；
+%
+% \item 在我所选择的宏定义方法中，尽量避免使用 |pgfmathreciprocal|；
+%
+% \item 还有一种万无一失的方法，即避免使用 |scale = ...|。如果你和我一样，只在代码开头固定若干定点，那么这很容易做到。图形的大小只取决于这些定点，因此你只需调整这些点的坐标即可。
+% \end{enumerate}
+%
+% \item 现在 |\tkzDefCircle| 给出两个点作为结果：圆心和圆上一点。当圆上一点已知时，用 |\tkzGetPoint| 或 |\tkzGetFirstPoint|
+% 即可得到圆心；否则 |\tkzGetPoints| 会给出圆心和圆上一点。你始终可以用 |\tkzGetLength| 获取半径长度。我希望优先使用节点，并杜绝在代码中出现数字。
+%
+% \item 为了隔离定义，我删除或修改了以下宏：|\tkzDrawLine|、|\tkzDrawTriangle|、|\tkzDrawCircle|、|\tkzDrawSemiCircle| 和 |\tkzDrawRectangle|；
+%
+% 因此 |\tkzDrawSquare(A,B)| 变为 |\tkzDefSquare(A,B)||\tkzGetPoints{C}{D}|，然后
+%
+%  |\tkzDrawPolygon(A,B,C,D)|；
+%
+% 如果你想画圆，不能直接写 |\tkzDrawCircle[R](A,1)|。必须先定义圆经过的点，因此要执行
+% |\tkzDefCircle[R](A,1)| |\tkzGetPoint{a}|，最后 |\tkzDrawCircle(A,a)|。另一种方法是定义圆上一点 |\tkzDefShiftPoint[A](1,O){a}|；
+%
+%
+% \item 下列宏 |tkzDefCircleBy[orthogonal through]| 和 |\tkzDefCircleBy[orthogonal from]| 变为 |tkzDefCircle[orthogonal through]| 和 |\tkzDefCircle[orthogonal from]|；
+%
+%
+% \item |\tkzDefLine[euler](A,B,C)| 是一个宏，用于在可能时得到 \tkzname{Euler} 直线。|\tkzDefLine[altitude](A,B,C)| 再次可用，|\tkzDefLine[tangent at=A](O)| 和 |\tkzDefLine[tangent from=P](O,A)| 同样可用，此前它们无法工作；
+%
+%
+% \item | \tkzDefTangent| 被替换为 |\tkzDefLine[tangent from = ...]| 或 |\tkzDefLine[tangent at = ...]|；
+%
+%
+% \item 我为更喜欢直接使用 \TIKZ 的人新增了宏 |\tkzPicAngle[tikz options](A,B,C)|；
+%
+%
+% \item 宏 |\tkzMarkAngle| 已修正；
+%
+% \item 与 |\tkzDefCircle| 命令的 \tkzname{apollonius} 选项相关的宏已重写；
+%
+% \item (4.23) 宏 |\tkzDrawSemiCircle| 已修正；
+%
+% \item
+% 宏 \tkzcname{tkzDefPointOnCircle} 的参数顺序已改变：现在是圆心、角度、点或半径。
+% 我新增了两个用于弧度制的选项：\tkzname{through in rad} 和 \tkzname{R in rad}。
+%
+%
+% \item 我为圆弧路径新增了选项 \tkzname{reverse}。它可以反转路径，并在必要时反转已有的箭头。
+%
+%
+% \item 我统一了标签的样式。现在只剩 \tkzname{label style} 一个，对点、线段、直线、圆和角都有效。我删除了 \tkzname{label seg style}、\tkzname{label line style} 和 \tkzname{label angle style}。
+%
+% \item 我新增了宏 |tkzFillAngles|，用于同时处理多个角。
+%
+% \item 修正 \tkzname{return} 选项与 \tkzcname{tkzProtractor} 的配合。
+%
+% 提醒一下，此前还做过以下改动：
+%
+%  \item  |\tkzDrawMedian|、|\tkzDrawBisector|、|\tkzDrawAltitude|、|\tkzDrawMedians|、|\tkzDrawBisectors| 和 |\tkzDrawAltitudes| 已不复存在。由于不遵守创建与绘制分离的原则，建议先用 |\tkzDefSpcTriangle[median]| 创建这些点的坐标，再用 |\tkzDrawSegments| 或 |\tkzDrawLines| 选择要绘制的那些；
+%
+% \item |\tkzDrawTriangle| 已删除。|\tkzDrawTriangle[equilateral]| 虽然方便，但更好的做法是用 |\tkzDefTriangle[equilateral]| 得到第三个点，再用 |\tkzDrawPolygon| 绘制；|\tkzDrawSquare| 和 |\tkzDrawGoldRectangle| 同理；
+%
+%
+% \item 圆的反演此前定义有误，因此我重写了该宏。输入参数始终是圆心和圆上一点，输出参数是像圆的圆心和像圆上一点；若原圆经过反演极点，则输出为像直线上的两个点。如果圆经过反演中心，像就是一条直线；该过程是否有效取决于原圆上所取点的选择；
+%
+% \item 修正黄金三角形与欧几里得三角形的正确归属；
+%
+%
+% \item 我为求交 LC 和 CC 新增了选项 \code{next to}；
+%
+%
+% \item 修正等腰直角选项；
+%
+% \item (4.22 和 4.23) 修正宏 |\tkzMarkAngle|；
+%
+%
+% \item |\tkzDefMidArc(O,A,B)| 给出以 $O$ 为圆心、从 $A$ 到 $B$ 的弧的中点；
+%
+% \item 好消息：新增了一些有用的工具。它们目前以实验性方式提供，无疑还需要改进；
+%
+%
+% \item 选项 \code{orthogonal from} 和 \code{through} 现在归 \tkzcname{tkzDefCircleBy} 管辖。
+%
+% \begin{enumerate}
+%
+%   \item |\tkzDotProduct(A,B,C)| 在正交参考系中计算向量 $\overrightarrow{A,B}$ 与 $\overrightarrow{A,C}$ 的数量积。
+%
+%   |\tkzDotProduct(A,B,C)=aa'+bb' 当 vec{AB} =(a,b) 且 vec{AC} =(a',b')|
+%
+%
+%   \item |\tkzPowerCircle(A)(B,C)| 点 $A$ 关于以 $B$ 为圆心且经过 $C$ 的圆的幂；
+%
+%
+%   \item |\tkzDefRadicalAxis(A,B)(C,D)| 圆心分别为 $A$ 和 $C$ 的两圆的根轴；
+%
+%
+% \item (4.23) 宏 |tkzDefRadicalAxis| 已完善
+%
+%   \item 一些测试：|\tkzIsOrtho(A,B,C)| 和 |\tkzIsLinear(A,B,C)|。前者判断直线 $(A,B)$ 与 $(A,C)$ 是否正交。后者判断点 $A$、$B$、$C$ 是否共线；
+%
+%  |\tkzIsLinear(A,B,C)| 若 $A$、$B$、$C$ 共线，则 |\tkzLineartrue|
+%   你可以使用 |\iftkzLinear|（|\tkzIsOrtho| 同理）；
+%
+% \item 新增了一种向量样式，你当然可以修改它
+%
+% |tikzset{vector style/.style={>=Latex,->}}|；
+%
+%
+% \item 现在可以用选项 |tkz arrow| 在直线或圆上加箭头。
+% \end{enumerate}
+% \end{itemize}
+%
+% % subsection with_4_2_version (end)
+% \subsection{Changes with previous versions} % (fold)
+% \label{sub:changes_with_previous_versions}
+%
+% \vspace{1cm}
+%  \begin{itemize}\setlength{\itemsep}{10pt}
+%
+% \item 提醒一下，一个重要的新变化是最近用 \tkzNamePack{xfp} 替换了 \tkzNamePack{fp} 宏包。这是为了进一步改进计算并更易用；
+%
+%
+% \item 首先，你不必再用 \TIKZ 处理 bounding box 的大小。早期版本的 \tkzname{\tkznameofpack} 不控制 bounding box 的大小；现在每个宏（希望如此）都会控制 bounding box，以避免先使用 \tkzcname{tkzInit} 再使用 \tkzcname{tkzClip}；
+%
+% \item 使用 \tkzimp{tkz-euclide} 会加载所有对象，因此不需要再写 \tkzcname{usetkzobj\{all\}}；
+%
+% \item 新增了关于 bounding box 的宏：\tkzcname{tkzSaveBB}、\tkzcname{tkzClipBB} 等；
+%
+% \item 按常理，大多数宏都接受 \TIKZ 选项。因此我在可能的情况下移除了重复的选项，例如 \code{label options} 选项被删除；
+%
+% \item 单位现在是 cm；
+%
+% \item |\tkzCalcLength| |\tkzGetLength| 以 cm 为单位给出结果；
+%
+% \item  |\tkzMarkArc| 和 |\tkzLabelArc| 是新宏；
+%
+% \item 现在 |\tkzClipCircle| 和 |\tkzClipPolygon| 有一个 \tkzimp{out} 选项。要使用此选项，你必须有一个包含待裁剪对象的 bounding box。可以使用一个包围整个图形的对象，或使用宏 \tkzcname{tkzInit} 来实现；
+%
+%
+% \item 此前用于给直线标注的选项 \tkzname{end} 和 \tkzname{start} 已被移除。现在必须使用宏 \tkzcname{tkzLabelLine}；
+%
+% \item 引入库 \NameLib{quotes} 和 \NameLib{angles}；它允许给点加标签，尽管我并不赞成这种做法；
+%
+% \item 向量的概念消失了；要画向量，只需把 ``->'' 作为选项传给 \tkzcname{tkzDrawSegment}；
+%
+%
+% \item |\tkzDefIntSimilitudeCenter| 和 |\tkzDefExtSimilitudeCenter| 已不复存在，现在需要使用 |\tkzDefSimilitudeCenter[int]| 或 |\tkzDefSimilitudeCenter[ext]|；
+%
+% \item |\tkzDefRandPointOn| 被 |\tkzGetRandPointOn| 替换；
+%
+%
+% \item 宏 \tkzcname{tkzDefTriangle} 的一个选项已改变：上一版中该选项是带 ``e'' 的 \code{euclide}，现在是 \code{euclid}；
+%
+% \item 随机点现在位于 \tkzname{\tkznameofpack} 中，宏 \tkzcname{tkzGetRandPointOn} 被替换为
+%
+%  \tkzcname{tkzDefRandPointOn}。出于一致性考虑，点必须用 \tkzcname{tkzGetPoint} 获取；
+%
+% \item 新增了以下宏：\tkzcname{tkzDrawSemiCircles}、\tkzcname{tkzDrawPolygons}、\tkzcname{tkzDrawTriangles}；
+%
+%
+% \item 选项 \code{isosceles right} 是宏 \tkzcname{tkzDefTriangle} 的一个新选项；
+%
+% \item 出现了宏 \tkzcname{usetkztool}，用于加载新的 \code{tools}；
+%
+% \item 可以借助以下宏修改样式：\tkzcname{tkzSetUpPoint}、\tkzcname{tkzSetUpLine}、\tkzcname{tkzSetUpArc}、\tkzcname{tkzSetUpCompass}、\tkzcname{tkzSetUpLabel} 和 \tkzcname{tkzSetUpStyle}。最后一个允许你创建新样式。
+% \end{itemize}
+% % subsection changes_with_previous_versions (end)
+
+\endinput

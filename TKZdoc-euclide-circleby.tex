@@ -1,0 +1,145 @@
+\section{由变换得到的圆}
+\subsection{宏命令 \tkzcname{tkzDefCircleBy}}
+可用的变换有：
+
+\begin{itemize}
+   \item 平移；
+   \item 位似；
+   \item 正交反射或轴对称；
+   \item 中心对称；
+   \item 正交投影；
+   \item 旋转（角度制）；
+   \item 反演。
+\end{itemize}
+
+变换通过选项来选择。例如，我们写：
+\begin{tkzltxexample}[]
+\tkzDefCircleBy[translation= from A to A'](O,M) 
+\end{tkzltxexample}
+$O$ 是圆心，$M$ 是圆上一点。
+像仍是一个圆：新圆心为 |tkzFirstPointResult|，|tkzSecondPointResult| 是新圆上的一点。你可以用宏命令 \tkzcname{tkzGetPoints} 获取结果。使用反演时，过反演中心的圆的像是一条直线：此时两个点即为该直线上的两个点。
+\medskip
+\begin{NewMacroBox}{tkzDefCircleBy}{\oarg{local options}\parg{pt1,pt2}}%
+参数为一对点，结果同样是一对点。要保留这些点，\tkzcname{tkzGetPoints\{O'\}\{M'\}} 将圆心命名为 \tkzname{O'}，将圆上的点命名为 \tkzname{M'}。
+
+\begin{tabular}{lll}%
+\toprule
+参数 &  定义 & 示例               \\ 
+\midrule
+\TAline{pt1,pt2}   {已有点}   {$(O,M)$}
+\bottomrule
+\end{tabular}
+
+\begin{tabular}{lll}%
+选项     &     & 示例                         \\ 
+\midrule
+\TOline{translation}{= from \#1 to \#2}{[translation=from A to B](O,M)}
+\TOline{homothety}  {= center \#1 ratio \#2}{[homothety=center A ratio .5](O,M)}
+\TOline{reflection} {= over \#1--\#2}{[reflection=over A--B](O,M)}
+\TOline{symmetry }  {= center \#1}{[symmetry=center A](O,M)}
+\TOline{projection }{= onto \#1--\#2}{[projection=onto A--B](O,M)}
+\TOline{rotation }  {= center \#1 angle \#2}{[rotation=center O angle 30](O,M)}
+\TOline{inversion}{= center \#1 through \#2}{[inversion =center O through A](O,M)} 
+% \TOline{inversion negative}{= center \#1 through \#2}{[inversion negative =center O through A](O,M)}
+\bottomrule
+\end{tabular}
+
+\medskip
+\emph{像仅被定义，并未绘制。}
+\end{NewMacroBox} 
+
+\subsubsection{\tkzname{平移}}
+\begin{tkzexample}[latex=7cm,small]
+\begin{tikzpicture}[>=latex] 
+ \tkzDefPoint(0,0){A}  \tkzDefPoint(3,1){B}
+ \tkzDefPoint(3,2){C}   \tkzDefPoint(4,3){D}
+ \tkzDefCircleBy[translation= from B to A](C,D) 
+ \tkzGetPoints{C'}{D'} 
+ \tkzDrawPoints[teal](A,B,C,D,C',D')
+ \tkzDrawSegments[orange,->](A,B)
+ \tkzDrawCircles(C,D C',D')
+ \tkzLabelPoints[color=teal](A,B,C,C') 
+ \tkzLabelPoints[color=teal,above](D,D') 
+\end{tikzpicture} 
+\end{tkzexample}
+
+\subsubsection{\tkzname{反射}（轴对称）}
+
+\begin{tkzexample}[latex=7cm,small]
+\begin{tikzpicture}[>=latex] 
+ \tkzDefPoint(0,0){A}  \tkzDefPoint(3,1){B}
+ \tkzDefPoint(3,2){C}   \tkzDefPoint(4,3){D}
+ \tkzDefCircleBy[reflection = over A--B](C,D)
+ \tkzGetPoints{C'}{D'} 
+ \tkzDrawPoints[teal](A,B,C,D,C',D')
+ \tkzDrawLine[add =0 and 1][orange](A,B)
+ \tkzDrawCircles(C,D C',D')
+ \tkzLabelPoints[color=teal](A,B,C,C') 
+ \tkzLabelPoints[color=teal,right](D,D') 
+\end{tikzpicture} 
+\end{tkzexample}
+
+\subsubsection{\tkzname{位似}}
+
+\begin{tkzexample}[latex=7cm,small]
+\begin{tikzpicture}[scale=1.2]
+ \tkzDefPoint(0,0){A}   \tkzDefPoint(3,1){B}
+ \tkzDefPoint(3,2){C}   \tkzDefPoint(4,3){D}
+ \tkzDefCircleBy[homothety=center A ratio .5](C,D)
+ \tkzGetPoints{C'}{D'}
+ \tkzDrawPoints[teal](A,C,D,C',D')
+ \tkzDrawCircles(C,D C',D')
+ \tkzLabelPoints[color=teal](A,C,C')
+ \tkzLabelPoints[color=teal,right](D,D') 
+\end{tikzpicture}
+\end{tkzexample}
+
+\subsubsection{\tkzname{中心对称}}
+\begin{tkzexample}[latex=7cm,small]
+\begin{tikzpicture}[scale=1]
+ \tkzDefPoint(3,1){B}
+ \tkzDefPoint(3,2){C}   \tkzDefPoint(4,3){D}
+ \tkzDefCircleBy[symmetry=center B](C,D)
+ \tkzGetPoints{C'}{D'}
+ \tkzDrawPoints[teal](B,C,D,C',D')
+ \tkzDrawLines[orange](C,C' D,D')
+ \tkzDrawCircles(C,D C',D')
+ \tkzLabelPoints[color=teal](C,C')
+ \tkzLabelPoints[color=teal,above](D)
+ \tkzLabelPoints[color=teal,below](D')
+\end{tikzpicture}
+\end{tkzexample}
+
+\subsubsection{\tkzname{旋转}}
+\begin{tkzexample}[latex=7cm,small]
+\begin{tikzpicture}[scale=0.5]
+ \tkzDefPoint(3,-1){B}
+ \tkzDefPoint(3,2){C}   \tkzDefPoint(4,3){D}
+ \tkzDefCircleBy[rotation=center B angle 90](C,D)
+ \tkzGetPoints{C'}{D'}
+ \tkzDrawPoints[teal](B,C,D,C',D')
+ \tkzLabelPoints[color=teal](B,C,D,C',D')
+ \tkzDrawCircles(C,D C',D')
+\end{tikzpicture}
+\end{tkzexample}
+
+\subsubsection{\tkzname{反演}}
+
+\begin{tkzexample}[latex=7cm,small]
+\begin{tikzpicture}[scale=1.5]
+\tkzSetUpPoint[size=3,color=red,fill=red!20]
+\tkzSetUpStyle[color=purple,ultra thin]{st1}
+\tkzSetUpStyle[color=cyan,ultra thin]{st2}
+\tkzDefPoint(2,0){A} \tkzDefPoint(3,0){B} 
+\tkzDefPoint(3,2){C} \tkzDefPoint(4,2){D} 
+\tkzDefCircleBy[inversion = center B through A](C,D) 
+\tkzGetPoints{C'}{D'}
+\tkzDrawPoints(A,B,C,D,C',D') 
+\tkzLabelPoints(A,B,C,D,C',D')
+\tkzDrawCircles(B,A)
+\tkzDrawCircles[st1](C,D)
+\tkzDrawCircles[st2](C',D')
+\end{tikzpicture}
+\end{tkzexample}
+
+\endinput

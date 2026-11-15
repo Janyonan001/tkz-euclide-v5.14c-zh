@@ -1,0 +1,993 @@
+\indexentry{tkzDefMidPoint_1@\texttt  {\textbackslash tkzDefMidPoint}|hyperpage}{14}
+\indexentry{tkzGetPoint_1@\texttt  {\textbackslash tkzGetPoint}|hyperpage}{14}
+\indexentry{standalone|hyperpage}{15}
+\indexentry{Ti\emph  {k}Z Library !babel@\texttt  {babel}|hyperpage}{20}
+\indexentry{tkzInit_1@\texttt  {\textbackslash tkzInit}|hyperpage}{21}
+\indexentry{tkzClip_1@\texttt  {\textbackslash tkzClip}|hyperpage}{21}
+\indexentry{Package !xfp@\texttt  {xfp}|hyperpage}{22}
+\indexentry{TeX Distributions !TeXLive@\texttt  {TeXLive}|hyperpage}{22}
+\indexentry{Operating System !Windows@\texttt  {Windows}|hyperpage}{22}
+\indexentry{TeX Distributions !MiKTeX@\texttt  {MiKTeX}|hyperpage}{22}
+\indexentry{tkzDefPoint_1@\texttt  {\textbackslash tkzDefPoint}|hyperpage}{27}
+\indexentry{tkzDefPoints_1@\texttt  {\textbackslash tkzDefPoints}|hyperpage}{27}
+\indexentry{tkzDefPoint_1@\texttt  {\textbackslash tkzDefPoint}|hyperpage}{27}
+\indexentry{tkzDefPoint_1@\texttt  {\textbackslash tkzDefPoint}|hyperpage}{27}
+\indexentry{coordinate_1@\texttt  {\textbackslash coordinate}|hyperpage}{27}
+\indexentry{coordinate_1@\texttt  {\textbackslash coordinate}|hyperpage}{27}
+\indexentry{Package !xfp@\texttt  {xfp}|hyperpage}{27}
+\indexentry{tkzDefPoint_1@\texttt  {\textbackslash tkzDefPoint}|hyperpage}{28}
+\indexentry{tkzDefPoint{\ttfamily  [}{\color  {myblue}\meta  {local options}}{\ttfamily  ]}{\ttfamily  (}{\color  {myblue}\meta  {$x,y$}}{\ttfamily  )}{\ttfamily  \char `\{}{\color  {myblue}\meta  {ref}}{\ttfamily  \char `\}} or {\ttfamily  (}{\color  {myblue}\meta  {$\mitalpha $:$d$}}{\ttfamily  )}{\ttfamily  \char `\{}{\color  {myblue}\meta  {ref}}{\ttfamily  \char `\}}_1@\texttt  {\textbackslash tkzDefPoint{\ttfamily  [}{\color  {myblue}\meta  {local options}}{\ttfamily  ]}{\ttfamily  (}{\color  {myblue}\meta  {$x,y$}}{\ttfamily  )}{\ttfamily  \char `\{}{\color  {myblue}\meta  {ref}}{\ttfamily  \char `\}} or {\ttfamily  (}{\color  {myblue}\meta  {$\mitalpha $:$d$}}{\ttfamily  )}{\ttfamily  \char `\{}{\color  {myblue}\meta  {ref}}{\ttfamily  \char `\}}}|hyperpage}{28}
+\indexentry{tkzDefPoint_1@\texttt  {\textbackslash tkzDefPoint}|hyperpage}{28}
+\indexentry{tkzDefPoint_2@\texttt  {\textbackslash tkzDefPoint: arguments}!\texttt  {($x,y$)}|hyperpage}{28}
+\indexentry{tkzDefPoint_2@\texttt  {\textbackslash tkzDefPoint: arguments}!\texttt  {($\mitalpha $:$d$)}|hyperpage}{28}
+\indexentry{tkzDefPoint_2@\texttt  {\textbackslash tkzDefPoint: arguments}!\texttt  {\{ref\}}|hyperpage}{28}
+\indexentry{tkzDefPoint_3@\texttt  {\textbackslash tkzDefPoint: options}!\texttt  {label}|hyperpage}{29}
+\indexentry{tkzDefPoint_3@\texttt  {\textbackslash tkzDefPoint: options}!\texttt  {shift}|hyperpage}{29}
+\indexentry{Package !xfp@\texttt  {xfp}|hyperpage}{29}
+\indexentry{Environment_1@\texttt  {Environment}!\texttt  {scope}|hyperpage}{30}
+\indexentry{tkzDefShiftPoint_1@\texttt  {\textbackslash tkzDefShiftPoint}|hyperpage}{30}
+\indexentry{tkzDefShiftPoint{\ttfamily  [}{\color  {myblue}\meta  {Point}}{\ttfamily  ]}{\ttfamily  (}{\color  {myblue}\meta  {$x,y$}}{\ttfamily  )}{\ttfamily  \char `\{}{\color  {myblue}\meta  {ref}}{\ttfamily  \char `\}} or {\ttfamily  (}{\color  {myblue}\meta  {$\mitalpha $:$d$}}{\ttfamily  )}{\ttfamily  \char `\{}{\color  {myblue}\meta  {ref}}{\ttfamily  \char `\}}_1@\texttt  {\textbackslash tkzDefShiftPoint{\ttfamily  [}{\color  {myblue}\meta  {Point}}{\ttfamily  ]}{\ttfamily  (}{\color  {myblue}\meta  {$x,y$}}{\ttfamily  )}{\ttfamily  \char `\{}{\color  {myblue}\meta  {ref}}{\ttfamily  \char `\}} or {\ttfamily  (}{\color  {myblue}\meta  {$\mitalpha $:$d$}}{\ttfamily  )}{\ttfamily  \char `\{}{\color  {myblue}\meta  {ref}}{\ttfamily  \char `\}}}|hyperpage}{30}
+\indexentry{tkzDefShiftPoint_1@\texttt  {\textbackslash tkzDefShiftPoint}|hyperpage}{30}
+\indexentry{tkzDefShiftPoint_2@\texttt  {\textbackslash tkzDefShiftPoint: arguments}!\texttt  {($x,y$)}|hyperpage}{30}
+\indexentry{tkzDefShiftPoint_2@\texttt  {\textbackslash tkzDefShiftPoint: arguments}!\texttt  {($\mitalpha $:$d$)}|hyperpage}{30}
+\indexentry{tkzDefShiftPoint_2@\texttt  {\textbackslash tkzDefShiftPoint: arguments}!\texttt  {\{ref\}}|hyperpage}{30}
+\indexentry{tkzDefShiftPoint_3@\texttt  {\textbackslash tkzDefShiftPoint: options}!\texttt  {[pt]}|hyperpage}{30}
+\indexentry{tkzDefShiftPoint_1@\texttt  {\textbackslash tkzDefShiftPoint}|hyperpage}{30}
+\indexentry{tkzDefTriangle_1@\texttt  {\textbackslash tkzDefTriangle}|hyperpage}{31}
+\indexentry{tkzDefParallelogram_1@\texttt  {\textbackslash tkzDefParallelogram}|hyperpage}{31}
+\indexentry{tkzDefPoints_1@\texttt  {\textbackslash tkzDefPoints}|hyperpage}{31}
+\indexentry{tkzDefPoints{\ttfamily  [}{\color  {myblue}\meta  {local options}}{\ttfamily  ]}{\ttfamily  \char `\{}{\color  {myblue}\meta  {$x_1/y_1/r_1,x_2/y_2/r_2$, ...}}{\ttfamily  \char `\}}_1@\texttt  {\textbackslash tkzDefPoints{\ttfamily  [}{\color  {myblue}\meta  {local options}}{\ttfamily  ]}{\ttfamily  \char `\{}{\color  {myblue}\meta  {$x_1/y_1/r_1,x_2/y_2/r_2$, ...}}{\ttfamily  \char `\}}}|hyperpage}{31}
+\indexentry{tkzDefPoints_1@\texttt  {\textbackslash tkzDefPoints}|hyperpage}{31}
+\indexentry{tkzDefPoints_2@\texttt  {\textbackslash tkzDefPoints: arguments}!\texttt  {$x_i/y_i/r_i$}|hyperpage}{32}
+\indexentry{tkzDefPoints\{0/0/O,2/2/A\}_1@\texttt  {\textbackslash tkzDefPoints\{0/0/O,2/2/A\}}|hyperpage}{32}
+\indexentry{tkzDefPoints_3@\texttt  {\textbackslash tkzDefPoints: options}!\texttt  {shift}|hyperpage}{32}
+\indexentry{tkzGetPoint_1@\texttt  {\textbackslash tkzGetPoint}|hyperpage}{33}
+\indexentry{tkzGetPoint{\ttfamily  \char `\{}{\color  {myblue}\meta  {ref}}{\ttfamily  \char `\}}_1@\texttt  {\textbackslash tkzGetPoint{\ttfamily  \char `\{}{\color  {myblue}\meta  {ref}}{\ttfamily  \char `\}}}|hyperpage}{33}
+\indexentry{tkzGetPoint_1@\texttt  {\textbackslash tkzGetPoint}|hyperpage}{33}
+\indexentry{tkzGetPoint_1@\texttt  {\textbackslash tkzGetPoint}|hyperpage}{33}
+\indexentry{tkzGetPoint_2@\texttt  {\textbackslash tkzGetPoint: arguments}!\texttt  {ref}|hyperpage}{33}
+\indexentry{tkzGetPoint\{M\} _1@\texttt  {\textbackslash tkzGetPoint\{M\} }|hyperpage}{33}
+\indexentry{tkzGetPoints{\ttfamily  \char `\{}{\color  {myblue}\meta  {ref1}}{\ttfamily  \char `\}}{\ttfamily  \char `\{}{\color  {myblue}\meta  {ref2}}{\ttfamily  \char `\}}_1@\texttt  {\textbackslash tkzGetPoints{\ttfamily  \char `\{}{\color  {myblue}\meta  {ref1}}{\ttfamily  \char `\}}{\ttfamily  \char `\{}{\color  {myblue}\meta  {ref2}}{\ttfamily  \char `\}}}|hyperpage}{33}
+\indexentry{tkzGetPoints_1@\texttt  {\textbackslash tkzGetPoints}|hyperpage}{33}
+\indexentry{tkzGetPoints_2@\texttt  {\textbackslash tkzGetPoints: arguments}!\texttt  {\{ref1,ref2\}}|hyperpage}{33}
+\indexentry{tkzGetPoints\{M,N\} _1@\texttt  {\textbackslash tkzGetPoints\{M,N\} }|hyperpage}{33}
+\indexentry{tkzInterCC_1@\texttt  {\textbackslash tkzInterCC}|hyperpage}{33}
+\indexentry{tkzGetFirstPoint{\ttfamily  \char `\{}{\color  {myblue}\meta  {ref1}}{\ttfamily  \char `\}}_1@\texttt  {\textbackslash tkzGetFirstPoint{\ttfamily  \char `\{}{\color  {myblue}\meta  {ref1}}{\ttfamily  \char `\}}}|hyperpage}{33}
+\indexentry{tkzGetFirstPoint_1@\texttt  {\textbackslash tkzGetFirstPoint}|hyperpage}{33}
+\indexentry{tkzGetFirstPoint_2@\texttt  {\textbackslash tkzGetFirstPoint: arguments}!\texttt  {ref1}|hyperpage}{33}
+\indexentry{tkzGetFirstPoint\{M\} _1@\texttt  {\textbackslash tkzGetFirstPoint\{M\} }|hyperpage}{33}
+\indexentry{tkzGetSecondPoint{\ttfamily  \char `\{}{\color  {myblue}\meta  {ref2}}{\ttfamily  \char `\}}_1@\texttt  {\textbackslash tkzGetSecondPoint{\ttfamily  \char `\{}{\color  {myblue}\meta  {ref2}}{\ttfamily  \char `\}}}|hyperpage}{33}
+\indexentry{tkzGetSecondPoint_1@\texttt  {\textbackslash tkzGetSecondPoint}|hyperpage}{33}
+\indexentry{tkzGetSecondPoint_2@\texttt  {\textbackslash tkzGetSecondPoint: arguments}!\texttt  {ref2}|hyperpage}{33}
+\indexentry{tkzGetSecondPoint\{M\} _1@\texttt  {\textbackslash tkzGetSecondPoint\{M\} }|hyperpage}{33}
+\indexentry{tkzGetPoint_1@\texttt  {\textbackslash tkzGetPoint}|hyperpage}{33}
+\indexentry{tkzGetLength_1@\texttt  {\textbackslash tkzGetLength}|hyperpage}{33}
+\indexentry{tkzGetLength{\ttfamily  \char `\{}{\color  {myblue}\meta  {name of a macro}}{\ttfamily  \char `\}}_1@\texttt  {\textbackslash tkzGetLength{\ttfamily  \char `\{}{\color  {myblue}\meta  {name of a macro}}{\ttfamily  \char `\}}}|hyperpage}{33}
+\indexentry{tkzGetLength_1@\texttt  {\textbackslash tkzGetLength}|hyperpage}{33}
+\indexentry{tkzGetLength_2@\texttt  {\textbackslash tkzGetLength: arguments}!\texttt  {name of a macro}|hyperpage}{34}
+\indexentry{tkzGetLength\{rAB\} \relax \@savsk \lastskip \@savsf \spacefactor \begingroup \catcode `\ 12\relax \catcode `\\12\relax \catcode `\$12\relax \catcode `\&12\relax \catcode `\#12\relax \catcode `\^12\relax \catcode `\_12\relax \catcode `\%12\relax \catcode `\~12\relax \catcode `\|12\relax \begingroup \let 34\relax \let \@unexpandable@protect \edef rm{\endgroup \write \@indexfile {\indexentry{rAB_1@\texttt  {\textbackslash rAB}|hyperpage}{34}}}rm\endgroup \relax \spacefactor \@savsf \ignorespaces \textbf  {\texttt  {\textcolor {MidnightBlue}{\textbackslash rAB}}} 给出以 cm 为单位的长度_1@\texttt  {\textbackslash tkzGetLength\{rAB\} \relax \@savsk \lastskip \@savsf \spacefactor \begingroup \catcode `\ 12\relax \catcode `\\12\relax \catcode `\$12\relax \catcode `\&12\relax \catcode `\#12\relax \catcode `\^12\relax \catcode `\_12\relax \catcode `\%12\relax \catcode `\~12\relax \catcode `\|12\relax \begingroup \let 34\relax \let \@unexpandable@protect \edef rm{\endgroup \write \@indexfile {\indexentry{rAB_1@\texttt  {\textbackslash rAB}|hyperpage}{34}}}rm\endgroup \relax \spacefactor \@savsf \ignorespaces \textbf  {\texttt  {\textcolor {MidnightBlue}{\textbackslash rAB}}} 给出以 cm 为单位的长度}|hyperpage}{34}
+\indexentry{rAB_1@\texttt  {\textbackslash rAB}|hyperpage}{34}
+\indexentry{tkzDefMidPoint_1@\texttt  {\textbackslash tkzDefMidPoint}|hyperpage}{34}
+\indexentry{tkzDefMidPoint{\ttfamily  (}{\color  {myblue}\meta  {pt1,pt2}}{\ttfamily  )}_1@\texttt  {\textbackslash tkzDefMidPoint{\ttfamily  (}{\color  {myblue}\meta  {pt1,pt2}}{\ttfamily  )}}|hyperpage}{34}
+\indexentry{tkzDefMidPoint_1@\texttt  {\textbackslash tkzDefMidPoint}|hyperpage}{34}
+\indexentry{tkzGetPoint_1@\texttt  {\textbackslash tkzGetPoint}|hyperpage}{34}
+\indexentry{tkzDefMidPoint_2@\texttt  {\textbackslash tkzDefMidPoint: arguments}!\texttt  {(pt1,pt2)}|hyperpage}{34}
+\indexentry{tkzDefMidPoint_1@\texttt  {\textbackslash tkzDefMidPoint}|hyperpage}{34}
+\indexentry{tkzDefPoint_1@\texttt  {\textbackslash tkzDefPoint}|hyperpage}{34}
+\indexentry{tkzDefGoldenRatio_1@\texttt  {\textbackslash tkzDefGoldenRatio}|hyperpage}{34}
+\indexentry{tkzDefGoldenRatio{\ttfamily  (}{\color  {myblue}\meta  {pt1,pt2}}{\ttfamily  )}_1@\texttt  {\textbackslash tkzDefGoldenRatio{\ttfamily  (}{\color  {myblue}\meta  {pt1,pt2}}{\ttfamily  )}}|hyperpage}{34}
+\indexentry{tkzDefGoldenRatio_1@\texttt  {\textbackslash tkzDefGoldenRatio}|hyperpage}{34}
+\indexentry{tkzDefGoldenRatio_2@\texttt  {\textbackslash tkzDefGoldenRatio: arguments}!\texttt  {(pt1,pt2)}|hyperpage}{34}
+\indexentry{tkzDefGoldenRatio(A,C)_1@\texttt  {\textbackslash tkzDefGoldenRatio(A,C)}|hyperpage}{34}
+\indexentry{tkzGetPoint_1@\texttt  {\textbackslash tkzGetPoint}|hyperpage}{34}
+\indexentry{tkzDefBarycentricPoint_1@\texttt  {\textbackslash tkzDefBarycentricPoint}|hyperpage}{35}
+\indexentry{tkzDefBarycentricPoint{\ttfamily  (}{\color  {myblue}\meta  {pt1=$\mitalpha _1$,pt2=$\mitalpha _2$,\dots  }}{\ttfamily  )}_1@\texttt  {\textbackslash tkzDefBarycentricPoint{\ttfamily  (}{\color  {myblue}\meta  {pt1=$\mitalpha _1$,pt2=$\mitalpha _2$,\dots  }}{\ttfamily  )}}|hyperpage}{35}
+\indexentry{tkzDefBarycentricPoint_1@\texttt  {\textbackslash tkzDefBarycentricPoint}|hyperpage}{35}
+\indexentry{tkzDefBarycentricPoint_2@\texttt  {\textbackslash tkzDefBarycentricPoint: arguments}!\texttt  {(pt1=$\mitalpha _1$,pt2=$\mitalpha _2$,\dots  )}|hyperpage}{35}
+\indexentry{tkzCentroid_1@\texttt  {\textbackslash tkzCentroid}|hyperpage}{36}
+\indexentry{tkzDefSimilitudeCenter_1@\texttt  {\textbackslash tkzDefSimilitudeCenter}|hyperpage}{36}
+\indexentry{tkzDefIntSimilitudeCenter_1@\texttt  {\textbackslash tkzDefIntSimilitudeCenter}|hyperpage}{36}
+\indexentry{tkzDefExtSimilitudeCenter_1@\texttt  {\textbackslash tkzDefExtSimilitudeCenter}|hyperpage}{36}
+\indexentry{tkzDefSimilitudeCenter{\ttfamily  [}{\color  {myblue}\meta  {options}}{\ttfamily  ]}{\ttfamily  (}{\color  {myblue}\meta  {O,A}}{\ttfamily  )}{\ttfamily  (}{\color  {myblue}\meta  {O',B}}{\ttfamily  )}_1@\texttt  {\textbackslash tkzDefSimilitudeCenter{\ttfamily  [}{\color  {myblue}\meta  {options}}{\ttfamily  ]}{\ttfamily  (}{\color  {myblue}\meta  {O,A}}{\ttfamily  )}{\ttfamily  (}{\color  {myblue}\meta  {O',B}}{\ttfamily  )}}|hyperpage}{36}
+\indexentry{tkzDefSimilitudeCenter_1@\texttt  {\textbackslash tkzDefSimilitudeCenter}|hyperpage}{36}
+\indexentry{tkzDefSimilitudeCenter_2@\texttt  {\textbackslash tkzDefSimilitudeCenter: arguments}!\texttt  {{\ttfamily  (}{\color  {myblue}\meta  {pt1,pt2}}{\ttfamily  )}{\ttfamily  (}{\color  {myblue}\meta  {pt3,pt4}}{\ttfamily  )}}|hyperpage}{36}
+\indexentry{tkzDefSimilitudeCenter_3@\texttt  {\textbackslash tkzDefSimilitudeCenter: options}!\texttt  {ext}|hyperpage}{37}
+\indexentry{tkzDefSimilitudeCenter_3@\texttt  {\textbackslash tkzDefSimilitudeCenter: options}!\texttt  {int}|hyperpage}{37}
+\indexentry{tkzDefBarycentricPoint_1@\texttt  {\textbackslash tkzDefBarycentricPoint}|hyperpage}{38}
+\indexentry{tkzDefHarmonic_1@\texttt  {\textbackslash tkzDefHarmonic}|hyperpage}{39}
+\indexentry{tkzDefHarmonic{\ttfamily  [}{\color  {myblue}\meta  {options}}{\ttfamily  ]}{\ttfamily  (}{\color  {myblue}\meta  {pt1,pt2,pt3}}{\ttfamily  )} or {\ttfamily  (}{\color  {myblue}\meta  {pt1,pt2,k}}{\ttfamily  )}_1@\texttt  {\textbackslash tkzDefHarmonic{\ttfamily  [}{\color  {myblue}\meta  {options}}{\ttfamily  ]}{\ttfamily  (}{\color  {myblue}\meta  {pt1,pt2,pt3}}{\ttfamily  )} or {\ttfamily  (}{\color  {myblue}\meta  {pt1,pt2,k}}{\ttfamily  )}}|hyperpage}{39}
+\indexentry{tkzDefHarmonic_1@\texttt  {\textbackslash tkzDefHarmonic}|hyperpage}{39}
+\indexentry{tkzDefHarmonic_3@\texttt  {\textbackslash tkzDefHarmonic: options}!\texttt  {both}|hyperpage}{39}
+\indexentry{tkzDefHarmonic_3@\texttt  {\textbackslash tkzDefHarmonic: options}!\texttt  {ext}|hyperpage}{39}
+\indexentry{tkzDefHarmonic_3@\texttt  {\textbackslash tkzDefHarmonic: options}!\texttt  {int}|hyperpage}{39}
+\indexentry{tkzDefEquiPoints_1@\texttt  {\textbackslash tkzDefEquiPoints}|hyperpage}{40}
+\indexentry{tkzDefEquiPoints{\ttfamily  [}{\color  {myblue}\meta  {local options}}{\ttfamily  ]}{\ttfamily  (}{\color  {myblue}\meta  {pt1,pt2}}{\ttfamily  )}_1@\texttt  {\textbackslash tkzDefEquiPoints{\ttfamily  [}{\color  {myblue}\meta  {local options}}{\ttfamily  ]}{\ttfamily  (}{\color  {myblue}\meta  {pt1,pt2}}{\ttfamily  )}}|hyperpage}{40}
+\indexentry{tkzDefEquiPoints_1@\texttt  {\textbackslash tkzDefEquiPoints}|hyperpage}{40}
+\indexentry{tkzDefEquiPoints_2@\texttt  {\textbackslash tkzDefEquiPoints: arguments}!\texttt  {(pt1,pt2)}|hyperpage}{40}
+\indexentry{tkzDefEquiPoints_3@\texttt  {\textbackslash tkzDefEquiPoints: options}!\texttt  {dist}|hyperpage}{40}
+\indexentry{tkzDefEquiPoints_3@\texttt  {\textbackslash tkzDefEquiPoints: options}!\texttt  {from=pt}|hyperpage}{40}
+\indexentry{tkzDefEquiPoints_3@\texttt  {\textbackslash tkzDefEquiPoints: options}!\texttt  {show}|hyperpage}{40}
+\indexentry{tkzDefEquiPoints_3@\texttt  {\textbackslash tkzDefEquiPoints: options}!\texttt  {/compass/delta}|hyperpage}{40}
+\indexentry{tkzDefEquiPoints_1@\texttt  {\textbackslash tkzDefEquiPoints}|hyperpage}{41}
+\indexentry{tkzDefMidArc{\ttfamily  (}{\color  {myblue}\meta  {pt1,pt2,pt3}}{\ttfamily  )}_1@\texttt  {\textbackslash tkzDefMidArc{\ttfamily  (}{\color  {myblue}\meta  {pt1,pt2,pt3}}{\ttfamily  )}}|hyperpage}{41}
+\indexentry{tkzDefMidArc_1@\texttt  {\textbackslash tkzDefMidArc}|hyperpage}{41}
+\indexentry{tkzDefMidArc_2@\texttt  {\textbackslash tkzDefMidArc: arguments}!\texttt  {$pt1,pt2,pt3$}|hyperpage}{41}
+\indexentry{tkzDefPointOnLine_1@\texttt  {\textbackslash tkzDefPointOnLine}|hyperpage}{42}
+\indexentry{tkzDefPointOnLine{\ttfamily  [}{\color  {myblue}\meta  {local options}}{\ttfamily  ]}{\ttfamily  (}{\color  {myblue}\meta  {A,B}}{\ttfamily  )}_1@\texttt  {\textbackslash tkzDefPointOnLine{\ttfamily  [}{\color  {myblue}\meta  {local options}}{\ttfamily  ]}{\ttfamily  (}{\color  {myblue}\meta  {A,B}}{\ttfamily  )}}|hyperpage}{42}
+\indexentry{tkzDefPointOnLine_1@\texttt  {\textbackslash tkzDefPointOnLine}|hyperpage}{42}
+\indexentry{tkzDefPointOnLine_2@\texttt  {\textbackslash tkzDefPointOnLine: arguments}!\texttt  {pt1,pt2}|hyperpage}{42}
+\indexentry{tkzDefPointOnLine_3@\texttt  {\textbackslash tkzDefPointOnLine: options}!\texttt  {pos=nb}|hyperpage}{42}
+\indexentry{tkzDefPointOnCircle_1@\texttt  {\textbackslash tkzDefPointOnCircle}|hyperpage}{43}
+\indexentry{tkzDefPointOnCircle{\ttfamily  [}{\color  {myblue}\meta  {local options}}{\ttfamily  ]}_1@\texttt  {\textbackslash tkzDefPointOnCircle{\ttfamily  [}{\color  {myblue}\meta  {local options}}{\ttfamily  ]}}|hyperpage}{43}
+\indexentry{tkzDefPointOnCircle_1@\texttt  {\textbackslash tkzDefPointOnCircle}|hyperpage}{43}
+\indexentry{tkzDefPointOnCircle_3@\texttt  {\textbackslash tkzDefPointOnCircle: options}!\texttt  {through}|hyperpage}{43}
+\indexentry{tkzDefPointOnCircle_3@\texttt  {\textbackslash tkzDefPointOnCircle: options}!\texttt  {R}|hyperpage}{43}
+\indexentry{rAp_1@\texttt  {\textbackslash rAp}|hyperpage}{43}
+\indexentry{tkzDefPointOnCircle_3@\texttt  {\textbackslash tkzDefPointOnCircle: options}!\texttt  {through in rad}|hyperpage}{43}
+\indexentry{tkzDefPointOnCircle_3@\texttt  {\textbackslash tkzDefPointOnCircle: options}!\texttt  {R in rad}|hyperpage}{43}
+\indexentry{rAp_1@\texttt  {\textbackslash rAp}|hyperpage}{43}
+\indexentry{tkzDefPointOnCircle_1@\texttt  {\textbackslash tkzDefPointOnCircle}|hyperpage}{44}
+\indexentry{tkzDefTriangleCenter_1@\texttt  {\textbackslash tkzDefTriangleCenter}|hyperpage}{45}
+\indexentry{tkzDefTriangleCenter{\ttfamily  [}{\color  {myblue}\meta  {local options}}{\ttfamily  ]}{\ttfamily  (}{\color  {myblue}\meta  {A,B,C}}{\ttfamily  )}_1@\texttt  {\textbackslash tkzDefTriangleCenter{\ttfamily  [}{\color  {myblue}\meta  {local options}}{\ttfamily  ]}{\ttfamily  (}{\color  {myblue}\meta  {A,B,C}}{\ttfamily  )}}|hyperpage}{45}
+\indexentry{tkzDefTriangleCenter_1@\texttt  {\textbackslash tkzDefTriangleCenter}|hyperpage}{45}
+\indexentry{tkzGetPoint_1@\texttt  {\textbackslash tkzGetPoint}|hyperpage}{45}
+\indexentry{tkzDefTriangleCenter_2@\texttt  {\textbackslash tkzDefTriangleCenter: arguments}!\texttt  {(pt1,pt2,pt3)}|hyperpage}{45}
+\indexentry{tkzDefTriangleCenter[ortho](B,C,A)_1@\texttt  {\textbackslash tkzDefTriangleCenter[ortho](B,C,A)}|hyperpage}{45}
+\indexentry{tkzDefTriangleCenter_3@\texttt  {\textbackslash tkzDefTriangleCenter: options}!\texttt  {ortho}|hyperpage}{45}
+\indexentry{tkzDefTriangleCenter_3@\texttt  {\textbackslash tkzDefTriangleCenter: options}!\texttt  {orthic}|hyperpage}{45}
+\indexentry{tkzDefTriangleCenter_3@\texttt  {\textbackslash tkzDefTriangleCenter: options}!\texttt  {centroid}|hyperpage}{45}
+\indexentry{tkzDefTriangleCenter_3@\texttt  {\textbackslash tkzDefTriangleCenter: options}!\texttt  {median}|hyperpage}{45}
+\indexentry{tkzDefTriangleCenter_3@\texttt  {\textbackslash tkzDefTriangleCenter: options}!\texttt  {circum}|hyperpage}{45}
+\indexentry{tkzDefTriangleCenter_3@\texttt  {\textbackslash tkzDefTriangleCenter: options}!\texttt  {in}|hyperpage}{45}
+\indexentry{tkzDefTriangleCenter_3@\texttt  {\textbackslash tkzDefTriangleCenter: options}!\texttt  {in}|hyperpage}{45}
+\indexentry{tkzDefTriangleCenter_3@\texttt  {\textbackslash tkzDefTriangleCenter: options}!\texttt  {ex}|hyperpage}{45}
+\indexentry{tkzDefTriangleCenter_3@\texttt  {\textbackslash tkzDefTriangleCenter: options}!\texttt  {euler}|hyperpage}{45}
+\indexentry{tkzDefTriangleCenter_3@\texttt  {\textbackslash tkzDefTriangleCenter: options}!\texttt  {gergonne}|hyperpage}{45}
+\indexentry{tkzDefTriangleCenter_3@\texttt  {\textbackslash tkzDefTriangleCenter: options}!\texttt  {symmedian}|hyperpage}{45}
+\indexentry{tkzDefTriangleCenter_3@\texttt  {\textbackslash tkzDefTriangleCenter: options}!\texttt  {lemoine}|hyperpage}{45}
+\indexentry{tkzDefTriangleCenter_3@\texttt  {\textbackslash tkzDefTriangleCenter: options}!\texttt  {grebe}|hyperpage}{45}
+\indexentry{tkzDefTriangleCenter_3@\texttt  {\textbackslash tkzDefTriangleCenter: options}!\texttt  {spieker}|hyperpage}{45}
+\indexentry{tkzDefTriangleCenter_3@\texttt  {\textbackslash tkzDefTriangleCenter: options}!\texttt  {nagel}|hyperpage}{45}
+\indexentry{tkzDefTriangleCenter_3@\texttt  {\textbackslash tkzDefTriangleCenter: options}!\texttt  {mittenpunkt}|hyperpage}{45}
+\indexentry{tkzDefTriangleCenter_3@\texttt  {\textbackslash tkzDefTriangleCenter: options}!\texttt  {feuerbach}|hyperpage}{45}
+\indexentry{tkzGetPoint_1@\texttt  {\textbackslash tkzGetPoint}|hyperpage}{47}
+\indexentry{tkzGetPoint_1@\texttt  {\textbackslash tkzGetPoint}|hyperpage}{47}
+\indexentry{tkzDefPointBy_1@\texttt  {\textbackslash tkzDefPointBy}|hyperpage}{52}
+\indexentry{tkzDefPointBy_1@\texttt  {\textbackslash tkzDefPointBy}|hyperpage}{52}
+\indexentry{tkzDefPointsBy_1@\texttt  {\textbackslash tkzDefPointsBy}|hyperpage}{52}
+\indexentry{tkzDefPointBy{\ttfamily  [}{\color  {myblue}\meta  {local options}}{\ttfamily  ]}{\ttfamily  (}{\color  {myblue}\meta  {pt}}{\ttfamily  )}_1@\texttt  {\textbackslash tkzDefPointBy{\ttfamily  [}{\color  {myblue}\meta  {local options}}{\ttfamily  ]}{\ttfamily  (}{\color  {myblue}\meta  {pt}}{\ttfamily  )}}|hyperpage}{52}
+\indexentry{tkzDefPointBy_1@\texttt  {\textbackslash tkzDefPointBy}|hyperpage}{52}
+\indexentry{tkzGetPoint\{M\}_1@\texttt  {\textbackslash tkzGetPoint\{M\}}|hyperpage}{52}
+\indexentry{tkzDefPointBy_2@\texttt  {\textbackslash tkzDefPointBy: arguments}!\texttt  {pt}|hyperpage}{53}
+\indexentry{tkzDefPointBy_3@\texttt  {\textbackslash tkzDefPointBy: options}!\texttt  {translation}|hyperpage}{53}
+\indexentry{tkzDefPointBy_3@\texttt  {\textbackslash tkzDefPointBy: options}!\texttt  {homothety}|hyperpage}{53}
+\indexentry{tkzDefPointBy_3@\texttt  {\textbackslash tkzDefPointBy: options}!\texttt  {reflection}|hyperpage}{53}
+\indexentry{tkzDefPointBy_3@\texttt  {\textbackslash tkzDefPointBy: options}!\texttt  {symmetry }|hyperpage}{53}
+\indexentry{tkzDefPointBy_3@\texttt  {\textbackslash tkzDefPointBy: options}!\texttt  {projection }|hyperpage}{53}
+\indexentry{tkzDefPointBy_3@\texttt  {\textbackslash tkzDefPointBy: options}!\texttt  {rotation }|hyperpage}{53}
+\indexentry{tkzDefPointBy_3@\texttt  {\textbackslash tkzDefPointBy: options}!\texttt  {rotation in rad}|hyperpage}{53}
+\indexentry{tkzDefPointBy_3@\texttt  {\textbackslash tkzDefPointBy: options}!\texttt  {rotation with nodes}|hyperpage}{53}
+\indexentry{tkzDefPointBy_3@\texttt  {\textbackslash tkzDefPointBy: options}!\texttt  {inversion}|hyperpage}{53}
+\indexentry{tkzDefPointBy_3@\texttt  {\textbackslash tkzDefPointBy: options}!\texttt  {inversion negative}|hyperpage}{53}
+\indexentry{tkzDefPointsBy_1@\texttt  {\textbackslash tkzDefPointsBy}|hyperpage}{62}
+\indexentry{tkzDefPointsBy{\ttfamily  [}{\color  {myblue}\meta  {local options}}{\ttfamily  ]}{\ttfamily  (}{\color  {myblue}\meta  {list of points}}{\ttfamily  )}{\ttfamily  \char `\{}{\color  {myblue}\meta  {list of points}}{\ttfamily  \char `\}}_1@\texttt  {\textbackslash tkzDefPointsBy{\ttfamily  [}{\color  {myblue}\meta  {local options}}{\ttfamily  ]}{\ttfamily  (}{\color  {myblue}\meta  {list of points}}{\ttfamily  )}{\ttfamily  \char `\{}{\color  {myblue}\meta  {list of points}}{\ttfamily  \char `\}}}|hyperpage}{62}
+\indexentry{tkzDefPointsBy_1@\texttt  {\textbackslash tkzDefPointsBy}|hyperpage}{62}
+\indexentry{tkzDefPointsBy_2@\texttt  {\textbackslash tkzDefPointsBy: arguments}!\texttt  {{\ttfamily  (}{\color  {myblue}\meta  {list of points}}{\ttfamily  )}{\ttfamily  \char `\{}{\color  {myblue}\meta  {list of pts}}{\ttfamily  \char `\}}}|hyperpage}{62}
+\indexentry{tkzDefPointsBy_3@\texttt  {\textbackslash tkzDefPointsBy: options}!\texttt  {translation = from \#1 to \#2}|hyperpage}{62}
+\indexentry{tkzDefPointsBy_3@\texttt  {\textbackslash tkzDefPointsBy: options}!\texttt  {homothety = center \#1 ratio \#2}|hyperpage}{62}
+\indexentry{tkzDefPointsBy_3@\texttt  {\textbackslash tkzDefPointsBy: options}!\texttt  {reflection = over \#1--\#2}|hyperpage}{62}
+\indexentry{tkzDefPointsBy_3@\texttt  {\textbackslash tkzDefPointsBy: options}!\texttt  {symmetry = center \#1}|hyperpage}{62}
+\indexentry{tkzDefPointsBy_3@\texttt  {\textbackslash tkzDefPointsBy: options}!\texttt  {projection = onto \#1--\#2}|hyperpage}{62}
+\indexentry{tkzDefPointsBy_3@\texttt  {\textbackslash tkzDefPointsBy: options}!\texttt  {rotation = center \#1 angle \#2}|hyperpage}{62}
+\indexentry{tkzDefPointsBy_3@\texttt  {\textbackslash tkzDefPointsBy: options}!\texttt  {rotation in rad = center \#1 angle \#2}|hyperpage}{62}
+\indexentry{tkzDefPointsBy_3@\texttt  {\textbackslash tkzDefPointsBy: options}!\texttt  {rotation with nodes = center \#1 from \#2 to \#3}|hyperpage}{62}
+\indexentry{tkzDefPointsBy_3@\texttt  {\textbackslash tkzDefPointsBy: options}!\texttt  {inversion = center \#1 through \#2}|hyperpage}{62}
+\indexentry{tkzDefPointsBy_3@\texttt  {\textbackslash tkzDefPointsBy: options}!\texttt  {inversion negative = center \#1 through \#2}|hyperpage}{62}
+\indexentry{tkzDefPointWith_1@\texttt  {\textbackslash tkzDefPointWith}|hyperpage}{63}
+\indexentry{tkzDefPointWith_1@\texttt  {\textbackslash tkzDefPointWith}|hyperpage}{63}
+\indexentry{tkzGetPoint_1@\texttt  {\textbackslash tkzGetPoint}|hyperpage}{63}
+\indexentry{tkzGetPoint_1@\texttt  {\textbackslash tkzGetPoint}|hyperpage}{63}
+\indexentry{tkzDefPointWith{\ttfamily  (}{\color  {myblue}\meta  {pt1,pt2}}{\ttfamily  )}_1@\texttt  {\textbackslash tkzDefPointWith{\ttfamily  (}{\color  {myblue}\meta  {pt1,pt2}}{\ttfamily  )}}|hyperpage}{64}
+\indexentry{tkzDefPointWith_1@\texttt  {\textbackslash tkzDefPointWith}|hyperpage}{64}
+\indexentry{tkzDefPointWith_2@\texttt  {\textbackslash tkzDefPointWith: arguments}!\texttt  {(pt1,pt2)}|hyperpage}{64}
+\indexentry{tkzGetPoint\{C\}_1@\texttt  {\textbackslash tkzGetPoint\{C\}}|hyperpage}{64}
+\indexentry{tkzGetPoint\{C\}_1@\texttt  {\textbackslash tkzGetPoint\{C\}}|hyperpage}{64}
+\indexentry{tkzDefPointWith_3@\texttt  {\textbackslash tkzDefPointWith: options}!\texttt  {orthogonal}|hyperpage}{64}
+\indexentry{tkzDefPointWith_3@\texttt  {\textbackslash tkzDefPointWith: options}!\texttt  {orthogonal normed}|hyperpage}{64}
+\indexentry{tkzDefPointWith_3@\texttt  {\textbackslash tkzDefPointWith: options}!\texttt  {linear}|hyperpage}{64}
+\indexentry{tkzDefPointWith_3@\texttt  {\textbackslash tkzDefPointWith: options}!\texttt  {linear normed}|hyperpage}{64}
+\indexentry{tkzDefPointWith_3@\texttt  {\textbackslash tkzDefPointWith: options}!\texttt  {colinear= at \#1}|hyperpage}{64}
+\indexentry{tkzDefPointWith_3@\texttt  {\textbackslash tkzDefPointWith: options}!\texttt  {colinear normed= at \#1}|hyperpage}{64}
+\indexentry{tkzDefPointWith_3@\texttt  {\textbackslash tkzDefPointWith: options}!\texttt  {K}|hyperpage}{64}
+\indexentry{tkzGetVectxy_1@\texttt  {\textbackslash tkzGetVectxy}|hyperpage}{69}
+\indexentry{tkzGetVectxy{\ttfamily  (}{\color  {myblue}\meta  {$A,B$}}{\ttfamily  )}\{{\color  {myblue}\meta  {text}}\}_1@\texttt  {\textbackslash tkzGetVectxy{\ttfamily  (}{\color  {myblue}\meta  {$A,B$}}{\ttfamily  )}\{{\color  {myblue}\meta  {text}}\}}|hyperpage}{69}
+\indexentry{tkzGetVectxy_1@\texttt  {\textbackslash tkzGetVectxy}|hyperpage}{69}
+\indexentry{tkzGetVectxy_2@\texttt  {\textbackslash tkzGetVectxy: arguments}!\texttt  {(point)\{name of macro\}}|hyperpage}{69}
+\indexentry{tkzGetVectxy_1@\texttt  {\textbackslash tkzGetVectxy}|hyperpage}{69}
+\indexentry{Vx_1@\texttt  {\textbackslash Vx}|hyperpage}{69}
+\indexentry{Vy_1@\texttt  {\textbackslash Vy}|hyperpage}{69}
+\indexentry{tkzGetVectxy_1@\texttt  {\textbackslash tkzGetVectxy}|hyperpage}{69}
+\indexentry{tkzGetRandPointOn_1@\texttt  {\textbackslash tkzGetRandPointOn}|hyperpage}{70}
+\indexentry{tkzDefRandPointOn{\ttfamily  [}{\color  {myblue}\meta  {local options}}{\ttfamily  ]}_1@\texttt  {\textbackslash tkzDefRandPointOn{\ttfamily  [}{\color  {myblue}\meta  {local options}}{\ttfamily  ]}}|hyperpage}{70}
+\indexentry{tkzDefRandPointOn_1@\texttt  {\textbackslash tkzDefRandPointOn}|hyperpage}{70}
+\indexentry{tkzGetPoint_1@\texttt  {\textbackslash tkzGetPoint}|hyperpage}{70}
+\indexentry{tkzDefRandPointOn_3@\texttt  {\textbackslash tkzDefRandPointOn: options}!\texttt  {rectangle=pt1 and pt2}|hyperpage}{70}
+\indexentry{tkzDefRandPointOn_3@\texttt  {\textbackslash tkzDefRandPointOn: options}!\texttt  {segment= pt1--pt2}|hyperpage}{70}
+\indexentry{tkzDefRandPointOn_3@\texttt  {\textbackslash tkzDefRandPointOn: options}!\texttt  {line=pt1--pt2}|hyperpage}{70}
+\indexentry{tkzDefRandPointOn_3@\texttt  {\textbackslash tkzDefRandPointOn: options}!\texttt  {circle =center pt1 radius dim}|hyperpage}{70}
+\indexentry{tkzDefRandPointOn_3@\texttt  {\textbackslash tkzDefRandPointOn: options}!\texttt  {circle through=center pt1 through pt2}|hyperpage}{70}
+\indexentry{tkzDefRandPointOn_3@\texttt  {\textbackslash tkzDefRandPointOn: options}!\texttt  {disk through=center pt1 through pt2}|hyperpage}{70}
+\indexentry{tkzDefLine{\ttfamily  [}{\color  {myblue}\meta  {local options}}{\ttfamily  ]}{\ttfamily  (}{\color  {myblue}\meta  {pt1,pt2}}{\ttfamily  )} or {\ttfamily  (}{\color  {myblue}\meta  {pt1,pt2,pt3}}{\ttfamily  )}_1@\texttt  {\textbackslash tkzDefLine{\ttfamily  [}{\color  {myblue}\meta  {local options}}{\ttfamily  ]}{\ttfamily  (}{\color  {myblue}\meta  {pt1,pt2}}{\ttfamily  )} or {\ttfamily  (}{\color  {myblue}\meta  {pt1,pt2,pt3}}{\ttfamily  )}}|hyperpage}{73}
+\indexentry{tkzDefLine_1@\texttt  {\textbackslash tkzDefLine}|hyperpage}{73}
+\indexentry{tkzGetPoint_1@\texttt  {\textbackslash tkzGetPoint}|hyperpage}{73}
+\indexentry{tkzGetPoints_1@\texttt  {\textbackslash tkzGetPoints}|hyperpage}{73}
+\indexentry{tkzDefLine_2@\texttt  {\textbackslash tkzDefLine: arguments}!\texttt  {{\ttfamily  (}{\color  {myblue}\meta  {pt1,pt2}}{\ttfamily  )}}|hyperpage}{73}
+\indexentry{tkzDefLine_2@\texttt  {\textbackslash tkzDefLine: arguments}!\texttt  {{\ttfamily  (}{\color  {myblue}\meta  {pt1,pt2,pt3}}{\ttfamily  )}}|hyperpage}{73}
+\indexentry{tkzDefLine_2@\texttt  {\textbackslash tkzDefLine: arguments}!\texttt  {{\ttfamily  (}{\color  {myblue}\meta  {pt1,pt2,pt3}}{\ttfamily  )}}|hyperpage}{73}
+\indexentry{tkzDefLine_2@\texttt  {\textbackslash tkzDefLine: arguments}!\texttt  {{\ttfamily  (}{\color  {myblue}\meta  {pt1}}{\ttfamily  )}}|hyperpage}{73}
+\indexentry{tkzDefLine_2@\texttt  {\textbackslash tkzDefLine: arguments}!\texttt  {{\ttfamily  (}{\color  {myblue}\meta  {pt1,pt2}}{\ttfamily  )}}|hyperpage}{73}
+\indexentry{tkzDefLine_3@\texttt  {\textbackslash tkzDefLine: options}!\texttt  {mediator}|hyperpage}{73}
+\indexentry{tkzDefLine_3@\texttt  {\textbackslash tkzDefLine: options}!\texttt  {perpendicular=through\dots  }|hyperpage}{73}
+\indexentry{tkzDefLine_3@\texttt  {\textbackslash tkzDefLine: options}!\texttt  {orthogonal=through\dots  }|hyperpage}{73}
+\indexentry{tkzDefLine_3@\texttt  {\textbackslash tkzDefLine: options}!\texttt  {parallel=through\dots  }|hyperpage}{73}
+\indexentry{tkzDefLine_3@\texttt  {\textbackslash tkzDefLine: options}!\texttt  {bisector}|hyperpage}{73}
+\indexentry{tkzDefLine_3@\texttt  {\textbackslash tkzDefLine: options}!\texttt  {bisector out}|hyperpage}{73}
+\indexentry{tkzDefLine_3@\texttt  {\textbackslash tkzDefLine: options}!\texttt  {symmedian}|hyperpage}{73}
+\indexentry{tkzDefLine_3@\texttt  {\textbackslash tkzDefLine: options}!\texttt  {altitude}|hyperpage}{73}
+\indexentry{tkzDefLine_3@\texttt  {\textbackslash tkzDefLine: options}!\texttt  {euler}|hyperpage}{73}
+\indexentry{tkzDefLine_3@\texttt  {\textbackslash tkzDefLine: options}!\texttt  {tangent at}|hyperpage}{73}
+\indexentry{tkzDefLine_3@\texttt  {\textbackslash tkzDefLine: options}!\texttt  {tangent from}|hyperpage}{73}
+\indexentry{tkzDefLine_3@\texttt  {\textbackslash tkzDefLine: options}!\texttt  {K}|hyperpage}{73}
+\indexentry{tkzDefLine_3@\texttt  {\textbackslash tkzDefLine: options}!\texttt  {normed}|hyperpage}{73}
+\indexentry{tkzDefTriangle_1@\texttt  {\textbackslash tkzDefTriangle}|hyperpage}{79}
+\indexentry{tkzDefTriangle{\ttfamily  [}{\color  {myblue}\meta  {local options}}{\ttfamily  ]}{\ttfamily  (}{\color  {myblue}\meta  {A,B}}{\ttfamily  )}_1@\texttt  {\textbackslash tkzDefTriangle{\ttfamily  [}{\color  {myblue}\meta  {local options}}{\ttfamily  ]}{\ttfamily  (}{\color  {myblue}\meta  {A,B}}{\ttfamily  )}}|hyperpage}{80}
+\indexentry{tkzDefTriangle_1@\texttt  {\textbackslash tkzDefTriangle}|hyperpage}{80}
+\indexentry{tkzGetPoint_1@\texttt  {\textbackslash tkzGetPoint}|hyperpage}{80}
+\indexentry{tkzDefTriangle_3@\texttt  {\textbackslash tkzDefTriangle: options}!\texttt  {two angles= \#1 and \#2}|hyperpage}{80}
+\indexentry{tkzDefTriangle_3@\texttt  {\textbackslash tkzDefTriangle: options}!\texttt  {equilateral}|hyperpage}{80}
+\indexentry{tkzDefTriangle_3@\texttt  {\textbackslash tkzDefTriangle: options}!\texttt  {half}|hyperpage}{80}
+\indexentry{tkzDefTriangle_3@\texttt  {\textbackslash tkzDefTriangle: options}!\texttt  {isosceles right}|hyperpage}{80}
+\indexentry{tkzDefTriangle_3@\texttt  {\textbackslash tkzDefTriangle: options}!\texttt  {pythagore}|hyperpage}{80}
+\indexentry{tkzDefTriangle_3@\texttt  {\textbackslash tkzDefTriangle: options}!\texttt  {pythagoras}|hyperpage}{80}
+\indexentry{tkzDefTriangle_3@\texttt  {\textbackslash tkzDefTriangle: options}!\texttt  {egyptian}|hyperpage}{80}
+\indexentry{tkzDefTriangle_3@\texttt  {\textbackslash tkzDefTriangle: options}!\texttt  {school}|hyperpage}{80}
+\indexentry{tkzDefTriangle_3@\texttt  {\textbackslash tkzDefTriangle: options}!\texttt  {gold}|hyperpage}{80}
+\indexentry{tkzDefTriangle_3@\texttt  {\textbackslash tkzDefTriangle: options}!\texttt  {euclid}|hyperpage}{80}
+\indexentry{tkzDefTriangle_3@\texttt  {\textbackslash tkzDefTriangle: options}!\texttt  {golden}|hyperpage}{80}
+\indexentry{tkzDefTriangle_3@\texttt  {\textbackslash tkzDefTriangle: options}!\texttt  {sublime}|hyperpage}{80}
+\indexentry{tkzDefTriangle_3@\texttt  {\textbackslash tkzDefTriangle: options}!\texttt  {cheops}|hyperpage}{80}
+\indexentry{tkzDefTriangle_3@\texttt  {\textbackslash tkzDefTriangle: options}!\texttt  {swap}|hyperpage}{80}
+\indexentry{tkzGetPoint_1@\texttt  {\textbackslash tkzGetPoint}|hyperpage}{80}
+\indexentry{tkzDefSpcTriangle_1@\texttt  {\textbackslash tkzDefSpcTriangle}|hyperpage}{84}
+\indexentry{tkzDefSpcTriangle{\ttfamily  [}{\color  {myblue}\meta  {local options}}{\ttfamily  ]}{\ttfamily  (}{\color  {myblue}\meta  {p1,p2,p3}}{\ttfamily  )}{\ttfamily  \char `\{}{\color  {myblue}\meta  {r1,r2,r3}}{\ttfamily  \char `\}}_1@\texttt  {\textbackslash tkzDefSpcTriangle{\ttfamily  [}{\color  {myblue}\meta  {local options}}{\ttfamily  ]}{\ttfamily  (}{\color  {myblue}\meta  {p1,p2,p3}}{\ttfamily  )}{\ttfamily  \char `\{}{\color  {myblue}\meta  {r1,r2,r3}}{\ttfamily  \char `\}}}|hyperpage}{84}
+\indexentry{tkzDefSpcTriangle_1@\texttt  {\textbackslash tkzDefSpcTriangle}|hyperpage}{84}
+\indexentry{tkzDefSpcTriangle_3@\texttt  {\textbackslash tkzDefSpcTriangle: options}!\texttt  {orthic}|hyperpage}{84}
+\indexentry{tkzDefSpcTriangle_3@\texttt  {\textbackslash tkzDefSpcTriangle: options}!\texttt  {centroid or medial}|hyperpage}{84}
+\indexentry{tkzDefSpcTriangle_3@\texttt  {\textbackslash tkzDefSpcTriangle: options}!\texttt  {in or incentral}|hyperpage}{84}
+\indexentry{tkzDefSpcTriangle_3@\texttt  {\textbackslash tkzDefSpcTriangle: options}!\texttt  {ex or excentral}|hyperpage}{84}
+\indexentry{tkzDefSpcTriangle_3@\texttt  {\textbackslash tkzDefSpcTriangle: options}!\texttt  {extouch}|hyperpage}{84}
+\indexentry{tkzDefSpcTriangle_3@\texttt  {\textbackslash tkzDefSpcTriangle: options}!\texttt  {intouch or contact}|hyperpage}{84}
+\indexentry{tkzDefSpcTriangle_3@\texttt  {\textbackslash tkzDefSpcTriangle: options}!\texttt  {}|hyperpage}{84}
+\indexentry{tkzDefSpcTriangle_3@\texttt  {\textbackslash tkzDefSpcTriangle: options}!\texttt  {euler}|hyperpage}{84}
+\indexentry{tkzDefSpcTriangle_3@\texttt  {\textbackslash tkzDefSpcTriangle: options}!\texttt  {symmedial}|hyperpage}{84}
+\indexentry{tkzDefSpcTriangle_3@\texttt  {\textbackslash tkzDefSpcTriangle: options}!\texttt  {tangential}|hyperpage}{84}
+\indexentry{tkzDefSpcTriangle_3@\texttt  {\textbackslash tkzDefSpcTriangle: options}!\texttt  {feuerbach}|hyperpage}{84}
+\indexentry{tkzDefSpcTriangle_3@\texttt  {\textbackslash tkzDefSpcTriangle: options}!\texttt  {}|hyperpage}{84}
+\indexentry{tkzDefSpcTriangle_3@\texttt  {\textbackslash tkzDefSpcTriangle: options}!\texttt  {name}|hyperpage}{84}
+\indexentry{tkzDefSpcTriangle[medial,name=M](A,B,C)\{\_A,\_B,\_C\}_1@\texttt  {\textbackslash tkzDefSpcTriangle[medial,name=M](A,B,C)\{\_A,\_B,\_C\}}|hyperpage}{84}
+\indexentry{tkzDefSpcTriangle[medial](A,B,C)\{a,b,c\}_1@\texttt  {\textbackslash tkzDefSpcTriangle[medial](A,B,C)\{a,b,c\}}|hyperpage}{84}
+\indexentry{tkzDefSpcTriangle[medial,name=M\_](A,B,C)\{A,B,C\}_1@\texttt  {\textbackslash tkzDefSpcTriangle[medial,name=M\_](A,B,C)\{A,B,C\}}|hyperpage}{84}
+\indexentry{tkzPermute{\ttfamily  (}{\color  {myblue}\meta  {$pt1$,$pt2$,$pt3$}}{\ttfamily  )}_1@\texttt  {\textbackslash tkzPermute{\ttfamily  (}{\color  {myblue}\meta  {$pt1$,$pt2$,$pt3$}}{\ttfamily  )}}|hyperpage}{93}
+\indexentry{tkzPermute_1@\texttt  {\textbackslash tkzPermute}|hyperpage}{93}
+\indexentry{tkzPermute_2@\texttt  {\textbackslash tkzPermute: arguments}!\texttt  {(pt1,pt2,pt3)}|hyperpage}{93}
+\indexentry{tkzPermute_1@\texttt  {\textbackslash tkzPermute}|hyperpage}{93}
+\indexentry{tkzDefSquare{\ttfamily  (}{\color  {myblue}\meta  {pt1,pt2}}{\ttfamily  )}_1@\texttt  {\textbackslash tkzDefSquare{\ttfamily  (}{\color  {myblue}\meta  {pt1,pt2}}{\ttfamily  )}}|hyperpage}{94}
+\indexentry{tkzDefSquare_1@\texttt  {\textbackslash tkzDefSquare}|hyperpage}{94}
+\indexentry{tkzGetPoints_1@\texttt  {\textbackslash tkzGetPoints}|hyperpage}{94}
+\indexentry{tkzDefSquare_2@\texttt  {\textbackslash tkzDefSquare: arguments}!\texttt  {{\ttfamily  (}{\color  {myblue}\meta  {pt1,pt2}}{\ttfamily  )}}|hyperpage}{94}
+\indexentry{tkzDefSquare_1@\texttt  {\textbackslash tkzDefSquare}|hyperpage}{94}
+\indexentry{tkzDefSquare_1@\texttt  {\textbackslash tkzDefSquare}|hyperpage}{94}
+\indexentry{tkzGetFirstPoint_1@\texttt  {\textbackslash tkzGetFirstPoint}|hyperpage}{94}
+\indexentry{tkzGetSecondPoint_1@\texttt  {\textbackslash tkzGetSecondPoint}|hyperpage}{94}
+\indexentry{tkzDefSquare_1@\texttt  {\textbackslash tkzDefSquare}|hyperpage}{95}
+\indexentry{tkzDefSquare_1@\texttt  {\textbackslash tkzDefSquare}|hyperpage}{95}
+\indexentry{tkzDefRectangle{\ttfamily  (}{\color  {myblue}\meta  {pt1,pt2}}{\ttfamily  )}_1@\texttt  {\textbackslash tkzDefRectangle{\ttfamily  (}{\color  {myblue}\meta  {pt1,pt2}}{\ttfamily  )}}|hyperpage}{95}
+\indexentry{tkzDefRectangle_1@\texttt  {\textbackslash tkzDefRectangle}|hyperpage}{95}
+\indexentry{tkzGetPoints_1@\texttt  {\textbackslash tkzGetPoints}|hyperpage}{95}
+\indexentry{tkzDefRectangle_2@\texttt  {\textbackslash tkzDefRectangle: arguments}!\texttt  {{\ttfamily  (}{\color  {myblue}\meta  {pt1,pt2}}{\ttfamily  )}}|hyperpage}{95}
+\indexentry{tkzDefRectangle_1@\texttt  {\textbackslash tkzDefRectangle}|hyperpage}{95}
+\indexentry{tkzDefParallelogram{\ttfamily  (}{\color  {myblue}\meta  {pt1,pt2,pt3}}{\ttfamily  )}_1@\texttt  {\textbackslash tkzDefParallelogram{\ttfamily  (}{\color  {myblue}\meta  {pt1,pt2,pt3}}{\ttfamily  )}}|hyperpage}{96}
+\indexentry{tkzDefParallelogram_1@\texttt  {\textbackslash tkzDefParallelogram}|hyperpage}{96}
+\indexentry{tkzDefParallelogram_2@\texttt  {\textbackslash tkzDefParallelogram: arguments}!\texttt  {{\ttfamily  (}{\color  {myblue}\meta  {pt1,pt2,pt3}}{\ttfamily  )}}|hyperpage}{96}
+\indexentry{tkzGetPoint_1@\texttt  {\textbackslash tkzGetPoint}|hyperpage}{96}
+\indexentry{tkzDefGoldenRectangle{\ttfamily  (}{\color  {myblue}\meta  {point,point}}{\ttfamily  )}_1@\texttt  {\textbackslash tkzDefGoldenRectangle{\ttfamily  (}{\color  {myblue}\meta  {point,point}}{\ttfamily  )}}|hyperpage}{96}
+\indexentry{tkzDefGoldenRectangle_1@\texttt  {\textbackslash tkzDefGoldenRectangle}|hyperpage}{96}
+\indexentry{tkzGetPoints_1@\texttt  {\textbackslash tkzGetPoints}|hyperpage}{96}
+\indexentry{tkzDefGoldenRectangle_2@\texttt  {\textbackslash tkzDefGoldenRectangle: arguments}!\texttt  {{\ttfamily  (}{\color  {myblue}\meta  {pt1,pt2}}{\ttfamily  )}}|hyperpage}{96}
+\indexentry{tkzDefGoldenRectangle_1@\texttt  {\textbackslash tkzDefGoldenRectangle}|hyperpage}{96}
+\indexentry{tkzDefGoldRectangle_1@\texttt  {\textbackslash tkzDefGoldRectangle}|hyperpage}{96}
+\indexentry{tkzDefRegPolygon{\ttfamily  [}{\color  {myblue}\meta  {local options}}{\ttfamily  ]}{\ttfamily  (}{\color  {myblue}\meta  {pt1,pt2}}{\ttfamily  )}_1@\texttt  {\textbackslash tkzDefRegPolygon{\ttfamily  [}{\color  {myblue}\meta  {local options}}{\ttfamily  ]}{\ttfamily  (}{\color  {myblue}\meta  {pt1,pt2}}{\ttfamily  )}}|hyperpage}{97}
+\indexentry{tkzDefRegPolygon_1@\texttt  {\textbackslash tkzDefRegPolygon}|hyperpage}{97}
+\indexentry{tkzDefRegPolygon_2@\texttt  {\textbackslash tkzDefRegPolygon: arguments}!\texttt  {{\ttfamily  (}{\color  {myblue}\meta  {pt1,pt2}}{\ttfamily  )}}|hyperpage}{97}
+\indexentry{tkzDefRegPolygon_2@\texttt  {\textbackslash tkzDefRegPolygon: arguments}!\texttt  {{\ttfamily  (}{\color  {myblue}\meta  {pt1,pt2}}{\ttfamily  )}}|hyperpage}{97}
+\indexentry{tkzDefRegPolygon_3@\texttt  {\textbackslash tkzDefRegPolygon: options}!\texttt  {name}|hyperpage}{98}
+\indexentry{tkzDefRegPolygon_3@\texttt  {\textbackslash tkzDefRegPolygon: options}!\texttt  {sides}|hyperpage}{98}
+\indexentry{tkzDefRegPolygon_3@\texttt  {\textbackslash tkzDefRegPolygon: options}!\texttt  {center}|hyperpage}{98}
+\indexentry{tkzDefRegPolygon_3@\texttt  {\textbackslash tkzDefRegPolygon: options}!\texttt  {side}|hyperpage}{98}
+\indexentry{tkzDefRegPolygon_3@\texttt  {\textbackslash tkzDefRegPolygon: options}!\texttt  {Options TikZ}|hyperpage}{98}
+\indexentry{tkzDefCircle_1@\texttt  {\textbackslash tkzDefCircle}|hyperpage}{100}
+\indexentry{tkzGetPoint_1@\texttt  {\textbackslash tkzGetPoint}|hyperpage}{100}
+\indexentry{tkzGetLength_1@\texttt  {\textbackslash tkzGetLength}|hyperpage}{100}
+\indexentry{tkzDrawCircle_1@\texttt  {\textbackslash tkzDrawCircle}|hyperpage}{100}
+\indexentry{tkzFillCircle_1@\texttt  {\textbackslash tkzFillCircle}|hyperpage}{100}
+\indexentry{tkzClipCircle_1@\texttt  {\textbackslash tkzClipCircle}|hyperpage}{100}
+\indexentry{tkzLabelCircle_1@\texttt  {\textbackslash tkzLabelCircle}|hyperpage}{100}
+\indexentry{tkzDefCircle_1@\texttt  {\textbackslash tkzDefCircle}|hyperpage}{100}
+\indexentry{tkzDefCircle{\ttfamily  [}{\color  {myblue}\meta  {local options}}{\ttfamily  ]}{\ttfamily  (}{\color  {myblue}\meta  {A,B}}{\ttfamily  )} or {\ttfamily  (}{\color  {myblue}\meta  {A,B,C}}{\ttfamily  )}_1@\texttt  {\textbackslash tkzDefCircle{\ttfamily  [}{\color  {myblue}\meta  {local options}}{\ttfamily  ]}{\ttfamily  (}{\color  {myblue}\meta  {A,B}}{\ttfamily  )} or {\ttfamily  (}{\color  {myblue}\meta  {A,B,C}}{\ttfamily  )}}|hyperpage}{100}
+\indexentry{tkzDefCircle_1@\texttt  {\textbackslash tkzDefCircle}|hyperpage}{100}
+\indexentry{tkzGetPoints_1@\texttt  {\textbackslash tkzGetPoints}|hyperpage}{100}
+\indexentry{tkzGetLength_1@\texttt  {\textbackslash tkzGetLength}|hyperpage}{100}
+\indexentry{tkzDefCircle_2@\texttt  {\textbackslash tkzDefCircle: arguments}!\texttt  {{\ttfamily  (}{\color  {myblue}\meta  {pt1,pt2}}{\ttfamily  )} or {\ttfamily  (}{\color  {myblue}\meta  {pt1,pt2,pt3}}{\ttfamily  )}}|hyperpage}{100}
+\indexentry{tkzDefCircle_3@\texttt  {\textbackslash tkzDefCircle: options}!\texttt  {R}|hyperpage}{100}
+\indexentry{tkzDefCircle_3@\texttt  {\textbackslash tkzDefCircle: options}!\texttt  {diameter}|hyperpage}{100}
+\indexentry{tkzDefCircle_3@\texttt  {\textbackslash tkzDefCircle: options}!\texttt  {circum}|hyperpage}{100}
+\indexentry{tkzDefCircle_3@\texttt  {\textbackslash tkzDefCircle: options}!\texttt  {in}|hyperpage}{100}
+\indexentry{tkzDefCircle_3@\texttt  {\textbackslash tkzDefCircle: options}!\texttt  {ex}|hyperpage}{100}
+\indexentry{tkzDefCircle_3@\texttt  {\textbackslash tkzDefCircle: options}!\texttt  {euler or nine}|hyperpage}{100}
+\indexentry{tkzDefCircle_3@\texttt  {\textbackslash tkzDefCircle: options}!\texttt  {spieker}|hyperpage}{100}
+\indexentry{tkzDefCircle_3@\texttt  {\textbackslash tkzDefCircle: options}!\texttt  {apollonius}|hyperpage}{100}
+\indexentry{tkzDefCircle_3@\texttt  {\textbackslash tkzDefCircle: options}!\texttt  {orthogonal from}|hyperpage}{100}
+\indexentry{tkzDefCircle_3@\texttt  {\textbackslash tkzDefCircle: options}!\texttt  {orthogonal through}|hyperpage}{100}
+\indexentry{tkzDefCircle_3@\texttt  {\textbackslash tkzDefCircle: options}!\texttt  {K}|hyperpage}{100}
+\indexentry{tkzGetPoint_1@\texttt  {\textbackslash tkzGetPoint}|hyperpage}{101}
+\indexentry{tkzGetFirstPoint\{Jb\}_1@\texttt  {\textbackslash tkzGetFirstPoint\{Jb\}}|hyperpage}{103}
+\indexentry{tkzGetSecondPoint\{Tb\}_1@\texttt  {\textbackslash tkzGetSecondPoint\{Tb\}}|hyperpage}{103}
+\indexentry{tkzDefProjExcenter{\ttfamily  [}{\color  {myblue}\meta  {local options}}{\ttfamily  ]}{\ttfamily  (}{\color  {myblue}\meta  {A,B,C}}{\ttfamily  )}{\ttfamily  (}{\color  {myblue}\meta  {a,b,c}}{\ttfamily  )}{\ttfamily  \char `\{}{\color  {myblue}\meta  {X,Y,Z}}{\ttfamily  \char `\}}_1@\texttt  {\textbackslash tkzDefProjExcenter{\ttfamily  [}{\color  {myblue}\meta  {local options}}{\ttfamily  ]}{\ttfamily  (}{\color  {myblue}\meta  {A,B,C}}{\ttfamily  )}{\ttfamily  (}{\color  {myblue}\meta  {a,b,c}}{\ttfamily  )}{\ttfamily  \char `\{}{\color  {myblue}\meta  {X,Y,Z}}{\ttfamily  \char `\}}}|hyperpage}{104}
+\indexentry{tkzDefProjExcenter_1@\texttt  {\textbackslash tkzDefProjExcenter}|hyperpage}{104}
+\indexentry{tkzDefProjExcenter[name=J](A,B,C)(a,b,c)\{Y,Z,X\}_1@\texttt  {\textbackslash tkzDefProjExcenter[name=J](A,B,C)(a,b,c)\{Y,Z,X\}}|hyperpage}{104}
+\indexentry{tkzDefProjExcenter_3@\texttt  {\textbackslash tkzDefProjExcenter: options}!\texttt  {name}|hyperpage}{104}
+\indexentry{tkzDefProjExcenter_2@\texttt  {\textbackslash tkzDefProjExcenter: arguments}!\texttt  {(pt1=$\mitalpha _1$,pt2=$\mitalpha _2$,\dots  )}|hyperpage}{104}
+\indexentry{tkzGetPoints\{z1\}\{z2\}_1@\texttt  {\textbackslash tkzGetPoints\{z1\}\{z2\}}|hyperpage}{106}
+\indexentry{tkzDefCircleBy_1@\texttt  {\textbackslash tkzDefCircleBy}|hyperpage}{107}
+\indexentry{tkzGetPoints_1@\texttt  {\textbackslash tkzGetPoints}|hyperpage}{107}
+\indexentry{tkzDefCircleBy{\ttfamily  [}{\color  {myblue}\meta  {local options}}{\ttfamily  ]}{\ttfamily  (}{\color  {myblue}\meta  {pt1,pt2}}{\ttfamily  )}_1@\texttt  {\textbackslash tkzDefCircleBy{\ttfamily  [}{\color  {myblue}\meta  {local options}}{\ttfamily  ]}{\ttfamily  (}{\color  {myblue}\meta  {pt1,pt2}}{\ttfamily  )}}|hyperpage}{107}
+\indexentry{tkzDefCircleBy_1@\texttt  {\textbackslash tkzDefCircleBy}|hyperpage}{107}
+\indexentry{tkzGetPoints\{O'\}\{M'\}_1@\texttt  {\textbackslash tkzGetPoints\{O'\}\{M'\}}|hyperpage}{107}
+\indexentry{tkzDefCircleBy_2@\texttt  {\textbackslash tkzDefCircleBy: arguments}!\texttt  {pt1,pt2}|hyperpage}{107}
+\indexentry{tkzDefCircleBy_3@\texttt  {\textbackslash tkzDefCircleBy: options}!\texttt  {translation}|hyperpage}{107}
+\indexentry{tkzDefCircleBy_3@\texttt  {\textbackslash tkzDefCircleBy: options}!\texttt  {homothety}|hyperpage}{107}
+\indexentry{tkzDefCircleBy_3@\texttt  {\textbackslash tkzDefCircleBy: options}!\texttt  {reflection}|hyperpage}{107}
+\indexentry{tkzDefCircleBy_3@\texttt  {\textbackslash tkzDefCircleBy: options}!\texttt  {symmetry }|hyperpage}{107}
+\indexentry{tkzDefCircleBy_3@\texttt  {\textbackslash tkzDefCircleBy: options}!\texttt  {projection }|hyperpage}{107}
+\indexentry{tkzDefCircleBy_3@\texttt  {\textbackslash tkzDefCircleBy: options}!\texttt  {rotation }|hyperpage}{107}
+\indexentry{tkzDefCircleBy_3@\texttt  {\textbackslash tkzDefCircleBy: options}!\texttt  {inversion}|hyperpage}{107}
+\indexentry{tkzTestInterLC_1@\texttt  {\textbackslash tkzTestInterLC}|hyperpage}{111}
+\indexentry{tkzTestInterCC_1@\texttt  {\textbackslash tkzTestInterCC}|hyperpage}{111}
+\indexentry{tkzInterLL_1@\texttt  {\textbackslash tkzInterLL}|hyperpage}{111}
+\indexentry{tkzInterLL{\ttfamily  (}{\color  {myblue}\meta  {$A,B$}}{\ttfamily  )}{\ttfamily  (}{\color  {myblue}\meta  {$C,D$}}{\ttfamily  )}_1@\texttt  {\textbackslash tkzInterLL{\ttfamily  (}{\color  {myblue}\meta  {$A,B$}}{\ttfamily  )}{\ttfamily  (}{\color  {myblue}\meta  {$C,D$}}{\ttfamily  )}}|hyperpage}{111}
+\indexentry{tkzInterLL_1@\texttt  {\textbackslash tkzInterLL}|hyperpage}{111}
+\indexentry{tkzGetPoint_1@\texttt  {\textbackslash tkzGetPoint}|hyperpage}{111}
+\indexentry{tkzInterLC_1@\texttt  {\textbackslash tkzInterLC}|hyperpage}{111}
+\indexentry{tkzInterLC{\ttfamily  [}{\color  {myblue}\meta  {options}}{\ttfamily  ]}{\ttfamily  (}{\color  {myblue}\meta  {$A,B$}}{\ttfamily  )}{\ttfamily  (}{\color  {myblue}\meta  {$O,C$}}{\ttfamily  )} or {\ttfamily  (}{\color  {myblue}\meta  {$O,r$}}{\ttfamily  )} or {\ttfamily  (}{\color  {myblue}\meta  {$O,C,D$}}{\ttfamily  )}_1@\texttt  {\textbackslash tkzInterLC{\ttfamily  [}{\color  {myblue}\meta  {options}}{\ttfamily  ]}{\ttfamily  (}{\color  {myblue}\meta  {$A,B$}}{\ttfamily  )}{\ttfamily  (}{\color  {myblue}\meta  {$O,C$}}{\ttfamily  )} or {\ttfamily  (}{\color  {myblue}\meta  {$O,r$}}{\ttfamily  )} or {\ttfamily  (}{\color  {myblue}\meta  {$O,C,D$}}{\ttfamily  )}}|hyperpage}{111}
+\indexentry{tkzInterLC_1@\texttt  {\textbackslash tkzInterLC}|hyperpage}{111}
+\indexentry{tkzInterLC_3@\texttt  {\textbackslash tkzInterLC: options}!\texttt  {N}|hyperpage}{111}
+\indexentry{tkzInterLC_3@\texttt  {\textbackslash tkzInterLC: options}!\texttt  {R}|hyperpage}{111}
+\indexentry{tkzInterLC_3@\texttt  {\textbackslash tkzInterLC: options}!\texttt  {with nodes}|hyperpage}{111}
+\indexentry{tkzInterLC_3@\texttt  {\textbackslash tkzInterLC: options}!\texttt  {common=pt}|hyperpage}{111}
+\indexentry{tkzInterLC_3@\texttt  {\textbackslash tkzInterLC: options}!\texttt  {near}|hyperpage}{111}
+\indexentry{tkzTestInterLC{\ttfamily  (}{\color  {myblue}\meta  {$O,A$}}{\ttfamily  )}{\ttfamily  (}{\color  {myblue}\meta  {$O',B$}}{\ttfamily  )}_1@\texttt  {\textbackslash tkzTestInterLC{\ttfamily  (}{\color  {myblue}\meta  {$O,A$}}{\ttfamily  )}{\ttfamily  (}{\color  {myblue}\meta  {$O',B$}}{\ttfamily  )}}|hyperpage}{112}
+\indexentry{tkzTestInterLC_1@\texttt  {\textbackslash tkzTestInterLC}|hyperpage}{112}
+\indexentry{iftkzFlagLC_1@\texttt  {\textbackslash iftkzFlagLC}|hyperpage}{112}
+\indexentry{tkzTestInterLC_1@\texttt  {\textbackslash tkzTestInterLC}|hyperpage}{112}
+\indexentry{foreach_1@\texttt  {\textbackslash foreach}|hyperpage}{115}
+\indexentry{pgfmathsetmacro_1@\texttt  {\textbackslash pgfmathsetmacro}|hyperpage}{117}
+\indexentry{pgfmathsetmacro_1@\texttt  {\textbackslash pgfmathsetmacro}|hyperpage}{117}
+\indexentry{fpeval_1@\texttt  {\textbackslash fpeval}|hyperpage}{117}
+\indexentry{tkzInterCC_1@\texttt  {\textbackslash tkzInterCC}|hyperpage}{118}
+\indexentry{tkzInterCC{\ttfamily  [}{\color  {myblue}\meta  {options}}{\ttfamily  ]}{\ttfamily  (}{\color  {myblue}\meta  {$O,A$}}{\ttfamily  )}{\ttfamily  (}{\color  {myblue}\meta  {$O',A'$}}{\ttfamily  )} or {\ttfamily  (}{\color  {myblue}\meta  {$O,r$}}{\ttfamily  )}{\ttfamily  (}{\color  {myblue}\meta  {$O',r'$}}{\ttfamily  )} or {\ttfamily  (}{\color  {myblue}\meta  {$O,A,B$}}{\ttfamily  )} {\ttfamily  (}{\color  {myblue}\meta  {$O',C,D$}}{\ttfamily  )}_1@\texttt  {\textbackslash tkzInterCC{\ttfamily  [}{\color  {myblue}\meta  {options}}{\ttfamily  ]}{\ttfamily  (}{\color  {myblue}\meta  {$O,A$}}{\ttfamily  )}{\ttfamily  (}{\color  {myblue}\meta  {$O',A'$}}{\ttfamily  )} or {\ttfamily  (}{\color  {myblue}\meta  {$O,r$}}{\ttfamily  )}{\ttfamily  (}{\color  {myblue}\meta  {$O',r'$}}{\ttfamily  )} or {\ttfamily  (}{\color  {myblue}\meta  {$O,A,B$}}{\ttfamily  )} {\ttfamily  (}{\color  {myblue}\meta  {$O',C,D$}}{\ttfamily  )}}|hyperpage}{118}
+\indexentry{tkzInterCC_1@\texttt  {\textbackslash tkzInterCC}|hyperpage}{118}
+\indexentry{tkzInterCC_3@\texttt  {\textbackslash tkzInterCC: options}!\texttt  {N}|hyperpage}{118}
+\indexentry{tkzInterCC_3@\texttt  {\textbackslash tkzInterCC: options}!\texttt  {R}|hyperpage}{118}
+\indexentry{tkzInterCC_3@\texttt  {\textbackslash tkzInterCC: options}!\texttt  {with nodes}|hyperpage}{118}
+\indexentry{tkzInterCC_3@\texttt  {\textbackslash tkzInterCC: options}!\texttt  {common=pt}|hyperpage}{118}
+\indexentry{tkzTestInterCC{\ttfamily  (}{\color  {myblue}\meta  {$O,A$}}{\ttfamily  )}{\ttfamily  (}{\color  {myblue}\meta  {$O',B$}}{\ttfamily  )}_1@\texttt  {\textbackslash tkzTestInterCC{\ttfamily  (}{\color  {myblue}\meta  {$O,A$}}{\ttfamily  )}{\ttfamily  (}{\color  {myblue}\meta  {$O',B$}}{\ttfamily  )}}|hyperpage}{118}
+\indexentry{tkzTestInterCC_1@\texttt  {\textbackslash tkzTestInterCC}|hyperpage}{118}
+\indexentry{iftkzFlagCC_1@\texttt  {\textbackslash iftkzFlagCC}|hyperpage}{118}
+\indexentry{tkzTestInterCC_1@\texttt  {\textbackslash tkzTestInterCC}|hyperpage}{119}
+\indexentry{tkzDefPoint_1@\texttt  {\textbackslash tkzDefPoint}|hyperpage}{123}
+\indexentry{tkzDefPointBy[rotation = \dots  ]_1@\texttt  {\textbackslash tkzDefPointBy[rotation = \dots  ]}|hyperpage}{123}
+\indexentry{tkzDrawArc_1@\texttt  {\textbackslash tkzDrawArc}|hyperpage}{123}
+\indexentry{tkzGetAngle_1@\texttt  {\textbackslash tkzGetAngle}|hyperpage}{123}
+\indexentry{tkzFindAngle_1@\texttt  {\textbackslash tkzFindAngle}|hyperpage}{123}
+\indexentry{tkzGetAngle_1@\texttt  {\textbackslash tkzGetAngle}|hyperpage}{123}
+\indexentry{tkzGetAngle{\ttfamily  (}{\color  {myblue}\meta  {name of macro}}{\ttfamily  )}_1@\texttt  {\textbackslash tkzGetAngle{\ttfamily  (}{\color  {myblue}\meta  {name of macro}}{\ttfamily  )}}|hyperpage}{123}
+\indexentry{tkzGetAngle_1@\texttt  {\textbackslash tkzGetAngle}|hyperpage}{123}
+\indexentry{tkzAngleResult_1@\texttt  {\textbackslash tkzAngleResult}|hyperpage}{123}
+\indexentry{tkzGetAngle_2@\texttt  {\textbackslash tkzGetAngle: arguments}!\texttt  {宏名称}|hyperpage}{124}
+\indexentry{tkzGetAngle_1@\texttt  {\textbackslash tkzGetAngle}|hyperpage}{124}
+\indexentry{ang_1@\texttt  {\textbackslash ang}|hyperpage}{124}
+\indexentry{tkzFindAngle_1@\texttt  {\textbackslash tkzFindAngle}|hyperpage}{124}
+\indexentry{tkzFindAngle{\ttfamily  (}{\color  {myblue}\meta  {pt1,pt2,pt3}}{\ttfamily  )}_1@\texttt  {\textbackslash tkzFindAngle{\ttfamily  (}{\color  {myblue}\meta  {pt1,pt2,pt3}}{\ttfamily  )}}|hyperpage}{124}
+\indexentry{tkzFindAngle_1@\texttt  {\textbackslash tkzFindAngle}|hyperpage}{124}
+\indexentry{tkzAngleResult_1@\texttt  {\textbackslash tkzAngleResult}|hyperpage}{124}
+\indexentry{tkzFindAngle_2@\texttt  {\textbackslash tkzFindAngle: arguments}!\texttt  {(pt1,pt2,pt3)}|hyperpage}{124}
+\indexentry{tkzFindAngle_1@\texttt  {\textbackslash tkzFindAngle}|hyperpage}{124}
+\indexentry{tkzAngleResult_1@\texttt  {\textbackslash tkzAngleResult}|hyperpage}{124}
+\indexentry{tkzGetAngle_1@\texttt  {\textbackslash tkzGetAngle}|hyperpage}{124}
+\indexentry{tkzFindSlopeAngle_1@\texttt  {\textbackslash tkzFindSlopeAngle}|hyperpage}{126}
+\indexentry{tkzFindSlopeAngle{\ttfamily  (}{\color  {myblue}\meta  {A,B}}{\ttfamily  )}_1@\texttt  {\textbackslash tkzFindSlopeAngle{\ttfamily  (}{\color  {myblue}\meta  {A,B}}{\ttfamily  )}}|hyperpage}{126}
+\indexentry{tkzFindSlopeAngle_1@\texttt  {\textbackslash tkzFindSlopeAngle}|hyperpage}{126}
+\indexentry{tkzAngleResult_1@\texttt  {\textbackslash tkzAngleResult}|hyperpage}{126}
+\indexentry{tkzFindSlopeAngle_2@\texttt  {\textbackslash tkzFindSlopeAngle: arguments}!\texttt  {(pt1,pt2)}|hyperpage}{126}
+\indexentry{tkzFindSlopeAngle_1@\texttt  {\textbackslash tkzFindSlopeAngle}|hyperpage}{126}
+\indexentry{tkzGetAngle_1@\texttt  {\textbackslash tkzGetAngle}|hyperpage}{126}
+\indexentry{tkzAngleResult_1@\texttt  {\textbackslash tkzAngleResult}|hyperpage}{126}
+\indexentry{tkzFindSlopeAngle_1@\texttt  {\textbackslash tkzFindSlopeAngle}|hyperpage}{126}
+\indexentry{tkzFindSlopeAngle_1@\texttt  {\textbackslash tkzFindSlopeAngle}|hyperpage}{127}
+\indexentry{tkzGetAngle_1@\texttt  {\textbackslash tkzGetAngle}|hyperpage}{127}
+\indexentry{tkzFindSlopeAngle_1@\texttt  {\textbackslash tkzFindSlopeAngle}|hyperpage}{128}
+\indexentry{tkzDrawPoint_1@\texttt  {\textbackslash tkzDrawPoint}|hyperpage}{130}
+\indexentry{tkzDrawPoints_1@\texttt  {\textbackslash tkzDrawPoints}|hyperpage}{130}
+\indexentry{tkzDrawPoint_1@\texttt  {\textbackslash tkzDrawPoint}|hyperpage}{130}
+\indexentry{tkzDrawPoint{\ttfamily  [}{\color  {myblue}\meta  {local options}}{\ttfamily  ]}{\ttfamily  (}{\color  {myblue}\meta  {name}}{\ttfamily  )}_1@\texttt  {\textbackslash tkzDrawPoint{\ttfamily  [}{\color  {myblue}\meta  {local options}}{\ttfamily  ]}{\ttfamily  (}{\color  {myblue}\meta  {name}}{\ttfamily  )}}|hyperpage}{130}
+\indexentry{tkzDrawPoint_1@\texttt  {\textbackslash tkzDrawPoint}|hyperpage}{130}
+\indexentry{tkzDrawPoint_2@\texttt  {\textbackslash tkzDrawPoint: arguments}!\texttt  {点名称}|hyperpage}{130}
+\indexentry{tkzDrawPoint_3@\texttt  {\textbackslash tkzDrawPoint: options}!\texttt  {Ti\textsl  {k}Z\ 选项}|hyperpage}{130}
+\indexentry{tkzDrawPoint_3@\texttt  {\textbackslash tkzDrawPoint: options}!\texttt  {shape}|hyperpage}{130}
+\indexentry{tkzDrawPoint_3@\texttt  {\textbackslash tkzDrawPoint: options}!\texttt  {size}|hyperpage}{130}
+\indexentry{pgflinewidth_1@\texttt  {\textbackslash pgflinewidth}|hyperpage}{130}
+\indexentry{tkzDrawPoint_3@\texttt  {\textbackslash tkzDrawPoint: options}!\texttt  {color}|hyperpage}{130}
+\indexentry{tkzDrawPoints{\ttfamily  [}{\color  {myblue}\meta  {local options}}{\ttfamily  ]}{\ttfamily  (}{\color  {myblue}\meta  {liste}}{\ttfamily  )}_1@\texttt  {\textbackslash tkzDrawPoints{\ttfamily  [}{\color  {myblue}\meta  {local options}}{\ttfamily  ]}{\ttfamily  (}{\color  {myblue}\meta  {liste}}{\ttfamily  )}}|hyperpage}{132}
+\indexentry{tkzDrawPoints_1@\texttt  {\textbackslash tkzDrawPoints}|hyperpage}{132}
+\indexentry{tkzDrawPoints_2@\texttt  {\textbackslash tkzDrawPoints: arguments}!\texttt  {点列表}|hyperpage}{132}
+\indexentry{tkzDrawPoints(A,B,C)_1@\texttt  {\textbackslash tkzDrawPoints(A,B,C)}|hyperpage}{132}
+\indexentry{tkzDrawPoints_3@\texttt  {\textbackslash tkzDrawPoints: options}!\texttt  {shape}|hyperpage}{132}
+\indexentry{tkzDrawPoints_3@\texttt  {\textbackslash tkzDrawPoints: options}!\texttt  {size}|hyperpage}{132}
+\indexentry{pgflinewidth_1@\texttt  {\textbackslash pgflinewidth}|hyperpage}{132}
+\indexentry{tkzDrawPoints_3@\texttt  {\textbackslash tkzDrawPoints: options}!\texttt  {color}|hyperpage}{132}
+\indexentry{tkzSetUpLine_1@\texttt  {\textbackslash tkzSetUpLine}|hyperpage}{133}
+\indexentry{tkzDrawLine{\ttfamily  [}{\color  {myblue}\meta  {local options}}{\ttfamily  ]}{\ttfamily  (}{\color  {myblue}\meta  {pt1,pt2}}{\ttfamily  )} _1@\texttt  {\textbackslash tkzDrawLine{\ttfamily  [}{\color  {myblue}\meta  {local options}}{\ttfamily  ]}{\ttfamily  (}{\color  {myblue}\meta  {pt1,pt2}}{\ttfamily  )} }|hyperpage}{134}
+\indexentry{tkzDrawLine_1@\texttt  {\textbackslash tkzDrawLine}|hyperpage}{134}
+\indexentry{tkzDrawLine_3@\texttt  {\textbackslash tkzDrawLine: options}!\texttt  {Ti\textsl  {k}Z\ 选项}|hyperpage}{134}
+\indexentry{tkzDrawLine_3@\texttt  {\textbackslash tkzDrawLine: options}!\texttt  {add}|hyperpage}{134}
+\indexentry{tkzDrawLine_3@\texttt  {\textbackslash tkzDrawLine: options}!\texttt  {\dots  }|hyperpage}{134}
+\indexentry{tkzDrawLines{\ttfamily  [}{\color  {myblue}\meta  {local options}}{\ttfamily  ]}{\ttfamily  (}{\color  {myblue}\meta  {pt1,pt2 pt3,pt4 ...}}{\ttfamily  )}_1@\texttt  {\textbackslash tkzDrawLines{\ttfamily  [}{\color  {myblue}\meta  {local options}}{\ttfamily  ]}{\ttfamily  (}{\color  {myblue}\meta  {pt1,pt2 pt3,pt4 ...}}{\ttfamily  )}}|hyperpage}{134}
+\indexentry{tkzDrawLines_1@\texttt  {\textbackslash tkzDrawLines}|hyperpage}{134}
+\indexentry{tkzDrawLines_1@\texttt  {\textbackslash tkzDrawLines}|hyperpage}{134}
+\indexentry{tkzDrawSegment_1@\texttt  {\textbackslash tkzDrawSegment}|hyperpage}{135}
+\indexentry{tkzDrawSegment{\ttfamily  [}{\color  {myblue}\meta  {local options}}{\ttfamily  ]}{\ttfamily  (}{\color  {myblue}\meta  {pt1,pt2}}{\ttfamily  )}_1@\texttt  {\textbackslash tkzDrawSegment{\ttfamily  [}{\color  {myblue}\meta  {local options}}{\ttfamily  ]}{\ttfamily  (}{\color  {myblue}\meta  {pt1,pt2}}{\ttfamily  )}}|hyperpage}{135}
+\indexentry{tkzDrawSegment_1@\texttt  {\textbackslash tkzDrawSegment}|hyperpage}{135}
+\indexentry{tkzDrawSegment_2@\texttt  {\textbackslash tkzDrawSegment: arguments}!\texttt  {(pt1,pt2)}|hyperpage}{135}
+\indexentry{tkzDrawSegment_3@\texttt  {\textbackslash tkzDrawSegment: options}!\texttt  {Ti\textsl  {k}Z\ 选项}|hyperpage}{135}
+\indexentry{tkzDrawSegment_3@\texttt  {\textbackslash tkzDrawSegment: options}!\texttt  {dim}|hyperpage}{135}
+\indexentry{tkzDrawSegment_3@\texttt  {\textbackslash tkzDrawSegment: options}!\texttt  {\dots  }|hyperpage}{135}
+\indexentry{draw (A)--(B);_1@\texttt  {\textbackslash draw (A)--(B);}|hyperpage}{135}
+\indexentry{tkzDrawSegments_1@\texttt  {\textbackslash tkzDrawSegments}|hyperpage}{137}
+\indexentry{tkzDrawSegments{\ttfamily  [}{\color  {myblue}\meta  {local options}}{\ttfamily  ]}{\ttfamily  (}{\color  {myblue}\meta  {pt1,pt2 pt3,pt4 ...}}{\ttfamily  )}_1@\texttt  {\textbackslash tkzDrawSegments{\ttfamily  [}{\color  {myblue}\meta  {local options}}{\ttfamily  ]}{\ttfamily  (}{\color  {myblue}\meta  {pt1,pt2 pt3,pt4 ...}}{\ttfamily  )}}|hyperpage}{137}
+\indexentry{tkzDrawSegments_1@\texttt  {\textbackslash tkzDrawSegments}|hyperpage}{137}
+\indexentry{tkzDrawPolygon{\ttfamily  [}{\color  {myblue}\meta  {local options}}{\ttfamily  ]}{\ttfamily  (}{\color  {myblue}\meta  {points list}}{\ttfamily  )}_1@\texttt  {\textbackslash tkzDrawPolygon{\ttfamily  [}{\color  {myblue}\meta  {local options}}{\ttfamily  ]}{\ttfamily  (}{\color  {myblue}\meta  {points list}}{\ttfamily  )}}|hyperpage}{139}
+\indexentry{tkzDrawPolygon_1@\texttt  {\textbackslash tkzDrawPolygon}|hyperpage}{139}
+\indexentry{tkzDrawPolygon_2@\texttt  {\textbackslash tkzDrawPolygon: arguments}!\texttt  {{\ttfamily  (}{\color  {myblue}\meta  {pt1,pt2,pt3,...}}{\ttfamily  )}}|hyperpage}{139}
+\indexentry{tkzDrawPolygon_3@\texttt  {\textbackslash tkzDrawPolygon: options}!\texttt  {Options TikZ}|hyperpage}{139}
+\indexentry{tkzDrawPolygon_1@\texttt  {\textbackslash tkzDrawPolygon}|hyperpage}{140}
+\indexentry{tkzDrawPolySeg{\ttfamily  [}{\color  {myblue}\meta  {local options}}{\ttfamily  ]}{\ttfamily  (}{\color  {myblue}\meta  {points list}}{\ttfamily  )}_1@\texttt  {\textbackslash tkzDrawPolySeg{\ttfamily  [}{\color  {myblue}\meta  {local options}}{\ttfamily  ]}{\ttfamily  (}{\color  {myblue}\meta  {points list}}{\ttfamily  )}}|hyperpage}{140}
+\indexentry{tkzDrawPolySeg_1@\texttt  {\textbackslash tkzDrawPolySeg}|hyperpage}{140}
+\indexentry{tkzDrawPolySeg_2@\texttt  {\textbackslash tkzDrawPolySeg: arguments}!\texttt  {{\ttfamily  (}{\color  {myblue}\meta  {pt1,pt2,pt3,...}}{\ttfamily  )}}|hyperpage}{141}
+\indexentry{tkzDrawPolySeg_3@\texttt  {\textbackslash tkzDrawPolySeg: options}!\texttt  {Options TikZ}|hyperpage}{141}
+\indexentry{tkzDrawCircle_1@\texttt  {\textbackslash tkzDrawCircle}|hyperpage}{142}
+\indexentry{tkzDrawCircle{\ttfamily  [}{\color  {myblue}\meta  {local options}}{\ttfamily  ]}{\ttfamily  (}{\color  {myblue}\meta  {A,B}}{\ttfamily  )}_1@\texttt  {\textbackslash tkzDrawCircle{\ttfamily  [}{\color  {myblue}\meta  {local options}}{\ttfamily  ]}{\ttfamily  (}{\color  {myblue}\meta  {A,B}}{\ttfamily  )}}|hyperpage}{142}
+\indexentry{tkzDrawCircle_1@\texttt  {\textbackslash tkzDrawCircle}|hyperpage}{142}
+\indexentry{tkzDrawCircle_2@\texttt  {\textbackslash tkzDrawCircle: arguments}!\texttt  {{\ttfamily  (}{\color  {myblue}\meta  {pt1,pt2}}{\ttfamily  )}}|hyperpage}{142}
+\indexentry{tkzDrawCircles{\ttfamily  [}{\color  {myblue}\meta  {local options}}{\ttfamily  ]}{\ttfamily  (}{\color  {myblue}\meta  {A,B C,D \dots  }}{\ttfamily  )}_1@\texttt  {\textbackslash tkzDrawCircles{\ttfamily  [}{\color  {myblue}\meta  {local options}}{\ttfamily  ]}{\ttfamily  (}{\color  {myblue}\meta  {A,B C,D \dots  }}{\ttfamily  )}}|hyperpage}{142}
+\indexentry{tkzDrawCircles_1@\texttt  {\textbackslash tkzDrawCircles}|hyperpage}{142}
+\indexentry{tkzDrawCircles_2@\texttt  {\textbackslash tkzDrawCircles: arguments}!\texttt  {{\ttfamily  (}{\color  {myblue}\meta  {pt1,pt2 pt3,pt4 ...}}{\ttfamily  )}}|hyperpage}{142}
+\indexentry{tkzDrawCircles_3@\texttt  {\textbackslash tkzDrawCircles: options}!\texttt  {through}|hyperpage}{142}
+\indexentry{tkzDrawSemiCircle{\ttfamily  [}{\color  {myblue}\meta  {local options}}{\ttfamily  ]}{\ttfamily  (}{\color  {myblue}\meta  {O,A}}{\ttfamily  )}_1@\texttt  {\textbackslash tkzDrawSemiCircle{\ttfamily  [}{\color  {myblue}\meta  {local options}}{\ttfamily  ]}{\ttfamily  (}{\color  {myblue}\meta  {O,A}}{\ttfamily  )}}|hyperpage}{145}
+\indexentry{tkzDrawSemiCircle_1@\texttt  {\textbackslash tkzDrawSemiCircle}|hyperpage}{145}
+\indexentry{tkzDrawSemiCircle_2@\texttt  {\textbackslash tkzDrawSemiCircle: arguments}!\texttt  {{\ttfamily  (}{\color  {myblue}\meta  {pt1,pt2}}{\ttfamily  )}}|hyperpage}{145}
+\indexentry{tkzDrawSemiCircle_1@\texttt  {\textbackslash tkzDrawSemiCircle}|hyperpage}{145}
+\indexentry{tkzDrawSemiCircles{\ttfamily  [}{\color  {myblue}\meta  {local options}}{\ttfamily  ]}{\ttfamily  (}{\color  {myblue}\meta  {A,B C,D \dots  }}{\ttfamily  )}_1@\texttt  {\textbackslash tkzDrawSemiCircles{\ttfamily  [}{\color  {myblue}\meta  {local options}}{\ttfamily  ]}{\ttfamily  (}{\color  {myblue}\meta  {A,B C,D \dots  }}{\ttfamily  )}}|hyperpage}{145}
+\indexentry{tkzDrawSemiCircles_1@\texttt  {\textbackslash tkzDrawSemiCircles}|hyperpage}{145}
+\indexentry{tkzDrawSemiCircles_2@\texttt  {\textbackslash tkzDrawSemiCircles: arguments}!\texttt  {{\ttfamily  (}{\color  {myblue}\meta  {pt1,pt2 pt3,pt4 ...}}{\ttfamily  )}}|hyperpage}{145}
+\indexentry{tkzDrawSemiCircles_1@\texttt  {\textbackslash tkzDrawSemiCircles}|hyperpage}{146}
+\indexentry{tkzDrawEllipse_1@\texttt  {\textbackslash tkzDrawEllipse}|hyperpage}{146}
+\indexentry{tkzDrawEllipse{\ttfamily  [}{\color  {myblue}\meta  {local options}}{\ttfamily  ]}{\ttfamily  (}{\color  {myblue}\meta  {C,a,b,An}}{\ttfamily  )}_1@\texttt  {\textbackslash tkzDrawEllipse{\ttfamily  [}{\color  {myblue}\meta  {local options}}{\ttfamily  ]}{\ttfamily  (}{\color  {myblue}\meta  {C,a,b,An}}{\ttfamily  )}}|hyperpage}{146}
+\indexentry{tkzDrawEllipse_1@\texttt  {\textbackslash tkzDrawEllipse}|hyperpage}{146}
+\indexentry{tkzDrawEllipse_2@\texttt  {\textbackslash tkzDrawEllipse: arguments}!\texttt  {{\ttfamily  (}{\color  {myblue}\meta  {C,a,b,An}}{\ttfamily  )}}|hyperpage}{146}
+\indexentry{tkzDrawArc_1@\texttt  {\textbackslash tkzDrawArc}|hyperpage}{147}
+\indexentry{tkzDrawArc{\ttfamily  [}{\color  {myblue}\meta  {local options}}{\ttfamily  ]}{\ttfamily  (}{\color  {myblue}\meta  {O,\dots  }}{\ttfamily  )}{\ttfamily  (}{\color  {myblue}\meta  {\dots  }}{\ttfamily  )}_1@\texttt  {\textbackslash tkzDrawArc{\ttfamily  [}{\color  {myblue}\meta  {local options}}{\ttfamily  ]}{\ttfamily  (}{\color  {myblue}\meta  {O,\dots  }}{\ttfamily  )}{\ttfamily  (}{\color  {myblue}\meta  {\dots  }}{\ttfamily  )}}|hyperpage}{147}
+\indexentry{tkzDrawArc_1@\texttt  {\textbackslash tkzDrawArc}|hyperpage}{147}
+\indexentry{tkzDrawArc_3@\texttt  {\textbackslash tkzDrawArc: options}!\texttt  {towards}|hyperpage}{147}
+\indexentry{tkzDrawArc_3@\texttt  {\textbackslash tkzDrawArc: options}!\texttt  {rotate}|hyperpage}{147}
+\indexentry{tkzDrawArc_3@\texttt  {\textbackslash tkzDrawArc: options}!\texttt  {R}|hyperpage}{147}
+\indexentry{tkzDrawArc_3@\texttt  {\textbackslash tkzDrawArc: options}!\texttt  {R with nodes}|hyperpage}{147}
+\indexentry{tkzDrawArc_3@\texttt  {\textbackslash tkzDrawArc: options}!\texttt  {angles}|hyperpage}{147}
+\indexentry{tkzDrawArc_3@\texttt  {\textbackslash tkzDrawArc: options}!\texttt  {delta}|hyperpage}{147}
+\indexentry{tkzDrawArc_3@\texttt  {\textbackslash tkzDrawArc: options}!\texttt  {reverse}|hyperpage}{147}
+\indexentry{tkzDrawArc_3@\texttt  {\textbackslash tkzDrawArc: options}!\texttt  {towards}|hyperpage}{147}
+\indexentry{tkzDrawArc[delta=10](O,A)(B)_1@\texttt  {\textbackslash tkzDrawArc[delta=10](O,A)(B)}|hyperpage}{147}
+\indexentry{tkzDrawArc_3@\texttt  {\textbackslash tkzDrawArc: options}!\texttt  {rotate}|hyperpage}{147}
+\indexentry{tkzDrawArc[rotate,color=red](O,A)(90)_1@\texttt  {\textbackslash tkzDrawArc[rotate,color=red](O,A)(90)}|hyperpage}{147}
+\indexentry{tkzDrawArc_3@\texttt  {\textbackslash tkzDrawArc: options}!\texttt  {R}|hyperpage}{147}
+\indexentry{tkzDrawArc[R](O,2)(30,90)_1@\texttt  {\textbackslash tkzDrawArc[R](O,2)(30,90)}|hyperpage}{147}
+\indexentry{tkzDrawArc_3@\texttt  {\textbackslash tkzDrawArc: options}!\texttt  {R with nodes}|hyperpage}{147}
+\indexentry{tkzDrawArc[R with nodes](O,2)(A,B)_1@\texttt  {\textbackslash tkzDrawArc[R with nodes](O,2)(A,B)}|hyperpage}{147}
+\indexentry{tkzDrawArc_3@\texttt  {\textbackslash tkzDrawArc: options}!\texttt  {angles}|hyperpage}{147}
+\indexentry{tkzDrawArc[angles](O,A)(0,90)_1@\texttt  {\textbackslash tkzDrawArc[angles](O,A)(0,90)}|hyperpage}{147}
+\indexentry{tkzCompass_1@\texttt  {\textbackslash tkzCompass}|hyperpage}{149}
+\indexentry{tkzSetUpArc_1@\texttt  {\textbackslash tkzSetUpArc}|hyperpage}{149}
+\indexentry{tkzDrawSector_1@\texttt  {\textbackslash tkzDrawSector}|hyperpage}{151}
+\indexentry{tkzDrawSector{\ttfamily  [}{\color  {myblue}\meta  {local options}}{\ttfamily  ]}{\ttfamily  (}{\color  {myblue}\meta  {O,\dots  }}{\ttfamily  )}{\ttfamily  (}{\color  {myblue}\meta  {\dots  }}{\ttfamily  )}_1@\texttt  {\textbackslash tkzDrawSector{\ttfamily  [}{\color  {myblue}\meta  {local options}}{\ttfamily  ]}{\ttfamily  (}{\color  {myblue}\meta  {O,\dots  }}{\ttfamily  )}{\ttfamily  (}{\color  {myblue}\meta  {\dots  }}{\ttfamily  )}}|hyperpage}{151}
+\indexentry{tkzDrawSector_1@\texttt  {\textbackslash tkzDrawSector}|hyperpage}{151}
+\indexentry{tkzDrawSector_3@\texttt  {\textbackslash tkzDrawSector: options}!\texttt  {towards}|hyperpage}{151}
+\indexentry{tkzDrawSector_3@\texttt  {\textbackslash tkzDrawSector: options}!\texttt  {rotate}|hyperpage}{151}
+\indexentry{tkzDrawSector_3@\texttt  {\textbackslash tkzDrawSector: options}!\texttt  {R}|hyperpage}{151}
+\indexentry{tkzDrawSector_3@\texttt  {\textbackslash tkzDrawSector: options}!\texttt  {R with nodes}|hyperpage}{151}
+\indexentry{tkzDrawSector_3@\texttt  {\textbackslash tkzDrawSector: options}!\texttt  {towards}|hyperpage}{151}
+\indexentry{tkzDrawSector(O,A)(B)_1@\texttt  {\textbackslash tkzDrawSector(O,A)(B)}|hyperpage}{151}
+\indexentry{tkzDrawSector_3@\texttt  {\textbackslash tkzDrawSector: options}!\texttt  {rotate}|hyperpage}{151}
+\indexentry{tkzDrawSector[rotate,color=red](O,A)(90)_1@\texttt  {\textbackslash tkzDrawSector[rotate,color=red](O,A)(90)}|hyperpage}{151}
+\indexentry{tkzDrawSector_3@\texttt  {\textbackslash tkzDrawSector: options}!\texttt  {R}|hyperpage}{151}
+\indexentry{tkzDrawSector[R,color=teal](O,2)(30,90)_1@\texttt  {\textbackslash tkzDrawSector[R,color=teal](O,2)(30,90)}|hyperpage}{151}
+\indexentry{tkzDrawSector_3@\texttt  {\textbackslash tkzDrawSector: options}!\texttt  {R with nodes}|hyperpage}{151}
+\indexentry{tkzDrawSector[R with nodes](O,2)(A,B)_1@\texttt  {\textbackslash tkzDrawSector[R with nodes](O,2)(A,B)}|hyperpage}{151}
+\indexentry{tkzDrawSector_1@\texttt  {\textbackslash tkzDrawSector}|hyperpage}{151}
+\indexentry{tkzDrawSector_1@\texttt  {\textbackslash tkzDrawSector}|hyperpage}{152}
+\indexentry{tkzDrawSector_1@\texttt  {\textbackslash tkzDrawSector}|hyperpage}{152}
+\indexentry{tkzDrawSector_1@\texttt  {\textbackslash tkzDrawSector}|hyperpage}{152}
+\indexentry{tkzFillSector_1@\texttt  {\textbackslash tkzFillSector}|hyperpage}{152}
+\indexentry{tkzDrawSector_1@\texttt  {\textbackslash tkzDrawSector}|hyperpage}{153}
+\indexentry{tkzDrawCircle_1@\texttt  {\textbackslash tkzDrawCircle}|hyperpage}{153}
+\indexentry{tkzFillCircle{\ttfamily  [}{\color  {myblue}\meta  {local options}}{\ttfamily  ]}{\ttfamily  (}{\color  {myblue}\meta  {A,B}}{\ttfamily  )}_1@\texttt  {\textbackslash tkzFillCircle{\ttfamily  [}{\color  {myblue}\meta  {local options}}{\ttfamily  ]}{\ttfamily  (}{\color  {myblue}\meta  {A,B}}{\ttfamily  )}}|hyperpage}{154}
+\indexentry{tkzFillCircle_1@\texttt  {\textbackslash tkzFillCircle}|hyperpage}{154}
+\indexentry{tkzFillCircle_3@\texttt  {\textbackslash tkzFillCircle: options}!\texttt  {radius}|hyperpage}{154}
+\indexentry{tkzFillCircle_3@\texttt  {\textbackslash tkzFillCircle: options}!\texttt  {R}|hyperpage}{154}
+\indexentry{tkzFillPolygon{\ttfamily  [}{\color  {myblue}\meta  {local options}}{\ttfamily  ]}{\ttfamily  (}{\color  {myblue}\meta  {points list}}{\ttfamily  )}_1@\texttt  {\textbackslash tkzFillPolygon{\ttfamily  [}{\color  {myblue}\meta  {local options}}{\ttfamily  ]}{\ttfamily  (}{\color  {myblue}\meta  {points list}}{\ttfamily  )}}|hyperpage}{157}
+\indexentry{tkzFillPolygon_1@\texttt  {\textbackslash tkzFillPolygon}|hyperpage}{157}
+\indexentry{tkzFillPolygon_2@\texttt  {\textbackslash tkzFillPolygon: arguments}!\texttt  {{\ttfamily  (}{\color  {myblue}\meta  {pt1,pt2,\dots  }}{\ttfamily  )}}|hyperpage}{157}
+\indexentry{tkzFillPolygon_1@\texttt  {\textbackslash tkzFillPolygon}|hyperpage}{157}
+\indexentry{tkzFillSector_1@\texttt  {\textbackslash tkzFillSector}|hyperpage}{157}
+\indexentry{tkzFillSector{\ttfamily  [}{\color  {myblue}\meta  {local options}}{\ttfamily  ]}{\ttfamily  (}{\color  {myblue}\meta  {O,\dots  }}{\ttfamily  )}{\ttfamily  (}{\color  {myblue}\meta  {\dots  }}{\ttfamily  )}_1@\texttt  {\textbackslash tkzFillSector{\ttfamily  [}{\color  {myblue}\meta  {local options}}{\ttfamily  ]}{\ttfamily  (}{\color  {myblue}\meta  {O,\dots  }}{\ttfamily  )}{\ttfamily  (}{\color  {myblue}\meta  {\dots  }}{\ttfamily  )}}|hyperpage}{157}
+\indexentry{tkzFillSector_1@\texttt  {\textbackslash tkzFillSector}|hyperpage}{157}
+\indexentry{tkzFillSector_3@\texttt  {\textbackslash tkzFillSector: options}!\texttt  {towards}|hyperpage}{157}
+\indexentry{tkzFillSector_3@\texttt  {\textbackslash tkzFillSector: options}!\texttt  {rotate}|hyperpage}{157}
+\indexentry{tkzFillSector_3@\texttt  {\textbackslash tkzFillSector: options}!\texttt  {R}|hyperpage}{157}
+\indexentry{tkzFillSector_3@\texttt  {\textbackslash tkzFillSector: options}!\texttt  {R with nodes}|hyperpage}{157}
+\indexentry{tkzFillSector_3@\texttt  {\textbackslash tkzFillSector: options}!\texttt  {towards}|hyperpage}{158}
+\indexentry{tkzFillSector(O,A)(B)_1@\texttt  {\textbackslash tkzFillSector(O,A)(B)}|hyperpage}{158}
+\indexentry{tkzFillSector_3@\texttt  {\textbackslash tkzFillSector: options}!\texttt  {rotate}|hyperpage}{158}
+\indexentry{tkzFillSector[rotate,color=red](O,A)(90)_1@\texttt  {\textbackslash tkzFillSector[rotate,color=red](O,A)(90)}|hyperpage}{158}
+\indexentry{tkzFillSector_3@\texttt  {\textbackslash tkzFillSector: options}!\texttt  {R}|hyperpage}{158}
+\indexentry{tkzFillSector[R,color=blue](O,2)(30,90)_1@\texttt  {\textbackslash tkzFillSector[R,color=blue](O,2)(30,90)}|hyperpage}{158}
+\indexentry{tkzFillSector_3@\texttt  {\textbackslash tkzFillSector: options}!\texttt  {R with nodes}|hyperpage}{158}
+\indexentry{tkzFillSector[R with nodes](O,2)(A,B)_1@\texttt  {\textbackslash tkzFillSector[R with nodes](O,2)(A,B)}|hyperpage}{158}
+\indexentry{tkzFillSector_1@\texttt  {\textbackslash tkzFillSector}|hyperpage}{158}
+\indexentry{tkzFillSector_1@\texttt  {\textbackslash tkzFillSector}|hyperpage}{158}
+\indexentry{tkzFillAngle_1@\texttt  {\textbackslash tkzFillAngle}|hyperpage}{158}
+\indexentry{tkzFillAngle{\ttfamily  [}{\color  {myblue}\meta  {local options}}{\ttfamily  ]}{\ttfamily  (}{\color  {myblue}\meta  {A,O,B}}{\ttfamily  )}_1@\texttt  {\textbackslash tkzFillAngle{\ttfamily  [}{\color  {myblue}\meta  {local options}}{\ttfamily  ]}{\ttfamily  (}{\color  {myblue}\meta  {A,O,B}}{\ttfamily  )}}|hyperpage}{158}
+\indexentry{tkzFillAngle_1@\texttt  {\textbackslash tkzFillAngle}|hyperpage}{158}
+\indexentry{tkzFillAngle_3@\texttt  {\textbackslash tkzFillAngle: options}!\texttt  {size}|hyperpage}{158}
+\indexentry{tkzFillAngles{\ttfamily  [}{\color  {myblue}\meta  {local options}}{\ttfamily  ]}{\ttfamily  (}{\color  {myblue}\meta  {A,O,B}}{\ttfamily  )}{\ttfamily  (}{\color  {myblue}\meta  {A',O',B'}}{\ttfamily  )}etc._1@\texttt  {\textbackslash tkzFillAngles{\ttfamily  [}{\color  {myblue}\meta  {local options}}{\ttfamily  ]}{\ttfamily  (}{\color  {myblue}\meta  {A,O,B}}{\ttfamily  )}{\ttfamily  (}{\color  {myblue}\meta  {A',O',B'}}{\ttfamily  )}etc.}|hyperpage}{159}
+\indexentry{tkzFillAngles_1@\texttt  {\textbackslash tkzFillAngles}|hyperpage}{159}
+\indexentry{Package !tkz-euclide@\texttt  {tkz-euclide}|hyperpage}{160}
+\indexentry{tkzInit_1@\texttt  {\textbackslash tkzInit}|hyperpage}{160}
+\indexentry{tkzInit_1@\texttt  {\textbackslash tkzInit}|hyperpage}{160}
+\indexentry{useasboundingbox_1@\texttt  {\textbackslash useasboundingbox}|hyperpage}{160}
+\indexentry{pgfresetboundingbox_1@\texttt  {\textbackslash pgfresetboundingbox}|hyperpage}{160}
+\indexentry{tkzInit_1@\texttt  {\textbackslash tkzInit}|hyperpage}{160}
+\indexentry{tkzInit_1@\texttt  {\textbackslash tkzInit}|hyperpage}{160}
+\indexentry{tkzInit_1@\texttt  {\textbackslash tkzInit}|hyperpage}{160}
+\indexentry{tkzInit_1@\texttt  {\textbackslash tkzInit}|hyperpage}{160}
+\indexentry{tkzClip_1@\texttt  {\textbackslash tkzClip}|hyperpage}{160}
+\indexentry{tkzInit_1@\texttt  {\textbackslash tkzInit}|hyperpage}{161}
+\indexentry{tkzInit{\ttfamily  [}{\color  {myblue}\meta  {local options}}{\ttfamily  ]}_1@\texttt  {\textbackslash tkzInit{\ttfamily  [}{\color  {myblue}\meta  {local options}}{\ttfamily  ]}}|hyperpage}{161}
+\indexentry{tkzInit_1@\texttt  {\textbackslash tkzInit}|hyperpage}{161}
+\indexentry{tkzInit_3@\texttt  {\textbackslash tkzInit: options}!\texttt  {xmin}|hyperpage}{161}
+\indexentry{tkzInit_3@\texttt  {\textbackslash tkzInit: options}!\texttt  {xmax}|hyperpage}{161}
+\indexentry{tkzInit_3@\texttt  {\textbackslash tkzInit: options}!\texttt  {xstep}|hyperpage}{161}
+\indexentry{tkzInit_3@\texttt  {\textbackslash tkzInit: options}!\texttt  {ymin}|hyperpage}{161}
+\indexentry{tkzInit_3@\texttt  {\textbackslash tkzInit: options}!\texttt  {ymax}|hyperpage}{161}
+\indexentry{tkzInit_3@\texttt  {\textbackslash tkzInit: options}!\texttt  {ystep}|hyperpage}{161}
+\indexentry{tkzInit_1@\texttt  {\textbackslash tkzInit}|hyperpage}{161}
+\indexentry{xstep_1@\texttt  {\textbackslash xstep}|hyperpage}{161}
+\indexentry{ystep_1@\texttt  {\textbackslash ystep}|hyperpage}{161}
+\indexentry{tkzInit_1@\texttt  {\textbackslash tkzInit}|hyperpage}{161}
+\indexentry{tkzClip_1@\texttt  {\textbackslash tkzClip}|hyperpage}{161}
+\indexentry{tkzClip{\ttfamily  [}{\color  {myblue}\meta  {local options}}{\ttfamily  ]}_1@\texttt  {\textbackslash tkzClip{\ttfamily  [}{\color  {myblue}\meta  {local options}}{\ttfamily  ]}}|hyperpage}{161}
+\indexentry{tkzClip_1@\texttt  {\textbackslash tkzClip}|hyperpage}{161}
+\indexentry{tkzClip_3@\texttt  {\textbackslash tkzClip: options}!\texttt  {space}|hyperpage}{161}
+\indexentry{tkzClip_1@\texttt  {\textbackslash tkzClip}|hyperpage}{162}
+\indexentry{tkzShowBB_1@\texttt  {\textbackslash tkzShowBB}|hyperpage}{162}
+\indexentry{tkzShowBB{\ttfamily  [}{\color  {myblue}\meta  {local options}}{\ttfamily  ]}_1@\texttt  {\textbackslash tkzShowBB{\ttfamily  [}{\color  {myblue}\meta  {local options}}{\ttfamily  ]}}|hyperpage}{162}
+\indexentry{tkzShowBB_1@\texttt  {\textbackslash tkzShowBB}|hyperpage}{162}
+\indexentry{tkzShowBB_1@\texttt  {\textbackslash tkzShowBB}|hyperpage}{162}
+\indexentry{tkzClipBB_1@\texttt  {\textbackslash tkzClipBB}|hyperpage}{163}
+\indexentry{tkzClipBB_1@\texttt  {\textbackslash tkzClipBB}|hyperpage}{163}
+\indexentry{tkzClipBB_1@\texttt  {\textbackslash tkzClipBB}|hyperpage}{163}
+\indexentry{tkzClipBB_1@\texttt  {\textbackslash tkzClipBB}|hyperpage}{163}
+\indexentry{tkzClipPolygon{\ttfamily  [}{\color  {myblue}\meta  {local options}}{\ttfamily  ]}{\ttfamily  (}{\color  {myblue}\meta  {points list}}{\ttfamily  )}_1@\texttt  {\textbackslash tkzClipPolygon{\ttfamily  [}{\color  {myblue}\meta  {local options}}{\ttfamily  ]}{\ttfamily  (}{\color  {myblue}\meta  {points list}}{\ttfamily  )}}|hyperpage}{164}
+\indexentry{tkzClipPolygon_1@\texttt  {\textbackslash tkzClipPolygon}|hyperpage}{164}
+\indexentry{tkzClipPolygon_2@\texttt  {\textbackslash tkzClipPolygon: arguments}!\texttt  {{\ttfamily  (}{\color  {myblue}\meta  {pt1,pt2,pt3,\dots  }}{\ttfamily  )}}|hyperpage}{164}
+\indexentry{tkzClipPolygon_3@\texttt  {\textbackslash tkzClipPolygon: options}!\texttt  {out}|hyperpage}{164}
+\indexentry{tkzClipPolygon_1@\texttt  {\textbackslash tkzClipPolygon}|hyperpage}{164}
+\indexentry{tkzClipPolygon[out]_1@\texttt  {\textbackslash tkzClipPolygon[out]}|hyperpage}{165}
+\indexentry{tkzClipCircle{\ttfamily  [}{\color  {myblue}\meta  {local options}}{\ttfamily  ]}{\ttfamily  (}{\color  {myblue}\meta  {A,B}}{\ttfamily  )}_1@\texttt  {\textbackslash tkzClipCircle{\ttfamily  [}{\color  {myblue}\meta  {local options}}{\ttfamily  ]}{\ttfamily  (}{\color  {myblue}\meta  {A,B}}{\ttfamily  )}}|hyperpage}{165}
+\indexentry{tkzClipCircle_1@\texttt  {\textbackslash tkzClipCircle}|hyperpage}{165}
+\indexentry{tkzClipCircle_2@\texttt  {\textbackslash tkzClipCircle: arguments}!\texttt  {{\ttfamily  (}{\color  {myblue}\meta  {A,B}}{\ttfamily  )}}|hyperpage}{165}
+\indexentry{tkzClipCircle_3@\texttt  {\textbackslash tkzClipCircle: options}!\texttt  {out}|hyperpage}{165}
+\indexentry{tkzClipSector{\ttfamily  [}{\color  {myblue}\meta  {local options}}{\ttfamily  ]}{\ttfamily  (}{\color  {myblue}\meta  {O,\dots  }}{\ttfamily  )}{\ttfamily  (}{\color  {myblue}\meta  {\dots  }}{\ttfamily  )}_1@\texttt  {\textbackslash tkzClipSector{\ttfamily  [}{\color  {myblue}\meta  {local options}}{\ttfamily  ]}{\ttfamily  (}{\color  {myblue}\meta  {O,\dots  }}{\ttfamily  )}{\ttfamily  (}{\color  {myblue}\meta  {\dots  }}{\ttfamily  )}}|hyperpage}{167}
+\indexentry{tkzClipSector_1@\texttt  {\textbackslash tkzClipSector}|hyperpage}{167}
+\indexentry{tkzClipSector_3@\texttt  {\textbackslash tkzClipSector: options}!\texttt  {towards}|hyperpage}{167}
+\indexentry{tkzClipSector_3@\texttt  {\textbackslash tkzClipSector: options}!\texttt  {rotate}|hyperpage}{167}
+\indexentry{tkzClipSector_3@\texttt  {\textbackslash tkzClipSector: options}!\texttt  {R}|hyperpage}{167}
+\indexentry{tkzClipSector_3@\texttt  {\textbackslash tkzClipSector: options}!\texttt  {towards}|hyperpage}{167}
+\indexentry{tkzClipSector(O,A)(B)_1@\texttt  {\textbackslash tkzClipSector(O,A)(B)}|hyperpage}{167}
+\indexentry{tkzClipSector_3@\texttt  {\textbackslash tkzClipSector: options}!\texttt  {rotate}|hyperpage}{167}
+\indexentry{tkzClipSector[rotate](O,A)(90)_1@\texttt  {\textbackslash tkzClipSector[rotate](O,A)(90)}|hyperpage}{167}
+\indexentry{tkzClipSector_3@\texttt  {\textbackslash tkzClipSector: options}!\texttt  {R}|hyperpage}{167}
+\indexentry{tkzClipSector[R](O,2)(30,90)_1@\texttt  {\textbackslash tkzClipSector[R](O,2)(30,90)}|hyperpage}{167}
+\indexentry{pgfinterruptboundingbox_1@\texttt  {\textbackslash pgfinterruptboundingbox}|hyperpage}{169}
+\indexentry{endpgfinterruptboundingbox_1@\texttt  {\textbackslash endpgfinterruptboundingbox}|hyperpage}{169}
+\indexentry{tkzClipPolygon[out]_1@\texttt  {\textbackslash tkzClipPolygon[out]}|hyperpage}{169}
+\indexentry{tkzClipPolygon[out]_1@\texttt  {\textbackslash tkzClipPolygon[out]}|hyperpage}{169}
+\indexentry{tkzClipCircle[out]_1@\texttt  {\textbackslash tkzClipCircle[out]}|hyperpage}{169}
+\indexentry{tkzMarkSegment_1@\texttt  {\textbackslash tkzMarkSegment}|hyperpage}{172}
+\indexentry{tkzMarkSegment{\ttfamily  [}{\color  {myblue}\meta  {local options}}{\ttfamily  ]}{\ttfamily  (}{\color  {myblue}\meta  {pt1,pt2}}{\ttfamily  )}_1@\texttt  {\textbackslash tkzMarkSegment{\ttfamily  [}{\color  {myblue}\meta  {local options}}{\ttfamily  ]}{\ttfamily  (}{\color  {myblue}\meta  {pt1,pt2}}{\ttfamily  )}}|hyperpage}{172}
+\indexentry{tkzMarkSegment_1@\texttt  {\textbackslash tkzMarkSegment}|hyperpage}{172}
+\indexentry{tkzMarkSegment_3@\texttt  {\textbackslash tkzMarkSegment: options}!\texttt  {pos}|hyperpage}{172}
+\indexentry{tkzMarkSegment_3@\texttt  {\textbackslash tkzMarkSegment: options}!\texttt  {color}|hyperpage}{172}
+\indexentry{tkzMarkSegment_3@\texttt  {\textbackslash tkzMarkSegment: options}!\texttt  {mark}|hyperpage}{172}
+\indexentry{tkzMarkSegment_3@\texttt  {\textbackslash tkzMarkSegment: options}!\texttt  {size}|hyperpage}{172}
+\indexentry{tkzMarkSegments_1@\texttt  {\textbackslash tkzMarkSegments}|hyperpage}{172}
+\indexentry{tkzMarkSegments{\ttfamily  [}{\color  {myblue}\meta  {local options}}{\ttfamily  ]}{\ttfamily  (}{\color  {myblue}\meta  {pt1,pt2 pt3,pt4 ...}}{\ttfamily  )}_1@\texttt  {\textbackslash tkzMarkSegments{\ttfamily  [}{\color  {myblue}\meta  {local options}}{\ttfamily  ]}{\ttfamily  (}{\color  {myblue}\meta  {pt1,pt2 pt3,pt4 ...}}{\ttfamily  )}}|hyperpage}{172}
+\indexentry{tkzMarkSegments_1@\texttt  {\textbackslash tkzMarkSegments}|hyperpage}{172}
+\indexentry{tkzMarkArc_1@\texttt  {\textbackslash tkzMarkArc}|hyperpage}{173}
+\indexentry{tkzMarkArc{\ttfamily  [}{\color  {myblue}\meta  {local options}}{\ttfamily  ]}{\ttfamily  (}{\color  {myblue}\meta  {pt1,pt2,pt3}}{\ttfamily  )}_1@\texttt  {\textbackslash tkzMarkArc{\ttfamily  [}{\color  {myblue}\meta  {local options}}{\ttfamily  ]}{\ttfamily  (}{\color  {myblue}\meta  {pt1,pt2,pt3}}{\ttfamily  )}}|hyperpage}{173}
+\indexentry{tkzMarkArc_1@\texttt  {\textbackslash tkzMarkArc}|hyperpage}{173}
+\indexentry{tkzMarkArc_3@\texttt  {\textbackslash tkzMarkArc: options}!\texttt  {pos}|hyperpage}{173}
+\indexentry{tkzMarkArc_3@\texttt  {\textbackslash tkzMarkArc: options}!\texttt  {color}|hyperpage}{173}
+\indexentry{tkzMarkArc_3@\texttt  {\textbackslash tkzMarkArc: options}!\texttt  {mark}|hyperpage}{173}
+\indexentry{tkzMarkArc_3@\texttt  {\textbackslash tkzMarkArc: options}!\texttt  {size}|hyperpage}{173}
+\indexentry{tkzMarkAngle_1@\texttt  {\textbackslash tkzMarkAngle}|hyperpage}{174}
+\indexentry{tkzMarkAngle{\ttfamily  [}{\color  {myblue}\meta  {local options}}{\ttfamily  ]}{\ttfamily  (}{\color  {myblue}\meta  {A,O,B}}{\ttfamily  )}_1@\texttt  {\textbackslash tkzMarkAngle{\ttfamily  [}{\color  {myblue}\meta  {local options}}{\ttfamily  ]}{\ttfamily  (}{\color  {myblue}\meta  {A,O,B}}{\ttfamily  )}}|hyperpage}{174}
+\indexentry{tkzMarkAngle_1@\texttt  {\textbackslash tkzMarkAngle}|hyperpage}{174}
+\indexentry{tkzMarkAngle_3@\texttt  {\textbackslash tkzMarkAngle: options}!\texttt  {arc}|hyperpage}{174}
+\indexentry{tkzMarkAngle_3@\texttt  {\textbackslash tkzMarkAngle: options}!\texttt  {size}|hyperpage}{174}
+\indexentry{tkzMarkAngle_3@\texttt  {\textbackslash tkzMarkAngle: options}!\texttt  {mark}|hyperpage}{174}
+\indexentry{tkzMarkAngle_3@\texttt  {\textbackslash tkzMarkAngle: options}!\texttt  {mksize}|hyperpage}{174}
+\indexentry{tkzMarkAngle_3@\texttt  {\textbackslash tkzMarkAngle: options}!\texttt  {mkcolor}|hyperpage}{174}
+\indexentry{tkzMarkAngle_3@\texttt  {\textbackslash tkzMarkAngle: options}!\texttt  {mkpos}|hyperpage}{174}
+\indexentry{tkzMarkAngles{\ttfamily  [}{\color  {myblue}\meta  {local options}}{\ttfamily  ]}{\ttfamily  (}{\color  {myblue}\meta  {A,O,B}}{\ttfamily  )}{\ttfamily  (}{\color  {myblue}\meta  {A',O',B'}}{\ttfamily  )}etc._1@\texttt  {\textbackslash tkzMarkAngles{\ttfamily  [}{\color  {myblue}\meta  {local options}}{\ttfamily  ]}{\ttfamily  (}{\color  {myblue}\meta  {A,O,B}}{\ttfamily  )}{\ttfamily  (}{\color  {myblue}\meta  {A',O',B'}}{\ttfamily  )}etc.}|hyperpage}{175}
+\indexentry{tkzMarkAngles_1@\texttt  {\textbackslash tkzMarkAngles}|hyperpage}{175}
+\indexentry{tkzMarkAngle_1@\texttt  {\textbackslash tkzMarkAngle}|hyperpage}{175}
+\indexentry{tkzMarkAngle_1@\texttt  {\textbackslash tkzMarkAngle}|hyperpage}{175}
+\indexentry{tkzMarkRightAngle_1@\texttt  {\textbackslash tkzMarkRightAngle}|hyperpage}{175}
+\indexentry{tkzMarkRightAngle{\ttfamily  [}{\color  {myblue}\meta  {local options}}{\ttfamily  ]}{\ttfamily  (}{\color  {myblue}\meta  {A,O,B}}{\ttfamily  )}_1@\texttt  {\textbackslash tkzMarkRightAngle{\ttfamily  [}{\color  {myblue}\meta  {local options}}{\ttfamily  ]}{\ttfamily  (}{\color  {myblue}\meta  {A,O,B}}{\ttfamily  )}}|hyperpage}{175}
+\indexentry{tkzMarkRightAngle_1@\texttt  {\textbackslash tkzMarkRightAngle}|hyperpage}{175}
+\indexentry{tkzMarkRightAngle_3@\texttt  {\textbackslash tkzMarkRightAngle: options}!\texttt  {german}|hyperpage}{175}
+\indexentry{tkzMarkRightAngle_3@\texttt  {\textbackslash tkzMarkRightAngle: options}!\texttt  {size}|hyperpage}{175}
+\indexentry{tkzMarkRightAngles_1@\texttt  {\textbackslash tkzMarkRightAngles}|hyperpage}{177}
+\indexentry{tkzMarkRightAngles{\ttfamily  [}{\color  {myblue}\meta  {local options}}{\ttfamily  ]}{\ttfamily  (}{\color  {myblue}\meta  {A,O,B}}{\ttfamily  )}{\ttfamily  (}{\color  {myblue}\meta  {A',O',B'}}{\ttfamily  )}etc._1@\texttt  {\textbackslash tkzMarkRightAngles{\ttfamily  [}{\color  {myblue}\meta  {local options}}{\ttfamily  ]}{\ttfamily  (}{\color  {myblue}\meta  {A,O,B}}{\ttfamily  )}{\ttfamily  (}{\color  {myblue}\meta  {A',O',B'}}{\ttfamily  )}etc.}|hyperpage}{177}
+\indexentry{tkzMarkRightAngles_1@\texttt  {\textbackslash tkzMarkRightAngles}|hyperpage}{177}
+\indexentry{tkzPicAngle_1@\texttt  {\textbackslash tkzPicAngle}|hyperpage}{177}
+\indexentry{tkzPicRightAngle_1@\texttt  {\textbackslash tkzPicRightAngle}|hyperpage}{177}
+\indexentry{tkzPicAngle{\ttfamily  [}{\color  {myblue}\meta  {tikz options}}{\ttfamily  ]}{\ttfamily  (}{\color  {myblue}\meta  {A,O,B}}{\ttfamily  )}_1@\texttt  {\textbackslash tkzPicAngle{\ttfamily  [}{\color  {myblue}\meta  {tikz options}}{\ttfamily  ]}{\ttfamily  (}{\color  {myblue}\meta  {A,O,B}}{\ttfamily  )}}|hyperpage}{177}
+\indexentry{tkzPicAngle_1@\texttt  {\textbackslash tkzPicAngle}|hyperpage}{177}
+\indexentry{tkzPicAngle_3@\texttt  {\textbackslash tkzPicAngle: options}!\texttt  {tikz option}|hyperpage}{177}
+\indexentry{tkzPicRightAngle{\ttfamily  [}{\color  {myblue}\meta  {tikz options}}{\ttfamily  ]}{\ttfamily  (}{\color  {myblue}\meta  {A,O,B}}{\ttfamily  )}_1@\texttt  {\textbackslash tkzPicRightAngle{\ttfamily  [}{\color  {myblue}\meta  {tikz options}}{\ttfamily  ]}{\ttfamily  (}{\color  {myblue}\meta  {A,O,B}}{\ttfamily  )}}|hyperpage}{178}
+\indexentry{tkzPicRightAngle_1@\texttt  {\textbackslash tkzPicRightAngle}|hyperpage}{178}
+\indexentry{tkzPicRightAngle_3@\texttt  {\textbackslash tkzPicRightAngle: options}!\texttt  {tikz option}|hyperpage}{178}
+\indexentry{tkzLabelPoint_1@\texttt  {\textbackslash tkzLabelPoint}|hyperpage}{178}
+\indexentry{tkzLabelPoint{\ttfamily  [}{\color  {myblue}\meta  {local options}}{\ttfamily  ]}{\ttfamily  (}{\color  {myblue}\meta  {point}}{\ttfamily  )}\{{\color  {myblue}\meta  {label}}\}_1@\texttt  {\textbackslash tkzLabelPoint{\ttfamily  [}{\color  {myblue}\meta  {local options}}{\ttfamily  ]}{\ttfamily  (}{\color  {myblue}\meta  {point}}{\ttfamily  )}\{{\color  {myblue}\meta  {label}}\}}|hyperpage}{178}
+\indexentry{tkzLabelPoint_1@\texttt  {\textbackslash tkzLabelPoint}|hyperpage}{178}
+\indexentry{tkzLabelPoint_2@\texttt  {\textbackslash tkzLabelPoint: arguments}!\texttt  {point}|hyperpage}{178}
+\indexentry{tkzLabelPoint(A)\{\$A\_1\$\}_1@\texttt  {\textbackslash tkzLabelPoint(A)\{\$A\_1\$\}}|hyperpage}{178}
+\indexentry{tkzLabelPoint_3@\texttt  {\textbackslash tkzLabelPoint: options}!\texttt  {TikZ options}|hyperpage}{178}
+\indexentry{tkzLabelPoint_1@\texttt  {\textbackslash tkzLabelPoint}|hyperpage}{179}
+\indexentry{tkzLabelPoints_1@\texttt  {\textbackslash tkzLabelPoints}|hyperpage}{179}
+\indexentry{tkzLabelPoints{\ttfamily  [}{\color  {myblue}\meta  {local options}}{\ttfamily  ]}{\ttfamily  (}{\color  {myblue}\meta  {$A_1,A_2,...$}}{\ttfamily  )}_1@\texttt  {\textbackslash tkzLabelPoints{\ttfamily  [}{\color  {myblue}\meta  {local options}}{\ttfamily  ]}{\ttfamily  (}{\color  {myblue}\meta  {$A_1,A_2,...$}}{\ttfamily  )}}|hyperpage}{179}
+\indexentry{tkzLabelPoints_1@\texttt  {\textbackslash tkzLabelPoints}|hyperpage}{179}
+\indexentry{tkzLabelPoints_2@\texttt  {\textbackslash tkzLabelPoints: arguments}!\texttt  {点列表}|hyperpage}{179}
+\indexentry{tkzLabelPoints(A,B,C)_1@\texttt  {\textbackslash tkzLabelPoints(A,B,C)}|hyperpage}{179}
+\indexentry{tkzLabelPoints_1@\texttt  {\textbackslash tkzLabelPoints}|hyperpage}{179}
+\indexentry{tkzAutoLabelPoints_1@\texttt  {\textbackslash tkzAutoLabelPoints}|hyperpage}{180}
+\indexentry{tkzAutoLabelPoints{\ttfamily  [}{\color  {myblue}\meta  {local options}}{\ttfamily  ]}{\ttfamily  (}{\color  {myblue}\meta  {$A_1,A_2,...$}}{\ttfamily  )}_1@\texttt  {\textbackslash tkzAutoLabelPoints{\ttfamily  [}{\color  {myblue}\meta  {local options}}{\ttfamily  ]}{\ttfamily  (}{\color  {myblue}\meta  {$A_1,A_2,...$}}{\ttfamily  )}}|hyperpage}{180}
+\indexentry{tkzAutoLabelPoints_1@\texttt  {\textbackslash tkzAutoLabelPoints}|hyperpage}{180}
+\indexentry{tkzAutoLabelPoints_2@\texttt  {\textbackslash tkzAutoLabelPoints: arguments}!\texttt  {点列表}|hyperpage}{180}
+\indexentry{tkzAutoLabelPoint(A,B,C)_1@\texttt  {\textbackslash tkzAutoLabelPoint(A,B,C)}|hyperpage}{180}
+\indexentry{tkzAutoLabelPoints_1@\texttt  {\textbackslash tkzAutoLabelPoints}|hyperpage}{180}
+\indexentry{tkzLabelSegment_1@\texttt  {\textbackslash tkzLabelSegment}|hyperpage}{180}
+\indexentry{tkzLabelSegments_1@\texttt  {\textbackslash tkzLabelSegments}|hyperpage}{180}
+\indexentry{tkzLabelSegment{\ttfamily  [}{\color  {myblue}\meta  {local options}}{\ttfamily  ]}{\ttfamily  (}{\color  {myblue}\meta  {pt1,pt2}}{\ttfamily  )}{\ttfamily  \char `\{}{\color  {myblue}\meta  {label}}{\ttfamily  \char `\}}_1@\texttt  {\textbackslash tkzLabelSegment{\ttfamily  [}{\color  {myblue}\meta  {local options}}{\ttfamily  ]}{\ttfamily  (}{\color  {myblue}\meta  {pt1,pt2}}{\ttfamily  )}{\ttfamily  \char `\{}{\color  {myblue}\meta  {label}}{\ttfamily  \char `\}}}|hyperpage}{180}
+\indexentry{tkzLabelSegment_1@\texttt  {\textbackslash tkzLabelSegment}|hyperpage}{180}
+\indexentry{tkzLabelSegment_2@\texttt  {\textbackslash tkzLabelSegment: arguments}!\texttt  {label}|hyperpage}{180}
+\indexentry{tkzLabelSegment(A,B)\{$5$\}_1@\texttt  {\textbackslash tkzLabelSegment(A,B)\{$5$\}}|hyperpage}{180}
+\indexentry{tkzLabelSegment_2@\texttt  {\textbackslash tkzLabelSegment: arguments}!\texttt  {(pt1,pt2)}|hyperpage}{180}
+\indexentry{tkzLabelSegment_3@\texttt  {\textbackslash tkzLabelSegment: options}!\texttt  {pos}|hyperpage}{180}
+\indexentry{tkzLabelSegments{\ttfamily  [}{\color  {myblue}\meta  {local options}}{\ttfamily  ]}{\ttfamily  (}{\color  {myblue}\meta  {pt1,pt2 pt3,pt4 ...}}{\ttfamily  )}_1@\texttt  {\textbackslash tkzLabelSegments{\ttfamily  [}{\color  {myblue}\meta  {local options}}{\ttfamily  ]}{\ttfamily  (}{\color  {myblue}\meta  {pt1,pt2 pt3,pt4 ...}}{\ttfamily  )}}|hyperpage}{182}
+\indexentry{tkzLabelSegments_1@\texttt  {\textbackslash tkzLabelSegments}|hyperpage}{182}
+\indexentry{tkzLabelLine_1@\texttt  {\textbackslash tkzLabelLine}|hyperpage}{183}
+\indexentry{tkzLabelLine{\ttfamily  [}{\color  {myblue}\meta  {local options}}{\ttfamily  ]}{\ttfamily  (}{\color  {myblue}\meta  {pt1,pt2}}{\ttfamily  )}{\ttfamily  \char `\{}{\color  {myblue}\meta  {label}}{\ttfamily  \char `\}}_1@\texttt  {\textbackslash tkzLabelLine{\ttfamily  [}{\color  {myblue}\meta  {local options}}{\ttfamily  ]}{\ttfamily  (}{\color  {myblue}\meta  {pt1,pt2}}{\ttfamily  )}{\ttfamily  \char `\{}{\color  {myblue}\meta  {label}}{\ttfamily  \char `\}}}|hyperpage}{183}
+\indexentry{tkzLabelLine_1@\texttt  {\textbackslash tkzLabelLine}|hyperpage}{183}
+\indexentry{tkzLabelLine_2@\texttt  {\textbackslash tkzLabelLine: arguments}!\texttt  {label}|hyperpage}{183}
+\indexentry{tkzLabelLine(A,B)_1@\texttt  {\textbackslash tkzLabelLine(A,B)}|hyperpage}{183}
+\indexentry{Delta_1@\texttt  {\textbackslash Delta}|hyperpage}{183}
+\indexentry{tkzLabelLine_3@\texttt  {\textbackslash tkzLabelLine: options}!\texttt  {pos}|hyperpage}{183}
+\indexentry{tkzLabelLine_1@\texttt  {\textbackslash tkzLabelLine}|hyperpage}{183}
+\indexentry{tkzLabelAngle_1@\texttt  {\textbackslash tkzLabelAngle}|hyperpage}{183}
+\indexentry{tkzLabelAngles_1@\texttt  {\textbackslash tkzLabelAngles}|hyperpage}{183}
+\indexentry{tkzLabelAngle{\ttfamily  [}{\color  {myblue}\meta  {local options}}{\ttfamily  ]}{\ttfamily  (}{\color  {myblue}\meta  {A,O,B}}{\ttfamily  )}_1@\texttt  {\textbackslash tkzLabelAngle{\ttfamily  [}{\color  {myblue}\meta  {local options}}{\ttfamily  ]}{\ttfamily  (}{\color  {myblue}\meta  {A,O,B}}{\ttfamily  )}}|hyperpage}{183}
+\indexentry{tkzLabelAngle_1@\texttt  {\textbackslash tkzLabelAngle}|hyperpage}{183}
+\indexentry{tkzLabelAngle_3@\texttt  {\textbackslash tkzLabelAngle: options}!\texttt  {pos}|hyperpage}{183}
+\indexentry{tkzLabelAngles_1@\texttt  {\textbackslash tkzLabelAngles}|hyperpage}{185}
+\indexentry{tkzLabelAngles{\ttfamily  [}{\color  {myblue}\meta  {local options}}{\ttfamily  ]}{\ttfamily  (}{\color  {myblue}\meta  {A,O,B}}{\ttfamily  )}{\ttfamily  (}{\color  {myblue}\meta  {A',O',B'}}{\ttfamily  )}etc._1@\texttt  {\textbackslash tkzLabelAngles{\ttfamily  [}{\color  {myblue}\meta  {local options}}{\ttfamily  ]}{\ttfamily  (}{\color  {myblue}\meta  {A,O,B}}{\ttfamily  )}{\ttfamily  (}{\color  {myblue}\meta  {A',O',B'}}{\ttfamily  )}etc.}|hyperpage}{185}
+\indexentry{tkzLabelAngles_1@\texttt  {\textbackslash tkzLabelAngles}|hyperpage}{185}
+\indexentry{tkzLabelCircle_1@\texttt  {\textbackslash tkzLabelCircle}|hyperpage}{185}
+\indexentry{tkzLabelCircle_1@\texttt  {\textbackslash tkzLabelCircle}|hyperpage}{185}
+\indexentry{tkzLabelCircle{\ttfamily  [}{\color  {myblue}\meta  {tikz options}}{\ttfamily  ]}{\ttfamily  (}{\color  {myblue}\meta  {O,A}}{\ttfamily  )}{\ttfamily  (}{\color  {myblue}\meta  {angle}}{\ttfamily  )}{\ttfamily  \char `\{}{\color  {myblue}\meta  {label}}{\ttfamily  \char `\}}_1@\texttt  {\textbackslash tkzLabelCircle{\ttfamily  [}{\color  {myblue}\meta  {tikz options}}{\ttfamily  ]}{\ttfamily  (}{\color  {myblue}\meta  {O,A}}{\ttfamily  )}{\ttfamily  (}{\color  {myblue}\meta  {angle}}{\ttfamily  )}{\ttfamily  \char `\{}{\color  {myblue}\meta  {label}}{\ttfamily  \char `\}}}|hyperpage}{185}
+\indexentry{tkzLabelCircle_1@\texttt  {\textbackslash tkzLabelCircle}|hyperpage}{185}
+\indexentry{tkzLabelCircle_3@\texttt  {\textbackslash tkzLabelCircle: options}!\texttt  {tikz options}|hyperpage}{185}
+\indexentry{tkzLabelArc_1@\texttt  {\textbackslash tkzLabelArc}|hyperpage}{186}
+\indexentry{tkzLabelArc{\ttfamily  [}{\color  {myblue}\meta  {local options}}{\ttfamily  ]}{\ttfamily  (}{\color  {myblue}\meta  {pt1,pt2,pt3}}{\ttfamily  )}{\ttfamily  \char `\{}{\color  {myblue}\meta  {label}}{\ttfamily  \char `\}}_1@\texttt  {\textbackslash tkzLabelArc{\ttfamily  [}{\color  {myblue}\meta  {local options}}{\ttfamily  ]}{\ttfamily  (}{\color  {myblue}\meta  {pt1,pt2,pt3}}{\ttfamily  )}{\ttfamily  \char `\{}{\color  {myblue}\meta  {label}}{\ttfamily  \char `\}}}|hyperpage}{186}
+\indexentry{tkzLabelArc_1@\texttt  {\textbackslash tkzLabelArc}|hyperpage}{186}
+\indexentry{tkzLabelArc_2@\texttt  {\textbackslash tkzLabelArc: arguments}!\texttt  {label}|hyperpage}{186}
+\indexentry{tkzLabelArc(A,B)\{$5$\}_1@\texttt  {\textbackslash tkzLabelArc(A,B)\{$5$\}}|hyperpage}{186}
+\indexentry{tkzLabelArc_2@\texttt  {\textbackslash tkzLabelArc: arguments}!\texttt  {(pt1,pt2,pt3)}|hyperpage}{186}
+\indexentry{tkzLabelArc_3@\texttt  {\textbackslash tkzLabelArc: options}!\texttt  {pos}|hyperpage}{186}
+\indexentry{tkzCompass_1@\texttt  {\textbackslash tkzCompass}|hyperpage}{189}
+\indexentry{tkzCompass{\ttfamily  [}{\color  {myblue}\meta  {local options}}{\ttfamily  ]}{\ttfamily  (}{\color  {myblue}\meta  {A,B}}{\ttfamily  )}_1@\texttt  {\textbackslash tkzCompass{\ttfamily  [}{\color  {myblue}\meta  {local options}}{\ttfamily  ]}{\ttfamily  (}{\color  {myblue}\meta  {A,B}}{\ttfamily  )}}|hyperpage}{189}
+\indexentry{tkzCompass_1@\texttt  {\textbackslash tkzCompass}|hyperpage}{189}
+\indexentry{tkzCompass_3@\texttt  {\textbackslash tkzCompass: options}!\texttt  {delta}|hyperpage}{189}
+\indexentry{tkzCompass_3@\texttt  {\textbackslash tkzCompass: options}!\texttt  {length}|hyperpage}{189}
+\indexentry{tkzCompasss_1@\texttt  {\textbackslash tkzCompasss}|hyperpage}{190}
+\indexentry{tkzCompasss{\ttfamily  [}{\color  {myblue}\meta  {local options}}{\ttfamily  ]}{\ttfamily  (}{\color  {myblue}\meta  {pt1,pt2 pt3,pt4,\dots  }}{\ttfamily  )}_1@\texttt  {\textbackslash tkzCompasss{\ttfamily  [}{\color  {myblue}\meta  {local options}}{\ttfamily  ]}{\ttfamily  (}{\color  {myblue}\meta  {pt1,pt2 pt3,pt4,\dots  }}{\ttfamily  )}}|hyperpage}{190}
+\indexentry{tkzCompasss_1@\texttt  {\textbackslash tkzCompasss}|hyperpage}{190}
+\indexentry{tkzCompasss_3@\texttt  {\textbackslash tkzCompasss: options}!\texttt  {delta}|hyperpage}{190}
+\indexentry{tkzCompasss_3@\texttt  {\textbackslash tkzCompasss: options}!\texttt  {length}|hyperpage}{190}
+\indexentry{tkzCompasss_1@\texttt  {\textbackslash tkzCompasss}|hyperpage}{190}
+\indexentry{tkzShowLine_1@\texttt  {\textbackslash tkzShowLine}|hyperpage}{190}
+\indexentry{tkzShowLine{\ttfamily  [}{\color  {myblue}\meta  {local options}}{\ttfamily  ]}{\ttfamily  (}{\color  {myblue}\meta  {pt1,pt2}}{\ttfamily  )} or {\ttfamily  (}{\color  {myblue}\meta  {pt1,pt2,pt3}}{\ttfamily  )}_1@\texttt  {\textbackslash tkzShowLine{\ttfamily  [}{\color  {myblue}\meta  {local options}}{\ttfamily  ]}{\ttfamily  (}{\color  {myblue}\meta  {pt1,pt2}}{\ttfamily  )} or {\ttfamily  (}{\color  {myblue}\meta  {pt1,pt2,pt3}}{\ttfamily  )}}|hyperpage}{190}
+\indexentry{tkzShowLine_1@\texttt  {\textbackslash tkzShowLine}|hyperpage}{190}
+\indexentry{tkzShowLine_3@\texttt  {\textbackslash tkzShowLine: options}!\texttt  {mediator}|hyperpage}{190}
+\indexentry{tkzShowLine_3@\texttt  {\textbackslash tkzShowLine: options}!\texttt  {perpendicular}|hyperpage}{190}
+\indexentry{tkzShowLine_3@\texttt  {\textbackslash tkzShowLine: options}!\texttt  {orthogonal}|hyperpage}{190}
+\indexentry{tkzShowLine_3@\texttt  {\textbackslash tkzShowLine: options}!\texttt  {bisector}|hyperpage}{190}
+\indexentry{tkzShowLine_3@\texttt  {\textbackslash tkzShowLine: options}!\texttt  {K}|hyperpage}{190}
+\indexentry{tkzShowLine_3@\texttt  {\textbackslash tkzShowLine: options}!\texttt  {length}|hyperpage}{190}
+\indexentry{tkzShowLine_3@\texttt  {\textbackslash tkzShowLine: options}!\texttt  {ratio}|hyperpage}{190}
+\indexentry{tkzShowLine_3@\texttt  {\textbackslash tkzShowLine: options}!\texttt  {gap}|hyperpage}{190}
+\indexentry{tkzShowLine_3@\texttt  {\textbackslash tkzShowLine: options}!\texttt  {size}|hyperpage}{190}
+\indexentry{tkzShowLine_1@\texttt  {\textbackslash tkzShowLine}|hyperpage}{191}
+\indexentry{tkzShowLine_1@\texttt  {\textbackslash tkzShowLine}|hyperpage}{191}
+\indexentry{tkzShowLine_1@\texttt  {\textbackslash tkzShowLine}|hyperpage}{191}
+\indexentry{tkzShowLine_1@\texttt  {\textbackslash tkzShowLine}|hyperpage}{192}
+\indexentry{tkzShowTransformation{\ttfamily  [}{\color  {myblue}\meta  {local options}}{\ttfamily  ]}{\ttfamily  (}{\color  {myblue}\meta  {pt1,pt2}}{\ttfamily  )} or {\ttfamily  (}{\color  {myblue}\meta  {pt1,pt2,pt3}}{\ttfamily  )}_1@\texttt  {\textbackslash tkzShowTransformation{\ttfamily  [}{\color  {myblue}\meta  {local options}}{\ttfamily  ]}{\ttfamily  (}{\color  {myblue}\meta  {pt1,pt2}}{\ttfamily  )} or {\ttfamily  (}{\color  {myblue}\meta  {pt1,pt2,pt3}}{\ttfamily  )}}|hyperpage}{192}
+\indexentry{tkzShowTransformation_1@\texttt  {\textbackslash tkzShowTransformation}|hyperpage}{192}
+\indexentry{tkzShowTransformation_3@\texttt  {\textbackslash tkzShowTransformation: options}!\texttt  {reflection= over pt1--pt2}|hyperpage}{192}
+\indexentry{tkzShowTransformation_3@\texttt  {\textbackslash tkzShowTransformation: options}!\texttt  {symmetry=center pt}|hyperpage}{192}
+\indexentry{tkzShowTransformation_3@\texttt  {\textbackslash tkzShowTransformation: options}!\texttt  {projection=onto pt1--pt2}|hyperpage}{192}
+\indexentry{tkzShowTransformation_3@\texttt  {\textbackslash tkzShowTransformation: options}!\texttt  {translation=from pt1 to pt2}|hyperpage}{192}
+\indexentry{tkzShowTransformation_3@\texttt  {\textbackslash tkzShowTransformation: options}!\texttt  {K}|hyperpage}{192}
+\indexentry{tkzShowTransformation_3@\texttt  {\textbackslash tkzShowTransformation: options}!\texttt  {length}|hyperpage}{192}
+\indexentry{tkzShowTransformation_3@\texttt  {\textbackslash tkzShowTransformation: options}!\texttt  {ratio}|hyperpage}{192}
+\indexentry{tkzShowTransformation_3@\texttt  {\textbackslash tkzShowTransformation: options}!\texttt  {gap}|hyperpage}{192}
+\indexentry{tkzShowTransformation_3@\texttt  {\textbackslash tkzShowTransformation: options}!\texttt  {size}|hyperpage}{192}
+\indexentry{tkzShowTransformation_1@\texttt  {\textbackslash tkzShowTransformation}|hyperpage}{193}
+\indexentry{tkzShowTransformation_1@\texttt  {\textbackslash tkzShowTransformation}|hyperpage}{193}
+\indexentry{tkzProtractor_1@\texttt  {\textbackslash tkzProtractor}|hyperpage}{194}
+\indexentry{tkzProtractor{\ttfamily  [}{\color  {myblue}\meta  {local options}}{\ttfamily  ]}{\ttfamily  (}{\color  {myblue}\meta  {$O,A$}}{\ttfamily  )}_1@\texttt  {\textbackslash tkzProtractor{\ttfamily  [}{\color  {myblue}\meta  {local options}}{\ttfamily  ]}{\ttfamily  (}{\color  {myblue}\meta  {$O,A$}}{\ttfamily  )}}|hyperpage}{194}
+\indexentry{tkzProtractor_1@\texttt  {\textbackslash tkzProtractor}|hyperpage}{194}
+\indexentry{tkzProtractor_3@\texttt  {\textbackslash tkzProtractor: options}!\texttt  {lw}|hyperpage}{194}
+\indexentry{tkzProtractor_3@\texttt  {\textbackslash tkzProtractor: options}!\texttt  {scale}|hyperpage}{194}
+\indexentry{tkzProtractor_3@\texttt  {\textbackslash tkzProtractor: options}!\texttt  {return}|hyperpage}{194}
+\indexentry{tkzDuplicateSegment{\ttfamily  (}{\color  {myblue}\meta  {pt1,pt2}}{\ttfamily  )}{\ttfamily  (}{\color  {myblue}\meta  {pt3,pt4}}{\ttfamily  )}{\ttfamily  \char `\{}{\color  {myblue}\meta  {pt5}}{\ttfamily  \char `\}}_1@\texttt  {\textbackslash tkzDuplicateSegment{\ttfamily  (}{\color  {myblue}\meta  {pt1,pt2}}{\ttfamily  )}{\ttfamily  (}{\color  {myblue}\meta  {pt3,pt4}}{\ttfamily  )}{\ttfamily  \char `\{}{\color  {myblue}\meta  {pt5}}{\ttfamily  \char `\}}}|hyperpage}{195}
+\indexentry{tkzDuplicateSegment_1@\texttt  {\textbackslash tkzDuplicateSegment}|hyperpage}{195}
+\indexentry{tkzDuplicateSegment_1@\texttt  {\textbackslash tkzDuplicateSegment}|hyperpage}{195}
+\indexentry{tkzDuplicateLen_1@\texttt  {\textbackslash tkzDuplicateLen}|hyperpage}{195}
+\indexentry{tkzDuplicateSegment_2@\texttt  {\textbackslash tkzDuplicateSegment: arguments}!\texttt  {(pt1,pt2)(pt3,pt4)\{pt5\}}|hyperpage}{195}
+\indexentry{tkzDuplicateSegment_1@\texttt  {\textbackslash tkzDuplicateSegment}|hyperpage}{195}
+\indexentry{tkzDuplicateLength_1@\texttt  {\textbackslash tkzDuplicateLength}|hyperpage}{195}
+\indexentry{tkzDuplicateSegment_1@\texttt  {\textbackslash tkzDuplicateSegment}|hyperpage}{196}
+\indexentry{tkzDuplicateSegment_1@\texttt  {\textbackslash tkzDuplicateSegment}|hyperpage}{196}
+\indexentry{tkzCalcLength_1@\texttt  {\textbackslash tkzCalcLength}|hyperpage}{197}
+\indexentry{Package !xfp@\texttt  {xfp}|hyperpage}{197}
+\indexentry{tkzCalcLength{\ttfamily  [}{\color  {myblue}\meta  {local options}}{\ttfamily  ]}{\ttfamily  (}{\color  {myblue}\meta  {pt1,pt2}}{\ttfamily  )}_1@\texttt  {\textbackslash tkzCalcLength{\ttfamily  [}{\color  {myblue}\meta  {local options}}{\ttfamily  ]}{\ttfamily  (}{\color  {myblue}\meta  {pt1,pt2}}{\ttfamily  )}}|hyperpage}{197}
+\indexentry{tkzCalcLength_1@\texttt  {\textbackslash tkzCalcLength}|hyperpage}{197}
+\indexentry{tkzGetLength_1@\texttt  {\textbackslash tkzGetLength}|hyperpage}{197}
+\indexentry{tkzGetLength\{dAB\}_1@\texttt  {\textbackslash tkzGetLength\{dAB\}}|hyperpage}{197}
+\indexentry{dAB_1@\texttt  {\textbackslash dAB}|hyperpage}{197}
+\indexentry{tkzCalcLength_2@\texttt  {\textbackslash tkzCalcLength: arguments}!\texttt  {(pt1,pt2)\{name of macro\}}|hyperpage}{197}
+\indexentry{tkzCalcLength_1@\texttt  {\textbackslash tkzCalcLength}|hyperpage}{197}
+\indexentry{dAB_1@\texttt  {\textbackslash dAB}|hyperpage}{197}
+\indexentry{tkzCalcLength_3@\texttt  {\textbackslash tkzCalcLength: options}!\texttt  {cm}|hyperpage}{197}
+\indexentry{tkzCalcLength_1@\texttt  {\textbackslash tkzCalcLength}|hyperpage}{197}
+\indexentry{tkzGetLength\{dAB\}_1@\texttt  {\textbackslash tkzGetLength\{dAB\}}|hyperpage}{197}
+\indexentry{dAB_1@\texttt  {\textbackslash dAB}|hyperpage}{197}
+\indexentry{tkzDefCircle[radius](A,B)_1@\texttt  {\textbackslash tkzDefCircle[radius](A,B)}|hyperpage}{198}
+\indexentry{tkzGetLength_1@\texttt  {\textbackslash tkzGetLength}|hyperpage}{198}
+\indexentry{tkzpttocm{\ttfamily  (}{\color  {myblue}\meta  {number}}{\ttfamily  )}{\ttfamily  \char `\{}{\color  {myblue}\meta  {name of macro}}{\ttfamily  \char `\}}_1@\texttt  {\textbackslash tkzpttocm{\ttfamily  (}{\color  {myblue}\meta  {number}}{\ttfamily  )}{\ttfamily  \char `\{}{\color  {myblue}\meta  {name of macro}}{\ttfamily  \char `\}}}|hyperpage}{198}
+\indexentry{tkzpttocm_1@\texttt  {\textbackslash tkzpttocm}|hyperpage}{198}
+\indexentry{tkzpttocm_2@\texttt  {\textbackslash tkzpttocm: arguments}!\texttt  {(number)\{name of macro\}}|hyperpage}{198}
+\indexentry{tkzpttocm_1@\texttt  {\textbackslash tkzpttocm}|hyperpage}{198}
+\indexentry{len_1@\texttt  {\textbackslash len}|hyperpage}{198}
+\indexentry{len_1@\texttt  {\textbackslash len}|hyperpage}{198}
+\indexentry{tkzcmtopt{\ttfamily  (}{\color  {myblue}\meta  {number}}{\ttfamily  )}{\ttfamily  \char `\{}{\color  {myblue}\meta  {name of macro}}{\ttfamily  \char `\}}_1@\texttt  {\textbackslash tkzcmtopt{\ttfamily  (}{\color  {myblue}\meta  {number}}{\ttfamily  )}{\ttfamily  \char `\{}{\color  {myblue}\meta  {name of macro}}{\ttfamily  \char `\}}}|hyperpage}{199}
+\indexentry{tkzcmtopt_1@\texttt  {\textbackslash tkzcmtopt}|hyperpage}{199}
+\indexentry{tkzcmtopt_2@\texttt  {\textbackslash tkzcmtopt: arguments}!\texttt  {(number)\{name of macro\}}|hyperpage}{199}
+\indexentry{tkzcmtopt_1@\texttt  {\textbackslash tkzcmtopt}|hyperpage}{199}
+\indexentry{len_1@\texttt  {\textbackslash len}|hyperpage}{199}
+\indexentry{len_1@\texttt  {\textbackslash len}|hyperpage}{199}
+\indexentry{tkzGetPointCoord{\ttfamily  (}{\color  {myblue}\meta  {$A$}}{\ttfamily  )}{\ttfamily  \char `\{}{\color  {myblue}\meta  {name of macro}}{\ttfamily  \char `\}}_1@\texttt  {\textbackslash tkzGetPointCoord{\ttfamily  (}{\color  {myblue}\meta  {$A$}}{\ttfamily  )}{\ttfamily  \char `\{}{\color  {myblue}\meta  {name of macro}}{\ttfamily  \char `\}}}|hyperpage}{199}
+\indexentry{tkzGetPointCoord_1@\texttt  {\textbackslash tkzGetPointCoord}|hyperpage}{199}
+\indexentry{tkzGetPointCoord_2@\texttt  {\textbackslash tkzGetPointCoord: arguments}!\texttt  {(point)\{name of macro\}}|hyperpage}{199}
+\indexentry{tkzGetPointCoord_1@\texttt  {\textbackslash tkzGetPointCoord}|hyperpage}{199}
+\indexentry{Ax_1@\texttt  {\textbackslash Ax}|hyperpage}{199}
+\indexentry{Ay_1@\texttt  {\textbackslash Ay}|hyperpage}{199}
+\indexentry{px_1@\texttt  {\textbackslash px}|hyperpage}{199}
+\indexentry{py_1@\texttt  {\textbackslash py}|hyperpage}{199}
+\indexentry{tkzGetPointCoord_1@\texttt  {\textbackslash tkzGetPointCoord}|hyperpage}{199}
+\indexentry{tkzGetPointCoord_1@\texttt  {\textbackslash tkzGetPointCoord}|hyperpage}{200}
+\indexentry{tkzSwapPoints{\ttfamily  (}{\color  {myblue}\meta  {$pt1$,$pt2$}}{\ttfamily  )}_1@\texttt  {\textbackslash tkzSwapPoints{\ttfamily  (}{\color  {myblue}\meta  {$pt1$,$pt2$}}{\ttfamily  )}}|hyperpage}{200}
+\indexentry{tkzSwapPoints_1@\texttt  {\textbackslash tkzSwapPoints}|hyperpage}{200}
+\indexentry{tkzSwapPoints_2@\texttt  {\textbackslash tkzSwapPoints: arguments}!\texttt  {(pt1,pt2)}|hyperpage}{200}
+\indexentry{tkzSwapPoints_1@\texttt  {\textbackslash tkzSwapPoints}|hyperpage}{200}
+\indexentry{tkzSwapPoints_1@\texttt  {\textbackslash tkzSwapPoints}|hyperpage}{200}
+\indexentry{tkzDotProduct{\ttfamily  (}{\color  {myblue}\meta  {$pt1$,$pt2$,$pt3$}}{\ttfamily  )}_1@\texttt  {\textbackslash tkzDotProduct{\ttfamily  (}{\color  {myblue}\meta  {$pt1$,$pt2$,$pt3$}}{\ttfamily  )}}|hyperpage}{200}
+\indexentry{tkzDotProduct_1@\texttt  {\textbackslash tkzDotProduct}|hyperpage}{200}
+\indexentry{tkzDotProduct_2@\texttt  {\textbackslash tkzDotProduct: arguments}!\texttt  {(pt1,pt2,pt3)}|hyperpage}{200}
+\indexentry{tkzDotProduct_1@\texttt  {\textbackslash tkzDotProduct}|hyperpage}{200}
+\indexentry{tkzGetResult_1@\texttt  {\textbackslash tkzGetResult}|hyperpage}{200}
+\indexentry{tkzPowerCircle{\ttfamily  (}{\color  {myblue}\meta  {$pt1$}}{\ttfamily  )}{\ttfamily  (}{\color  {myblue}\meta  {$pt2$,$pt3$}}{\ttfamily  )}_1@\texttt  {\textbackslash tkzPowerCircle{\ttfamily  (}{\color  {myblue}\meta  {$pt1$}}{\ttfamily  )}{\ttfamily  (}{\color  {myblue}\meta  {$pt2$,$pt3$}}{\ttfamily  )}}|hyperpage}{203}
+\indexentry{tkzPowerCircle_1@\texttt  {\textbackslash tkzPowerCircle}|hyperpage}{203}
+\indexentry{tkzPowerCircle_2@\texttt  {\textbackslash tkzPowerCircle: arguments}!\texttt  {(pt1)(pt2,pt3)}|hyperpage}{203}
+\indexentry{tkzPowerCircle_1@\texttt  {\textbackslash tkzPowerCircle}|hyperpage}{203}
+\indexentry{tkzDefRadicalAxis{\ttfamily  (}{\color  {myblue}\meta  {$pt1$,$pt2$}}{\ttfamily  )}{\ttfamily  (}{\color  {myblue}\meta  {$pt3$,$pt4$}}{\ttfamily  )}_1@\texttt  {\textbackslash tkzDefRadicalAxis{\ttfamily  (}{\color  {myblue}\meta  {$pt1$,$pt2$}}{\ttfamily  )}{\ttfamily  (}{\color  {myblue}\meta  {$pt3$,$pt4$}}{\ttfamily  )}}|hyperpage}{203}
+\indexentry{tkzDefRadicalAxis_1@\texttt  {\textbackslash tkzDefRadicalAxis}|hyperpage}{203}
+\indexentry{tkzDefRadicalAxis_2@\texttt  {\textbackslash tkzDefRadicalAxis: arguments}!\texttt  {(pt1,pt2)(pt3,pt4)}|hyperpage}{203}
+\indexentry{tkzDefRadicalAxis_1@\texttt  {\textbackslash tkzDefRadicalAxis}|hyperpage}{203}
+\indexentry{tkzIsLinear_1@\texttt  {\textbackslash tkzIsLinear}|hyperpage}{205}
+\indexentry{tkzIsOrtho_1@\texttt  {\textbackslash tkzIsOrtho}|hyperpage}{205}
+\indexentry{tkzIsLinear{\ttfamily  (}{\color  {myblue}\meta  {$pt1$,$pt2$,$pt3$}}{\ttfamily  )}_1@\texttt  {\textbackslash tkzIsLinear{\ttfamily  (}{\color  {myblue}\meta  {$pt1$,$pt2$,$pt3$}}{\ttfamily  )}}|hyperpage}{205}
+\indexentry{tkzIsLinear_1@\texttt  {\textbackslash tkzIsLinear}|hyperpage}{205}
+\indexentry{tkzIsLinear_2@\texttt  {\textbackslash tkzIsLinear: arguments}!\texttt  {(pt1,pt2,pt3)}|hyperpage}{205}
+\indexentry{tkzIsLinear_1@\texttt  {\textbackslash tkzIsLinear}|hyperpage}{205}
+\indexentry{tkzIsLinear_1@\texttt  {\textbackslash tkzIsLinear}|hyperpage}{205}
+\indexentry{tkzIsOrtho{\ttfamily  (}{\color  {myblue}\meta  {$pt1$,$pt2$,$pt3$}}{\ttfamily  )}_1@\texttt  {\textbackslash tkzIsOrtho{\ttfamily  (}{\color  {myblue}\meta  {$pt1$,$pt2$,$pt3$}}{\ttfamily  )}}|hyperpage}{205}
+\indexentry{tkzIsOrtho_1@\texttt  {\textbackslash tkzIsOrtho}|hyperpage}{205}
+\indexentry{tkzIsOrtho_2@\texttt  {\textbackslash tkzIsOrtho: arguments}!\texttt  {(pt1,pt2,pt3)}|hyperpage}{205}
+\indexentry{tkzIsOrtho_1@\texttt  {\textbackslash tkzIsOrtho}|hyperpage}{205}
+\indexentry{tkzIsOrtho_1@\texttt  {\textbackslash tkzIsOrtho}|hyperpage}{205}
+\indexentry{tkzIsOrtho_1@\texttt  {\textbackslash tkzIsOrtho}|hyperpage}{206}
+\indexentry{tkzIsLinear_1@\texttt  {\textbackslash tkzIsLinear}|hyperpage}{206}
+\indexentry{tkzSetUpColors_1@\texttt  {\textbackslash tkzSetUpColors}|hyperpage}{208}
+\indexentry{tikzset_1@\texttt  {\textbackslash tikzset}|hyperpage}{208}
+\indexentry{tkzSetUpPoint_1@\texttt  {\textbackslash tkzSetUpPoint}|hyperpage}{208}
+\indexentry{tkzSetUpPoint_1@\texttt  {\textbackslash tkzSetUpPoint}|hyperpage}{208}
+\indexentry{tkzSetUpPoint{\ttfamily  [}{\color  {myblue}\meta  {local options}}{\ttfamily  ]}_1@\texttt  {\textbackslash tkzSetUpPoint{\ttfamily  [}{\color  {myblue}\meta  {local options}}{\ttfamily  ]}}|hyperpage}{208}
+\indexentry{tkzSetUpPoint_1@\texttt  {\textbackslash tkzSetUpPoint}|hyperpage}{208}
+\indexentry{tkzSetUpPoint_3@\texttt  {\textbackslash tkzSetUpPoint: options}!\texttt  {color}|hyperpage}{208}
+\indexentry{tkzSetUpPoint_3@\texttt  {\textbackslash tkzSetUpPoint: options}!\texttt  {size}|hyperpage}{208}
+\indexentry{tkzSetUpPoint_3@\texttt  {\textbackslash tkzSetUpPoint: options}!\texttt  {fill}|hyperpage}{208}
+\indexentry{tkzSetUpPoint_3@\texttt  {\textbackslash tkzSetUpPoint: options}!\texttt  {shape}|hyperpage}{208}
+\indexentry{Environment_1@\texttt  {Environment}!\texttt  {tikzpicture}|hyperpage}{209}
+\indexentry{tkzSetUpPoint_1@\texttt  {\textbackslash tkzSetUpPoint}|hyperpage}{209}
+\indexentry{Environment_1@\texttt  {Environment}!\texttt  {tikzpicture}|hyperpage}{209}
+\indexentry{Environment_1@\texttt  {Environment}!\texttt  {scope}|hyperpage}{209}
+\indexentry{Environment_1@\texttt  {Environment}!\texttt  {scope}|hyperpage}{209}
+\indexentry{tkzSetUpPoint_1@\texttt  {\textbackslash tkzSetUpPoint}|hyperpage}{210}
+\indexentry{tkzSetUpPoint_1@\texttt  {\textbackslash tkzSetUpPoint}|hyperpage}{210}
+\indexentry{tkzSetUpLine_1@\texttt  {\textbackslash tkzSetUpLine}|hyperpage}{210}
+\indexentry{tkzSetUpLine_1@\texttt  {\textbackslash tkzSetUpLine}|hyperpage}{210}
+\indexentry{tkzSetUpLine{\ttfamily  [}{\color  {myblue}\meta  {local options}}{\ttfamily  ]}_1@\texttt  {\textbackslash tkzSetUpLine{\ttfamily  [}{\color  {myblue}\meta  {local options}}{\ttfamily  ]}}|hyperpage}{211}
+\indexentry{tkzSetUpLine_1@\texttt  {\textbackslash tkzSetUpLine}|hyperpage}{211}
+\indexentry{tkzSetUpLine_3@\texttt  {\textbackslash tkzSetUpLine: options}!\texttt  {color}|hyperpage}{211}
+\indexentry{tkzSetUpLine_3@\texttt  {\textbackslash tkzSetUpLine: options}!\texttt  {line width}|hyperpage}{211}
+\indexentry{tkzSetUpLine_3@\texttt  {\textbackslash tkzSetUpLine: options}!\texttt  {style}|hyperpage}{211}
+\indexentry{tkzSetUpLine_3@\texttt  {\textbackslash tkzSetUpLine: options}!\texttt  {add}|hyperpage}{211}
+\indexentry{tkzSetUpArc_1@\texttt  {\textbackslash tkzSetUpArc}|hyperpage}{212}
+\indexentry{tkzSetUpArc{\ttfamily  [}{\color  {myblue}\meta  {local options}}{\ttfamily  ]}_1@\texttt  {\textbackslash tkzSetUpArc{\ttfamily  [}{\color  {myblue}\meta  {local options}}{\ttfamily  ]}}|hyperpage}{213}
+\indexentry{tkzSetUpArc_1@\texttt  {\textbackslash tkzSetUpArc}|hyperpage}{213}
+\indexentry{tkzSetUpArc_3@\texttt  {\textbackslash tkzSetUpArc: options}!\texttt  {color}|hyperpage}{213}
+\indexentry{tkzSetUpArc_3@\texttt  {\textbackslash tkzSetUpArc: options}!\texttt  {line width}|hyperpage}{213}
+\indexentry{tkzSetUpArc_3@\texttt  {\textbackslash tkzSetUpArc: options}!\texttt  {style}|hyperpage}{213}
+\indexentry{tkzSetUpArc_3@\texttt  {\textbackslash tkzSetUpArc: options}!\texttt  {delta}|hyperpage}{213}
+\indexentry{tkzDrawArc_1@\texttt  {\textbackslash tkzDrawArc}|hyperpage}{213}
+\indexentry{tkzMarkArc_1@\texttt  {\textbackslash tkzMarkArc}|hyperpage}{213}
+\indexentry{tkzLabelArc_1@\texttt  {\textbackslash tkzLabelArc}|hyperpage}{213}
+\indexentry{tkzSetUpCompass_1@\texttt  {\textbackslash tkzSetUpCompass}|hyperpage}{213}
+\indexentry{tkzSetUpArc_1@\texttt  {\textbackslash tkzSetUpArc}|hyperpage}{213}
+\indexentry{tkzSetUpCompass_1@\texttt  {\textbackslash tkzSetUpCompass}|hyperpage}{213}
+\indexentry{tkzSetUpCompass{\ttfamily  [}{\color  {myblue}\meta  {local options}}{\ttfamily  ]}_1@\texttt  {\textbackslash tkzSetUpCompass{\ttfamily  [}{\color  {myblue}\meta  {local options}}{\ttfamily  ]}}|hyperpage}{214}
+\indexentry{tkzSetUpCompass_1@\texttt  {\textbackslash tkzSetUpCompass}|hyperpage}{214}
+\indexentry{tkzSetUpCompass_3@\texttt  {\textbackslash tkzSetUpCompass: options}!\texttt  {color}|hyperpage}{214}
+\indexentry{tkzSetUpCompass_3@\texttt  {\textbackslash tkzSetUpCompass: options}!\texttt  {line width}|hyperpage}{214}
+\indexentry{tkzSetUpCompass_3@\texttt  {\textbackslash tkzSetUpCompass: options}!\texttt  {style}|hyperpage}{214}
+\indexentry{tkzSetUpCompass_3@\texttt  {\textbackslash tkzSetUpCompass: options}!\texttt  {delta}|hyperpage}{214}
+\indexentry{tkzSetUpCompass_1@\texttt  {\textbackslash tkzSetUpCompass}|hyperpage}{214}
+\indexentry{tkzSetUpCompass_1@\texttt  {\textbackslash tkzSetUpCompass}|hyperpage}{214}
+\indexentry{tkzShowLine_1@\texttt  {\textbackslash tkzShowLine}|hyperpage}{214}
+\indexentry{tkzSetUpLabel_1@\texttt  {\textbackslash tkzSetUpLabel}|hyperpage}{215}
+\indexentry{tkzSetUpLabel_1@\texttt  {\textbackslash tkzSetUpLabel}|hyperpage}{215}
+\indexentry{tkzSetUpStyle{\ttfamily  [}{\color  {myblue}\meta  {local options}}{\ttfamily  ]}_1@\texttt  {\textbackslash tkzSetUpStyle{\ttfamily  [}{\color  {myblue}\meta  {local options}}{\ttfamily  ]}}|hyperpage}{215}
+\indexentry{tkzSetUpStyle_1@\texttt  {\textbackslash tkzSetUpStyle}|hyperpage}{215}
+\indexentry{tkzSetUpLabel_1@\texttt  {\textbackslash tkzSetUpLabel}|hyperpage}{215}
+\indexentry{tkzSetUpStyle_1@\texttt  {\textbackslash tkzSetUpStyle}|hyperpage}{215}
+\indexentry{tkzSetUpStyle_1@\texttt  {\textbackslash tkzSetUpStyle}|hyperpage}{215}
+\indexentry{tkzSetUpStyle{\ttfamily  [}{\color  {myblue}\meta  {local options}}{\ttfamily  ]}_1@\texttt  {\textbackslash tkzSetUpStyle{\ttfamily  [}{\color  {myblue}\meta  {local options}}{\ttfamily  ]}}|hyperpage}{215}
+\indexentry{tkzSetUpStyle_1@\texttt  {\textbackslash tkzSetUpStyle}|hyperpage}{215}
+\indexentry{tkzSetUpStyle_1@\texttt  {\textbackslash tkzSetUpStyle}|hyperpage}{216}
+\indexentry{tkzMarkAngle_1@\texttt  {\textbackslash tkzMarkAngle}|hyperpage}{223}
+\indexentry{tkzFillAngle_1@\texttt  {\textbackslash tkzFillAngle}|hyperpage}{223}
+\indexentry{tkzDrawSegments_1@\texttt  {\textbackslash tkzDrawSegments}|hyperpage}{271}
+\indexentry{tkzDrawCircles_1@\texttt  {\textbackslash tkzDrawCircles}|hyperpage}{271}
+\indexentry{tkzDrawPoint(A,B)_1@\texttt  {\textbackslash tkzDrawPoint(A,B)}|hyperpage}{271}
+\indexentry{tkzDrawPoints(A,B)_1@\texttt  {\textbackslash tkzDrawPoints(A,B)}|hyperpage}{271}
+\indexentry{tkzDrawCircle[R](O,3cm)_1@\texttt  {\textbackslash tkzDrawCircle[R](O,3cm)}|hyperpage}{271}
+\indexentry{tkzDrawCircle[R](O,3)_1@\texttt  {\textbackslash tkzDrawCircle[R](O,3)}|hyperpage}{271}
+\indexentry{tkzMarkAngle_1@\texttt  {\textbackslash tkzMarkAngle}|hyperpage}{271}
+\indexentry{tkzGetPoint\{A\}_1@\texttt  {\textbackslash tkzGetPoint\{A\}}|hyperpage}{271}
+\indexentry{tkzGetPoint(A)_1@\texttt  {\textbackslash tkzGetPoint(A)}|hyperpage}{271}
+\indexentry{tkzGetPoint\{A\}_1@\texttt  {\textbackslash tkzGetPoint\{A\}}|hyperpage}{271}
+\indexentry{tkzGetFirstPoint\{A\}_1@\texttt  {\textbackslash tkzGetFirstPoint\{A\}}|hyperpage}{271}
+\indexentry{tkzGetPoints\{A\}\{B\}_1@\texttt  {\textbackslash tkzGetPoints\{A\}\{B\}}|hyperpage}{271}
+\indexentry{tkzGetFirstPoint\{A\}_1@\texttt  {\textbackslash tkzGetFirstPoint\{A\}}|hyperpage}{271}
+\indexentry{tkzGetSecondPoint\{A\}_1@\texttt  {\textbackslash tkzGetSecondPoint\{A\}}|hyperpage}{271}
+\indexentry{tkzGetPoint_1@\texttt  {\textbackslash tkzGetPoint}|hyperpage}{271}
+\indexentry{tkzGetPoints_1@\texttt  {\textbackslash tkzGetPoints}|hyperpage}{271}
+\indexentry{tkzGetLength_1@\texttt  {\textbackslash tkzGetLength}|hyperpage}{271}
+\indexentry{tkzDefCircle[euler](A,B,C)_1@\texttt  {\textbackslash tkzDefCircle[euler](A,B,C)}|hyperpage}{271}
+\indexentry{tkzGetPoints\{N\}\{P\}_1@\texttt  {\textbackslash tkzGetPoints\{N\}\{P\}}|hyperpage}{271}
+\indexentry{tkzDrawCircle(N,P)_1@\texttt  {\textbackslash tkzDrawCircle(N,P)}|hyperpage}{271}
+\indexentry{Package !pgfmath@\texttt  {pgfmath}|hyperpage}{271}
+\indexentry{Package !xfp@\texttt  {xfp}|hyperpage}{271}
+\indexentry{Package !xfp@\texttt  {xfp}|hyperpage}{271}
+\indexentry{Package !pgfmath@\texttt  {pgfmath}|hyperpage}{271}
+\indexentry{tkzDrawArc_1@\texttt  {\textbackslash tkzDrawArc}|hyperpage}{272}
+\indexentry{tkzMarkAngle_1@\texttt  {\textbackslash tkzMarkAngle}|hyperpage}{272}
+\indexentry{Ti\emph  {k}Z Library !decorations@\texttt  {decorations}|hyperpage}{272}
+\indexentry{Package !xfp@\texttt  {xfp}|hyperpage}{272}
+\indexentry{tkzSetUpCompass_1@\texttt  {\textbackslash tkzSetUpCompass}|hyperpage}{272}
+\indexentry{tkzDrawArc_1@\texttt  {\textbackslash tkzDrawArc}|hyperpage}{272}
+\indexentry{tkzSetUpArc_1@\texttt  {\textbackslash tkzSetUpArc}|hyperpage}{272}
+\indexentry{tkzDefCircle_1@\texttt  {\textbackslash tkzDefCircle}|hyperpage}{274}
+\indexentry{tkzDefCircle_1@\texttt  {\textbackslash tkzDefCircle}|hyperpage}{274}
+\indexentry{tkzShowLine_1@\texttt  {\textbackslash tkzShowLine}|hyperpage}{274}
+\indexentry{tkzDefSimilitudeCenter_1@\texttt  {\textbackslash tkzDefSimilitudeCenter}|hyperpage}{274}
+\indexentry{tkzCalcLength_1@\texttt  {\textbackslash tkzCalcLength}|hyperpage}{274}
+\indexentry{tkzGrid_1@\texttt  {\textbackslash tkzGrid}|hyperpage}{274}
+\indexentry{tkzClip_1@\texttt  {\textbackslash tkzClip}|hyperpage}{274}
+\indexentry{tkzDefEquiPoints_1@\texttt  {\textbackslash tkzDefEquiPoints}|hyperpage}{274}
+\indexentry{tkzLegend_1@\texttt  {\textbackslash tkzLegend}|hyperpage}{274}
+\indexentry{tkzIsLinear_1@\texttt  {\textbackslash tkzIsLinear}|hyperpage}{274}
+\indexentry{tkzIsLinear_1@\texttt  {\textbackslash tkzIsLinear}|hyperpage}{274}
+\indexentry{tkzIsOrtho_1@\texttt  {\textbackslash tkzIsOrtho}|hyperpage}{274}
+\indexentry{tkzPowerCircle_1@\texttt  {\textbackslash tkzPowerCircle}|hyperpage}{274}
+\indexentry{tkzDefCircleBy_1@\texttt  {\textbackslash tkzDefCircleBy}|hyperpage}{274}
+\indexentry{tkzDefCircle_1@\texttt  {\textbackslash tkzDefCircle}|hyperpage}{274}
+\indexentry{tkzDefTriangleCenter_1@\texttt  {\textbackslash tkzDefTriangleCenter}|hyperpage}{274}
+\indexentry{tkzDefSpcTriangle_1@\texttt  {\textbackslash tkzDefSpcTriangle}|hyperpage}{274}
+\indexentry{tkzDrawPolySeg_1@\texttt  {\textbackslash tkzDrawPolySeg}|hyperpage}{274}
+\indexentry{tkzCompass_1@\texttt  {\textbackslash tkzCompass}|hyperpage}{274}
+\indexentry{tkzProtractor_1@\texttt  {\textbackslash tkzProtractor}|hyperpage}{274}
+\indexentry{tkzLabelRegPolygon_1@\texttt  {\textbackslash tkzLabelRegPolygon}|hyperpage}{274}
+\indexentry{tkzDrawX_1@\texttt  {\textbackslash tkzDrawX}|hyperpage}{274}
+\indexentry{tkzDefNinePointsCircle_1@\texttt  {\textbackslash tkzDefNinePointsCircle}|hyperpage}{274}
+\indexentry{tkzFeuerBachCircle_1@\texttt  {\textbackslash tkzFeuerBachCircle}|hyperpage}{274}
+\indexentry{tkzIncentralTriangle_1@\texttt  {\textbackslash tkzIncentralTriangle}|hyperpage}{274}
+\indexentry{tkzSetUpCompass_1@\texttt  {\textbackslash tkzSetUpCompass}|hyperpage}{274}
+\indexentry{tkzDrawArc_1@\texttt  {\textbackslash tkzDrawArc}|hyperpage}{274}
+\indexentry{tkzMarkArc_1@\texttt  {\textbackslash tkzMarkArc}|hyperpage}{274}
+\indexentry{tkzLabelArc_1@\texttt  {\textbackslash tkzLabelArc}|hyperpage}{274}
+\indexentry{tkzSetUpArc_1@\texttt  {\textbackslash tkzSetUpArc}|hyperpage}{274}
+\indexentry{Package !tkz-elements@\texttt  {tkz-elements}|hyperpage}{274}
+\indexentry{Package !tkz-elements@\texttt  {tkz-elements}|hyperpage}{274}
+\indexentry{tkzDefCircle_1@\texttt  {\textbackslash tkzDefCircle}|hyperpage}{275}
+\indexentry{tkzDrawCircle_1@\texttt  {\textbackslash tkzDrawCircle}|hyperpage}{275}
+\indexentry{tkzInit_1@\texttt  {\textbackslash tkzInit}|hyperpage}{275}
+\indexentry{Package !tkz-elements@\texttt  {tkz-elements}|hyperpage}{276}
+\indexentry{Package !tkz-elements@\texttt  {tkz-elements}|hyperpage}{276}
+\indexentry{tkz-euclide_3@\texttt  {tkz-euclide: options}!\texttt  {lua}|hyperpage}{276}
+\indexentry{Package !xfp@\texttt  {xfp}|hyperpage}{276}
+\indexentry{Package !tkz-elements@\texttt  {tkz-elements}|hyperpage}{276}
+\indexentry{Package !tkz-elements@\texttt  {tkz-elements}|hyperpage}{276}
+\indexentry{tkz-euclide_3@\texttt  {tkz-euclide: options}!\texttt  {mini}|hyperpage}{276}

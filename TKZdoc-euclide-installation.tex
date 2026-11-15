@@ -1,0 +1,35 @@
+\section{安装}
+
+\tkzname{\tkznameofpack} 可在 \tkzname{CTAN}\footnote{\tkzname{\tkznameofpack} 是 \NameDist{TeXLive} 的一部分，可由 \tkzname{tlmgr} 安装，在 \NameSys{Windows} 下也是 \NameDist{MiKTeX} 的一部分。} 上获取。如果你想测试 beta 版本，请将文件放在系统能找到的 texmf 文件夹中。
+请检查以下几点：
+
+\begin{itemize}\setlength{\itemsep}{5pt}
+\item \tkzname{\tkznameofpack} 文件夹必须位于 \tkzname{latex} 搜索的路径中。
+\item \tkzname{\tkznameofpack} 使用宏包 \tkzNamePack{xfp}。
+\item \PGF 必须安装在你的计算机上。\tkzname{\tkznameofpack} 使用 \TIKZ 的以下几个库：
+
+ \begin{tabular}{l}
+    angles,                         \\
+    arrows,                         \\
+    arrows.meta,                    \\
+    backgrounds,                    \\
+    calc,                           \\
+    decorations,                    \\
+    decorations.markings,           \\
+    decorations.pathreplacing,      \\
+    decorations.shapes,             \\
+    decorations.text,               \\
+    decorations.pathmorphing,       \\
+    intersections,                  \\
+    math,                           \\
+    plotmarks,                      \\
+    positioning,                    \\
+    quotes,                         \\
+    shapes.misc,                    \\
+    through
+\end{tabular}
+
+\item 本手册使用 \tkzname{lualatex} 编译，但也可以使用 \tkzname{pdflatex} 和 \tkzname{xelatex}。
+\end{itemize}
+
+\endinput

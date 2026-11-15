@@ -1,0 +1,87 @@
+\section{使用圆规}    
+
+\subsection{主要宏 \tkzcname{tkzCompass}} 
+\begin{NewMacroBox}{tkzCompass}{\oarg{local options}\parg{A,B}}%
+该宏留下一个圆规记号，即一段过给定点的圆弧；圆心必须给出。若干特定选项可以改变圆弧的外观，此外还可以使用 \TIKZ\ 选项，如 style、color、line width 等。
+
+你可以通过选项 |length| 或选项 |delta| 来设置圆弧的长度。
+
+\medskip
+\begin{tabular}{lll}%
+\toprule
+选项             & 默认值 & 说明                        \\ 
+\midrule
+\TOline{delta} {0 (deg)}{对称地增大圆弧的角度} 
+\TOline{length}{1 (cm)}{改变长度（单位 cm）}
+\end{tabular}
+\end{NewMacroBox} 
+
+\subsubsection{选项 \tkzname{length}} 
+\begin{tkzexample}[latex=7cm,small]
+\begin{tikzpicture}
+  \tkzDefPoint(1,1){A}
+  \tkzDefPoint(6,1){B}
+  \tkzInterCC[R](A,4)(B,3)
+  \tkzGetPoints{C}{D}
+  \tkzDrawPoint(C)
+  \tkzCompass[length=1.5](A,C)
+  \tkzCompass(B,C)
+  \tkzDrawSegments(A,B A,C B,C)
+\end{tikzpicture}
+\end{tkzexample}
+
+\subsubsection{选项 \tkzname{delta}} 
+\tkzname{delta} 是以度为单位的角度：标记从该点周围的 $-\delta$ 延伸到 $+\delta$。接受小数值。当取默认值 $0$ 时，标记的长度由选项 \tkzname{length} 给出。
+
+\begin{tkzexample}[latex=7cm,small]
+\begin{tikzpicture} 
+  \tkzDefPoint(0,0){A} 
+  \tkzDefPoint(5,0){B}
+  \tkzInterCC[R](A,4)(B,3)
+  \tkzGetPoints{C}{D}
+  \tkzDrawPoints(A,B,C) 
+  \tkzCompass[delta=20](A,C)
+  \tkzCompass[delta=20](B,C) 
+  \tkzDrawPolygon(A,B,C)  
+  \tkzMarkAngle(A,C,B)
+\end{tikzpicture}
+\end{tkzexample} 
+
+\subsection{多重构造 \tkzcname{tkzCompasss}} 
+\begin{NewMacroBox}{tkzCompasss}{\oarg{local options}\parg{pt1,pt2 pt3,pt4,\dots}}%
+\tkzHandBomb\  注意，参数为点对列表。这样可以节省几行代码。
+
+\medskip
+\begin{tabular}{lll}%
+\toprule
+选项             & 默认值 & 说明                        \\ 
+\midrule
+\TOline{delta} {0}{通过对称增大来修改圆弧的角度} 
+\TOline{length}{1}{改变长度} 
+\end{tabular}
+\end{NewMacroBox} 
+
+\subsubsection{\tkzcname{tkzCompasss} 的用法} % (fold)
+\label{ssub:use_tkzcname_tkzcompasss}
+
+% subsubsection use_tkzcname_tkzcompasss (end)
+\begin{tkzexample}[latex=7cm,small]
+\begin{tikzpicture}[scale=.6]
+ \tkzDefPoint(2,2){A}  \tkzDefPoint(5,-2){B}
+ \tkzDefPoint(3,4){C}  \tkzDrawPoints(A,B) 
+ \tkzDrawPoint[shape=cross out](C)    
+ \tkzCompasss[new](A,B A,C B,C C,B) 
+ \tkzShowLine[mediator,new,dashed,length = 2](A,B)
+ \tkzShowLine[parallel = through C,
+                     color=purple,length=2](A,B)
+ \tkzDefLine[mediator](A,B)  
+  \tkzGetPoints{i}{j}
+ \tkzDefLine[parallel=through C](A,B) 
+   \tkzGetPoint{D}
+ \tkzDrawLines[add=.6 and .6](C,D A,C B,D)
+ \tkzDrawLines(i,j) \tkzDrawPoints(A,B,C,i,j,D)  
+ \tkzLabelPoints(A,B,C,i,j,D)
+\end{tikzpicture}
+\end{tkzexample} 
+
+\endinput

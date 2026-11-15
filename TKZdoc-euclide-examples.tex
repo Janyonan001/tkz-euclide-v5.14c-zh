@@ -1,0 +1,1142 @@
+\section{一些有趣的示例}
+
+\subsection{整数的平方根}
+\begin{tikzpicture}
+\node [mybox,title={整数的平方根}] (box){%
+\begin{minipage}{0.90\textwidth}
+  {\emph{如何用直尺和圆规作出 $1$、$\sqrt{2}$、$\sqrt{3}$。
+}} 
+\end{minipage}
+};
+\end{tikzpicture}
+
+\begin{tkzexample}[latex=7cm,small]
+\begin{tikzpicture}
+  \tkzDefPoint(0,0){O}
+  \tkzDefPoint(1,0){a0}
+   \tkzDrawSegment(O,a0)
+  \foreach \i [count=\j] in {0,...,16}{%
+    \tkzDefPointWith[orthogonal normed](a\i,O)
+    \tkzGetPoint{a\j}
+       \pgfmathsetmacro{\c}{5*\i} 
+    \tkzDrawPolySeg[fill=teal!\c](a\i,a\j,O)}
+ \end{tikzpicture}
+\end{tkzexample}
+
+\subsection{关于直角三角形}
+\begin{tikzpicture}
+\node [mybox,title={关于直角三角形}] (box){%
+\begin{minipage}{0.90\textwidth}
+  {\emph{给定线段 $[AB]$，试确定一点 $C$，使 $AC=8$~cm 且 $ABC$ 在 $B$ 处为直角三角形。
+}} 
+\end{minipage}
+};
+\end{tikzpicture}
+
+\begin{tkzexample}[latex=7cm,small]
+\begin{tikzpicture}[scale=.5]
+  \tkzDefPoint["$A$" left](2,1){A}
+  \tkzDefPoint["$B$" right](6,4){B}
+  \tkzDefPointWith[orthogonal,K=-1](B,A)
+  \tkzDrawLine[add = .5 and .5](B,tkzPointResult)
+  \tkzInterLC[R](B,tkzPointResult)(A,8)
+  \tkzGetPoints{J}{C}
+  \tkzDrawSegment(A,B)
+  \tkzDrawPoints(A,B,C)
+  \tkzCompass(A,C)
+  \tkzMarkRightAngle(A,B,C)
+  \tkzDrawLine[color=gray,style=dashed](A,C)
+  \tkzLabelPoint[above](C){$C$}
+\end{tikzpicture}
+\end{tkzexample}
+
+\subsection{阿基米德}
+\begin{tikzpicture}
+\node [mybox,title={阿基米德}] (box){%
+\begin{minipage}{0.90\textwidth}
+  {\emph{这是一个古老的问题，由伟大的希腊数学家阿基米德证明。
+下图给出一个以 $AB$ 为直径的半圆。过 $B$ 作半圆的一条切线，再过半圆上一点 $C$ 作另一条切线。将点 $C$ 投影到线段 $[AB]$ 上得到点 $D$。两条切线相交于点 $T$。证明直线 $(AT)$ 平分 $(CD)$。
+}} 
+\end{minipage}
+};
+\end{tikzpicture}
+
+\begin{tkzexample}[]
+\begin{tikzpicture}[scale=1]
+  \tkzDefPoint(0,0){A}\tkzDefPoint(6,0){D}
+  \tkzDefPoint(8,0){B}\tkzDefPoint(4,0){I}
+  \tkzDefLine[orthogonal=through D](A,D)
+  \tkzInterLC[R](D,tkzPointResult)(I,4) \tkzGetSecondPoint{C}
+  \tkzDefLine[orthogonal=through C](I,C)    \tkzGetPoint{c}
+  \tkzDefLine[orthogonal=through B](A,B)    \tkzGetPoint{b}
+  \tkzInterLL(C,c)(B,b) \tkzGetPoint{T}
+  \tkzInterLL(A,T)(C,D) \tkzGetPoint{P}
+  \tkzDrawArc(I,B)(A)
+  \tkzDrawSegments(A,B A,T C,D I,C) \tkzDrawSegment[new](I,C)
+  \tkzDrawLine[add = 1 and 0](C,T)   \tkzDrawLine[add = 0 and 1](B,T)
+  \tkzMarkRightAngle(I,C,T)
+  \tkzDrawPoints(A,B,I,D,C,T)
+  \tkzLabelPoints(A,B,I,D)  \tkzLabelPoints[above right](C,T)
+  \tkzMarkSegment[pos=.25,mark=s|](C,D) \tkzMarkSegment[pos=.75,mark=s|](C,D)
+\end{tikzpicture}
+\end{tkzexample}
+
+\newpage
+\subsubsection{等面积的正方形与矩形；黄金分割}
+
+\begin{tikzpicture}
+\node [mybox,title={第二卷，命题 XI \_Euclid's Elements\_}] (box){%
+\begin{minipage}{0.90\textwidth}
+{\emph{作一个正方形和一个矩形，使二者面积相等。}
+} 
+\end{minipage}
+};
+\end{tikzpicture}% 
+
+\begin{tkzexample}[vbox,small]
+ \begin{tikzpicture}[scale=.75]
+  \tkzDefPoint(0,0){D} \tkzDefPoint(8,0){A}
+  \tkzDefSquare(D,A) \tkzGetPoints{B}{C}
+  \tkzDefMidPoint(D,A) \tkzGetPoint{E}
+  \tkzInterLC(D,A)(E,B)\tkzGetSecondPoint{F}
+  \tkzInterLC[near](B,A)(A,F)\tkzGetFirstPoint{G}
+  \tkzDefSquare(A,F)\tkzGetFirstPoint{H}
+  \tkzInterLL(C,D)(H,G)\tkzGetPoint{I}
+  \tkzFillPolygon[teal!10](I,G,B,C)
+  \tkzFillPolygon[teal!10](A,F,H,G)
+  \tkzDrawArc[angles](E,B)(0,120)
+  \tkzDrawSemiCircle(A,F)
+  \tkzDrawSegments(A,F E,B H,I F,H)
+  \tkzDrawPolygons(A,B,C,D)
+  \tkzDrawPoints(A,...,I)
+  \tkzLabelPoints[below right](A,E,D,F,I)
+  \tkzLabelPoints[above right](C,B,G,H)
+ \end{tikzpicture}
+\end{tkzexample}
+
+\newpage
+
+\subsubsection{施泰纳线与西姆松线}
+
+\begin{tikzpicture}
+\node [mybox,title={施泰纳线与西姆松线}] (box){%
+\begin{minipage}{0.90\textwidth}
+{\emph{考虑三角形 $ABC$ 及其外接圆上一点 $M$。$M$ 到三角形各边的垂足共线（施泰纳线）。在直线 $AB$、$AC$、$BC$ 上距 $M$ 最近的三个点共线，这就是西姆松线。
+}} 
+\end{minipage}
+};
+\end{tikzpicture}%
+
+\begin{tkzexample}[latex=7cm,small]
+\begin{tikzpicture}[scale=.75,rotate=-20]
+  \tkzDefPoint(0,0){B} 
+  \tkzDefPoint(2,4){A} \tkzDefPoint(7,0){C}
+  \tkzDefCircle[circum](A,B,C)  
+  \tkzGetPoint{O}
+  \tkzDrawCircle(O,A) 
+  \tkzCalcLength(O,A)  
+  \tkzGetLength{rOA} 
+  \tkzDefShiftPoint[O](40:\rOA){M}
+  \tkzDefShiftPoint[O](60:\rOA){N}  
+  \tkzDefTriangleCenter[orthic](A,B,C)
+  \tkzGetPoint{H}
+  \tkzDefSpcTriangle[orthic,name=H](A,B,C){a,b,c}
+  \tkzDefPointsBy[reflection=over A--B](M,N){P,P'}
+  \tkzDefPointsBy[reflection=over A--C](M,N){Q,Q'}
+  \tkzDefPointsBy[reflection=over C--B](M,N){R,R'}
+  \tkzDefMidPoint(M,P)\tkzGetPoint{I}
+  \tkzDefMidPoint(M,Q)\tkzGetPoint{J}
+  \tkzDefMidPoint(M,R)\tkzGetPoint{K} 
+  \tkzDrawSegments[new](P,R M,P M,Q M,R N,P'
+   N,Q' N,R' P',R' I,K)
+  \tkzDrawPolygons(A,B,C)
+  \tkzDrawPoints(A,B,C,H,M,N,P,Q,R,P',Q',R',I,J,K)
+  \tkzLabelPoints(A,B,C,H,M,N,P,Q,R,P',Q',R',I,J,K)
+\end{tikzpicture}
+\end{tkzexample}
+
+\newpage
+\subsection{希波克拉底月牙}
+
+\begin{tikzpicture}
+\node [mybox,title={希波克拉底月牙}] (box){%
+\begin{minipage}{0.90\textwidth}
+  { \emph{来自维基百科：在几何学中，希波克拉底月牙以希俄斯的希波克拉底命名，是由两段圆弧围成的月牙形，其中较小的圆以大圆上张成直角的一条弦为直径。在第一个图中，月牙的面积等于三角形 $ABC$ 的面积。希俄斯的希波克拉底（古希腊数学家）
+}} 
+\end{minipage}
+};
+\end{tikzpicture}% 
+
+\begin{tkzexample}[latex=7cm,small]
+\begin{tikzpicture}
+ \tkzInit[xmin=-2,xmax=5,ymin=-1,ymax=6]
+ \tkzClip % allows you to define a bounding box 
+   % large enough
+  \tkzDefPoint(0,0){A}\tkzDefPoint(4,0){B}
+  \tkzDefSquare(A,B) 
+  \tkzGetFirstPoint{C} 
+  \tkzDrawPolygon[fill=green!5](A,B,C)
+   \begin{scope}
+     \tkzClipCircle[out](B,A)
+     \tkzDefMidPoint(C,A) \tkzGetPoint{M}
+     \tkzDrawSemiCircle[fill=teal!5](M,C)
+   \end{scope}
+   \tkzDrawArc[delta=0](B,C)(A)
+\end{tikzpicture}
+\end{tkzexample}
+
+\subsection{海什木月牙}
+
+\begin{tikzpicture}
+\node [mybox,title={海什木月牙}] (box){%
+\begin{minipage}{0.90\textwidth}
+  { \emph{来自维基百科：阿拉伯数学家海什木（Hasan Ibn al-Haytham，拉丁化名字为 Alhazen）证明，在直角三角形两条直角边上分别作两个月牙形，其外边界为半圆，内边界由三角形的外接圆构成，则这两个月牙的面积之和等于该三角形的面积。以这种方式由直角三角形作出的月牙形被称为海什木月牙。
+}} 
+\end{minipage}};
+\end{tikzpicture}% 
+
+\begin{tkzexample}[latex=7cm,small]
+\begin{tikzpicture}[scale=.5,rotate=180]
+  \tkzInit[xmin=-1,xmax=11,ymin=-4,ymax=7]
+  \tkzClip
+  \tkzDefPoints{0/0/A,8/0/B}
+  \tkzDefTriangle[pythagore,swap](A,B) 
+  \tkzGetPoint{C}
+  \tkzDrawPolygon[fill=green!5](A,B,C)
+  \tkzDefMidPoint(C,A) \tkzGetPoint{I}
+  \begin{scope}
+    \tkzClipCircle[out](I,A)
+    \tkzDefMidPoint(B,A) \tkzGetPoint{x}
+    \tkzDrawSemiCircle[fill=teal!5](x,A)
+    \tkzDefMidPoint(B,C) \tkzGetPoint{y}
+    \tkzDrawSemiCircle[fill=teal!5](y,B)
+  \end{scope}
+  \tkzSetUpCompass[/tkzcompass/delta=0]
+      \tkzDefMidPoint(C,A) \tkzGetPoint{z}
+  \tkzDrawSemiCircle(z,A)
+\end{tikzpicture}
+\end{tkzexample}
+
+\newpage
+\subsection{关于圆的裁剪}\label{About clipping circles}
+\begin{tikzpicture}
+\node [mybox,title={关于圆的裁剪}] (box){%
+\begin{minipage}{0.90\textwidth}
+  { \emph{问题在于 bounding box 的管理。首先需要定义一个矩形，图形将被放置在其中。这由前两行完成。
+}} 
+\end{minipage}
+};
+\end{tikzpicture}% 
+
+\begin{tkzexample}[latex=7cm,small]
+\begin{tikzpicture}
+  \tkzInit[xmin=0,xmax=6,ymin=0,ymax=6]
+  \tkzClip
+  \tkzDefPoints{0/0/A, 6/0/B}
+  \tkzDefSquare(A,B)      \tkzGetPoints{C}{D}
+  \tkzDefMidPoint(A,B)        \tkzGetPoint{M}
+  \tkzDefMidPoint(A,D)        \tkzGetPoint{N}
+  \tkzDefMidPoint(B,C)        \tkzGetPoint{O}
+  \tkzDefMidPoint(C,D)        \tkzGetPoint{P}
+ \begin{scope}
+  \tkzClipCircle[out](M,B) \tkzClipCircle[out](P,D)
+  \tkzFillPolygon[teal!20](M,N,P,O)
+ \end{scope}
+ \begin{scope}
+   \tkzClipCircle[out](N,A) \tkzClipCircle[out](O,C)
+   \tkzFillPolygon[teal!20](M,N,P,O)
+ \end{scope}
+ \begin{scope}
+   \tkzClipCircle(P,C) \tkzClipCircle(N,A)      
+   \tkzFillPolygon[teal!20](N,P,D)
+ \end{scope}
+ \begin{scope}
+     \tkzClipCircle(O,C) \tkzClipCircle(P,C) 
+     \tkzFillPolygon[teal!20](P,C,O)
+ \end{scope}
+ \begin{scope}
+     \tkzClipCircle(M,B)  \tkzClipCircle(O,B)
+     \tkzFillPolygon[teal!20](O,B,M)
+ \end{scope}
+ \begin{scope}
+     \tkzClipCircle(N,A) \tkzClipCircle(M,A)  
+     \tkzFillPolygon[teal!20](A,M,N)
+ \end{scope}
+ \tkzDrawSemiCircles(M,B N,A O,C P,D)
+ \tkzDrawPolygons(A,B,C,D M,N,P,O)
+ \end{tikzpicture}
+ \end{tkzexample}
+
+\newpage
+\subsection{相似等腰三角形}
+
+\begin{tikzpicture}
+\node [mybox,title={相似等腰三角形}] (box){%
+\begin{minipage}{0.90\textwidth}
+  { \emph{以下内容出自优秀网站 \textbf{Descartes et les Mathématiques}。我未修改原文，仅是图形编程的作者。
+\url{http://debart.pagesperso-orange.fr/seconde/triangle.html}
+}} 
+\end{minipage}
+};
+\end{tikzpicture}% 
+
+以下内容出自优秀网站 \textbf{Descartes et les Mathématiques}。我未修改原文；仅编写了图形程序。
+
+\url{http://debart.pagesperso-orange.fr/seconde/triangle.html}
+
+参考文献：
+
+\begin{itemize}
+\item   Géométrie au Bac - Tangente, 特刊第 8 期 - 习题 11，第 11 页
+
+\item   Elisabeth Busser 与 Gilles Cohen：200 nouveaux problèmes du "Monde" - POLE 2007（《世界报》200 道新题）
+
+\item   Affaire de logique n° 364 - Le Monde，2004 年 2 月 17 日
+\end{itemize}
+
+
+共给出两则题目，一则来自 \textit{Tangente} 杂志，另一则来自 \textit{Le Monde}。
+
+\vspace*{2cm}
+\emph{《Tangente》杂志编辑}：\textcolor{orange}{作两个相似的等腰三角形 $AXB$ 和 $BYC$，主顶点分别为 $X$ 和 $Y$，使 $A$、$B$、$C$ 三点共线，且这两个三角形为 ``indirect'' 型。设顶角 $\widehat{AXB}$ = $\widehat{BYC}$ 为 $\alpha$。再作第三个等腰三角形 $XZY$，与前两个相似，主顶点为 $Z$，同样为 ``indirect'' 型。证明点 $Z$ 在直线 $(AC)$ 上。}
+
+\vspace*{2cm}
+\emph{《Le Monde》编辑}：\textcolor{orange}{作两个相似的等腰三角形 $AXB$ 和 $BYC$，主顶点分别为 $X$ 和 $Y$，使 $A$、$B$、$C$ 三点共线，且这两个三角形为 ``indirect'' 型。设顶角 $\widehat{AXB}$ = $\widehat{BYC}$ 为 $\alpha$。线段 $[AC]$ 上的点 $Z$ 到两顶点 $X$ 和 $Y$ 的距离相等。\\
+问：$Z$ 以多大的角度观察这两个顶点？}
+
+\vspace*{2cm} 作法及其代码见接下来两页，但你可以先自行探索。两种情形中，程序都遵循我的思路（我想是这样……）。
+
+\subsection{《Tangente》修订版}
+\begin{tkzexample}[]
+\begin{tikzpicture}[scale=.8,rotate=60]
+  \tkzDefPoint(6,0){X}   \tkzDefPoint(3,3){Y}
+  \tkzDefShiftPoint[X](-110:6){A}    \tkzDefShiftPoint[X](-70:6){B}
+  \tkzDefShiftPoint[Y](-110:4.2){A'} \tkzDefShiftPoint[Y](-70:4.2){B'}
+  \tkzDefPointBy[translation= from A' to B ](Y) \tkzGetPoint{Y}
+  \tkzDefPointBy[translation= from A' to B ](B') \tkzGetPoint{C}
+  \tkzInterLL(A,B)(X,Y) \tkzGetPoint{O}
+  \tkzDefMidPoint(X,Y) \tkzGetPoint{I}
+  \tkzDefPointWith[orthogonal](I,Y)
+  \tkzInterLL(I,tkzPointResult)(A,B) \tkzGetPoint{Z}
+  \tkzDefCircle[circum](X,Y,B) \tkzGetPoint{O}
+  \tkzDrawCircle(O,X)
+  \tkzDrawLines[add = 0 and 1.5](A,C) \tkzDrawLines[add = 0 and 3](X,Y)
+  \tkzDrawSegments(A,X B,X B,Y C,Y)   \tkzDrawSegments[color=red](X,Z Y,Z)
+  \tkzDrawPoints(A,B,C,X,Y,O,Z)
+  \tkzLabelPoints(A,B,C,Z)   \tkzLabelPoints[above right](X,Y,O)
+\end{tikzpicture}
+\end{tkzexample}
+
+\subsection{《Le Monde》版}
+
+\begin{tkzexample}[]
+\begin{tikzpicture}[scale=1.25]
+  \tkzDefPoint(0,0){A}
+  \tkzDefPoint(3,0){B}
+  \tkzDefPoint(9,0){C}
+  \tkzDefPoint(1.5,2){X}
+  \tkzDefPoint(6,4){Y}
+  \tkzDefCircle[circum](X,Y,B) \tkzGetPoint{O}
+  \tkzDefMidPoint(X,Y)               \tkzGetPoint{I}
+  \tkzDefPointWith[orthogonal](I,Y)  \tkzGetPoint{i}
+  \tkzDrawLines[add = 2 and 1,color=orange](I,i)
+  \tkzInterLL(I,i)(A,B)              \tkzGetPoint{Z}
+  \tkzInterLC(I,i)(O,B)              \tkzGetFirstPoint{M}
+  \tkzDefPointWith[orthogonal](B,Z)  \tkzGetPoint{b}
+  \tkzDrawCircle(O,B)
+  \tkzDrawLines[add = 0 and 2,color=orange](B,b)
+  \tkzDrawSegments(A,X B,X B,Y C,Y A,C X,Y)
+  \tkzDrawSegments[color=red](X,Z Y,Z)
+  \tkzDrawPoints(A,B,C,X,Y,Z,M,I)
+  \tkzLabelPoints(A,B,C,Z)
+  \tkzLabelPoints[above right](X,Y,M,I)
+\end{tikzpicture}
+\end{tkzexample}
+
+\subsection{三角形的高}
+
+\begin{tikzpicture}
+\node [mybox,title={三角形的高}] (box){%
+\begin{minipage}{0.90\textwidth}
+  { \emph{来自维基百科：以下内容同样出自优秀网站 \textbf{Descartes et les Mathématiques}。
+\url{http://debart.pagesperso-orange.fr/geoplan/geometrie_triangle.html}。
+三角形的三条高相交于同一点 $H$。
+}} 
+\end{minipage}
+};
+\end{tikzpicture}% 
+
+\begin{tkzexample}[vbox,small]
+\begin{tikzpicture}
+   \tkzDefPoint(0,0){C} \tkzDefPoint(7,0){B}
+   \tkzDefPoint(5,6){A}
+   \tkzDefMidPoint(C,B) \tkzGetPoint{I}
+   \tkzInterLC(A,C)(I,B)
+   \tkzGetFirstPoint{B'}
+   \tkzInterLC(A,B)(I,B)
+   \tkzGetSecondPoint{C'}
+   \tkzInterLL(B,B')(C,C') \tkzGetPoint{H}
+   \tkzInterLL(A,H)(C,B) \tkzGetPoint{A'}
+   \tkzDefCircle[circum](A,B',C') \tkzGetPoint{O}
+   \tkzDrawArc(I,B)(C)
+   \tkzDrawPolygon(A,B,C)
+   \tkzDrawCircle[color=red](O,A)
+   \tkzDrawSegments[color=orange](B,B' C,C' A,A')
+   \tkzMarkRightAngles(C,B',B B,C',C C,A',A)
+   \tkzDrawPoints(A,B,C,A',B',C',H)
+   \tkzLabelPoints[above right](A,B',C',H)
+   \tkzLabelPoints[below right](B,C,A')
+\end{tikzpicture}
+\end{tkzexample}
+
+\subsection{高——另一种作法}
+
+\begin{tkzexample}[vbox,small]
+\begin{tikzpicture}
+\tkzDefPoint(0,0){A} \tkzDefPoint(8,0){B} 
+\tkzDefPoint(5,6){C} 
+\tkzDefMidPoint(A,B)\tkzGetPoint{O} 
+\tkzDefPointBy[projection=onto A--B](C) \tkzGetPoint{P}
+\tkzInterLC[common=A](C,A)(O,A)
+\tkzGetFirstPoint{M}
+\tkzInterLC(C,B)(O,A)
+\tkzGetSecondPoint{N}
+\tkzInterLL(B,M)(A,N)\tkzGetPoint{I}
+\tkzDefCircle[diameter](A,B)\tkzGetPoint{x}
+\tkzDefCircle[diameter](I,C)\tkzGetPoint{y}
+\tkzDrawCircles(x,A y,C)
+\tkzDrawSegments(C,A C,B A,B B,M A,N)
+\tkzMarkRightAngles[fill=brown!20](A,M,B A,N,B A,P,C)
+\tkzDrawSegment[style=dashed,color=orange](C,P)
+\tkzLabelPoints(O,A,B,P)
+\tkzLabelPoint[left](M){$M$} 
+\tkzLabelPoint[right](N){$N$} 
+\tkzLabelPoint[above](C){$C$} 
+\tkzLabelPoint[above right](I){$I$} 
+\tkzDrawPoints[color=red](M,N,P,I) 
+\tkzDrawPoints[color=brown](O,A,B,C)
+\end{tikzpicture}
+\end{tkzexample}
+
+\newpage
+\subsection{等边三角形中的三个圆}
+\begin{tikzpicture}
+\node [mybox,title={等边三角形中的三个圆}] (box){%
+\begin{minipage}{0.90\textwidth}
+  { \emph{来自维基百科：在几何学中，Malfatti 圆是给定三角形内的三个圆，使得每个圆都与另外两个圆以及三角形的两条边相切。它们以 Gian Francesco Malfatti 的名字命名，他最早研究了构造这三个圆的问题，并错误地认为这样能使三角形内三个互不相交的圆的总面积最大。下面研究一个特例：等边三角形与三个等圆。
+}} 
+\end{minipage}
+};
+\end{tikzpicture}% 
+\begin{tkzexample}[latex=7cm,small]
+\begin{tikzpicture}[scale=.8]
+  \tkzDefPoints{0/0/A,8/0/B,0/4/a,8/4/b,8/8/c}
+  \tkzDefTriangle[equilateral](A,B) \tkzGetPoint{C}
+  \tkzDefMidPoint(A,B) \tkzGetPoint{M}
+  \tkzDefMidPoint(B,C) \tkzGetPoint{N}
+  \tkzDefMidPoint(A,C) \tkzGetPoint{P}
+  \tkzInterLL(A,N)(M,a) \tkzGetPoint{Ia}
+  \tkzDefPointBy[projection = onto A--B](Ia)
+  \tkzGetPoint{ha}
+  \tkzInterLL(B,P)(M,b) \tkzGetPoint{Ib}
+  \tkzDefPointBy[projection = onto A--B](Ib)
+  \tkzGetPoint{hb}
+  \tkzInterLL(A,c)(M,C) \tkzGetPoint{Ic}
+  \tkzDefPointBy[projection = onto A--C](Ic)
+  \tkzGetPoint{hc}
+  \tkzInterLL(A,Ia)(B,Ib) \tkzGetPoint{G}
+  \tkzDefSquare(A,B) \tkzGetPoints{D}{E}
+  \tkzDrawPolygon(A,B,C)
+  \tkzClipBB
+  \tkzDrawSemiCircles[gray,dashed](M,B A,M 
+  A,B B,A G,Ia)
+  \tkzDrawCircles[gray](Ia,ha Ib,hb Ic,hc)
+  \tkzDrawPolySeg(A,E,D,B)
+  \tkzDrawPoints(A,B,C,G,Ia,Ib,Ic)
+  \tkzDrawSegments[gray,dashed](C,M A,N B,P
+   M,a M,b A,a a,b b,B A,D Ia,ha)
+\end{tikzpicture}
+\end{tkzexample}
+
+\newpage
+\subsection{正弦定理}
+\begin{tikzpicture}
+\node [mybox,title={正弦定理}] (box){%
+\begin{minipage}{0.90\textwidth}
+  {来自维基百科：\emph{在三角学中，正弦定理（law of sines、sine law、sine formula 或 sine rule）是一个将三角形（任意形状）三边长度与其对角的正弦值联系起来的等式。
+}} 
+\end{minipage}
+};
+\end{tikzpicture}% 
+
+\begin{tkzexample}[latex=7cm,small]
+  \begin{tikzpicture}
+  \tkzDefPoints{0/0/A,5/1/B,2/6/C}
+  \tkzDefTriangleCenter[circum](A,B,C)
+   \tkzGetPoint{O} 
+  \tkzDefPointBy[symmetry= center O](B) 
+   \tkzGetPoint{D} 
+  \tkzDrawPolygon[color=brown](A,B,C)
+  \tkzDrawCircle(O,A)
+  \tkzDrawPoints(A,B,C,D,O)
+  \tkzDrawSegments[dashed](B,D A,D)
+  \tkzLabelPoint[left](D){$D$}
+  \tkzLabelPoint[below](A){$A$}
+  \tkzLabelPoint[above](C){$C$}
+  \tkzLabelPoint[right](B){$B$}
+  \tkzLabelPoint[below](O){$O$}
+  \tkzLabelSegment(B,C){$a$}
+  \tkzLabelSegment[left](A,C){$b$}
+  \tkzLabelSegment(A,B){$c$}
+  \end{tikzpicture}
+\end{tkzexample}
+
+在三角形 $ABC$ 中：
+
+\begin{equation}
+\frac{a}{\sin A} = \frac{b}{\sin B} =\frac{c}{\sin C}
+\end{equation}
+
+\[\widehat{C} = \widehat{D}\] 
+\begin{equation}
+\frac{c}{2R} = \sin D = \sin C 
+\end{equation}
+
+因此 \[ \frac{c}{\sin C} = 2R\]
+
+\newpage
+\subsection{生命之花}
+\begin{tikzpicture}
+\node [mybox,title={第四卷，命题 XI \_Euclid's Elements\_}] (box){%
+\begin{minipage}{0.90\textwidth}
+  {\emph{神圣几何可以被描述为一种信仰体系，它将宗教或文化价值赋予空间与时间的诸多基本形式。按照这一信仰体系，存在的基本模式被视为神圣的，因为沉思它们即是沉思万物的本源。通过研究这些形式的本质及其相互关系，人们可以寻求领悟宇宙的科学、哲学、心理学、美学与神秘法则。
+生命之花被认为是神圣几何的象征，据说蕴含着描绘空间与时间基本形式的古老宗教价值。从这个意义上说，它是生命贯穿全人类之联系的视觉表达，有人相信它包含了一切生物基本信息的阿卡西记录。
+}} 
+\end{minipage}
+};
+\end{tikzpicture}% 
+
+在埃及阿拜多斯的欧西里斯神庙中发现的精美圆形排列之一（Rawles 1997）。\\
+Weisstein, Eric W. ``Flower of Life.'' 摘自 MathWorld--A Wolfram Web Resource。\\ \url{http://mathworld.wolfram.com/FlowerofLife.html}
+ 
+\begin{tkzexample}[vbox,small]
+\begin{tikzpicture}[scale=.75]
+  \tkzSetUpLine[line width=2pt,color=teal!80!black]
+  \tkzSetUpCompass[line width=2pt,color=teal!80!black]
+   \tkzDefPoint(0,0){O}  \tkzDefPoint(2.25,0){A}
+   \tkzDrawCircle(O,A)
+\foreach \i in {0,...,5}{
+   \tkzDefPointBy[rotation= center O angle 30+60*\i](A)\tkzGetPoint{a\i}
+   \tkzDefPointBy[rotation= center {a\i} angle  120](O)\tkzGetPoint{b\i}
+   \tkzDefPointBy[rotation= center {a\i} angle  180](O)\tkzGetPoint{c\i}
+   \tkzDefPointBy[rotation= center {c\i} angle  120](a\i)\tkzGetPoint{d\i}
+   \tkzDefPointBy[rotation= center {c\i} angle   60](d\i)\tkzGetPoint{f\i}
+   \tkzDefPointBy[rotation= center {d\i} angle   60](b\i)\tkzGetPoint{e\i} 
+   \tkzDefPointBy[rotation= center {f\i} angle   60](d\i)\tkzGetPoint{g\i} 
+   \tkzDefPointBy[rotation= center {d\i} angle   60](e\i)\tkzGetPoint{h\i}
+   \tkzDefPointBy[rotation= center {e\i} angle  180](b\i)\tkzGetPoint{k\i}   
+   \tkzDrawCircle(a\i,O)
+   \tkzDrawCircle(b\i,a\i)
+   \tkzDrawCircle(c\i,a\i)
+   \tkzDrawArc[rotate](f\i,d\i)(-120)
+   \tkzDrawArc[rotate](e\i,d\i)(180)
+   \tkzDrawArc[rotate](d\i,f\i)(180)
+   \tkzDrawArc[rotate](g\i,f\i)(60)
+   \tkzDrawArc[rotate](h\i,d\i)(60)
+   \tkzDrawArc[rotate](k\i,e\i)(60) 
+}
+   \tkzClipCircle(O,f0)
+\end{tikzpicture}
+\end{tkzexample}
+
+
+\newpage
+\subsection{圆内接五边形}
+\begin{tikzpicture}
+\node [mybox,title={第四卷，命题 XI \_Euclid's Elements\_}] (box){%
+\begin{minipage}{0.90\textwidth}
+  {\emph{在给定圆内作一个等边且等角的五边形。
+}} 
+\end{minipage}
+};
+\end{tikzpicture}% 
+
+\begin{tkzexample}[vbox,small]
+\begin{tikzpicture}[scale=.75]
+   \tkzDefPoint(0,0){O} 
+   \tkzDefPoint(5,0){A}
+   \tkzDefPoint(0,5){B}
+   \tkzDefPoint(-5,0){C} 
+   \tkzDefPoint(0,-5){D}
+   \tkzDefMidPoint(A,O)             \tkzGetPoint{I}
+   \tkzInterLC(I,B)(I,A)            \tkzGetPoints{F}{E}
+   \tkzInterCC(O,C)(B,E)            \tkzGetPoints{D3}{D2}
+   \tkzInterCC(O,C)(B,F)            \tkzGetPoints{D4}{D1}
+   \tkzDrawArc[angles](B,E)(180,360)
+   \tkzDrawArc[angles](B,F)(220,340)
+   \tkzDrawLine[add=.5 and .5](B,I)
+   \tkzDrawCircle(O,A)
+   \tkzDefCircle[diameter](O,A)     \tkzGetPoint{x}
+   \tkzDrawCircle(x,A)
+   \tkzDrawSegments(B,D C,A) 
+   \tkzDrawPolygon[new](D,D1,D2,D3,D4)
+   \tkzDrawPoints(A,...,D,O)
+   \tkzDrawPoints[new](E,F,I,D1,D2,D4,D3)
+   \tkzLabelPoints[below left](A,...,D,O)
+   \tkzLabelPoints[new,below right](I,E,F,D1,D2,D4,D3)  
+\end{tikzpicture}
+\end{tkzexample}
+
+ \newpage
+ \subsection{正方形内作五边形}
+ \begin{tikzpicture}
+ \node [mybox,title={正方形内作五边形}] (box){%
+ \begin{minipage}{0.90\textwidth}
+   { \emph{在给定正方形内作一个五边形。
+ }} 
+ \end{minipage}
+ };
+ \end{tikzpicture}%
+    
+\begin{tkzexample}[vbox,small]
+\begin{tikzpicture}[scale=.75]
+  \tkzDefPoints{0/0/O,-5/-5/A,5/-5/B}
+  \tkzDefSquare(A,B)   \tkzGetPoints{C}{D}
+  \tkzDefMidPoint(A,B) \tkzGetPoint{F}
+  \tkzDefMidPoint(C,D) \tkzGetPoint{E}
+  \tkzDefMidPoint(B,C) \tkzGetPoint{G}
+  \tkzDefMidPoint(A,D) \tkzGetPoint{K}
+  \tkzInterLC[near](C,D)(E,B)              \tkzGetFirstPoint{T}
+  \tkzDefMidPoint(D,T)                     \tkzGetPoint{I}
+  \tkzInterCC[with nodes](O,D,I)(E,D,I)    \tkzGetSecondPoint{H}
+  \tkzInterLC(O,H)(O,E)                    \tkzGetSecondPoint{M}
+  \tkzInterCC(O,E)(E,M)                    \tkzGetFirstPoint{Q}
+  \tkzInterCC[with nodes](O,O,E)(Q,E,M)    \tkzGetFirstPoint{P}
+  \tkzInterCC[with nodes](O,O,E)(P,E,M)    \tkzGetFirstPoint{N}
+  \tkzCompasss(O,H E,H)
+  \tkzDrawArc(E,B)(T)
+  \tkzDrawPolygons[purple](A,B,C,D M,E,Q,P,N) 
+  \tkzDrawCircle(O,E)
+  \tkzDrawSegments(T,I O,H E,H E,F G,K)
+  \tkzDrawPoints(T,M,Q,P,N,I)
+  \tkzLabelPoints(A,B,O,N,P,Q,M,H)
+  \tkzLabelPoints[above right](C,D,E,I,T)
+\end{tikzpicture} 
+\end{tkzexample}
+
+\newpage
+\subsection{内接六边形}
+ \begin{tikzpicture}
+ \node [mybox,title={内接六边形}] (box){%
+ \begin{minipage}{0.90\textwidth}
+   {\emph{在给定的等边三角形内作一个完美内切的正六边形（不留边距）。
+ }} 
+ \end{minipage}
+ };
+ \end{tikzpicture}%
+ 
+\subsubsection{内接六边形：版本 1} % (fold)
+\label{ssub:hexagon_inscribed_version_1}
+\begin{tkzexample}[latex=7cm,small]
+  \begin{tikzpicture}[scale=.5]
+   \pgfmathsetmacro{\c}{6} 
+   \tkzDefPoints{0/0/A,\c/0/B}
+   \tkzDefTriangle[equilateral](A,B)\tkzGetPoint{C}
+   \tkzDefTriangleCenter[centroid](A,B,C) 
+   \tkzGetPoint{I}
+   \tkzDefPointBy[homothety=center A ratio 1./3](B) 
+   \tkzGetPoint{c1}
+   \tkzInterLC(B,C)(I,c1) \tkzGetPoints{a1}{a2}
+   \tkzInterLC(A,C)(I,c1) \tkzGetPoints{b1}{b2}
+   \tkzInterLC(A,B)(I,c1) \tkzGetPoints{c1}{c2}
+   \tkzDrawPolygon(A,B,C)
+   \tkzDrawCircle[thin,orange](I,c1)
+   \tkzDrawPolygon[red,thick](a2,a1,b2,b1,c2,c1)
+ \end{tikzpicture} 
+\end{tkzexample}
+% subsubsection hexagon_inscribed_version_1 (end)
+
+\subsubsection{内接六边形：版本 2} % (fold)
+\label{ssub:hexagon_inscribed_version_2}
+\begin{tkzexample}[latex=7cm,small]
+\begin{tikzpicture}[scale=.5]
+ \pgfmathsetmacro{\c}{6} 
+ \tkzDefPoints{0/0/A,\c/0/B}
+ \tkzDefTriangle[equilateral](A,B)\tkzGetPoint{C}
+ \tkzDefTriangleCenter[centroid](A,B,C) 
+ \tkzGetPoint{I}
+ \tkzDefPointsBy[rotation= center I
+                 angle 60](A,B,C){a,b,c}
+ \tkzDrawPolygon[fill=teal!20,opacity=.5](A,B,C)
+ \tkzDrawPolygon[fill=purple!20,opacity=.5](a,b,c)
+\end{tikzpicture} 
+\end{tkzexample}
+% subsubsection hexagon_inscribed_version_2 (end)
+
+\newpage
+\subsection{点关于圆的幂}
+
+\begin{tikzpicture}
+\node [mybox,title={点关于圆的幂}] (box){%
+\begin{minipage}{0.90\textwidth}
+  {\emph{$\overline{MA} \times \overline{MB}={MT}^2={MO}^2-{OT}^2$} } 
+\end{minipage}
+};
+\end{tikzpicture}% 
+
+\begin{tkzexample}[vbox,small]
+\begin{tikzpicture}
+ \pgfmathsetmacro{\r}{2}%
+ \pgfmathsetmacro{\xO}{6}%
+ \pgfmathsetmacro{\xE}{\xO-\r}%
+ \tkzDefPoints{0/0/M,\xO/0/O,\xE/0/E}
+ \tkzDefCircle[diameter](M,O)
+ \tkzGetPoint{I}
+ \tkzInterCC(I,O)(O,E) \tkzGetPoints{T}{T'}
+ \tkzDefShiftPoint[O](45:2){B}
+ \tkzInterLC(M,B)(O,E) \tkzGetPoints{A}{B}
+ \tkzDrawCircle(O,E)
+ \tkzDrawSemiCircle[dashed](I,O)
+ \tkzDrawLine(M,O)
+ \tkzDrawLines(M,T O,T M,B)
+ \tkzDrawPoints(A,B,T)
+ \tkzLabelPoints[above](A,B,O,M,T)
+\end{tikzpicture}
+\end{tkzexample}
+
+\newpage
+\subsection{两个不同心圆的根轴}
+\begin{tikzpicture}
+\node [mybox,title={两个不同心圆的根轴}] (box){%
+\begin{minipage}{0.90\textwidth}
+  {来自维基百科：\emph{在几何学中，两个不同心圆的根轴是指关于两圆幂相等的点的集合。因此根轴也被称为两圆的幂线或幂平分线。根轴（radical axis）这一术语由法国数学家 M. Chasles 以 axe radical 的形式使用。
+}} 
+\end{minipage}
+};
+\end{tikzpicture}% 
+
+\begin{tkzexample}[vbox,small]
+\begin{tikzpicture}
+\tkzDefPoints{0/0/A,4/2/B,2/3/K}
+\tkzDefCircle[R](A,1)\tkzGetPoint{a}
+\tkzDefCircle[R](B,2)\tkzGetPoint{b}
+\tkzDefCircle[R](K,3)\tkzGetPoint{k}
+\tkzDrawCircles(A,a B,b)
+\tkzDrawCircle[dashed,new](K,k)
+\tkzInterCC(A,a)(K,k) \tkzGetPoints{a}{a'}
+\tkzInterCC(B,b)(K,k) \tkzGetPoints{b}{b'}
+\tkzDrawLines[new,add=2 and 2](a,a')
+\tkzDrawLines[new,add=1 and 1](b,b')
+\tkzInterLL(a,a')(b,b') \tkzGetPoint{X}
+\tkzDefPointBy[projection= onto A--B](X) \tkzGetPoint{H}
+\tkzDrawPoints(A,B,H,X,a,b,a',b')
+\tkzDrawLine(A,B)
+\tkzDrawLine[add= 1 and 2,new](X,H)
+\tkzLabelPoints(A,B,H,X,a,b,a',b')
+\end{tikzpicture}
+\end{tkzexample}
+
+\newpage
+\subsection{外位似中心}
+\begin{tikzpicture}
+\node [mybox,title={外位似中心}] (box){%
+\begin{minipage}{0.90\textwidth}
+  {来自维基百科：\emph{给定两个不同心的圆，作方向相同的平行半径。则连接半径外端的直线经过连心线上一个定点，该点按半径比外分连心线。这个点称为外位似中心，或称外相似中心（Johnson 1929，第 19-20 页和第 41 页）。
+}} 
+\end{minipage}
+};
+\end{tikzpicture}% 
+
+\begin{tkzexample}[vbox,small]
+\begin{tikzpicture}
+\tkzDefPoints{0/0/A,4/2/B,2/3/K}
+\tkzDefCircle[R](A,1)\tkzGetPoint{a}
+\tkzDefCircle[R](B,2)\tkzGetPoint{b}
+\tkzDrawCircles(A,a B,b)
+\tkzDrawLine(A,B)
+\tkzDefShiftPoint[A](60:1){M}
+\tkzDefShiftPoint[B](60:2){M'}
+\tkzInterLL(A,B)(M,M') \tkzGetPoint{O}
+\tkzDefLine[tangent from = O](B,M') \tkzGetPoints{X}{T'}
+\tkzDefLine[tangent from = O](A,M) \tkzGetPoints{X}{T}
+\tkzDrawPoints(A,B,O,T,T',M,M')
+\tkzDrawLines[new](O,B O,T' O,M')
+\tkzDrawSegments[new](A,M B,M')
+\tkzLabelPoints(A,B,O,T,T',M,M')
+\end{tikzpicture}
+\end{tkzexample}
+
+\newpage
+\subsection{两圆的公切线}
+
+\begin{tikzpicture}
+\node [mybox,title={两圆的公切线}] (box){%
+\begin{minipage}{0.90\textwidth}
+  {\emph{对于两个圆，当两圆外离时，一般有四条不同的公切线。其中两条外公切线，两圆位于直线的同一侧；外公切线相交于外位似中心。}}
+\end{minipage}
+};
+\end{tikzpicture}%
+
+\begin{tkzexample}[vbox,small]
+\begin{tikzpicture}
+ \pgfmathsetmacro{\r}{1}%
+ \pgfmathsetmacro{\R}{2}%
+ \pgfmathsetmacro{\rt}{\R-\r}%
+ \tkzDefPoints{0/0/A,4/2/B,2/3/K}
+ \tkzDefMidPoint(A,B) \tkzGetPoint{I}
+ \tkzInterLC[R](A,B)(B,\rt) \tkzGetPoints{E}{F}
+ \tkzInterCC(I,B)(B,F) \tkzGetPoints{a}{a'}
+ \tkzInterLC[R](B,a)(B,\R) \tkzGetPoints{X'}{T'}
+ \tkzDefLine[tangent at=T'](B) \tkzGetPoint{h}
+ \tkzInterLL(T',h)(A,B) \tkzGetPoint{O}
+ \tkzInterLC[R](O,T')(A,\r) \tkzGetPoints{T}{T}
+ \tkzDefCircle[R](A,\r)  \tkzGetPoint{a}         
+ \tkzDefCircle[R](B,\R)  \tkzGetPoint{b}
+ \tkzDefCircle[R](B,\rt)  \tkzGetPoint{c}
+ \tkzDrawCircles(A,a)  
+ \tkzDrawCircles[orange](B,b B,c)           
+ \tkzDrawCircle[orange,dashed](I,B)
+ \tkzDrawPoints(O,A,B,a,a',E,F,T',T)
+ \tkzDrawLines(O,B A,a B,T' A,T)
+ \tkzDrawLines[add= 1 and 8](T',h)
+ \tkzLabelPoints(O,A,B,a,a',E,F,T,T')
+\end{tikzpicture}
+\end{tkzexample}
+
+\newpage
+\subsection{用根轴作两圆的公切线}
+
+\begin{tikzpicture}
+\node [mybox,title={用根轴作两圆的公切线}] (box){%
+\begin{minipage}{0.90\textwidth}
+  {\emph{只要两个圆不同心，就可以构造它们的根轴，即关于两圆幂相等的点的集合。我们知道根轴是垂直于连心线的一条直线。注意：若 $P$ 和 $Q$ 为某条外公切线与两圆的切点，$D$ 和 $E$ 为两圆在 $[AB]$ 外侧的点，则 $(DP)$ 与 $(EQ)$ 相交于两圆的根轴上。我们将证明这一性质始终成立，并且它使我们能够构造公切线，即使两圆半径相等。}}
+\end{minipage}
+};
+\end{tikzpicture}%
+
+
+\begin{tkzexample}[vbox,small]
+\begin{tikzpicture}
+\tkzDefPoints{0/0/A,4/2/B,2/3/K}
+\tkzDefCircle[R](A,1) \tkzGetPoint{a}
+\tkzDefCircle[R](B,3) \tkzGetPoint{b}
+\tkzInterCC[R](A,1)(K,3) \tkzGetPoints{a}{a'}
+\tkzInterCC[R](B,3)(K,3) \tkzGetPoints{b}{b'}
+\tkzInterLL(a,a')(b,b')  \tkzGetPoint{X}
+\tkzDefPointBy[projection= onto A--B](X) \tkzGetPoint{H}
+\tkzGetPoint{C}
+\tkzInterLC[R](A,B)(B,3) \tkzGetPoints{b1}{E}
+\tkzInterLC[R](A,B)(A,1) \tkzGetPoints{D}{a2}
+\tkzDefMidPoint(D,E) \tkzGetPoint{I}
+\tkzDrawCircle[orange](I,D)
+\tkzInterLC(X,H)(I,D) \tkzGetPoints{M}{M'}
+\tkzInterLC(M,D)(A,D) \tkzGetPoints{P}{P'}
+\tkzInterLC(M,E)(B,E) \tkzGetPoints{Q'}{Q}
+\tkzInterLL(P,Q)(A,B) \tkzGetPoint{O}
+\tkzDrawCircles(A,a B,b)
+\tkzDrawSegments[orange](A,P I,M B,Q)
+\tkzDrawPoints(A,B,D,E,M,I,O,P,Q,X,H)
+\tkzDrawLines(O,E M,D M,E O,Q)
+\tkzDrawLine[add= 3 and 4,orange](X,H)
+\tkzLabelPoints(A,B,D,E,M,I,O,P,Q,X,H)
+\end{tikzpicture}
+\end{tkzexample}
+
+\newpage
+\subsection{用圆规求线段中点}
+
+\begin{tikzpicture}
+\node [mybox,title={用圆规求线段中点}] (box){%
+\begin{minipage}{0.90\textwidth}
+  {\emph{本例仅使用圆规来确定一条线段的中点。}}
+\end{minipage}
+};
+\end{tikzpicture}%
+
+\begin{tkzexample}[vbox,small]
+\begin{tikzpicture}
+\tkzDefPoint(0,0){A}
+\tkzDefRandPointOn[circle= center A radius 4]    \tkzGetPoint{B}
+\tkzDefPointBy[rotation= center A angle 180](B)  \tkzGetPoint{C}
+\tkzInterCC(A,B)(B,A)                            \tkzGetPoints{I}{I'}
+\tkzInterCC(A,I)(I,A)                            \tkzGetPoints{J}{B}
+\tkzInterCC(B,A)(C,B)                            \tkzGetPoints{D}{E}
+\tkzInterCC(D,B)(E,B)                            \tkzGetPoints{M}{M'}
+\tkzSetUpArc[color=orange,style=solid,delta=10]
+\tkzDrawArc(C,D)(E)
+\tkzDrawArc(B,E)(D)
+\tkzDrawCircle[color=teal,line width=.2pt](A,B)
+\tkzDrawArc(D,B)(M) 
+\tkzDrawArc(E,M)(B)
+\tkzCompasss[color=orange,style=solid](B,I I,J J,C)
+\tkzDrawPoints(A,B,C,D,E,M)
+\tkzLabelPoints(A,B,M)
+\end{tikzpicture}
+\end{tkzexample}
+ 
+\newpage
+
+\subsection{圆的定义，\_Apollonius\_}
+
+\begin{tikzpicture}
+\node [mybox,title={圆的定义\_Apollonius\_}] (box){%
+\begin{minipage}{0.90\textwidth}
+  {来自维基百科：\emph{Apollonius 证明，圆可以定义为平面上到两个定点（称为焦点）距离之比为定值的点的集合。这个阿波罗尼奥斯圆是阿波罗尼奥斯追及问题的基础。……该问题的解有时被称为阿波罗尼奥斯圆。}} 
+\end{minipage}
+};
+\end{tikzpicture}% 
+
+说明
+
+圆是平面上到定点 $O$ 等距的点的集合。到圆心的距离 $r$ 称为半径，点 $O$ 称为圆心。这是最简单的定义，但并非唯一的定义。佩尔加的阿波罗尼奥斯给出了另一种定义：
+到两个定点距离之比为常数的所有点的集合是一个圆。
+
+使用 \pkg{tkz-euclide} 可以很容易地说明后一种定义。
+
+\begin{tkzexample}[vbox, small]
+\begin{tikzpicture}[scale=1.5]
+    % Firstly we defined two fixed point. 
+    % The figure depends of these points and the ratio K
+\tkzDefPoint(0,0){A}
+\tkzDefPoint(4,0){B}
+    % tkz-euclide.sty knows about the apollonius's circle
+    % with K=2 we search some points like  I such as IA=2 x IB
+\tkzDefCircle[apollonius,K=2](A,B) \tkzGetPoints{K1}{k}
+\tkzDefPointOnCircle[through=  center K1 angle 30 point k]
+\tkzGetPoint{I}
+\tkzDefPointOnCircle[through= center K1 angle 280  point k]
+\tkzGetPoint{J}
+\tkzDrawSegments[new](A,I I,B A,J J,B)  
+\tkzDrawCircle[color = teal,fill=teal!20,opacity=.4](K1,k)
+\tkzDrawPoints(A,B,K1,I,J)
+\tkzDrawSegment(A,B)
+\tkzLabelPoints[below,font=\scriptsize](A,B,K1,I,J)
+\end{tikzpicture}
+\end{tkzexample}
+
+\subsection{反演的应用：\tkzname{Pappus 链}}\label{pappus}
+\begin{tikzpicture}
+\node [mybox,title={Pappus 链}] (box){%
+\begin{minipage}{0.90\textwidth}
+来自维基百科 {\emph{在几何学中，Pappus 链是夹在两个相切圆之间的一串圆，由亚历山大的帕普斯在公元 3 世纪研究。}}
+\end{minipage}
+};
+\end{tikzpicture}%
+
+\begin{tkzexample}[vbox,small]
+\begin{tikzpicture}[ultra thin]
+  \pgfmathsetmacro{\xB}{6}%
+  \pgfmathsetmacro{\xC}{9}%
+  \pgfmathsetmacro{\xD}{(\xC*\xC)/\xB}%
+  \pgfmathsetmacro{\xJ}{(\xC+\xD)/2}%
+  \pgfmathsetmacro{\r}{\xD-\xJ}%
+  \pgfmathsetmacro{\nc}{16}%
+  \tkzDefPoints{0/0/A,\xB/0/B,\xC/0/C,\xD/0/D}
+  \tkzDefCircle[diameter](A,C) \tkzGetPoint{x}
+  \tkzDrawCircle[fill=teal!30](x,C)
+  \tkzDefCircle[diameter](A,B) \tkzGetPoint{y}
+  \tkzDrawCircle[fill=teal!30](y,B)
+  \foreach \i in {-\nc,...,0,...,\nc}
+  {\tkzDefPoint(\xJ,2*\r*\i){J}
+   \tkzDefPoint(\xJ,2*\r*\i-\r){H}
+   \tkzDefCircleBy[inversion = center A through C](J,H)
+   \tkzDrawCircle[fill=teal](tkzFirstPointResult,tkzSecondPointResult)}
+\end{tikzpicture}
+\end{tkzexample}
+
+\subsection{阿基米德《引理集》命题 1}
+\begin{tikzpicture}
+\node [mybox,title={《引理集》命题 1 阿基米德}] (box){%
+\begin{minipage}{0.90\textwidth}
+  {\emph{若两圆相切于 $A$，且 $[CD]$、$[EF]$ 分别为两圆内平行的直径，则 $A$、$C$、$E$ 三点共线。}}
+\end{minipage}
+};
+\end{tikzpicture}%
+
+\begin{tkzexample}[latex=7cm,small]
+  \begin{tikzpicture}[scale=.75]
+    \tkzDefPoints{0/0/O_1,0/1/O_2,0/3/A}
+    \tkzDefPoint(15:3){F}
+     \tkzDefPointBy[symmetry=center O_1](F) \tkzGetPoint{E}
+     \tkzDefLine[parallel=through O_2](E,F) \tkzGetPoint{x}
+     \tkzInterLC(x,O_2)(O_2,A) \tkzGetPoints{D}{C}
+     \tkzDrawCircles(O_1,A O_2,A)
+     \tkzDrawSegments[orange](O_1,A E,F C,D)
+     \tkzDrawSegments[purple](A,E A,F)
+     \tkzDrawPoints(A,O_1,O_2,E,F,x,C,D)
+     \tkzLabelPoints(A,O_1,O_2,E,F,x,C,D)
+  \end{tikzpicture}
+\end{tkzexample}
+
+$(CD) \parallel (EF)$，而 $(AO_1)$ 与这两条直线相交，故
+$\widehat{AO_2C} = \widehat{AO_1E}$。
+
+由于三角形 $AO_2C$ 与 $AO_1E$ 均为等腰三角形，它们的底角相等：$\widehat{ACO_2} = \widehat{AEO_1} = \widehat{CAO_2} = \widehat{EAO_1}$。因此 $A$、$C$、$E$ 三点共线。
+
+\subsection{阿基米德《引理集》命题 6}
+\begin{tikzpicture}
+\node [mybox,title={《引理集》命题 6 阿基米德}] (box){%
+\begin{minipage}{0.90\textwidth}
+  {\emph{设半圆的直径 $AC$ 在 $B$ 处被分割，使 $AC/AB =\phi$ 或取任意比值。在大半圆内、以 $AB$、$BC$ 为直径分别作半圆，再作一个与这三个半圆都相切的圆。若 $GH$ 为该圆的直径，求 $GH$ 与 $AC$ 之间的关系。}}
+\end{minipage}
+};
+\end{tikzpicture}%
+
+
+\begin{tkzexample}[vbox,overhang,small]
+\begin{tikzpicture}
+\tkzDefPoints{0/0/A,12/0/C}
+\tkzDefGoldenRatio(A,C)                  \tkzGetPoint{B}
+\tkzDefMidPoint(A,C)                     \tkzGetPoint{O}
+\tkzDefMidPoint(A,B)                     \tkzGetPoint{O_1}
+\tkzDefMidPoint(B,C)                     \tkzGetPoint{O_2}
+\tkzDefExtSimilitudeCenter(O_1,A)(O_2,B) \tkzGetPoint{M_0}
+\tkzDefIntSimilitudeCenter(O,A)(O_1,A)   \tkzGetPoint{M_1}
+\tkzDefIntSimilitudeCenter(O,C)(O_2,C)   \tkzGetPoint{M_2}
+\tkzInterCC(O_1,A)(M_2,C)                \tkzGetFirstPoint{E}
+\tkzInterCC(O_2,C)(M_1,A)                \tkzGetSecondPoint{F}
+\tkzInterCC(O,A)(M_0,B)                  \tkzGetFirstPoint{D}
+\tkzInterLL(O_1,E)(O_2,F)                \tkzGetPoint{O_3}
+\tkzDefCircle[circum](E,F,B)             \tkzGetPoint{0_4}
+\tkzInterLC(A,D)(O_1,A)                  \tkzGetFirstPoint{I}
+\tkzInterLC(C,D)(O_2,B)                  \tkzGetSecondPoint{K}
+\tkzInterLC[common=D](A,D)(O_3,D)        \tkzGetFirstPoint{G}
+\tkzInterLC[common=D](C,D)(O_3,D)        \tkzGetFirstPoint{H}
+\tkzInterLL(C,G)(B,K)                    \tkzGetPoint{M}
+\tkzInterLL(A,H)(B,I)                    \tkzGetPoint{L}
+\tkzInterLL(L,G)(A,C)                    \tkzGetPoint{N}
+\tkzInterLL(M,H)(A,C)                    \tkzGetPoint{P}  
+\tkzDrawCircles[red,thin](O_3,F)
+\tkzDrawCircles[new,thin](0_4,B)
+\tkzDrawSemiCircles[teal](O,C O_1,B O_2,C)
+\tkzDrawSemiCircles[green](M_2,C)
+\tkzDrawSemiCircles[green,swap](M_1,A)
+\tkzDrawSegment(A,C)
+\tkzDrawSegments[new](O_1,O_3 O_2,O_3)
+\tkzDrawSegments[new,very thin](B,H C,G A,H G,N H,P)
+\tkzDrawSegments[new,very thin](B,D A,D C,D G,H I,B K,B B,G)
+\tkzDrawPoints(A,B,C,M_1,M_2,E,O_3,F,D,0_4,O_1,O_2,I,K,G,H,L,P,N,M)  
+\tkzLabelPoints[font=\scriptsize](A,B,C,M_1,M_2,F,O_1,O_2,I,K,G,H,L,M,N)
+\tkzLabelPoints[font=\scriptsize,right](E,O_3,D,0_4,P)
+\end{tikzpicture}
+\end{tkzexample}
+
+设 $GH$ 为与 $AC$ 平行的圆的直径，且该圆分别在 $D$、$E$、$F$ 处与以 $AC$、$AB$、$BC$ 为直径的半圆相切。
+
+则由命题 1，$A$、$G$、$D$ 共线，$D$、$H$、$C$ 共线。\\
+同理，$A$、$E$、$H$ 共线，$C$、$F$、$G$ 共线，$B$、$E$、$G$ 与 $B$、$F$、$H$ 也分别共线。
+ 
+设 $(AD)$ 交以 $[AC]$ 为直径的半圆于 $I$，$(BD)$ 交以 $[BC]$ 为直径的半圆于 $K$。连接 $CI$、$CK$，分别交 $AE$、$BF$ 于 $L$、$M$，延长 $GL$、$HM$，分别交 $AB$ 于 $N$、$P$。
+
+在三角形 $AGB$ 中，从 $A$、$C$ 向对边所作的垂线交于 $L$。因此由三角形的性质，$(GN)$ 垂直于 $(AC)$。
+同理 $(HP)$ 垂直于 $(BC)$。\\
+又因为 $I$、$K$、$D$ 处的角为直角，$(CK)$ 平行于 $(AD)$，$(CI)$ 平行于 $(BD)$。
+
+因此\\
+\[\frac{AB}{BC} = \frac{AL}{LH}    =  \frac{AN}{NP}  \quad\text{且} \quad \frac{BC}{AB} = \frac{CM}{MG}    =  \frac{PC}{NP} \]
+
+从而
+
+\[ \frac{AN}{NP}    =  \frac{NP}{PC} \quad\text{故} \quad {NP}^2 = AN \times PC  \]
+
+现设 $B$ 按黄金分割比分割 $[AC]$，即：
+\[\phi = \frac{AB}{BC} =  \frac{AC}{AB} \quad\text{则} \quad AN = \phi NP \text{且}\quad  NP = \phi PC \]
+
+我们有
+\[ AC = AN + NP + PC\quad \text{即} \quad AB + BC = AN + NP + PC \quad \text{或} \quad (\phi + 1) BC = AN + NP + PC \]
+
+于是
+
+\[ (\phi + 1) BC = \phi NP + NP + PC =(\phi + 1)NP + PC = \phi(\phi + 1)PC + PC = ({\phi}^2 + \phi + 1)PC \]
+
+由于
+\[ {\phi}^2 = \phi + 1 \quad \text{故} \quad (\phi + 1) BC = 2(\phi + 1) PC \quad\text{即}\quad BC = 2 PC \]
+
+也就是说，
+$P$ 是线段 $BC$ 的中点。
+
+部分证明摘自 \url{https://www.cut-the-knot.org}
+
+
+\subsection{阿波罗尼奥斯圆}
+
+\begin{tikzpicture}
+\node [mybox,title={三角形的阿波罗尼奥斯圆\_Apollonius\_}] (box){%
+\begin{minipage}{0.90\textwidth}
+  {\emph{与三角形的三个旁切圆都相切且将它们包含在内的圆，通常被称为阿波罗尼奥斯圆（Kimberling 1998，第 102 页）。}}
+\end{minipage}
+};
+\end{tikzpicture}%
+
+说明
+
+前面几个示例的目的是展示这些命题可以多么简单地被重现。使用 TikZ 需要计算和三角学，而使用 \pkg{tkz-euclide} 只需构建简单的对象。
+
+但请不要忘记，TikZ 位于 \pkg{tkz-euclide} 之下，且远在其之上：我只是在 TikZ 与我的宏包用户之间创建了一个接口。
+
+最后一个示例非常复杂；它展示了使用 \pkg{tkz-euclide} 所能做的一切。
+
+
+\begin{tkzexample}[vbox,small]
+\begin{tikzpicture}[scale=.6]
+\tkzDefPoints{0/0/A,6/0/B,0.8/4/C}
+\tkzDefTriangleCenter[euler](A,B,C)        \tkzGetPoint{N} 
+\tkzDefTriangleCenter[circum](A,B,C)       \tkzGetPoint{O} 
+\tkzDefTriangleCenter[lemoine](A,B,C)      \tkzGetPoint{K}
+\tkzDefTriangleCenter[ortho](A,B,C)        \tkzGetPoint{H}
+\tkzDefSpcTriangle[excentral,name=J](A,B,C){a,b,c}
+\tkzDefSpcTriangle[centroid,name=M](A,B,C){a,b,c}
+\tkzDefCircle[in](Ma,Mb,Mc)                \tkzGetPoint{Sp}  % Sp Spieker center
+\tkzDefProjExcenter[name=J](A,B,C)(a,b,c){Y,Z,X}
+\tkzDefLine[parallel=through Za](A,B)      \tkzGetPoint{Xc}
+\tkzInterLL(Za,Xc)(C,B)                    \tkzGetPoint{C'}
+\tkzDefLine[parallel=through Zc](B,C)      \tkzGetPoint{Ya}
+\tkzInterLL(Zc,Ya)(A,B)                    \tkzGetPoint{A'}
+\tkzDefPointBy[reflection= over Ja--Jc](C')\tkzGetPoint{Ab}
+\tkzDefPointBy[reflection= over Ja--Jc](A')\tkzGetPoint{Cb}
+\tkzInterLL(K,O)(N,Sp)                     \tkzGetPoint{Q}
+\tkzInterLC(A,B)(Q,Cb)                     \tkzGetFirstPoint{Ba}
+\tkzInterLC(A,C)(Q,Cb)                     \tkzGetPoints{Ac}{Ca}
+\tkzInterLC(B,C')(Q,Cb)                    \tkzGetFirstPoint{Bc}
+\tkzInterLC[next to=Ja](Ja,Q)(Q,Cb)        \tkzGetFirstPoint{F'a}
+\tkzInterLC[next to=Jc](Jc,Q)(Q,Cb)        \tkzGetFirstPoint{F'c}
+\tkzInterLC[next to=Jb](Jb,Q)(Q,Cb)        \tkzGetFirstPoint{F'b}
+\tkzInterLC[common=F'a](Sp,F'a)(Ja,F'a)    \tkzGetFirstPoint{Fa}
+\tkzInterLC[common=F'b](Sp,F'b)(Jb,F'b)    \tkzGetFirstPoint{Fb}
+\tkzInterLC[common=F'c](Sp,F'c)(Jc,F'c)    \tkzGetFirstPoint{Fc}
+\tkzInterLC(Mc,Sp)(Q,Cb)                   \tkzGetFirstPoint{A''}
+\tkzDefCircle[euler](A,B,C)                \tkzGetPoints{E}{e}
+\tkzDefCircle[ex](C,A,B)                   \tkzGetPoints{Ea}{a}
+\tkzDefCircle[ex](A,B,C)                   \tkzGetPoints{Eb}{b}
+\tkzDefCircle[ex](B,C,A)                   \tkzGetPoints{Ec}{c}
+% Calculations are done, now you can draw, mark and label
+\tkzDrawCircles(Q,Cb E,e)%
+\tkzDrawCircles(Eb,b Ea,a Ec,c)
+\tkzDrawPolygon(A,B,C)
+\tkzDrawSegments[dashed](A,A' C,C' A',Zc Za,C' B,Cb B,Ab A,Ca)
+\tkzDrawSegments[dashed](C,Ac Ja,Xa Jb,Yb Jc,Zc)
+\begin{scope}
+   \tkzClipCircle(Q,Cb) % We limit the drawing of the lines
+   \tkzDrawLine[add=5 and 12,orange](K,O)
+   \tkzDrawLine[add=12 and 28,red!50!black](N,Sp)
+\end{scope}
+\tkzDrawPoints(A,B,C,K,Ja,Jb,Jc,Q,N,O,Sp,Mc,Xa,Xb,Yb,Yc,Za,Zc)
+\tkzDrawPoints(A',C',A'',Ab,Cb,Bc,Ca,Ac,Ba,Fa,Fb,Fc,F'a,F'b,F'c)
+\tkzLabelPoints(Ja,Jb,Jc,Q,Xa,Xb,Za,Zc,Ab,Cb,Bc,Ca,Ac,Ba,F'b)
+\tkzLabelPoints[above](O,K,F'a,Fa,A'')
+\tkzLabelPoints[below](B,F'c,Yc,N,Sp,Fc,Mc)
+\tkzLabelPoints[left](A',C',Fb)
+\tkzLabelPoints[right](C)
+\tkzLabelPoints[below right](A)
+\tkzLabelPoints[above right](Yb)
+\tkzDrawSegments(Fc,F'c Fb,F'b Fa,F'a)
+\tkzDrawSegments[color=green!50!black](Mc,N Mc,A'' A'',Q)
+\tkzDrawSegments[color=red,dashed](Ac,Ab Ca,Cb Ba,Bc Ja,Jc A',Cb C',Ab)
+\tkzDrawSegments[color=red](Cb,Ab Bc,Ac Ba,Ca A',C')
+\tkzMarkSegments[color=red,mark=|](Cb,Ab Bc,Ac Ba,Ca)
+\tkzMarkRightAngles(Jc,Zc,A Ja,Xa,B Jb,Yb,C)
+\tkzDrawSegments[green,dashed](A,F'a B,F'b C,F'c)
+\end{tikzpicture}
+\end{tkzexample}
+
+\endinput

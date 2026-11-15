@@ -1,0 +1,280 @@
+\section{用向量定义点}
+
+\subsection{\tkzcname{tkzDefPointWith}}
+满足特定向量条件的点可由 \tkzcname{tkzDefPointWith} 创建。基本原理如下：将两个点（即一个向量）作为参数传入。根据所选选项的不同，新点与第一个点（个别情况除外）所构成的向量，与原向量共线或垂直，其长度或与原向量长度成正比，或与单位长度成正比。由于这种点通常只是临时使用，不必立即命名：结果保存在 \tkzname{tkzPointResult} 中，再用 \tkzNameMacro{tkzGetPoint} 以另一个名称取出。
+
+某些选项会设定给定点与所得点之间的距离。一般情况下，该距离为作为参数给出的两点之间的距离；若选用 \tkzname{normed} 类选项，则该距离为 1~cm。选项 $K$ 则给出该距离的倍数。
+
+\begin{NewMacroBox}{tkzDefPointWith}{\parg{pt1,pt2}}%
+ 本宏用于定义满足向量条件的点。
+
+\medskip
+  
+\begin{tabular}{lll}%
+\toprule
+参数             & 含义 & 说明                         \\ 
+\midrule
+\TAline{(pt1,pt2)} {点对}{结果点保存在 \tkzname{tkzPointResult} 中} \\
+
+\bottomrule
+\end{tabular}
+
+\medskip
+下文假设所得点均通过 \tkzNameMacro{tkzGetPoint\{C\}} 取出。
+
+\begin{tabular}{lll}%
+\toprule
+选项             & 示例 & 说明                         \\ 
+\midrule
+\TOline{orthogonal}{[orthogonal](A,B)}{$AC=AB$ 且 $\overrightarrow{AC} \perp \overrightarrow{AB}$}
+\TOline{orthogonal normed}{[orthogonal normed](A,B)}{$AC=1$ 且 $\overrightarrow{AC} \perp \overrightarrow{AB}$} 
+\TOline{linear}{[linear](A,B)}{$\overrightarrow{AC}=K \times \overrightarrow{AB}$}
+\TOline{linear normed}{[linear normed](A,B)}{$AC=K$ 且 $\overrightarrow{AC}=k\times \overrightarrow{AB}$ }  
+\TOline{colinear= at \#1}{[colinear= at C](A,B)}{$\overrightarrow{CD}= \overrightarrow{AB}$ }
+\TOline{colinear normed= at \#1}{[colinear normed= at C](A,B)}{$\overrightarrow{CD}= \overrightarrow{AB}$ }
+\TOline{K}{[linear](A,B),K=2}{$\overrightarrow{AC}=2\times \overrightarrow{AB}$}
+\end{tabular}
+\end{NewMacroBox}
+
+\subsubsection{选项 \tkzname{colinear at}：简单示例}
+ $(\overrightarrow{AB}=\overrightarrow{CD})$
+\begin{tkzexample}[latex=6cm,small]
+\begin{tikzpicture}[scale=1.2,
+   vect/.style={->,shorten >=1pt,>=latex'}]
+  \tkzDefPoint(2,3){A}   \tkzDefPoint(4,2){B}
+  \tkzDefPoint(0,1){C}
+  \tkzDefPointWith[colinear=at C](A,B)
+  \tkzGetPoint{D}
+  \tkzDrawPoints[new](A,B,C,D)
+  \tkzLabelPoints[above right=3pt](A,B,C,D)
+  \tkzDrawSegments[vect](A,B C,D)
+\end{tikzpicture}
+\end{tkzexample}
+
+\subsubsection{选项 \tkzname{colinear at}：较复杂的示例}
+\begin{tkzexample}[vbox,small]
+\begin{tikzpicture}[scale=.75]
+\tkzDefPoints{0/0/B,3.6/0/C,1.5/4/A}
+\tkzDefSpcTriangle[ortho](A,B,C){Ha,Hb,Hc}
+\tkzDefTriangleCenter[ortho](A,B,C) \tkzGetPoint{H}
+\tkzDefSquare(A,C) \tkzGetPoints{R}{S}
+\tkzDefSquare(B,A) \tkzGetPoints{M}{N}
+\tkzDefSquare(C,B) \tkzGetPoints{P}{Q}
+\tkzDefPointWith[colinear= at M](A,S) \tkzGetPoint{A'}
+\tkzDefPointWith[colinear= at P](B,N) \tkzGetPoint{B'}
+\tkzDefPointWith[colinear= at Q](C,R) \tkzGetPoint{C'}
+\tkzDefPointBy[projection=onto P--Q](Ha) \tkzGetPoint{Pa}
+\tkzDrawPolygon[teal,thick](A,C,R,S)\tkzDrawPolygon[teal,thick](A,B,N,M)
+\tkzDrawPolygon[teal,thick](C,B,P,Q)
+\tkzDrawPoints[teal,size=2](A,B,C,Ha,Hb,Hc,A',B',C')
+\tkzDrawSegments[ultra thin,red](M,A' A',S P,B' B',N Q,C' C',R B,S C,M C,N B,R A,P A,Q)
+\tkzDrawSegments[ultra thin,teal, dashed](A,Ha B,Hb C,Hc)
+\tkzDefPointBy[rotation=center A angle 90](S) \tkzGetPoint{S'}
+\tkzDrawSegments[ultra thin,teal,dashed](B,S' A,S' A,A' M,S' B',Q P,C' M,S Ha,Pa)
+\tkzDrawArc(A,S)(S')
+\end{tikzpicture}
+\end{tkzexample}
+
+\subsubsection{选项 \tkzname{colinear at}：如何使用 $K$}
+$K$ 的用法
+\begin{tkzexample}[latex=7cm,small]
+\begin{tikzpicture}[vect/.style={->,
+               shorten >=1pt,>=latex'}]
+  \tkzDefPoints{0/0/A,5/0/B,1/2/C}
+  \tkzDefPointWith[colinear=at C](A,B)
+  \tkzGetPoint{G}
+  \tkzDefPointWith[colinear=at C, K=0.5](A,B)
+  \tkzGetPoint{H}
+  \tkzLabelPoints(A,B,C,G,H)
+  \tkzDrawPoints(A,B,C,G,H)
+  \tkzDrawSegments[vect](A,B C,H)
+\end{tikzpicture}
+\end{tkzexample}
+
+\subsubsection{选项 \tkzname{colinear at} 配合 $K=\sqrt{2}/2$}
+取 $K=\frac{\sqrt{2}}{2}$
+
+\begin{tkzexample}[latex=6cm,small]
+\begin{tikzpicture}[vect/.style={->,
+            shorten >=1pt,>=latex'}]
+ \tkzDefPoints{1/1/A,4/2/B,2/2/C}
+ \tkzDefPointWith[colinear=at C,K=sqrt(2)/2](A,B)
+ \tkzGetPoint{D}
+ \tkzDrawPoints[color=red](A,B,C,D)
+ \tkzDrawSegments[vect](A,B C,D)
+\end{tikzpicture}
+\end{tkzexample}
+
+\subsubsection{选项 \tkzname{orthogonal} 配合 $K=1$}
+此时 $AB=AC$，因为 $K=1$。
+\begin{tkzexample}[latex=6cm,small]
+\begin{tikzpicture}[scale=1.2,
+  vect/.style={->,shorten >=1pt,>=latex'}]
+  \tkzDefPoints{2/3/A,4/2/B}
+   \tkzDefPointWith[orthogonal,K=1](A,B)
+     \tkzGetPoint{C}
+   \tkzDrawPoints[color=red](A,B,C)
+   \tkzLabelPoints[right=3pt](B,C)
+   \tkzLabelPoints[below=3pt](A)
+   \tkzDrawSegments[vect](A,B A,C)
+   \tkzMarkRightAngle(B,A,C)
+\end{tikzpicture}
+\end{tkzexample}
+
+
+
+\subsubsection{选项 \tkzname{orthogonal} 配合 $K=-1$}
+ 取 $K=-1$。
+因 $\lvert K \rvert=1$，故 $OK=OI$，进而 $OI=OJ=OK$。
+
+\begin{tkzexample}[latex=7cm,small]
+\begin{tikzpicture}[scale=.75]
+  \tkzDefPoints{1/2/O,2/5/I}
+  \tkzDefPointWith[orthogonal](O,I)
+  \tkzGetPoint{J}
+  \tkzDefPointWith[orthogonal,K=-1](O,I)
+  \tkzGetPoint{K}
+  \tkzDrawSegment(O,I)
+  \tkzDrawSegments[->](O,J O,K)
+  \tkzMarkRightAngles(I,O,J I,O,K)
+  \tkzDrawPoints(O,I,J,K)
+  \tkzLabelPoints(O,I,J,K)
+\end{tikzpicture}
+\end{tkzexample}
+
+\subsubsection{选项 \tkzname{orthogonal}：一个较复杂的示例}
+\begin{tkzexample}[latex=7cm,small]
+\begin{tikzpicture}[scale=.75]
+  \tkzDefPoints{0/0/A,6/0/B}
+  \tkzDefMidPoint(A,B)
+    \tkzGetPoint{I}
+  \tkzDefPointWith[orthogonal,K=-.75](B,A)
+  \tkzGetPoint{C}
+  \tkzInterLC(B,C)(B,I)
+     \tkzGetPoints{D}{F}
+  \tkzDuplicateSegment(B,F)(A,F)
+  \tkzGetPoint{E}
+  \tkzDrawArc[delta=10](F,E)(B)
+  \tkzInterLC(A,B)(A,E)
+    \tkzGetPoints{N}{M}
+  \tkzDrawArc[delta=10](A,M)(E)
+  \tkzDrawLines(A,B B,C A,F)
+  \tkzCompass(B,F)
+  \tkzDrawPoints(A,B,C,F,M,E)
+  \tkzLabelPoints(A,B,C,F,M)
+  \tkzLabelPoints[above](E)
+\end{tikzpicture}
+\end{tkzexample}
+
+\subsubsection{选项 \tkzname{colinear} 与 \tkzname{orthogonal}}
+\begin{tkzexample}[latex=7cm,small]
+\begin{tikzpicture}[scale=1.2,
+  vect/.style={->,shorten >=1pt,>=latex'}]
+  \tkzDefPoints{2/1/A,6/2/B}
+  \tkzDefPointWith[orthogonal,K=.5](A,B)
+  \tkzGetPoint{C}
+  \tkzDefPointWith[colinear=at C,K=.5](A,B)
+  \tkzGetPoint{D}
+  \tkzMarkRightAngle[fill=gray!20](B,A,C)
+  \tkzDrawSegments[vect](A,B A,C C,D)
+  \tkzDrawPoints(A,...,D)
+\end{tikzpicture}
+\end{tkzexample}
+
+\subsubsection{选项 \tkzname{orthogonal normed}}
+ $K=1$，故 $AC=1$。
+
+\begin{tkzexample}[latex=7cm,small]
+\begin{tikzpicture}[scale=1.2,
+  vect/.style={->,shorten >=1pt,>=latex'}]
+  \tkzDefPoints{2/3/A,4/2/B}
+  \tkzDefPointWith[orthogonal normed](A,B)
+  \tkzGetPoint{C}
+  \tkzDrawPoints[color=red](A,B,C)
+  \tkzDrawSegments[vect](A,B A,C)
+  \tkzMarkRightAngle[fill=gray!20](B,A,C)
+\end{tikzpicture}
+\end{tkzexample}
+
+\subsubsection{选项 \tkzname{orthogonal normed} 与 K=2}
+$K=2$，因此 $AC=2$。
+
+\begin{tkzexample}[latex=7cm,small]
+\begin{tikzpicture}[scale=1.2,
+   vect/.style={->,shorten >=1pt,>=latex'}]
+  \tkzDefPoints{2/3/A,5/1/B}
+  \tkzDefPointWith[orthogonal normed,K=2](A,B)
+  \tkzGetPoint{C}
+  \tkzDrawPoints[color=red](A,B,C)
+  \tkzDefCircle[R](A,2) \tkzGetPoint{a}
+  \tkzDrawCircle(A,a)
+  \tkzDrawSegments[vect](A,B A,C)
+  \tkzMarkRightAngle[fill=gray!20](B,A,C)
+  \tkzLabelPoints[above=3pt](A,B,C)
+\end{tikzpicture}
+\end{tkzexample}
+
+\subsubsection{选项 \tkzname{linear}}
+此处 $K=0.5$。
+
+这相当于做一次位似，或将一个向量乘以一个实数。下面取 $[AB]$ 的中点。
+
+\begin{tkzexample}[latex=7cm,small]
+\begin{tikzpicture}[scale=1.2]
+  \tkzDefPoints{1/3/A,4/2/B}
+  \tkzDefPointWith[linear,K=0.5](A,B)
+  \tkzGetPoint{C}
+  \tkzDrawPoints[color=red](A,B,C)
+  \tkzDrawSegment(A,B)
+  \tkzLabelPoints[above right=3pt](A,B,C)
+\end{tikzpicture}
+\end{tkzexample}
+
+\subsubsection{选项 \tkzname{linear normed}}
+在下面的示例中，$AC=1$，且 $C$ 位于直线 $(AB)$ 上。
+
+\begin{tkzexample}[latex=7cm,small]
+\begin{tikzpicture}[scale=1.2]
+ \tkzDefPoints{1/3/A,4/2/B}
+ \tkzDefPointWith[linear normed](A,B)
+ \tkzGetPoint{C}
+ \tkzDrawPoints[color=red](A,B,C)
+ \tkzDrawSegment(A,B)
+ \tkzLabelSegment(A,C){$1$}
+ \tkzLabelPoints[above right=3pt](A,B,C)
+\end{tikzpicture}
+\end{tkzexample}
+%<--------------------------------------------------------------------------–>
+%         tkzGetVectxy
+%<--------------------------------------------------------------------------–>
+\subsection{\tkzcname{tkzGetVectxy} }
+取出一个向量的坐标。
+
+\begin{NewMacroBox}{tkzGetVectxy}{\parg{$A,B$}\var{text}}%
+给出一个向量的坐标。
+
+\medskip
+\begin{tabular}{lll}%
+\toprule
+参数    & 示例 & 说明      \\
+
+\midrule
+
+\TAline{(point)\{name of macro\}} {\tkzcname{tkzGetVectxy}(A,B)\{V\}}{\tkzcname{Vx}、\tkzcname{Vy}：向量 $\overrightarrow{AB}$ 的坐标}
+\end{tabular}
+\end{NewMacroBox}
+
+\subsubsection{用 \tkzcname{tkzGetVectxy} 传递坐标}
+
+\begin{tkzexample}[latex=7cm,small]
+\begin{tikzpicture}
+ \tkzDefPoints{0/0/O,1/1/A,4/2/B}
+ \tkzGetVectxy(A,B){v}
+ \tkzDefPoint(\vx,\vy){V}
+ \tkzDrawSegment[->,color=red](O,V)
+ \tkzDrawSegment[->,color=blue](A,B)
+ \tkzDrawPoints(A,B,O)
+ \tkzLabelPoints(A,B,O,V)
+\end{tikzpicture}
+\end{tkzexample}
+\endinput
